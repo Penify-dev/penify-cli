@@ -4,6 +4,15 @@ import time
 
 
 def main():
+    """Penify CLI tool for generating smart commit messages with JIRA
+    integration, configuring local-LLM and JIRA,
+    and generating code documentation.  This tool provides a command-line
+    interface to interact with Penify's services. It supports basic commands
+    that do not require login and advanced commands that require user
+    authentication. The `--version` flag can be used to display the version
+    information.
+    """
+
     parser = argparse.ArgumentParser(
         description="""Penify CLI tool for:
 1. AI commit message generation with JIRA integration to enhance commit messages.

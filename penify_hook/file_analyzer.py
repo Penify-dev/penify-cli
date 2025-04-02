@@ -103,7 +103,11 @@ class FileAnalyzerGenHook(BaseAnalyzer):
             return False
     
     def print_processing(self, file_path):
-        """Print a processing message for a file."""
+        """Print a processing message for a file.
+
+        Args:
+            file_path (str): The path to the file being processed.
+        """
         formatted_path = format_file_path(file_path)
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
@@ -116,6 +120,9 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         an error message indicating that the file was not processed. The method
         displays a progress bar and colored output to provide visual feedback on
         the processing status.
+
+        Args:
+            self (PostCommitHook): An instance of the PostCommitHook class.
         """
         
         # Create a progress bar with appropriate stages
