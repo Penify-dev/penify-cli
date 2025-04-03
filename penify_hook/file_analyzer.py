@@ -31,7 +31,8 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         This function validates the provided file extension, reads the content
         of the file, and sends it to an API client for further processing. If
         the API responds successfully, the original file content is replaced
-        with the response.
+        with the response. The function also updates a progress bar to reflect
+        the current processing stage.
 
         Args:
             file_path (str): The relative path to the file that needs to be processed.
