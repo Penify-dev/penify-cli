@@ -16,8 +16,8 @@ def generate_doc(api_url, token, location=None):
     Args:
         api_url (str): The URL of the API to connect to for documentation generation.
         token (str): The authentication token for accessing the API.
-        location (str?): The path to a specific file or folder to analyze. If not provided, the
-            current working directory is used.
+        location (str?): The path to a specific file or folder to analyze.
+            If not provided, the current working directory is used.
     """
 
     import os
@@ -86,7 +86,8 @@ def setup_docgen_parser(parser):
     This function configures a parser with various subcommands and arguments
     necessary for generating documentation for Git diffs, files, or folders.
     It also installs and uninstalls commit hooks to automate documentation
-    generation on commits.
+    generation on commits. The parser will provide options for specifying
+    locations for documentation generation and for managing Git hooks.
 
     Args:
         parser (argparse.ArgumentParser): The parser to configure.
@@ -127,7 +128,9 @@ def handle_docgen(args):
 
     This function processes different subcommands such as installing or
     uninstalling git hooks, and directly generating documentation based on
-    provided arguments.
+    provided arguments. It first retrieves an authentication token and
+    checks if the token is valid. Depending on the specified subcommand, it
+    either installs or uninstalls a git hook or generates documentation.
 
     Args:
         args (Namespace): Parsed command-line arguments containing the subcommand and location
