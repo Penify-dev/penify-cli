@@ -12,11 +12,18 @@ def save_credentials(api_key):
     """Save or update the API keys in the .penify file in the user's home
     directory.
 
+    This function checks if the .penify file exists in the user's home
+    directory. If it does, it loads the existing credentials and updates the
+    API key. If the file does not exist, it creates a new file with the
+    provided API key. The function attempts to write the updated credentials
+    back to the file and returns a boolean indicating whether the operation
+    was successful.
+
     Args:
         api_key (str): The new API key to be saved or updated.
 
     Returns:
-        bool: if the credentials were successfully saved, False otherwise.
+        bool: True if the credentials were successfully saved, False otherwise.
     """
     home_dir = Path.home()
     penify_file = home_dir / '.penify'

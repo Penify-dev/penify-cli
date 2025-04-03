@@ -43,13 +43,16 @@ def handle_config(args):
 
     This function processes different types of configurations such as LLM
     (Language Model) and JIRA. It saves configurations, sets up web-based
-    configurations, and verifies JIRA connections.
+    configurations, and verifies JIRA connections based on the provided
+    command-line arguments. The function ensures that the appropriate
+    configuration is applied and provides feedback on the success or failure
+    of the operations performed.
 
     Args:
         args (argparse.Namespace): Command-line arguments containing the type of configuration to handle.
 
     Returns:
-        int: Exit code indicating success or failure.
+        int: Exit code indicating success (0) or failure (1).
     """
 
     # Only import dependencies needed for config functionality here

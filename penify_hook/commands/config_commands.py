@@ -16,8 +16,10 @@ def get_penify_config() -> Path:
 
     This function searches for the `.penify` file in the current directory
     and its parent directories until it finds it or reaches the home
-    directory. If not found, it creates the `.penify` directory and an empty
-    `config.json` file.
+    directory. If the `.penify` directory does not exist, it creates the
+    directory and an empty `config.json` file within it. This is useful for
+    applications that require a configuration file to store user-specific
+    settings.
 
     Returns:
         Path: The path to the `config.json` file within the `.penify` directory.
@@ -95,7 +97,9 @@ def save_jira_config(url, username, api_token):
 
     This function reads existing JIRA configuration from the .penify file,
     updates or adds new JIRA configuration details, and writes it back to
-    the file.
+    the file. It handles the case where the .penify file may not exist or
+    may contain invalid JSON. If the configuration is successfully saved, it
+    returns True; otherwise, it returns False.
 
     Args:
         url (str): The URL of the JIRA instance.
@@ -139,7 +143,8 @@ def get_llm_config():
 
     This function reads the .penify configuration file and extracts the LLM
     settings. If the file does not exist or contains invalid JSON, it
-    returns an empty dictionary.
+    returns an empty dictionary. The function handles potential errors that
+    may arise during the reading and parsing of the configuration file.
 
     Returns:
         dict: A dictionary containing the LLM configuration, or an empty dictionary if
@@ -160,9 +165,11 @@ def get_jira_config():
     """Get JIRA configuration from the .penify file.
 
     This function reads the JIRA configuration from a JSON file specified in
-    the .penify file. If the .penify file exists and contains valid JSON
-    with a 'jira' key, it returns the corresponding configuration.
-    Otherwise, it returns an empty dictionary.
+    the .penify file. It checks for the existence of the .penify file and
+    attempts to load its contents. If the file contains valid JSON and has a
+    'jira' key, the function returns the corresponding configuration. If the
+    file does not exist, is invalid, or does not contain the 'jira' key, it
+    returns an empty dictionary.
 
     Returns:
         dict: The JIRA configuration or an empty dictionary if not found or invalid.
@@ -184,7 +191,7 @@ def config_llm_web():
     This function starts a temporary HTTP server that serves an HTML
     template for configuring Large Language Model (LLM) settings. It handles
     GET and POST requests to retrieve the current configuration, save new
-    configurations, and suppress log messages.  The server runs on a random
+    configurations, and suppress log messages. The server runs on a random
     port between 30000 and 50000, and it is accessible via a URL like
     http://localhost:<redirect_port>. The function opens this URL in the
     default web browser for configuration. Once configured, the server shuts
@@ -252,10 +259,11 @@ def config_llm_web():
             This method processes incoming POST requests to save language model
             configuration data. It extracts the necessary parameters from the
             request body, saves the configuration using the provided details, and
-            then schedules the server to shut down after a successful save.
+            then schedules the server to shut down after a successful save. If the
+            request path is not "/save", it responds with a 404 error.
 
             Args:
-                self (HTTPRequestHandler): The instance of the HTTPRequestHandler class handling the request.
+                self (HTTPRequestHandler): The instance of the HTTPRequestHandler
             """
 
             if self.path == "/save":
@@ -315,7 +323,11 @@ def config_jira_web():
     `http.server` module to handle GET and POST requests. The server serves
     an HTML page for configuration and handles saving the JIRA configuration
     details through API tokens and URLs. Upon successful configuration, it
-    shuts down the server gracefully.
+    shuts down the server gracefully.  The GET requests are processed to
+    serve the configuration HTML page or return the current JIRA
+    configuration in JSON format. The POST requests are used to save the
+    configuration details provided by the user. If an error occurs during
+    the saving process, a 500 Internal Server Error response is returned.
     """
     redirect_port = random.randint(30000, 50000)
     server_url = f"http://localhost:{redirect_port}"
@@ -326,10 +338,12 @@ def config_jira_web():
         def do_GET(self):
             """Handle GET requests for different paths.
 
-            This function processes GET requests based on the path requested. It
-            serves an HTML template for the root path, returns a JSON configuration
-            for a specific endpoint, and handles any other paths by returning a 404
-            error.
+            This function processes GET requests based on the requested path. It
+            serves an HTML template for the root path ("/"), returns a JSON
+            configuration for the "/get_config" endpoint, and handles any other
+            paths by returning a 404 error. The function reads the HTML template
+            from the specified resource and retrieves the current JIRA configuration
+            when requested.
             """
 
             if self.path == "/":
@@ -380,7 +394,8 @@ def config_jira_web():
             parameters (URL, username, API token, and verify), saves the
             configuration using the `save_jira_config` function, and responds with
             success or error messages. If an exception occurs during the process, it
-            sends a 500 Internal Server Error response.
+            sends a 500 Internal Server Error response. If the request path is not
+            recognized, it sends a 404 Not Found response.
             """
 
             if self.path == "/save":
@@ -437,8 +452,15 @@ def config_jira_web():
     print("Configuration completed.")
 
 def get_token():
-    """Get the token based on priority from environment variables or
-    configuration files.
+    """Retrieve the API token from environment variables or configuration
+    files.
+
+    This function checks for the presence of an API token in the environment
+    variable 'PENIFY_API_TOKEN'. If it is not found, the function attempts
+    to read the token from a configuration file located at '~/.penify'. If
+    the configuration file exists and is successfully read, the function
+    extracts the token from the JSON content. If any errors occur during
+    file reading or JSON decoding, an error message is printed.
 
     Returns:
         str: The API token if found, otherwise None.

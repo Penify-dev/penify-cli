@@ -10,9 +10,14 @@ penifycli docgen -gf {git_folder_path} -t {token}
 """
 
 def install_git_hook(location, token):
-    """Install a post-commit hook in the specified location that generates
-    documentation
-    for changed files after each commit.
+    """Install a post-commit hook in a Git repository to generate
+    documentation.
+
+    This function sets up a post-commit hook in the specified Git repository
+    location. The hook is designed to automatically generate documentation
+    for any files that have changed after each commit. It ensures that the
+    hooks directory exists before attempting to create the hook file and
+    makes the hook executable.
 
     Args:
         location (str): The path to the Git repository where the hook should be installed.

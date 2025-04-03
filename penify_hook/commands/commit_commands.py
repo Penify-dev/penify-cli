@@ -104,7 +104,9 @@ def setup_commit_parser(parser):
     This function sets up an argument parser that can be used to generate
     commit messages with contextual information. It allows users to specify
     options such as including a message, opening an edit terminal before
-    committing, and generating a detailed commit message.
+    committing, and generating a detailed commit message. The parser is
+    configured to provide helpful descriptions and usage information for
+    each argument.
 
     Args:
         parser (argparse.ArgumentParser): The ArgumentParser object to be configured.
@@ -127,12 +129,12 @@ It generates smart commit messages. By default, it will just generate just the T
     
 def handle_commit(args):
     """Handle the commit functionality by processing arguments and invoking the
-    appropriate commands.
-
-    This function processes the provided command-line arguments to configure
-    settings for commit operations, including LLM (Language Model) and Jira
-    configurations. It then calls the `commit_code` function with these
-    configurations to perform the actual commit operation.
+    appropriate commands.  This function processes the provided command-line
+    arguments to configure settings for commit operations, including
+    Language Model (LLM) and Jira configurations. It retrieves the necessary
+    configurations from the respective commands and then calls the
+    `commit_code` function with these configurations to perform the actual
+    commit operation.
 
     Args:
         args (argparse.Namespace): The parsed command-line arguments containing options like terminal,
