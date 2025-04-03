@@ -47,11 +47,12 @@ class JiraClient:
         """Check if the JIRA client is connected.
 
         This function verifies whether the JIRA client has successfully
-        established a connection. It returns `True` if the client is connected,
-        and `False` otherwise.
+        established a connection. It checks the state of the `jira_client`
+        attribute and returns `True` if the client is connected, and `False`
+        otherwise.
 
         Returns:
-            bool: True if the JIRA client is connected, False otherwise
+            bool: True if the JIRA client is connected, False otherwise.
         """
         return self.jira_client is not None
     
@@ -167,6 +168,13 @@ class JiraClient:
     def update_issue_status(self, issue_key: str, transition_name: str) -> bool:
         """Update the status of a JIRA issue.
 
+        This function updates the status of a specified JIRA issue by performing
+        a transition based on the provided transition name. It first checks if
+        the JIRA client is connected, retrieves the available transitions for
+        the issue, and then attempts to find and execute the specified
+        transition. If successful, it logs the update; otherwise, it logs a
+        warning or an error if an exception occurs.
+
         Args:
             issue_key (str): The key of the JIRA issue to be updated.
             transition_name (str): The name of the desired transition.
@@ -204,16 +212,24 @@ class JiraClient:
     def format_commit_message_with_jira_info(self, commit_title: str, commit_description: str, issue_keys: List[str] = None) -> tuple:
         """Format commit message with JIRA issue information.
 
+        This function formats a commit message by incorporating relevant JIRA
+        issue information. It takes the original commit title and description,
+        and if no issue keys are provided, it extracts them from both the title
+        and description. If the system is connected to JIRA and valid issue keys
+        are found, it updates the commit title to include the first issue key
+        and appends a section to the description with details about the related
+        JIRA issues.
+
         Args:
             commit_title (str): The original commit title.
             commit_description (str): The original commit description.
-            issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
-                provided, issue keys will be extracted from both the title and the
-                description.
+            issue_keys (List[str]?): A list of JIRA issue keys to include in
+                the commit message. If not provided, issue keys will be extracted from
+                both the title and the description.
 
         Returns:
-            tuple: A tuple containing the updated commit title and description with JIRA
-                information included.
+            tuple: A tuple containing the updated commit title and description with
+                JIRA information included.
         """
         # If no issue keys provided, extract them from title and description
         if not issue_keys:
@@ -253,14 +269,12 @@ class JiraClient:
 
     def get_detailed_issue_context(self, issue_key: str) -> Dict[str, Any]:
         """Retrieve comprehensive details about a JIRA issue including context for
-        better commit messages.
-
-        This function fetches detailed information from a specified JIRA issue
-        and constructs a dictionary containing various context fields such as
-        the issue summary, description, type, status, priority, comments, URL,
-        and additional custom fields like acceptance criteria and sprint
-        information. If any errors occur during the fetching process,
-        appropriate warnings or errors are logged.
+        better commit messages.  This function fetches detailed information from
+        a specified JIRA issue and constructs a dictionary containing various
+        context fields such as the issue summary, description, type, status,
+        priority, comments, URL, and additional custom fields like acceptance
+        criteria and sprint information. If any errors occur during the fetching
+        process, appropriate warnings or errors are logged.
 
         Args:
             issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
