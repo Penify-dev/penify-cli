@@ -63,9 +63,9 @@ class APIClient:
 
         Args:
             git_diff (str): The git diff of the commit.
-            instruction (str??): Additional instruction for the commit. Defaults to "".
-            repo_details (dict??): Details of the git repository. Defaults to None.
-            jira_context (dict??): JIRA issue details to enhance the commit summary. Defaults to None.
+            instruction (str?): Additional instruction for the commit. Defaults to "".
+            repo_details (dict?): Details of the git repository. Defaults to None.
+            jira_context (dict?): JIRA issue details to enhance the commit summary. Defaults to None.
 
         Returns:
             dict: The response from the API if the request is successful, None otherwise.
