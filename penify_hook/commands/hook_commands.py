@@ -10,9 +10,14 @@ penifycli docgen -gf {git_folder_path} -t {token}
 """
 
 def install_git_hook(location, token):
-    """
-    Install a post-commit hook in the specified location that generates documentation
+    """Install a post-commit hook in the specified location that generates
+    documentation
     for changed files after each commit.
+
+    Args:
+        location (str): The path to the Git repository where the hook should be installed.
+        token (str): The authentication token required to access the documentation generation
+            service.
     """
     hooks_dir = Path(location) / ".git/hooks"
     hook_path = hooks_dir / HOOK_FILENAME
@@ -29,8 +34,15 @@ def install_git_hook(location, token):
     print(f"Documentation will now be automatically generated after each commit.")
 
 def uninstall_git_hook(location):
-    """
-    Uninstalls the post-commit hook from the specified location.
+    """Uninstalls the post-commit hook from the specified location.
+
+    This function attempts to remove a post-commit git hook located at the
+    given path. It constructs the path to the hook and checks if it exists.
+    If the hook is found, it is deleted, and a confirmation message is
+    printed. If no hook is found, a message indicating this is also printed.
+
+    Args:
+        location (Path): The base directory where the .git/hooks directory is located.
     """
     hook_path = Path(location) / ".git/hooks" / HOOK_FILENAME
     

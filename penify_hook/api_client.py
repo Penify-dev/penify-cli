@@ -63,9 +63,9 @@ class APIClient:
 
         Args:
             git_diff (str): The git diff of the commit.
-            instruction (str?): Additional instruction for the commit. Defaults to "".
-            repo_details (dict?): Details of the git repository. Defaults to None.
-            jira_context (dict?): JIRA issue details to enhance the commit summary. Defaults to None.
+            instruction (str??): Additional instruction for the commit. Defaults to "".
+            repo_details (dict??): Details of the git repository. Defaults to None.
+            jira_context (dict??): JIRA issue details to enhance the commit summary. Defaults to None.
 
         Returns:
             dict: The response from the API if the request is successful, None otherwise.
@@ -102,10 +102,11 @@ class APIClient:
     def get_supported_file_types(self) -> list[str]:
         """Retrieve the supported file types from the API.
 
-        This function sends a request to the API to obtain a list of supported
-        file types. If the API responds successfully, it returns the list of
-        supported file types. If the API call fails, it returns a default list
-        of common file types.
+        This function sends a request to the API endpoint
+        `/v1/file/supported_languages` to obtain a list of supported file types.
+        If the API call is successful (status code 200), it parses the JSON
+        response and returns the list of supported file types. If the API call
+        fails, it returns a default list of common file types.
 
         Returns:
             list[str]: A list of supported file types, either from the API or a default set.
@@ -143,11 +144,11 @@ class APIClient:
             return self.generate_commit_summary(diff, message, repo_details, jira_context)
 
     def get_api_key(self):
-        """Get an API key from the specified URL.
+        """Fetch an API key from a specified URL.
 
-        It constructs a request to fetch an API token using a Bearer token in
-        the headers. The function handles the response and returns the API key
-        if successful, or `None` otherwise.
+        This function sends a GET request to retrieve an API token using a
+        Bearer token in the headers. It handles the response and returns the API
+        key if the request is successful, or `None` otherwise.
 
         Returns:
             str: The API key if the request is successful, `None` otherwise.

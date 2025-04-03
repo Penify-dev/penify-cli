@@ -5,11 +5,9 @@ def setup_login_parser(parser):
 def handle_login(args):
     """Handle the login command.
 
-    This function is responsible for initiating a user login process by
-    calling the `login` function from the
-    `penify_hook.commands.auth_commands` module. It uses predefined
-    constants `API_URL` and `DASHBOARD_URL` from the `penify_hook.constants`
-    module to perform the login operation.
+    Initiates a user login process by calling the `login` function from the
+    `penify_hook.commands.auth_commands` module using predefined constants
+    `API_URL` and `DASHBOARD_URL` from the `penify_hook.constants` module.
 
     Args:
         args (argparse.Namespace): Parsed arguments containing necessary parameters for the login command.

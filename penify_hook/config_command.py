@@ -2,6 +2,18 @@
 
 
 def setup_config_parser(parent_parser):
+    """Set up a configuration parser with subparsers for different types of
+    configurations.
+
+    This function configures and adds subcommands to the parent parser. Each
+    subcommand corresponds to a specific type of configuration, such as LLM
+    (Language Model) or JIRA. It allows users to configure settings for
+    these systems through command-line arguments.
+
+    Args:
+        parent_parser (argparse.ArgumentParser): The parent parser to which the config subparsers will be added.
+    """
+
     # Config subcommand: Create subparsers for config types
     parser = parent_parser.add_subparsers(title="config_type", dest="config_type")
 
@@ -27,6 +39,19 @@ def setup_config_parser(parent_parser):
     # Add all other necessary arguments for config command
     
 def handle_config(args):
+    """Handle configuration settings based on the specified config type.
+
+    This function processes different types of configurations such as LLM
+    (Language Model) and JIRA. It saves configurations, sets up web-based
+    configurations, and verifies JIRA connections.
+
+    Args:
+        args (argparse.Namespace): Command-line arguments containing the type of configuration to handle.
+
+    Returns:
+        int: Exit code indicating success or failure.
+    """
+
     # Only import dependencies needed for config functionality here
     from penify_hook.commands.config_commands import save_llm_config
     from penify_hook.jira_client import JiraClient  # Import moved here

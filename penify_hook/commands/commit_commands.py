@@ -8,8 +8,27 @@ from penify_hook.ui_utils import print_info, print_warning
 def commit_code(api_url, token, message, open_terminal, generate_description,
                llm_model=None, llm_api_base=None, llm_api_key=None,
                jira_url=None, jira_user=None, jira_api_token=None):
-    """
-    Enhance Git commits with AI-powered commit messages.
+    """Enhance Git commits with AI-powered commit messages.
+
+    This function allows for the generation of enhanced commit messages
+    using natural language processing models and optionally integrates with
+    JIRA for additional context. It processes the current Git folder to find
+    relevant files and generates a detailed commit message based on the
+    provided parameters.
+
+    Args:
+        api_url (str): URL of the API endpoint.
+        token (str): Authentication token for the API.
+        message (str): Initial commit message provided by the user.
+        open_terminal (bool): Whether to open the terminal after committing.
+        generate_description (bool): Whether to generate a detailed description in the commit message.
+        llm_model (str?): The language model to use for generating the commit message. Defaults to
+            None.
+        llm_api_base (str?): Base URL of the LLM API. Defaults to None.
+        llm_api_key (str?): API key for accessing the LLM service. Defaults to None.
+        jira_url (str?): URL of the JIRA instance. Defaults to None.
+        jira_user (str?): Username for authenticating with JIRA. Defaults to None.
+        jira_api_token (str?): API token for accessing JIRA. Defaults to None.
     """
 
     from penify_hook.ui_utils import print_error
@@ -79,6 +98,18 @@ def commit_code(api_url, token, message, open_terminal, generate_description,
 
 
 def setup_commit_parser(parser):
+    """Generates a parser for setting up a command to generate smart commit
+    messages.
+
+    This function sets up an argument parser that can be used to generate
+    commit messages with contextual information. It allows users to specify
+    options such as including a message, opening an edit terminal before
+    committing, and generating a detailed commit message.
+
+    Args:
+        parser (argparse.ArgumentParser): The ArgumentParser object to be configured.
+    """
+
     commit_parser_description = """
 It generates smart commit messages. By default, it will just generate just the Title of the commit message.
 1. If you have not configured LLM, it will give an error. You either need to configure LLM or use the API key.
@@ -95,6 +126,19 @@ It generates smart commit messages. By default, it will just generate just the T
     parser.add_argument("-d", "--description", action="store_false", help="It will generate commit message with title and description.", default=False)
     
 def handle_commit(args):
+    """Handle the commit functionality by processing arguments and invoking the
+    appropriate commands.
+
+    This function processes the provided command-line arguments to configure
+    settings for commit operations, including LLM (Language Model) and Jira
+    configurations. It then calls the `commit_code` function with these
+    configurations to perform the actual commit operation.
+
+    Args:
+        args (argparse.Namespace): The parsed command-line arguments containing options like terminal,
+            description, message, etc.
+    """
+
     from penify_hook.commands.commit_commands import commit_code
     from penify_hook.commands.config_commands import get_jira_config, get_llm_config, get_token
     from penify_hook.constants import API_URL

@@ -16,6 +16,21 @@ class TestWebConfig:
     @patch('socketserver.TCPServer')
     @patch('pkg_resources.resource_filename')
     def test_config_llm_web_server_setup(self, mock_resource_filename, mock_server, mock_webbrowser):
+        """Set up and test the web server configuration for an LLM (Large Language
+        Model) web interface.
+
+        This function configures a mock web server for testing purposes,
+        including setting up resource filenames, mocking server behavior, and
+        verifying that the web browser is opened and the server starts
+        correctly. The function uses various mocks to simulate external
+        dependencies such as `resource_filename` and `server`.
+
+        Args:
+            mock_resource_filename (MagicMock): A MagicMock object simulating the `resource_filename` function.
+            mock_server (MagicMock): A MagicMock object simulating the context manager for the web server.
+            mock_webbrowser (MagicMock): A MagicMock object simulating the `webbrowser` module.
+        """
+
         # Setup mocks
         mock_resource_filename.return_value = 'mock/template/path'
         mock_server_instance = MagicMock()
@@ -42,6 +57,20 @@ class TestWebConfig:
     @patch('socketserver.TCPServer')
     @patch('pkg_resources.resource_filename')
     def test_config_jira_web_server_setup(self, mock_resource_filename, mock_server, mock_webbrowser):
+        """Test the configuration and setup of a JIRA web server.
+
+        This function tests the entire process of setting up a JIRA web server,
+        including mocking necessary resources, configuring the server to shut
+        down after handling one request, and verifying that the web browser is
+        opened with the correct URL. The function uses several mocks to simulate
+        external dependencies such as resource files, servers, and web browsers.
+
+        Args:
+            mock_resource_filename (MagicMock): A MagicMock object for simulating the `resource_filename` function.
+            mock_server (MagicMock): A MagicMock object for simulating the server setup.
+            mock_webbrowser (MagicMock): A MagicMock object for simulating the web browser opening.
+        """
+
         # Setup mocks
         mock_resource_filename.return_value = 'mock/template/path'
         mock_server_instance = MagicMock()

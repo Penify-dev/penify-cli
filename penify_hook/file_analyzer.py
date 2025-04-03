@@ -28,10 +28,10 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         """Process a file by reading its content and sending it to an API for
         processing.
 
-        This function checks if the provided file has a supported extension. If
-        the file is valid, it reads the content of the file and sends it to an
-        API client for further processing. If the API responds successfully, the
-        original file content is replaced with the response.
+        This function validates the provided file extension, reads the content
+        of the file, and sends it to an API client for further processing. If
+        the API responds successfully, the original file content is replaced
+        with the response.
 
         Args:
             file_path (str): The relative path to the file that needs to be processed.

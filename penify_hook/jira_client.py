@@ -46,7 +46,7 @@ class JiraClient:
     def is_connected(self) -> bool:
         """Check if the JIRA client is connected.
 
-        This function checks whether the JIRA client has successfully
+        This function verifies whether the JIRA client has successfully
         established a connection. It returns `True` if the client is connected,
         and `False` otherwise.
 
@@ -83,6 +83,12 @@ class JiraClient:
     
     def extract_issue_keys(self, text: str) -> List[str]:
         """Extract JIRA issue keys from a given text.
+
+        This function searches through the provided text to find and return all
+        unique JIRA issue keys. A JIRA issue key typically follows the pattern
+        of PROJECT-123, where PROJECT is alphanumeric and consists of at least
+        one uppercase letter followed by one or more alphanumeric characters,
+        and 123 is a numeric sequence.
 
         Args:
             text (str): The text in which to search for JIRA issue keys.
@@ -162,8 +168,8 @@ class JiraClient:
         """Update the status of a JIRA issue.
 
         Args:
-            issue_key (str): The key of the JIRA issue to be updated (e.g., "PROJECT-123").
-            transition_name (str): The name of the desired transition (e.g., "In Progress", "Done").
+            issue_key (str): The key of the JIRA issue to be updated.
+            transition_name (str): The name of the desired transition.
 
         Returns:
             bool: True if the status was successfully updated, False otherwise.
@@ -202,8 +208,8 @@ class JiraClient:
             commit_title (str): The original commit title.
             commit_description (str): The original commit description.
             issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
-                provided,
-                issue keys will be extracted from both the title and the description.
+                provided, issue keys will be extracted from both the title and the
+                description.
 
         Returns:
             tuple: A tuple containing the updated commit title and description with JIRA
@@ -246,8 +252,15 @@ class JiraClient:
         return updated_title, updated_description
 
     def get_detailed_issue_context(self, issue_key: str) -> Dict[str, Any]:
-        """Get comprehensive details about a JIRA issue including context for
+        """Retrieve comprehensive details about a JIRA issue including context for
         better commit messages.
+
+        This function fetches detailed information from a specified JIRA issue
+        and constructs a dictionary containing various context fields such as
+        the issue summary, description, type, status, priority, comments, URL,
+        and additional custom fields like acceptance criteria and sprint
+        information. If any errors occur during the fetching process,
+        appropriate warnings or errors are logged.
 
         Args:
             issue_key (str): The JIRA issue key (e.g., "PROJECT-123").

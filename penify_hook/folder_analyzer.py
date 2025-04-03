@@ -12,12 +12,12 @@ class FolderAnalyzerGenHook(BaseAnalyzer):
         super().__init__(dir_path, api_client)
 
     def list_all_files_in_dir(self, dir_path: str):
-        """List all files in a directory and its subdirectories.
+        """List all non-hidden files in a directory and its subdirectories.
 
-        This function traverses the specified directory using `os.walk`,
-        collecting paths of all non-hidden files into a list. It filters out
-        hidden directories (those starting with a dot) to ensure only visible
-        files are returned.
+        This function recursively traverses the specified directory and its
+        subdirectories, collecting paths of all non-hidden files. It filters out
+        hidden directories and files (those starting with a dot) to ensure only
+        visible files are returned.
 
         Args:
             dir_path (str): The path to the directory whose files and subdirectory files need to be

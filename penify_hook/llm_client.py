@@ -26,17 +26,30 @@ class LLMClient:
             os.environ["OPENAI_API_KEY"] = api_key
     
     def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None) -> Dict:
-        """
-        Generate a commit summary using the LLM.
-        
+        """Generate a commit summary using the LLM.
+
+        This function generates a concise and descriptive commit summary based
+        on the provided Git diff, user instructions, repository details, and
+        optional JIRA context. It constructs a prompt for the LLM to produce a
+        commit title and an optional detailed description, adhering to Semantic
+        Commit Messages guidelines. If the JIRA context is provided, it enriches
+        the prompt with relevant issue information.
+
         Args:
-            diff: Git diff of changes
-            message: User-provided commit message or instructions
-            repo_details: Details about the repository
-            jira_context: Optional JIRA issue context to enhance the summary
-            
+            diff (str): Git diff of changes.
+            message (str): User-provided commit message or instructions.
+            generate_description (bool): Flag indicating whether to include a detailed description in the
+                summary.
+            repo_details (Dict): Details about the repository.
+            jira_context (Dict?): Optional JIRA issue context to enhance the summary.
+
         Returns:
-            Dict with title and description for the commit
+            Dict: A dictionary containing the title and description for the commit. If
+                generate_description is False,
+                the 'description' key may be absent.
+
+        Raises:
+            ValueError: If the LLM model is not configured.
         """
         if not self.model:
             raise ValueError("LLM model not configured. Please provide a model when initializing LLMClient.")
