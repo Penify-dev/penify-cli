@@ -9,8 +9,14 @@ from pathlib import Path
 from ..api_client import APIClient
 
 def save_credentials(api_key):
-    """
-    Save the token and API keys in the .penify file in the user's home directory.
+    """Save or update the API keys in the .penify file in the user's home
+    directory.
+
+    Args:
+        api_key (str): The new API key to be saved or updated.
+
+    Returns:
+        bool: if the credentials were successfully saved, False otherwise.
     """
     home_dir = Path.home()
     penify_file = home_dir / '.penify'
@@ -35,8 +41,20 @@ def save_credentials(api_key):
         return False
 
 def login(api_url, dashboard_url):
-    """
-    Open the login page in a web browser and listen for the redirect URL to capture the token.
+    """Open the login page in a web browser and listen for the redirect URL to
+    capture the token.
+
+    This function generates a random redirect port, constructs the full
+    login URL with the provided dashboard URL, opens the login page in the
+    default web browser, and sets up a simple HTTP server to listen for the
+    redirect. Upon receiving the redirect, it extracts the token from the
+    query parameters, fetches API keys using the token, saves them if
+    successful, and handles login failures by notifying the user.
+
+    Args:
+        api_url (str): The URL of the API service to fetch API keys.
+        dashboard_url (str): The URL of the dashboard where the user will be redirected after logging
+            in.
     """
     redirect_port = random.randint(30000, 50000)
     redirect_url = f"http://localhost:{redirect_port}/callback"
@@ -48,6 +66,16 @@ def login(api_url, dashboard_url):
     
     class TokenHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
+            """Handle a GET request to process login token and redirect or display
+            error message.
+
+            This method processes the incoming GET request, extracts the token from
+            the query string, and performs actions based on whether the token is
+            present. If the token is valid, it redirects the user to the Penify
+            dashboard and fetches API keys if successful. If the token is invalid,
+            it displays an error message.
+            """
+
             query = urllib.parse.urlparse(self.path).query
             query_components = urllib.parse.parse_qs(query)
             token = query_components.get("token", [None])[0]

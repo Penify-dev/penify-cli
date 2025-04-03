@@ -11,7 +11,7 @@ class GitRepoNotFoundError(Exception):
 
 
 def get_repo_details(repo: Repo):
-    """Get the details of a Git repository, including its hosting service,
+    """Get details of a Git repository, including its hosting service,
     organization name, and repository name.
 
     This function extracts these details from the remote URL of the provided
@@ -77,12 +77,6 @@ def get_repo_details(repo: Repo):
 def recursive_search_git_folder(folder_path):
     """Recursively search for the .git folder in the specified directory and
     return its parent directory.
-
-    This function takes a folder path as input and checks if the specified
-    directory contains a '.git' folder. If it does, the function returns the
-    path of that directory. If not, it recursively searches the parent
-    directory until it finds a '.git' folder or reaches the root of the
-    filesystem.
 
     Args:
         folder_path (str): The path of the directory to search for the .git folder.

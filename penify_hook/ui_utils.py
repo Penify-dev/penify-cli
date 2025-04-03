@@ -68,7 +68,8 @@ def format_error(message):
 
     This function takes a plain error message and wraps it in ANSI escape
     codes to apply the specified error color, ensuring that the error
-    message is visually distinct when output.
+    message is visually distinct when output. The function supports various
+    error colors defined by constants like `ERROR_COLOR`.
 
     Args:
         message (str): The plain text error message to be formatted.
@@ -117,7 +118,7 @@ def print_info(message):
     print(format_info(message))
 
 def print_success(message):
-    """Print a success message with appropriate formatting.
+    """Print a formatted success message.
 
     This function takes a string `message` and prints it as a formatted
     success message. The formatting includes adding a prefix "Success: " to
@@ -131,6 +132,10 @@ def print_success(message):
 def print_warning(message):
     """Print a warning message with appropriate formatting.
 
+    This function takes a warning message as input and prints it with
+    formatted output. The formatting may include color, timestamp, or other
+    styles to emphasize that it is a warning.
+
     Args:
         message (str): The warning message to be printed.
     """
@@ -138,6 +143,10 @@ def print_warning(message):
 
 def print_error(message):
     """Print an error message with appropriate formatting.
+
+    This function takes a string message, formats it as an error message,
+    and then prints it. The formatting typically includes prefixing the
+    message with "Error: " to clearly indicate that it is an error.
 
     Args:
         message (str): The error message to be printed.
