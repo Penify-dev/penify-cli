@@ -113,6 +113,11 @@ class CommitDocGenHook(BaseAnalyzer):
     def process_jira_integration(self, title: str, description: str, msg: str) -> tuple:
         """Process JIRA integration for the commit message.
 
+        This function processes the provided commit title, description, and user
+        message to look for JIRA issue keys. It extracts issue keys from the
+        message content, branch name, and adds comments to the corresponding
+        JIRA issues.
+
         Args:
             title (str): Generated commit title.
             description (str): Generated commit description.

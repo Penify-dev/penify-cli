@@ -92,13 +92,12 @@ class GitDocGenHook(BaseAnalyzer):
         """Process a file by checking its type, reading its content, and sending it
         to an API.
 
-        This method constructs the absolute path of the specified file and
-        verifies if the file has a valid extension. If the file type is
-        supported, it reads the content of the file and retrieves the
-        differences from the last commit in the repository. If changes are
-        detected, it sends the file content along with the modified lines to an
-        API for further processing. If the API response indicates no changes,
-        the original file will not be overwritten.
+        This method constructs the absolute path of the specified file, verifies
+        if the file has a valid extension, reads the content of the file,
+        retrieves the differences from the last commit in the repository. If
+        changes are detected, it sends the file content along with the modified
+        lines to an API for further processing. If the API response indicates no
+        changes, the original file will not be overwritten.
 
         Args:
             file_path (str): The relative path to the file to be processed.
@@ -160,6 +159,9 @@ class GitDocGenHook(BaseAnalyzer):
         processing, printing an error message for each file that fails to
         process. If any modifications are made to the files, an auto-commit is
         created to save those changes.
+
+        Args:
+            self (DocGenHook): An instance of the DocGenHook class.
         """
         logger.info("Starting doc_gen_hook processing")
         print_info("Starting doc_gen_hook processing")

@@ -101,10 +101,10 @@ def test_generate_doc_folder_location(mock_api_client, mock_folder_analyzer,
                                      mock_file_analyzer, mock_git_analyzer):
     """Test the function to generate documentation for a folder location.
 
-    It sets up mock objects for API client, folder analyzer, file analyzer,
-    and Git analyzer, then calls the `generate_doc` function with specified
-    parameters. Finally, it asserts that the correct methods on the mock
-    objects were called as expected.
+    This function sets up mock objects for API client, folder analyzer, file
+    analyzer, and Git analyzer. It then calls the `generate_doc` function
+    with specified parameters and asserts that the correct methods on the
+    mock objects were called as expected.
 
     Args:
         mock_api_client (MagicMock): Mock object for the API client.
@@ -134,11 +134,9 @@ def test_generate_doc_folder_location(mock_api_client, mock_folder_analyzer,
 @patch('penify_hook.commands.doc_commands.GitDocGenHook')
 @patch('penify_hook.api_client.APIClient')
 def test_generate_doc_error_handling(mock_api_client, mock_git_analyzer, mock_exit):
-    """Generate a documentation string for the provided code snippet using
-    Google Docstring style.
+    """Test function to ensure proper error handling during API calls with
+    GitAnalyzer.
 
-    Short one line description: Test function to ensure proper error
-    handling during API calls with GitAnalyzer.  Multiline long description:
     This test function is designed to verify that the generate_doc function
     handles exceptions correctly when an error occurs during API interaction
     with GitAnalyzer. It sets up a mock API client and a mock Git analyzer,
@@ -168,10 +166,9 @@ def test_generate_doc_error_handling(mock_api_client, mock_git_analyzer, mock_ex
 
 def test_setup_docgen_parser():
     """Test the setup_docgen_parser function to ensure it properly configures
-    the ArgumentParser for docgen options.
-
-    It verifies that the parser correctly sets up docgen options and handles
-    different subcommands like 'install-hook' and 'uninstall-hook'.
+    the ArgumentParser for docgen options.  It verifies that the parser
+    correctly sets up docgen options and handles different subcommands like
+    'install-hook' and 'uninstall-hook'.
     """
 
     parser = ArgumentParser()
@@ -201,9 +198,9 @@ def test_handle_docgen_install_hook(mock_exit, mock_get_token, mock_generate_doc
                                    mock_uninstall_hook, mock_install_hook):
     """Test the handling of the 'install-hook' subcommand.
 
-    This function sets up a mock environment where it simulates the
-    execution of the 'install-hook' subcommand. It verifies that the
-    `mock_install_hook` is called with the correct arguments, while
+    This function sets up a mock environment to simulate the execution of
+    the 'install-hook' subcommand. It verifies that the `mock_install_hook`
+    is called with the correct arguments while ensuring that
     `mock_generate_doc` and `mock_uninstall_hook` are not called.
 
     Args:
@@ -233,7 +230,8 @@ def test_handle_docgen_install_hook(mock_exit, mock_get_token, mock_generate_doc
 def test_handle_docgen_uninstall_hook(mock_exit, mock_get_token, mock_generate_doc, 
                                      mock_uninstall_hook, mock_install_hook):
     """Test the uninstall-hook subcommand of the handle_docgen function.
-    This test case sets up a mock environment and verifies that the
+
+    This function sets up a mock environment and verifies that the
     uninstall-hook is called with the correct location, while generate_doc
     and install_hook are not called.
 
@@ -311,11 +309,13 @@ def test_handle_docgen_no_token(mock_exit, mock_get_token):
 @patch('penify_hook.commands.doc_commands.os.getcwd')
 @patch('penify_hook.api_client.APIClient')
 def test_generate_doc_with_file_exception(mock_api_client, mock_getcwd):
-    """Generate documentation from a Python source file.
+    """Test generating documentation from a Python source file with an
+    exception.
 
-    This function reads a Python file and generates a docstring based on its
-    content. It uses mock objects to simulate API calls and directory
-    operations during testing.
+    This function reads a Python file and attempts to generate a docstring
+    based on its content. It uses mock objects to simulate API calls and
+    directory operations during testing. If an exception occurs during the
+    process, it raises a SystemExit with status code 1.
 
     Args:
         mock_api_client (unittest.mock.MagicMock): A mock object for simulating API client behavior.
@@ -334,18 +334,17 @@ def test_generate_doc_with_file_exception(mock_api_client, mock_getcwd):
 @patch('penify_hook.commands.doc_commands.os.getcwd')
 @patch('penify_hook.api_client.APIClient')
 def test_generate_doc_with_folder_exception(mock_api_client, mock_getcwd):
-    """Generate documentation from a given API endpoint and save it to a
-    folder.
+    """Test that a SystemExit exception is raised when an error occurs during
+    the fetching process.
 
-    This function fetches data from the specified API endpoint, processes
-    it, and saves the generated documentation in the provided folder. If an
-    error occurs during the fetching process, a SystemExit exception is
-    raised with an appropriate message.
+    This function tests the behavior of the `generate_doc` function when an
+    error occurs during the fetching process. It sets up a mock API client
+    to simulate a failure and checks if a SystemExit exception is raised
+    with the appropriate message.
 
     Args:
-        api_url (str): The URL of the API endpoint from which data will be fetched.
-        token (str): The authentication token required to access the API.
-        folder_path (str): The path to the folder where the documentation will be saved.
+        mock_api_client (MagicMock): A mock object for the API client, simulating an error.
+        mock_getcwd (MagicMock): A mock object for `os.getcwd`, returning a fake directory path.
     """
 
     # Setup

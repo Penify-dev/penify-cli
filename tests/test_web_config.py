@@ -19,11 +19,11 @@ class TestWebConfig:
         """Set up and test the web server configuration for an LLM (Large Language
         Model) web interface.
 
-        This function configures a mock web server for testing purposes,
-        including setting up resource filenames, mocking server behavior, and
-        verifying that the web browser is opened and the server starts
-        correctly. The function uses various mocks to simulate external
-        dependencies such as `resource_filename` and `server`.
+        This function configures a mock web server for testing purposes. It sets
+        up resource filenames, mocks server behavior, and verifies that the web
+        browser is opened and the server starts correctly. The function uses
+        various mocks to simulate external dependencies such as
+        `resource_filename` and `server`.
 
         Args:
             mock_resource_filename (MagicMock): A MagicMock object simulating the `resource_filename` function.

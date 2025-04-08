@@ -103,10 +103,10 @@ class FileAnalyzerGenHook(BaseAnalyzer):
             return False
     
     def print_processing(self, file_path):
-        """Print a processing message for a file.
+        """Print a processing message for a specified file.
 
         Args:
-            file_path (str): The path to the file being processed.
+            file_path (str): The path to the file that is being processed.
         """
         formatted_path = format_file_path(file_path)
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")

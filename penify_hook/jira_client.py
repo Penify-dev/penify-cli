@@ -51,18 +51,17 @@ class JiraClient:
         and `False` otherwise.
 
         Returns:
-            bool: True if the JIRA client is connected, False otherwise
+            bool: True if the JIRA client is connected, False otherwise.
         """
         return self.jira_client is not None
     
     def extract_issue_keys_from_branch(self, branch_name: str) -> List[str]:
         """Extracts JIRA issue keys from a branch name.
 
-        This function searches through a given git branch name to find and
-        return any JIRA issue keys that match the pattern. Common conventions
-        for JIRA issue keys in branch names include: -
-        feature/PROJECT-123-description - bugfix/PROJECT-123-fix-something -
-        hotfix/PROJECT-123/short-desc
+        Searches through a given git branch name to find and return any JIRA
+        issue keys that match the pattern. Common conventions for JIRA issue
+        keys in branch names include: - feature/PROJECT-123-description -
+        bugfix/PROJECT-123-fix-something - hotfix/PROJECT-123/short-desc
 
         Args:
             branch_name (str): The name of the git branch to search for JIRA issue keys.
@@ -146,11 +145,11 @@ class JiraClient:
         """Add a comment to a JIRA issue.
 
         Args:
-            issue_key (str): JIRA issue key (e.g., "PROJECT-123")
-            comment (str): Comment text to add
+            issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
+            comment (str): The text of the comment to be added.
 
         Returns:
-            bool: True if the comment was added successfully, False otherwise
+            bool: True if the comment was added successfully, False otherwise.
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")

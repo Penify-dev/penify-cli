@@ -13,8 +13,8 @@ def handle_login(args):
         args (argparse.Namespace): Parsed arguments containing necessary parameters for the login command.
 
     Returns:
-        None: This function does not return any value; it is expected to handle the
-            login process internally.
+        None: This function does not return any value; it is expected to handle
+            the login process internally.
     """
 
     from penify_hook.constants import API_URL, DASHBOARD_URL

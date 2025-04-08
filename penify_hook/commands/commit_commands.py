@@ -8,22 +8,23 @@ from penify_hook.ui_utils import print_info, print_warning
 def commit_code(api_url, token, message, open_terminal, generate_description,
                llm_model=None, llm_api_base=None, llm_api_key=None,
                jira_url=None, jira_user=None, jira_api_token=None):
-    """Enhance Git commits with AI-powered commit messages.
+    """Generate enhanced Git commits with AI-powered commit messages.
 
-    This function allows for the generation of enhanced commit messages
-    using natural language processing models and optionally integrates with
-    JIRA for additional context. It processes the current Git folder to find
-    relevant files and generates a detailed commit message based on the
-    provided parameters.
+    This function processes the current Git folder to find relevant files
+    and generates a detailed commit message using natural language
+    processing models. It optionally integrates with JIRA for additional
+    context based on provided parameters. The function requires
+    authentication tokens for both the API and potentially JIRA.
 
     Args:
         api_url (str): URL of the API endpoint.
         token (str): Authentication token for the API.
         message (str): Initial commit message provided by the user.
         open_terminal (bool): Whether to open the terminal after committing.
-        generate_description (bool): Whether to generate a detailed description in the commit message.
-        llm_model (str?): The language model to use for generating the commit message. Defaults to
-            None.
+        generate_description (bool): Whether to generate a detailed description
+            in the commit message.
+        llm_model (str?): The language model to use for generating the
+            commit message. Defaults to None.
         llm_api_base (str?): Base URL of the LLM API. Defaults to None.
         llm_api_key (str?): API key for accessing the LLM service. Defaults to None.
         jira_url (str?): URL of the JIRA instance. Defaults to None.

@@ -24,8 +24,8 @@ def get_repo_details(repo: Repo):
 
     Returns:
         dict: A dictionary containing keys for 'organization_name', 'repo_name', and
-            'vendor' which represent the organization name, repository name, and
-            hosting service respectively.
+            'vendor' which represent the
+            organization name, repository name, and hosting service respectively.
     """
     remote_url = None
     hosting_service = "Unknown"
@@ -75,15 +75,15 @@ def get_repo_details(repo: Repo):
     }
 
 def recursive_search_git_folder(folder_path):
-    """Recursively search for the .git folder in the specified directory and
+    """Recursively search for the `.git` folder in the specified directory and
     return its parent directory.
 
     Args:
-        folder_path (str): The path of the directory to search for the .git folder.
+        folder_path (str): The path of the directory to search for the `.git` folder.
 
     Returns:
-        str: The path of the directory containing the .git folder. If no .git folder
-            is found, returns None.
+        str: The path of the directory containing the `.git` folder. If no `.git`
+            folder is found, returns `None`.
     """
     if os.path.isdir(folder_path):
         if '.git' in os.listdir(folder_path):
@@ -110,8 +110,8 @@ def find_git_parent(path):
         str: The absolute path to the parent directory containing the `.git` folder.
 
     Raises:
-        GitRepoNotFoundError: If no Git repository is found in the specified path or any of its parent
-            directories.
+        GitRepoNotFoundError: If no Git repository is found in the specified path or any of its
+            parent directories.
     """
 
     current_dir = os.path.abspath(path)

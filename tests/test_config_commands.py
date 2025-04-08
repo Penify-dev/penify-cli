@@ -25,12 +25,6 @@ class TestConfigCommands:
 
         It should not create a new directory and assert that all mocked
         functions were called correctly.
-
-        Args:
-            mock_file_open (MagicMock): A MagicMock object simulating the open() function.
-            mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
-            mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
-            mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
         """
 
         # Mock git folder search
@@ -62,7 +56,7 @@ class TestConfigCommands:
         not exist.
 
         This function mocks various system calls to simulate a scenario where
-        the .penify directory is not present. It then asserts that the
+        the `.penify` directory is not present. It then asserts that the
         appropriate actions are taken to create the directory and write an empty
         JSON file.
 
@@ -187,12 +181,11 @@ class TestConfigCommands:
     @patch('builtins.open', new_callable=mock_open, read_data='{"jira": {"url": "https://jira.example.com", "username": "user", "api_token": "token"}}')
     def test_get_jira_config_exists(self, mock_file_open, mock_get_config):
         """Test that get_jira_config returns the correct JIRA configuration when
-        the configuration file exists.
-
-        It sets up a mock for the configuration file to simulate its existence
-        and verifies that the function reads from the correct file and returns
-        the expected JIRA configuration dictionary. Additionally, it checks that
-        the mock file open is called with the appropriate arguments.
+        the configuration file exists.  This function sets up a mock for the
+        configuration file to simulate its existence, calls the
+        `get_jira_config` function, and verifies that it reads from the correct
+        file and returns the expected JIRA configuration dictionary. It also
+        checks that the mock file open is called with the appropriate arguments.
 
         Args:
             mock_file_open (MagicMock): A mock for the `open` function.
@@ -268,9 +261,8 @@ class TestConfigCommands:
     @patch('builtins.print')
     def test_save_llm_config_failure(self, mock_print, mock_file_open, mock_get_config):
         """Test function to verify that the save_llm_config function returns False
-        and prints an error message when it fails to save the LLM configuration
-        due to a permission error.
-
+        and prints an error message
+        when it fails to save the LLM configuration due to a permission error.
         It sets up a mock configuration file that exists and calls the
         save_llm_config function with valid parameters. The function is expected
         to return False and print "Error saving LLM configuration: Permission
@@ -378,16 +370,18 @@ class TestConfigCommands:
     def test_get_token_from_config(self, mock_file_open, mock_path, mock_getenv):
         """Test retrieving a token from the configuration.
 
-        This function sets up mocks for environment variables and configuration
-        files, calls the `get_token` function, and asserts its behavior. It
-        verifies that when the environment variable is not found, the function
-        reads a token from a configuration file located in the user's home
-        directory.
+        This function tests the behavior of the `get_token` function when the
+        environment variable is not found. It sets up mocks for the environment
+        variable and the configuration file, calls the function, and asserts
+        that it correctly reads a token from the user's home directory
+        configuration file.
 
         Args:
-            mock_file_open (MagicMock): A mock for the `open` function.
-            mock_path (MagicMock): A mock for the `pathlib.Path` class.
-            mock_getenv (MagicMock): A mock for the `os.getenv` function.
+            mock_file_open (MagicMock): A mock for the `open` function used to read the configuration file.
+            mock_path (MagicMock): A mock for the `pathlib.Path` class representing the home directory
+                path.
+            mock_getenv (MagicMock): A mock for the `os.getenv` function to simulate the absence of the
+                environment variable.
         """
 
         # Setup mock for env var (not found)

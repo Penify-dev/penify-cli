@@ -51,7 +51,7 @@ class TestCommitCommands:
 
         This function yields a tuple containing a mock JIRA client instance and
         its `is_connected` method. The mock client is configured to simulate an
-        active connection. This is useful for unit tests that require
+        active connection, making it suitable for unit tests that require
         interaction with a JIRA client without making actual network calls.
 
         Yields:
@@ -113,14 +113,13 @@ class TestCommitCommands:
         purposes.
 
         This function uses Python's `unittest.mock.patch` to replace the actual
-        print functions (`print`, `print_warning`, and `print_error`) with mock
-        objects. These mock objects can be used in tests to capture calls made
-        to these print functions without actually printing anything.
+        print functions (`print_info`, `print_warning`, and `print_error`) with
+        mock objects. These mock objects can be used in tests to capture calls
+        made to these print functions without actually printing anything.
 
         Yields:
             tuple: A tuple containing three mock objects corresponding to `print_info`,
-                `print_warning`,
-                and `print_error`.
+                `print_warning`, and `print_error`.
         """
 
         with patch('penify_hook.ui_utils.print_info', create=True) as mock_info, \
@@ -322,9 +321,9 @@ class TestCommitCommands:
     @patch('builtins.print')
     def test_commit_code_error_handling(self, mock_print, mock_exit, 
                                        mock_git_folder_search, mock_doc_gen, mock_api_client):
-        """Test the error handling in the test_commit_code function.
+        """Test the error handling in the commit_code function.
 
-        This function sets up mocks to simulate exceptions and test the error
+        This function sets up mocks to simulate exceptions and tests the error
         handling of the commit_code function. It verifies that the function
         correctly prints an error message and exits with a status code of 1 when
         an exception occurs during documentation generation.
@@ -360,12 +359,12 @@ class TestCommitCommands:
         """Set up the argument parser for the commit command.
 
         This function configures an argument parser to handle various options
-        for committing changes. It adds three arguments: - '-m' or '--message':
-        An optional argument to specify a contextual commit message with a
-        default value of "N/A". - '-e' or '--terminal': A boolean flag to open
-        an edit terminal before committing. - '-d' or '--description': A boolean
-        flag that, when set to False, indicates the generation of a commit
-        message with title and description.
+        for committing changes. It adds three arguments: '-m' or '--message': An
+        optional argument to specify a contextual commit message with a default
+        value of "N/A". '-e' or '--terminal': A boolean flag to open an edit
+        terminal before committing. '-d' or '--description': A boolean flag
+        that, when set to False, indicates the generation of a commit message
+        with title and description.
 
         Args:
             parser (MagicMock): The argument parser to be configured.

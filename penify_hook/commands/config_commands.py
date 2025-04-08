@@ -95,7 +95,8 @@ def save_jira_config(url, username, api_token):
 
     This function reads existing JIRA configuration from the .penify file,
     updates or adds new JIRA configuration details, and writes it back to
-    the file.
+    the file. If the .penify file does not exist or is invalid JSON, it will
+    be created or corrected.
 
     Args:
         url (str): The URL of the JIRA instance.
@@ -157,11 +158,12 @@ def get_llm_config():
     return {}
 
 def get_jira_config():
-    """Get JIRA configuration from the .penify file.
+    """Retrieve JIRA configuration from a JSON file specified in the .penify
+    file.
 
-    This function reads the JIRA configuration from a JSON file specified in
-    the .penify file. If the .penify file exists and contains valid JSON
-    with a 'jira' key, it returns the corresponding configuration.
+    This function reads the JIRA configuration from a JSON file designated
+    in the .penify file. If the .penify file is present and contains valid
+    JSON with a 'jira' key, it returns the corresponding configuration.
     Otherwise, it returns an empty dictionary.
 
     Returns:
@@ -184,7 +186,7 @@ def config_llm_web():
     This function starts a temporary HTTP server that serves an HTML
     template for configuring Large Language Model (LLM) settings. It handles
     GET and POST requests to retrieve the current configuration, save new
-    configurations, and suppress log messages.  The server runs on a random
+    configurations, and suppress log messages. The server runs on a random
     port between 30000 and 50000, and it is accessible via a URL like
     http://localhost:<redirect_port>. The function opens this URL in the
     default web browser for configuration. Once configured, the server shuts
@@ -328,8 +330,8 @@ def config_jira_web():
 
             This function processes GET requests based on the path requested. It
             serves an HTML template for the root path, returns a JSON configuration
-            for a specific endpoint, and handles any other paths by returning a 404
-            error.
+            for a specific endpoint ("/get_config"), and handles any other paths by
+            returning a 404 error.
             """
 
             if self.path == "/":
@@ -437,7 +439,7 @@ def config_jira_web():
     print("Configuration completed.")
 
 def get_token():
-    """Get the token based on priority from environment variables or
+    """Get the API token based on priority from environment variables or
     configuration files.
 
     Returns:

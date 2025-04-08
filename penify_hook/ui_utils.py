@@ -82,6 +82,10 @@ def format_error(message):
 def format_highlight(message):
     """Format a highlighted message with appropriate color.
 
+    This function takes a message and wraps it in ANSI escape codes to apply
+    a highlight style. The highlighting is reset afterward using
+    Style.RESET_ALL.
+
     Args:
         message (str): The message to be formatted and highlighted.
 
@@ -188,7 +192,11 @@ def print_status(status, message):
         print(f"  {PROCESSING_SYMBOL} {message}")
 
 def create_progress_bar(total, desc="Processing", unit="item"):
-    """Create a tqdm progress bar with consistent styling.
+    """Create a consistent tqdm progress bar.
+
+    This function generates and returns a configured tqdm progress bar with
+    customizable total, description, and unit. The progress bar is formatted
+    with a fixed width and uses ASCII characters for rendering.
 
     Args:
         total (int): Total number of items to process.
@@ -197,6 +205,13 @@ def create_progress_bar(total, desc="Processing", unit="item"):
 
     Returns:
         tqdm: A configured tqdm progress bar instance.
+
+    Examples:
+        >>> from tqdm import tqdm
+        >>> pbar = create_progress_bar(100, desc="Downloading", unit="file")
+        >>> for i in range(100):
+        ...     time.sleep(0.1)
+        ...     pbar.update(1)
     """
     return tqdm(
         total=total,
@@ -210,9 +225,9 @@ def create_stage_progress_bar(stages, desc="Processing"):
     """Create a tqdm progress bar for processing stages with consistent
     styling.
 
-    This function initializes and returns a tqdm progress bar object for
-    tracking the progress through a series of stages. It also provides a
-    description for the progress bar to enhance its usability.
+    Initialize and returns a tqdm progress bar object to track the progress
+    through a series of stages. Optionally provide a description to enhance
+    its usability.
 
     Args:
         stages (list): A list of strings representing individual stages in the process.
