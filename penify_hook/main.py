@@ -4,19 +4,29 @@ import time
 
 
 def main():
-    """Main function to handle command-line interface (CLI) interactions with
-    Penify services.
 
-    This tool provides a command-line interface for generating smart commit
-    messages, configuring local-LLM and JIRA, and generating code
-    documentation. It supports basic commands that do not require login and
-    advanced commands that require user authentication. The `--version` flag
-    can be used to display the version information.
-
+    """Save the processed files map to a JSON file.
+    
+    Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+    description of each parameter is optional, but should be included if not obvious.
+    
+    Args:
+        dictionary (dict): The processed files map.
+    
     Returns:
-        int: Exit status of the program (0 for success, 1 for error).
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
-
     parser = argparse.ArgumentParser(
         description="""Penify CLI tool for:
 1. AI commit message generation with JIRA integration to enhance commit messages.
