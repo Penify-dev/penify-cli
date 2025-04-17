@@ -19,24 +19,27 @@ logger = logging.getLogger(__name__)
 
 class FileAnalyzerGenHook(BaseAnalyzer):
     def __init__(self, file_path: str, api_client: APIClient):
+        """Initialize a new instance of the class with the given file path and API client.
+        
+        Args:
+            file_path (str): The path to the file.
+            api_client (APIClient): An instance of the APIClient class.
+        """
         self.file_path = file_path
         super().__init__(file_path, api_client)
         
 
 
     def process_file(self, file_path, pbar):
-        """Process a file by reading its content and sending it to an API for
-        processing.
-
-        This function validates the provided file extension, reads the content
-        of the file, and sends it to an API client for further processing. If
-        the API responds successfully, the original file content is replaced
-        with the response.
-
+        """Process a file by reading its content and sending it to an API for processing.
+        
+        This function validates the provided file extension, reads the content of the file, and sends it to an API client for
+        further processing. If the API responds successfully, the original file content is replaced with the response.
+        
         Args:
             file_path (str): The relative path to the file that needs to be processed.
             pbar (tqdm): Progress bar to update during processing.
-
+        
         Returns:
             bool: True if the file was processed successfully, False otherwise.
         """
@@ -104,7 +107,7 @@ class FileAnalyzerGenHook(BaseAnalyzer):
     
     def print_processing(self, file_path):
         """Print a processing message for a file.
-
+        
         Args:
             file_path (str): The path to the file being processed.
         """
@@ -112,20 +115,18 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
     def run(self):
+        
+        # Create a progress bar with appropriate stages
         """Run the post-commit hook.
-
-        This method executes the post-commit hook by processing a specified
-        file. It attempts to process the file located at `self.file_path`. If an
-        error occurs during the processing, it catches the exception and prints
-        an error message indicating that the file was not processed. The method
-        displays a progress bar and colored output to provide visual feedback on
-        the processing status.
-
+        
+        This method executes the post-commit hook by processing a specified file. It attempts to process the file located at
+        `self.file_path`. If an error occurs during the processing, it catches the exception and prints an error message
+        indicating that the file was not processed. The method displays a progress bar and colored output to provide visual
+        feedback on the processing status.
+        
         Args:
             self (PostCommitHook): An instance of the PostCommitHook class.
         """
-        
-        # Create a progress bar with appropriate stages
         stages = ["Validating", "Reading content", "Documenting", "Writing changes", "Completed"]
         pbar, _ = create_stage_progress_bar(stages, f"Starting documenting")
         

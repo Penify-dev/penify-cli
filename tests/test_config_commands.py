@@ -20,20 +20,18 @@ class TestConfigCommands:
     @patch('os.makedirs')
     @patch('builtins.open', new_callable=mock_open)
     def test_get_penify_config_existing_dir(self, mock_file_open, mock_makedirs, mock_path, mock_git_folder):
-        """Test the get_penify_config function when the .penify config directory
-        exists.
 
-        It should not create a new directory and assert that all mocked
-        functions were called correctly.
-
+        # Mock git folder search
+        """Test the get_penify_config function when the .penify config directory exists.
+        
+        It should not create a new directory and assert that all mocked functions were called correctly.
+        
         Args:
             mock_file_open (MagicMock): A MagicMock object simulating the open() function.
             mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
             mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
             mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
         """
-
-        # Mock git folder search
         mock_git_folder.return_value = '/mock/git/folder'
         
         # Mock Path operations
@@ -58,22 +56,19 @@ class TestConfigCommands:
     @patch('os.makedirs')
     @patch('builtins.open', new_callable=mock_open)
     def test_get_penify_config_new_dir(self, mock_file_open, mock_makedirs, mock_path, mock_git_folder):
-        """Test the behavior of get_penify_config when the .penify directory does
-        not exist.
 
-        This function mocks various system calls to simulate a scenario where
-        the .penify directory is not present. It then asserts that the
-        appropriate actions are taken to create the directory and write an empty
-        JSON file.
-
+        # Mock git folder search
+        """Test the behavior of get_penify_config when the .penify directory does not exist.
+        
+        Mock various system calls to simulate a scenario where the .penify directory is not present. Assert that the appropriate
+        actions are taken to create the directory and write an empty JSON file.
+        
         Args:
             mock_file_open (MagicMock): A MagicMock object simulating the `open` function.
             mock_makedirs (MagicMock): A MagicMock object simulating the `os.makedirs` function.
             mock_path (MagicMock): A MagicMock object simulating the `Path` class from `pathlib`.
             mock_git_folder (MagicMock): A MagicMock object simulating a git folder search function.
         """
-
-        # Mock git folder search
         mock_git_folder.return_value = '/mock/git/folder'
         
         # Mock Path operations
@@ -95,20 +90,18 @@ class TestConfigCommands:
     @patch('penify_hook.commands.config_commands.get_penify_config')
     @patch('builtins.open', new_callable=mock_open, read_data='{"llm": {"model": "gpt-4", "api_base": "https://api.openai.com", "api_key": "test-key"}}')
     def test_get_llm_config_exists(self, mock_file_open, mock_get_config):
+
+        # Setup mock
         """Test the get_llm_config function when the configuration file exists.
-
-        This function sets up a mock configuration file that exists and returns
-        it when called. It then calls the get_llm_config function and asserts
-        that it returns the correct configuration dictionary. Additionally, it
-        checks that the mock_file_open function was called with the correct
-        arguments.
-
+        
+        This function sets up a mock configuration file that exists and returns it when called. It then calls the get_llm_config
+        function and asserts that it returns the correct configuration dictionary. Additionally, it checks that the
+        mock_file_open function was called with the correct arguments.
+        
         Args:
             mock_file_open (MagicMock): A mock for the open() function.
             mock_get_config (MagicMock): A mock for the get_config() function.
         """
-
-        # Setup mock
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
         mock_get_config.return_value = mock_config_file
@@ -127,20 +120,18 @@ class TestConfigCommands:
     @patch('penify_hook.commands.config_commands.get_penify_config')
     @patch('builtins.open', new_callable=mock_open, read_data='{}')
     def test_get_llm_config_empty(self, mock_file_open, mock_get_config):
-        """Test the behavior of get_llm_config when called with an empty
-        configuration file.
 
-        This function sets up a mock configuration file that exists but returns
-        no content. It then calls the `get_llm_config` function and asserts that
-        it returns an empty dictionary and that the file open method was called
-        exactly once with the correct arguments.
-
+        # Setup mock
+        """Test the behavior of get_llm_config when called with an empty configuration file.
+        
+        This function sets up a mock configuration file that exists but returns no content. It then calls the `get_llm_config`
+        function and asserts that it returns an empty dictionary and that the file open method was called exactly once with the
+        correct arguments.
+        
         Args:
             mock_file_open (MagicMock): A MagicMock object simulating the built-in open function.
             mock_get_config (MagicMock): A MagicMock object simulating the get_config function.
         """
-
-        # Setup mock
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
         mock_get_config.return_value = mock_config_file
@@ -156,21 +147,13 @@ class TestConfigCommands:
     @patch('builtins.open', new_callable=mock_open, read_data='invalid json')
     @patch('builtins.print')
     def test_get_llm_config_invalid_json(self, mock_print, mock_file_open, mock_get_config):
-        """Test function to verify the behavior of get_llm_config when reading an
-        invalid JSON file.
-
-        It sets up a mock configuration file that exists but contains invalid
-        JSON. The function is expected to handle this gracefully by printing an
-        error message and returning an empty dictionary.
-
-        Args:
-            mock_print (MagicMock): Mock for the print function.
-            mock_file_open (MagicMock): Mock for the open function.
-            mock_get_config (MagicMock): Mock for the get_config function, which returns the mock configuration
-                file.
-        """
 
         # Setup mock
+        """Test function to verify the behavior of get_llm_config when reading an invalid JSON file.
+        
+        It sets up a mock configuration file that exists but contains invalid JSON. The function is expected to handle this
+        gracefully by printing an error message and returning an empty dictionary.
+        """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
         mock_get_config.return_value = mock_config_file
@@ -186,25 +169,21 @@ class TestConfigCommands:
     @patch('penify_hook.commands.config_commands.get_penify_config')
     @patch('builtins.open', new_callable=mock_open, read_data='{"jira": {"url": "https://jira.example.com", "username": "user", "api_token": "token"}}')
     def test_get_jira_config_exists(self, mock_file_open, mock_get_config):
+
+        # Setup mock
         """Test that get_jira_config returns the correct JIRA configuration when
-        the configuration file exists.
-
-        It sets up a mock for the configuration file to simulate its existence
-        and verifies that the function reads from the correct file and returns
-        the expected JIRA configuration dictionary. Additionally, it checks that
-        the mock file open is called with the appropriate arguments.
-
+        the configuration file exists.  This function sets up a mock for the configuration file to simulate its existence and
+        verifies that the function reads from the correct file and returns the expected JIRA configuration dictionary. It also
+        checks that the mock file open is called with the appropriate arguments.
+        
         Args:
             mock_file_open (MagicMock): A mock for the `open` function.
             mock_get_config (MagicMock): A mock for the `get_config` function, which is expected to return a mock
                 configuration file object.
-
+        
         Returns:
-            None: This test function does not explicitly return anything. Its assertions
-                serve as the verification of its correctness.
+            None: This test function does not explicitly return anything. Its assertions serve as the verification of its correctness.
         """
-
-        # Setup mock
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
         mock_get_config.return_value = mock_config_file
@@ -225,21 +204,20 @@ class TestConfigCommands:
     @patch('json.dump')
     @patch('builtins.print')
     def test_save_llm_config_success(self, mock_print, mock_json_dump, mock_file_open, mock_get_config):
+
+        # Setup mock
         """Test the save_llm_config function successfully.
-
-        This function tests that the save_llm_config function correctly saves an
-        LLM configuration and handles various mock objects and side effects. It
-        ensures that the function returns True upon successful execution, writes
-        the expected configuration to a file, and prints a confirmation message.
-
+        
+        This function tests that the save_llm_config function correctly saves an LLM configuration and handles various mock
+        objects and side effects. It ensures that the function returns True upon successful execution, writes the expected
+        configuration to a file, and prints a confirmation message.
+        
         Args:
             mock_print (MagicMock): A mock object for the print function.
             mock_json_dump (MagicMock): A mock object for json.dump.
             mock_file_open (MagicMock): A mock object for file opening.
             mock_get_config (MagicMock): A mock object to return a configuration file mock.
         """
-
-        # Setup mock
         mock_config_file = MagicMock()
         mock_get_config.return_value = mock_config_file
         mock_file_open.return_value.__enter__.return_value = mock_file_open
@@ -267,26 +245,22 @@ class TestConfigCommands:
     @patch('builtins.open', side_effect=IOError("Permission denied"))
     @patch('builtins.print')
     def test_save_llm_config_failure(self, mock_print, mock_file_open, mock_get_config):
-        """Test function to verify that the save_llm_config function returns False
-        and prints an error message when it fails to save the LLM configuration
-        due to a permission error.
-
-        It sets up a mock configuration file that exists and calls the
-        save_llm_config function with valid parameters. The function is expected
-        to return False and print "Error saving LLM configuration: Permission
-        denied" in case of a failure.
-
-        Args:
-            self (TestLLMConfig): An instance of the test class.
-            mock_print (MagicMock): A MagicMock object representing the print function, which will be used
-                to assert that it was called with the expected error message.
-            mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in
-                this test but is included as a parameter for completeness.
-            mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be
-                used to return the mock configuration file.
-        """
 
         # Setup mock
+        """Test function to verify that the save_llm_config function returns False and prints an error message when it fails to
+        save the LLM configuration due to a permission error.
+        
+        It sets up a mock configuration file that exists and calls the save_llm_config function with valid parameters. The
+        function is expected to return False and print "Error saving LLM configuration: Permission denied" in case of a failure.
+        
+        Args:
+            self (TestLLMConfig): An instance of the test class.
+            mock_print (MagicMock): A MagicMock object representing the print function, which will be used to assert that it was called with the expected
+                error message.
+            mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in this test but is included as a parameter for
+                completeness.
+            mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be used to return the mock configuration file.
+        """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
         mock_get_config.return_value = mock_config_file
@@ -303,22 +277,20 @@ class TestConfigCommands:
     @patch('json.dump')
     @patch('builtins.print')
     def test_save_jira_config_success(self, mock_print, mock_json_dump, mock_file_open, mock_path):
-        """Test the save_jira_config function to ensure it saves JIRA configuration
-        successfully.
 
-        This function sets up mocks for various dependencies and tests the
-        functionality of saving a JIRA configuration. It asserts that the
-        function returns `True`, the JSON dump is called with the correct
-        configuration, and the print statement contains the expected message.
-
+        # Setup mock
+        """Test the save_jira_config function to ensure it saves JIRA configuration successfully.
+        
+        This function sets up mocks for various dependencies and tests the functionality of saving a JIRA configuration.  It
+        asserts that the function returns `True`, the JSON dump is called with the correct configuration,  and the print
+        statement contains the expected message.
+        
         Args:
             mock_print (MagicMock): Mock for the print function.
             mock_json_dump (MagicMock): Mock for the json.dump function.
             mock_file_open (MagicMock): Mock for the open function.
             mock_path (MagicMock): Mock for the path module.
         """
-
-        # Setup mock
         mock_home_dir = MagicMock()
         mock_path.home.return_value = mock_home_dir
         mock_home_dir.__truediv__.return_value = mock_home_dir
@@ -347,20 +319,13 @@ class TestConfigCommands:
     @patch('penify_hook.commands.config_commands.Path')
     @patch('builtins.open', new_callable=mock_open, read_data='{"api_keys": "config-token"}')
     def test_get_token_from_env(self, mock_file_open, mock_path, mock_getenv):
-        """Test retrieving a token from the environment variable.
-
-        This function tests the behavior of `get_token` when an environment
-        variable is set. It verifies that if the 'PENIFY_API_TOKEN' environment
-        variable exists, the function returns its value without attempting to
-        read a file.
-
-        Args:
-            mock_file_open (MagicMock): A MagicMock object for simulating file operations.
-            mock_path (MagicMock): A MagicMock object for simulating path operations.
-            mock_getenv (MagicMock): A MagicMock object for simulating environment variable retrieval.
-        """
 
         # Setup mock for env var
+        """Test retrieving a token from the environment variable.
+        
+        This function tests the behavior of `get_token` when an environment variable is set. It verifies that if the
+        'PENIFY_API_TOKEN' environment variable exists, the function returns its value without attempting to read a file.
+        """
         mock_getenv.return_value = "env-token"
         
         # Call function
@@ -376,21 +341,19 @@ class TestConfigCommands:
     @patch('penify_hook.commands.config_commands.Path')
     @patch('builtins.open', new_callable=mock_open, read_data='{"api_keys": "config-token"}')
     def test_get_token_from_config(self, mock_file_open, mock_path, mock_getenv):
+
+        # Setup mock for env var (not found)
         """Test retrieving a token from the configuration.
-
-        This function sets up mocks for environment variables and configuration
-        files, calls the `get_token` function, and asserts its behavior. It
-        verifies that when the environment variable is not found, the function
-        reads a token from a configuration file located in the user's home
-        directory.
-
+        
+        This function sets up mocks for environment variables and configuration files, calls the `get_token` function, and
+        asserts its behavior. It verifies that when the environment variable is not found, the function reads a token from a
+        configuration file located in the user's home directory.
+        
         Args:
             mock_file_open (MagicMock): A mock for the `open` function.
             mock_path (MagicMock): A mock for the `pathlib.Path` class.
             mock_getenv (MagicMock): A mock for the `os.getenv` function.
         """
-
-        # Setup mock for env var (not found)
         mock_getenv.return_value = None
         
         # Setup mock for config file
@@ -411,27 +374,23 @@ class TestConfigCommands:
     @patch('penify_hook.commands.config_commands.Path')
     @patch('builtins.open', new_callable=mock_open, read_data='{"other_key": "value"}')
     def test_get_token_not_found(self, mock_file_open, mock_path, mock_getenv):
-        """Test the get_token function when the API token environment variable is
-        not found.
 
-        This function tests the scenario where the `PENIFY_API_TOKEN`
-        environment variable is not set. It mocks the environment variable to
-        return `None`, and verifies that the function returns `None`. The test
-        also checks that the environment variable is accessed once and that a
-        file open operation is attempted on a configuration file located in the
-        user's home directory.
-
+        # Setup mock for env var (not found)
+        """Test the get_token function when the API token environment variable is not found.
+        
+        This function tests the scenario where the `PENIFY_API_TOKEN` environment variable is not set. It mocks the environment
+        variable to return `None`, and verifies that the function returns `None`. The test also checks that the environment
+        variable is accessed once and that a file open operation is attempted on a configuration file located in the user's home
+        directory.
+        
         Args:
             mock_file_open (MagicMock): Mock for the built-in `open` function.
             mock_path (MagicMock): Mock for the `pathlib.Path` module.
             mock_getenv (MagicMock): Mock for the `os.getenv` function.
-
+        
         Returns:
-            None: The function does not return anything; it asserts conditions to verify
-                correctness.
+            None: The function does not return anything; it asserts conditions to verify correctness.
         """
-
-        # Setup mock for env var (not found)
         mock_getenv.return_value = None
         
         # Setup mock for config file

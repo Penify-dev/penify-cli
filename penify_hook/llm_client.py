@@ -10,15 +10,17 @@ class LLMClient:
     """
     
     def __init__(self, model: str = None, api_base: str = None, api_key: str = None):
-        """
-        Initialize the LLM client.
+        # Configure litellm if parameters are provided
+        """Initialize the LLM client.
+        
+        This function configures and initializes the LLM client with the provided model, API base URL, and API key. If any of
+        these parameters are provided, they will be used to set environment variables for interacting with the LLM service.
         
         Args:
-            model: LLM model to use (e.g., "gpt-4", "ollama/llama2", etc.)
-            api_base: Base URL for API requests (e.g., "http://localhost:11434" for Ollama)
-            api_key: API key for the LLM service
-        """        
-        # Configure litellm if parameters are provided
+            model (str?): The LLM model to use (e.g., "gpt-4", "ollama/llama2", etc.). Defaults to None.
+            api_base (str?): The base URL for API requests (e.g., "http://localhost:11434" for Ollama). Defaults to None.
+            api_key (str?): The API key for the LLM service. Defaults to None.
+        """
         self.model = model
         if api_base:
             os.environ["OPENAI_API_BASE"] = api_base
@@ -26,28 +28,24 @@ class LLMClient:
             os.environ["OPENAI_API_KEY"] = api_key
     
     def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None) -> Dict:
-        """Generate a commit summary using the LLM.
-
-        This function generates a concise and descriptive commit summary based
-        on the provided Git diff, user instructions, repository details, and
-        optional JIRA context. It constructs a prompt for the LLM to produce a
-        commit title and an optional detailed description, adhering to Semantic
-        Commit Messages guidelines. If the JIRA context is provided, it enriches
-        the prompt with relevant issue information.
-
+        """Generate a concise and descriptive commit summary using the LLM.
+        
+        This function generates a concise and descriptive commit summary based on the provided Git diff, user instructions,
+        repository details, and optional JIRA context. It constructs a prompt for the LLM to produce a commit title and an
+        optional detailed description, adhering to Semantic Commit Messages guidelines. If the JIRA context is provided, it
+        enriches the prompt with relevant issue information.
+        
         Args:
             diff (str): Git diff of changes.
             message (str): User-provided commit message or instructions.
-            generate_description (bool): Flag indicating whether to include a detailed description in the
-                summary.
+            generate_description (bool): Flag indicating whether to include a detailed description in the summary.
             repo_details (Dict): Details about the repository.
-            jira_context (Dict?): Optional JIRA issue context to enhance the summary.
-
+            jira_context (Dict?): Optional JIRA issue context to enhance the summary. Defaults to None.
+        
         Returns:
-            Dict: A dictionary containing the title and description for the commit. If
-                generate_description is False,
-                the 'description' key may be absent.
-
+            Dict: A dictionary containing the title and description for the commit. If generate_description is False,
+            the 'description' key may be absent.
+        
         Raises:
             ValueError: If the LLM model is not configured.
         """

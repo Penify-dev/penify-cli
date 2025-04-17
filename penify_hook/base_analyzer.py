@@ -7,6 +7,12 @@ from penify_hook.utils import get_repo_details, recursive_search_git_folder
 class BaseAnalyzer:
     
     def __init__(self, folder_path: str, api_client: APIClient):
+        """Initialize an instance of YourClassName with a folder path and an API client.
+        
+        Args:
+            folder_path (str): The path to the directory containing the repository.
+            api_client (APIClient): An instance of the APIClient class for interacting with external services.
+        """
         self.folder_path = folder_path
         self.repo_path = recursive_search_git_folder(folder_path)
         self.repo = None

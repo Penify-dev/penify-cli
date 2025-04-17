@@ -15,13 +15,12 @@ class JiraClient:
     """
     
     def __init__(self, jira_url: str = None, jira_user: str = None, jira_api_token: str = None):
-        """
-        Initialize the JIRA client.
+        """Initialize the JIRA client.
         
         Args:
-            jira_url: Base URL for JIRA instance (e.g., "https://your-domain.atlassian.net")
-            jira_user: JIRA username or email
-            jira_api_token: JIRA API token
+            jira_url (str): Base URL for JIRA instance (e.g., "https://your-domain.atlassian.net")
+            jira_user (str): JIRA username or email
+            jira_api_token (str): JIRA API token
         """
         self.jira_url = jira_url
         self.jira_user = jira_user
@@ -45,36 +44,33 @@ class JiraClient:
     
     def is_connected(self) -> bool:
         """Check if the JIRA client is connected.
-
-        This function verifies whether the JIRA client has successfully
-        established a connection. It returns `True` if the client is connected,
-        and `False` otherwise.
-
+        
+        This function verifies whether the JIRA client has successfully established a connection. It returns `True` if the
+        client is connected, and `False` otherwise.
+        
         Returns:
             bool: True if the JIRA client is connected, False otherwise
         """
         return self.jira_client is not None
     
     def extract_issue_keys_from_branch(self, branch_name: str) -> List[str]:
+        # Common JIRA issue key pattern: PROJECT-123
         """Extracts JIRA issue keys from a branch name.
-
-        This function searches through a given git branch name to find and
-        return any JIRA issue keys that match the pattern. Common conventions
-        for JIRA issue keys in branch names include: -
-        feature/PROJECT-123-description - bugfix/PROJECT-123-fix-something -
-        hotfix/PROJECT-123/short-desc
-
+        
+        This function searches through a given git branch name to find and return any JIRA issue keys that match the pattern.
+        Common conventions for JIRA issue keys in branch names include: - feature/PROJECT-123-description -
+        bugfix/PROJECT-123-fix-something - hotfix/PROJECT-123/short-desc
+        
         Args:
             branch_name (str): The name of the git branch to search for JIRA issue keys.
-
+        
         Returns:
             List[str]: A list of unique JIRA issue keys found in the branch name.
-
+        
         Examples:
             extract_issue_keys_from_branch("feature/PROJ-456-add-new-feature")
             # Output: ['PROJ-456']
         """
-        # Common JIRA issue key pattern: PROJECT-123
         pattern = r'[A-Z][A-Z0-9_]+-[0-9]+'
         matches = re.findall(pattern, branch_name)
         if matches:
@@ -82,44 +78,37 @@ class JiraClient:
         return list(set(matches))  # Remove duplicates
     
     def extract_issue_keys(self, text: str) -> List[str]:
+        # Common JIRA issue key pattern: PROJECT-123
         """Extract JIRA issue keys from a given text.
-
-        This function searches through the provided text to find and return all
-        unique JIRA issue keys. A JIRA issue key typically follows the pattern
-        of PROJECT-123, where PROJECT is alphanumeric and consists of at least
-        one uppercase letter followed by one or more alphanumeric characters,
-        and 123 is a numeric sequence.
-
+        
+        This function searches through the provided text to find and return all unique JIRA issue keys. A JIRA issue key
+        typically follows the pattern of PROJECT-123, where PROJECT is alphanumeric and consists of at least one uppercase
+        letter followed by one or more alphanumeric characters, and 123 is a numeric sequence.
+        
         Args:
             text (str): The text in which to search for JIRA issue keys.
-
+        
         Returns:
             List[str]: A list of unique JIRA issue keys found in the text.
         """
-        # Common JIRA issue key pattern: PROJECT-123
         pattern = r'[A-Z][A-Z0-9_]+-[0-9]+'
         matches = re.findall(pattern, text)
         return list(set(matches))  # Remove duplicates
     
     def get_issue_details(self, issue_key: str) -> Optional[Dict[str, Any]]:
         """Retrieve details of a JIRA issue based on its key.
-
-        This function fetches detailed information about a specified JIRA issue
-        using the provided issue key. It checks if the JIRA client is connected
-        before attempting to retrieve the issue. If the client is not connected,
-        it logs a warning and returns `None`. The function then attempts to
-        fetch the issue from the JIRA server and constructs a dictionary
-        containing various details about the issue such as its key, summary,
-        status, description, assignee, reporter, type, priority, and URL. If any
-        errors occur during this process, they are logged, and `None` is
-        returned.
-
+        
+        This function fetches detailed information about a specified JIRA issue using the provided issue key.  It checks if the
+        JIRA client is connected before attempting to retrieve the issue. If the client is not connected,  it logs a warning and
+        returns `None`. The function then attempts to fetch the issue from the JIRA server and constructs  a dictionary
+        containing various details about the issue such as its key, summary, status, description, assignee, reporter,  type,
+        priority, and URL. If any errors occur during this process, they are logged, and `None` is returned.
+        
         Args:
             issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
-
+        
         Returns:
-            Dict[str, Any] or None: A dictionary containing the details of the JIRA
-                issue if found, otherwise `None`.
+            Dict[str, Any] or None: A dictionary containing the details of the JIRA issue if found, otherwise `None`.
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")
@@ -144,13 +133,13 @@ class JiraClient:
     
     def add_comment(self, issue_key: str, comment: str) -> bool:
         """Add a comment to a JIRA issue.
-
+        
         Args:
-            issue_key (str): JIRA issue key (e.g., "PROJECT-123")
-            comment (str): Comment text to add
-
+            issue_key (str): The JIRA issue key, e.g., "PROJECT-123".
+            comment (str): The text of the comment to be added.
+        
         Returns:
-            bool: True if the comment was added successfully, False otherwise
+            bool: True if the comment was added successfully, False otherwise.
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")
@@ -166,11 +155,16 @@ class JiraClient:
     
     def update_issue_status(self, issue_key: str, transition_name: str) -> bool:
         """Update the status of a JIRA issue.
-
+        
+        This function updates the status of a specified JIRA issue by transitioning it to a new state based on the provided
+        transition name. It first checks if the JIRA client is connected and then attempts to find the appropriate transition ID
+        from the available transitions. If found, it applies the transition and logs the update. If any errors occur during the
+        process, it logs an error message.
+        
         Args:
             issue_key (str): The key of the JIRA issue to be updated.
             transition_name (str): The name of the desired transition.
-
+        
         Returns:
             bool: True if the status was successfully updated, False otherwise.
         """
@@ -202,20 +196,20 @@ class JiraClient:
             return False
             
     def format_commit_message_with_jira_info(self, commit_title: str, commit_description: str, issue_keys: List[str] = None) -> tuple:
+        # If no issue keys provided, extract them from title and description
         """Format commit message with JIRA issue information.
-
+        
         Args:
             commit_title (str): The original commit title.
             commit_description (str): The original commit description.
             issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
                 provided, issue keys will be extracted from both the title and the
                 description.
-
+        
         Returns:
             tuple: A tuple containing the updated commit title and description with JIRA
                 information included.
         """
-        # If no issue keys provided, extract them from title and description
         if not issue_keys:
             title_keys = self.extract_issue_keys(commit_title)
             desc_keys = self.extract_issue_keys(commit_description)
@@ -252,19 +246,16 @@ class JiraClient:
         return updated_title, updated_description
 
     def get_detailed_issue_context(self, issue_key: str) -> Dict[str, Any]:
-        """Retrieve comprehensive details about a JIRA issue including context for
-        better commit messages.
-
-        This function fetches detailed information from a specified JIRA issue
-        and constructs a dictionary containing various context fields such as
-        the issue summary, description, type, status, priority, comments, URL,
-        and additional custom fields like acceptance criteria and sprint
-        information. If any errors occur during the fetching process,
-        appropriate warnings or errors are logged.
-
+        """Retrieve comprehensive details about a JIRA issue including context for better commit messages.
+        
+        This function fetches detailed information from a specified JIRA issue and constructs a dictionary containing various
+        context fields such as the issue summary, description, type, status, priority, comments, URL, and additional custom
+        fields like acceptance criteria and sprint information. If any errors occur during the fetching process, appropriate
+        warnings or errors are logged.
+        
         Args:
             issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
-
+        
         Returns:
             Dict[str, Any]: A dictionary containing business and technical context from the issue.
         """
@@ -336,19 +327,16 @@ class JiraClient:
             return {}
 
     def get_commit_context_from_issues(self, issue_keys: List[str]) -> Dict[str, Any]:
-        """Gather contextual information from JIRA issues to improve commit
-        messages.
-
-        This function processes a list of JIRA issue keys, retrieves detailed
-        context for each issue, and aggregates it into a dictionary that can be
-        used to enhance commit messages. It first retrieves the primary issue
-        (the first key in the list) and then gathers basic details for any
-        related issues. The resulting context includes information from both the
-        primary and related issues, along with all issue keys.
-
+        """Gather contextual information from JIRA issues to improve commit messages.
+        
+        This function processes a list of JIRA issue keys, retrieves detailed context for each issue, and aggregates it into a
+        dictionary that can be used to enhance commit messages. It first retrieves the primary issue (the first key in the list)
+        and then gathers basic details for any related issues. The resulting context includes information from both the primary
+        and related issues, along with all issue keys.
+        
         Args:
             issue_keys: List of JIRA issue keys to gather information from
-
+        
         Returns:
             Dict containing business and technical context from the issues
         """
@@ -375,17 +363,15 @@ class JiraClient:
         return context
 
     def enhance_commit_message(self, title: str, description: str, issue_keys: List[str]) -> tuple:
-        """Enhance a commit message with business and technical context from JIRA
-        issues.
-
+        """Enhance a commit message with business and technical context from JIRA issues.
+        
         Args:
             title (str): Original commit title.
             description (str): Original commit description.
             issue_keys (List[str]): List of JIRA issue keys to include in the enhanced commit message.
-
+        
         Returns:
-            tuple: A tuple containing the enhanced commit title and description with added
-                context from JIRA issues.
+            tuple: A tuple containing the enhanced commit title and description with added context from JIRA issues.
         """
         if not issue_keys or not self.is_connected():
             return title, description
