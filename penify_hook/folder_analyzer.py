@@ -8,26 +8,55 @@ from tqdm import tqdm
 
 class FolderAnalyzerGenHook(BaseAnalyzer):
     def __init__(self, dir_path: str, api_client: APIClient):
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
+        """
         self.dir_path = dir_path
         super().__init__(dir_path, api_client)
 
     def list_all_files_in_dir(self, dir_path: str):
-        """List all non-hidden files in a directory and its subdirectories.
 
-        This function recursively traverses the specified directory and its
-        subdirectories, collecting paths of all non-hidden files. It filters out
-        hidden directories and files (those starting with a dot) to ensure only
-        visible files are returned.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
         Args:
-            dir_path (str): The path to the directory whose files and subdirectory files need to be
-                listed.
-
+            dictionary (dict): The processed files map.
+        
         Returns:
-            list: A list containing the full paths of all non-hidden files within the
-                specified directory and its subdirectories.
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
-
         files = []
         for dirpath, dirnames, filenames in os.walk(dir_path):
             dirnames[:] = [d for d in dirnames if not d.startswith(".")]
@@ -38,16 +67,27 @@ class FolderAnalyzerGenHook(BaseAnalyzer):
         return files
 
     def run(self):
-        """Run the post-commit hook.
-
-        This function processes all files in a specified directory using a
-        progress bar. It lists all files, initializes a `FileAnalyzerGenHook`
-        for each file, and runs it. Errors during processing of individual files
-        are caught and logged, but do not stop the processing of other files. A
-        progress bar is displayed indicating the number of files processed.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
         Args:
-            self (PostCommitHook): The instance of the post-commit hook class.
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         try:
             file_list = self.list_all_files_in_dir(self.dir_path)
