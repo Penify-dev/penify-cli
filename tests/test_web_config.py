@@ -16,28 +16,80 @@ class TestWebConfig:
     @patch('socketserver.TCPServer')
     @patch('pkg_resources.resource_filename')
     def test_config_llm_web_server_setup(self, mock_resource_filename, mock_server, mock_webbrowser):
-        """Set up and test the web server configuration for an LLM (Large Language
-        Model) web interface.
-
-        This function configures a mock web server for testing purposes,
-        including setting up resource filenames, mocking server behavior, and
-        verifying that the web browser is opened and the server starts
-        correctly. The function uses various mocks to simulate external
-        dependencies such as `resource_filename` and `server`.
-
-        Args:
-            mock_resource_filename (MagicMock): A MagicMock object simulating the `resource_filename` function.
-            mock_server (MagicMock): A MagicMock object simulating the context manager for the web server.
-            mock_webbrowser (MagicMock): A MagicMock object simulating the `webbrowser` module.
-        """
 
         # Setup mocks
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        
+        Parameters
+        ----------
+        dictionary : dict
+            The processed files map.
+        
+        Returns
+        -------
+        bool
+            True if successful, False otherwise.
+        
+            The return type is optional and may be specified at the beginning of
+        
+            the ``Returns`` section followed by a colon.
+        
+            The ``Returns`` section may span multiple lines and paragraphs.
+        
+            Following lines should be indented to match the first line.
+        
+            The ``Returns`` section supports any reStructuredText formatting,
+        
+            including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+        """
         mock_resource_filename.return_value = 'mock/template/path'
         mock_server_instance = MagicMock()
         mock_server.return_value.__enter__.return_value = mock_server_instance
         
         # Mock the serve_forever method to stop after being called once
         def stop_server_after_call():
+            """Save the processed files map to a JSON file.
+            
+            Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+            description of each parameter is optional, but should be included if not obvious.
+            
+            
+            Parameters
+            ----------
+            dictionary : dict
+                The processed files map.
+            
+            Returns
+            -------
+            bool
+                True if successful, False otherwise.
+            
+                The return type is optional and may be specified at the beginning of
+            
+                the ``Returns`` section followed by a colon.
+            
+                The ``Returns`` section may span multiple lines and paragraphs.
+            
+                Following lines should be indented to match the first line.
+            
+                The ``Returns`` section supports any reStructuredText formatting,
+            
+                including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
+            """
             mock_server_instance.shutdown()
         mock_server_instance.serve_forever.side_effect = stop_server_after_call
         
@@ -57,27 +109,80 @@ class TestWebConfig:
     @patch('socketserver.TCPServer')
     @patch('pkg_resources.resource_filename')
     def test_config_jira_web_server_setup(self, mock_resource_filename, mock_server, mock_webbrowser):
-        """Test the configuration and setup of a JIRA web server.
-
-        This function tests the entire process of setting up a JIRA web server,
-        including mocking necessary resources, configuring the server to shut
-        down after handling one request, and verifying that the web browser is
-        opened with the correct URL. The function uses several mocks to simulate
-        external dependencies such as resource files, servers, and web browsers.
-
-        Args:
-            mock_resource_filename (MagicMock): A MagicMock object for simulating the `resource_filename` function.
-            mock_server (MagicMock): A MagicMock object for simulating the server setup.
-            mock_webbrowser (MagicMock): A MagicMock object for simulating the web browser opening.
-        """
 
         # Setup mocks
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        
+        Parameters
+        ----------
+        dictionary : dict
+            The processed files map.
+        
+        Returns
+        -------
+        bool
+            True if successful, False otherwise.
+        
+            The return type is optional and may be specified at the beginning of
+        
+            the ``Returns`` section followed by a colon.
+        
+            The ``Returns`` section may span multiple lines and paragraphs.
+        
+            Following lines should be indented to match the first line.
+        
+            The ``Returns`` section supports any reStructuredText formatting,
+        
+            including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+        """
         mock_resource_filename.return_value = 'mock/template/path'
         mock_server_instance = MagicMock()
         mock_server.return_value.__enter__.return_value = mock_server_instance
         
         # Mock the serve_forever method to stop after being called once
         def stop_server_after_call():
+            """Save the processed files map to a JSON file.
+            
+            Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+            description of each parameter is optional, but should be included if not obvious.
+            
+            
+            Parameters
+            ----------
+            dictionary : dict
+                The processed files map.
+            
+            Returns
+            -------
+            bool
+                True if successful, False otherwise.
+            
+                The return type is optional and may be specified at the beginning of
+            
+                the ``Returns`` section followed by a colon.
+            
+                The ``Returns`` section may span multiple lines and paragraphs.
+            
+                Following lines should be indented to match the first line.
+            
+                The ``Returns`` section supports any reStructuredText formatting,
+            
+                including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
+            """
             mock_server_instance.shutdown()
         mock_server_instance.serve_forever.side_effect = stop_server_after_call
         

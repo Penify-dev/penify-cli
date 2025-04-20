@@ -10,15 +10,40 @@ class LLMClient:
     """
     
     def __init__(self, model: str = None, api_base: str = None, api_key: str = None):
-        """
-        Initialize the LLM client.
-        
-        Args:
-            model: LLM model to use (e.g., "gpt-4", "ollama/llama2", etc.)
-            api_base: Base URL for API requests (e.g., "http://localhost:11434" for Ollama)
-            api_key: API key for the LLM service
-        """        
         # Configure litellm if parameters are provided
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        
+        Parameters
+        ----------
+        dictionary : dict
+            The processed files map.
+        
+        Returns
+        -------
+        bool
+            True if successful, False otherwise.
+        
+            The return type is optional and may be specified at the beginning of
+        
+            the ``Returns`` section followed by a colon.
+        
+            The ``Returns`` section may span multiple lines and paragraphs.
+        
+            Following lines should be indented to match the first line.
+        
+            The ``Returns`` section supports any reStructuredText formatting,
+        
+            including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+        """
         self.model = model
         if api_base:
             os.environ["OPENAI_API_BASE"] = api_base
@@ -26,30 +51,38 @@ class LLMClient:
             os.environ["OPENAI_API_KEY"] = api_key
     
     def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None) -> Dict:
-        """Generate a commit summary using the LLM.
-
-        This function generates a concise and descriptive commit summary based
-        on the provided Git diff, user instructions, repository details, and
-        optional JIRA context. It constructs a prompt for the LLM to produce a
-        commit title and an optional detailed description, adhering to Semantic
-        Commit Messages guidelines. If the JIRA context is provided, it enriches
-        the prompt with relevant issue information.
-
-        Args:
-            diff (str): Git diff of changes.
-            message (str): User-provided commit message or instructions.
-            generate_description (bool): Flag indicating whether to include a detailed description in the
-                summary.
-            repo_details (Dict): Details about the repository.
-            jira_context (Dict?): Optional JIRA issue context to enhance the summary.
-
-        Returns:
-            Dict: A dictionary containing the title and description for the commit. If
-                generate_description is False,
-                the 'description' key may be absent.
-
-        Raises:
-            ValueError: If the LLM model is not configured.
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        
+        Parameters
+        ----------
+        dictionary : dict
+            The processed files map.
+        
+        Returns
+        -------
+        bool
+            True if successful, False otherwise.
+        
+            The return type is optional and may be specified at the beginning of
+        
+            the ``Returns`` section followed by a colon.
+        
+            The ``Returns`` section may span multiple lines and paragraphs.
+        
+            Following lines should be indented to match the first line.
+        
+            The ``Returns`` section supports any reStructuredText formatting,
+        
+            including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
         """
         if not self.model:
             raise ValueError("LLM model not configured. Please provide a model when initializing LLMClient.")

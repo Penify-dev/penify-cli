@@ -10,14 +10,38 @@ penifycli docgen -gf {git_folder_path} -t {token}
 """
 
 def install_git_hook(location, token):
-    """Install a post-commit hook in the specified location that generates
-    documentation
-    for changed files after each commit.
-
-    Args:
-        location (str): The path to the Git repository where the hook should be installed.
-        token (str): The authentication token required to access the documentation generation
-            service.
+    """Save the processed files map to a JSON file.
+    
+    Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+    description of each parameter is optional, but should be included if not obvious.
+    
+    
+    Parameters
+    ----------
+    dictionary : dict
+        The processed files map.
+    
+    Returns
+    -------
+    bool
+        True if successful, False otherwise.
+    
+        The return type is optional and may be specified at the beginning of
+    
+        the ``Returns`` section followed by a colon.
+    
+        The ``Returns`` section may span multiple lines and paragraphs.
+    
+        Following lines should be indented to match the first line.
+    
+        The ``Returns`` section supports any reStructuredText formatting,
+    
+        including literal blocks::
+        
+        {
+        'param1': param1,
+        'param2': param2
+        }
     """
     hooks_dir = Path(location) / ".git/hooks"
     hook_path = hooks_dir / HOOK_FILENAME
@@ -34,15 +58,38 @@ def install_git_hook(location, token):
     print(f"Documentation will now be automatically generated after each commit.")
 
 def uninstall_git_hook(location):
-    """Uninstalls the post-commit hook from the specified location.
-
-    This function attempts to remove a post-commit git hook located at the
-    given path. It constructs the path to the hook and checks if it exists.
-    If the hook is found, it is deleted, and a confirmation message is
-    printed. If no hook is found, a message indicating this is also printed.
-
-    Args:
-        location (Path): The base directory where the .git/hooks directory is located.
+    """Save the processed files map to a JSON file.
+    
+    Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+    description of each parameter is optional, but should be included if not obvious.
+    
+    
+    Parameters
+    ----------
+    dictionary : dict
+        The processed files map.
+    
+    Returns
+    -------
+    bool
+        True if successful, False otherwise.
+    
+        The return type is optional and may be specified at the beginning of
+    
+        the ``Returns`` section followed by a colon.
+    
+        The ``Returns`` section may span multiple lines and paragraphs.
+    
+        Following lines should be indented to match the first line.
+    
+        The ``Returns`` section supports any reStructuredText formatting,
+    
+        including literal blocks::
+        
+        {
+        'param1': param1,
+        'param2': param2
+        }
     """
     hook_path = Path(location) / ".git/hooks" / HOOK_FILENAME
     
