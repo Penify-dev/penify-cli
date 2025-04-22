@@ -27,21 +27,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_git_folder.return_value = '/mock/git/folder'
         
@@ -74,21 +75,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_git_folder.return_value = '/mock/git/folder'
         
@@ -118,21 +120,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
@@ -159,21 +162,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
@@ -197,21 +201,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
@@ -235,21 +240,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
@@ -278,21 +284,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_config_file = MagicMock()
         mock_get_config.return_value = mock_config_file
@@ -328,21 +335,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_config_file = MagicMock()
         mock_config_file.exists.return_value = True
@@ -367,21 +375,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_home_dir = MagicMock()
         mock_path.home.return_value = mock_home_dir
@@ -418,21 +427,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_getenv.return_value = "env-token"
         
@@ -456,21 +466,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_getenv.return_value = None
         
@@ -499,21 +510,22 @@ class TestConfigCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_getenv.return_value = None
         

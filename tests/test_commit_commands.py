@@ -15,21 +15,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         with patch('penify_hook.api_client.APIClient', create=True) as mock:
             api_client_instance = MagicMock()
@@ -44,21 +45,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         with patch('penify_hook.llm_client.LLMClient', create=True) as mock:
             llm_client_instance = MagicMock()
@@ -73,21 +75,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         with patch('penify_hook.jira_client.JiraClient', create=True) as mock:
             jira_instance = MagicMock()
@@ -103,21 +106,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         with patch('penify_hook.commit_analyzer.CommitDocGenHook', create=True) as mock:
             doc_gen_instance = MagicMock()
@@ -132,21 +136,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         with patch('penify_hook.utils.recursive_search_git_folder', create=True) as mock:
             mock.return_value = '/mock/git/folder'
@@ -160,21 +165,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         with patch('penify_hook.ui_utils.print_info', create=True) as mock_info, \
              patch('penify_hook.ui_utils.print_warning', create=True) as mock_warning, \
@@ -198,21 +204,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         api_instance = MagicMock()
         mock_api_client.return_value = api_instance
@@ -265,21 +272,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         api_instance = MagicMock()
         mock_api_client.return_value = api_instance
@@ -336,21 +344,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         api_instance = MagicMock()
         mock_api_client.return_value = api_instance
@@ -394,21 +403,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_doc_gen.side_effect = Exception("Test error")
         mock_git_folder_search.return_value = '/mock/git/folder'
@@ -432,21 +442,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         parser = MagicMock()
         setup_commit_parser(parser)
@@ -472,21 +483,22 @@ class TestCommitCommands:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         mock_get_llm_config.return_value = {
             'model': 'test-model',
