@@ -10,21 +10,22 @@ class APIClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         self.api_url = api_url
         self.AUTH_TOKEN = api_token
@@ -36,21 +37,22 @@ class APIClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         payload = {
             'file_path': file_name,
@@ -77,21 +79,22 @@ class APIClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         payload = {
             'git_diff': git_diff,
@@ -126,21 +129,22 @@ class APIClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         url = self.api_url+"/v1/file/supported_languages"
         response = requests.get(url)
@@ -156,21 +160,22 @@ class APIClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         try:
             return llm_client.generate_commit_summary(diff, message, generate_description, repo_details, jira_context)
@@ -187,21 +192,22 @@ class APIClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         url = self.api_url+"/v1/apiToken/get"
         response = requests.get(url, headers={"Authorization": f"Bearer {self.BEARER_TOKEN}"}, timeout=60*10)

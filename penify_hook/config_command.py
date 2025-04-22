@@ -9,21 +9,22 @@ def setup_config_parser(parent_parser):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    @type dictionary: dict
-    @param dictionary: The processed files map.
-    @rtype: bool
-    @return: True if successful, False otherwise.
-    @return: The return type is optional and may be specified at the beginning of
-    @return: the ``Returns`` section followed by a colon.
-    @return: The ``Returns`` section may span multiple lines and paragraphs.
-    @return: Following lines should be indented to match the first line.
-    @return: The ``Returns`` section supports any reStructuredText formatting,
-    @return: including literal blocks::
-        
-        {
-        'param1': param1,
-        'param2': param2
-        }
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
     parser = parent_parser.add_subparsers(title="config_type", dest="config_type")
 
@@ -56,21 +57,22 @@ def handle_config(args):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    @type dictionary: dict
-    @param dictionary: The processed files map.
-    @rtype: bool
-    @return: True if successful, False otherwise.
-    @return: The return type is optional and may be specified at the beginning of
-    @return: the ``Returns`` section followed by a colon.
-    @return: The ``Returns`` section may span multiple lines and paragraphs.
-    @return: Following lines should be indented to match the first line.
-    @return: The ``Returns`` section supports any reStructuredText formatting,
-    @return: including literal blocks::
-        
-        {
-        'param1': param1,
-        'param2': param2
-        }
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
     from penify_hook.commands.config_commands import save_llm_config
     from penify_hook.jira_client import JiraClient  # Import moved here

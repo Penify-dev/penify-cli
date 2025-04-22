@@ -20,21 +20,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         self.jira_url = jira_url
         self.jira_user = jira_user
@@ -62,21 +63,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         return self.jira_client is not None
     
@@ -87,21 +89,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         pattern = r'[A-Z][A-Z0-9_]+-[0-9]+'
         matches = re.findall(pattern, branch_name)
@@ -116,21 +119,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         pattern = r'[A-Z][A-Z0-9_]+-[0-9]+'
         matches = re.findall(pattern, text)
@@ -142,21 +146,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")
@@ -185,21 +190,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")
@@ -219,21 +225,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")
@@ -269,21 +276,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not issue_keys:
             title_keys = self.extract_issue_keys(commit_title)
@@ -326,21 +334,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not self.is_connected():
             logging.warning("JIRA client not connected")
@@ -415,21 +424,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not issue_keys or not self.is_connected():
             return {}
@@ -459,21 +469,22 @@ class JiraClient:
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        @type dictionary: dict
-        @param dictionary: The processed files map.
-        @rtype: bool
-        @return: True if successful, False otherwise.
-        @return: The return type is optional and may be specified at the beginning of
-        @return: the ``Returns`` section followed by a colon.
-        @return: The ``Returns`` section may span multiple lines and paragraphs.
-        @return: Following lines should be indented to match the first line.
-        @return: The ``Returns`` section supports any reStructuredText formatting,
-        @return: including literal blocks::
-            
-            {
-            'param1': param1,
-            'param2': param2
-            }
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         if not issue_keys or not self.is_connected():
             return title, description

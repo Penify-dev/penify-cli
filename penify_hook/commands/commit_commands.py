@@ -14,21 +14,22 @@ def commit_code(api_url, token, message, open_terminal, generate_description,
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    @type dictionary: dict
-    @param dictionary: The processed files map.
-    @rtype: bool
-    @return: True if successful, False otherwise.
-    @return: The return type is optional and may be specified at the beginning of
-    @return: the ``Returns`` section followed by a colon.
-    @return: The ``Returns`` section may span multiple lines and paragraphs.
-    @return: Following lines should be indented to match the first line.
-    @return: The ``Returns`` section supports any reStructuredText formatting,
-    @return: including literal blocks::
-        
-        {
-        'param1': param1,
-        'param2': param2
-        }
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
     from penify_hook.ui_utils import print_error
     from penify_hook.utils import recursive_search_git_folder
@@ -103,21 +104,22 @@ def setup_commit_parser(parser):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    @type dictionary: dict
-    @param dictionary: The processed files map.
-    @rtype: bool
-    @return: True if successful, False otherwise.
-    @return: The return type is optional and may be specified at the beginning of
-    @return: the ``Returns`` section followed by a colon.
-    @return: The ``Returns`` section may span multiple lines and paragraphs.
-    @return: Following lines should be indented to match the first line.
-    @return: The ``Returns`` section supports any reStructuredText formatting,
-    @return: including literal blocks::
-        
-        {
-        'param1': param1,
-        'param2': param2
-        }
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
     commit_parser_description = """
 It generates smart commit messages. By default, it will just generate just the Title of the commit message.
@@ -141,21 +143,22 @@ def handle_commit(args):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    @type dictionary: dict
-    @param dictionary: The processed files map.
-    @rtype: bool
-    @return: True if successful, False otherwise.
-    @return: The return type is optional and may be specified at the beginning of
-    @return: the ``Returns`` section followed by a colon.
-    @return: The ``Returns`` section may span multiple lines and paragraphs.
-    @return: Following lines should be indented to match the first line.
-    @return: The ``Returns`` section supports any reStructuredText formatting,
-    @return: including literal blocks::
-        
-        {
-        'param1': param1,
-        'param2': param2
-        }
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
     from penify_hook.commands.commit_commands import commit_code
     from penify_hook.commands.config_commands import get_jira_config, get_llm_config, get_token
