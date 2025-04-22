@@ -13,6 +13,17 @@ from .api_client import APIClient
 
 class CommitDocGenHook(BaseAnalyzer):
     def __init__(self, repo_path: str, api_client: APIClient, llm_client=None, jira_client=None):
+        """Initialize a new instance of the class.
+        
+        This method initializes a new instance with the provided repository path, API client, and optionally LLM and JIRA
+        clients.
+        
+        Args:
+            repo_path (str): The path to the repository.
+            api_client (APIClient): The API client used for communication.
+            llm_client (LLMClient?): An optional LLM client for additional functionalities. Defaults to None.
+            jira_client (JiraClient?): An optional JIRA client for integration with JIRA. Defaults to None.
+        """
         super().__init__(repo_path, api_client)
 
         self.llm_client = llm_client  # Add LLM client as an optional parameter
@@ -20,25 +31,20 @@ class CommitDocGenHook(BaseAnalyzer):
 
     def get_summary(self, instruction: str, generate_description: bool) -> dict:
         """Generate a summary for the commit based on the staged changes.
-
-        This function retrieves the differences of the staged changes in the
-        repository and generates a commit summary using the provided
-        instruction. If there are no changes staged for commit, an exception is
-        raised. If a JIRA client is connected, it will attempt to extract issue
-        keys from the current branch and use them to fetch context. The summary
-        can be generated either with a Language Model (LLM) client or through
-        the API client.
-
+        
+        This function retrieves the differences of the staged changes in the repository and generates a commit summary using the
+        provided instruction. If there are no changes staged for commit, an exception is raised. If a JIRA client is connected,
+        it will attempt to extract issue keys from the current branch and use them to fetch context. The summary can be
+        generated either with a Language Model (LLM) client or through the API client.
+        
         Args:
             instruction (str): A string containing instructions for generating the commit summary.
             generate_description (bool): Whether to include detailed descriptions in the summary.
-
+        
         Returns:
-            dict: The generated commit summary based on the staged changes, provided
-                instruction, and any relevant JIRA context. The dictionary contains keys
-                such as 'summary', 'description', etc., depending on whether a
-                description was requested.
-
+            dict: The generated commit summary based on the staged changes, provided instruction, and any relevant JIRA context. The
+                dictionary contains keys such as 'summary', 'description', etc., depending on whether a description was requested.
+        
         Raises:
             ValueError: If there are no changes staged for commit.
         """
@@ -72,19 +78,16 @@ class CommitDocGenHook(BaseAnalyzer):
    
     def run(self, msg: Optional[str], edit_commit_message: bool, generate_description: bool):
         """Run the post-commit hook.
-
-        This method processes the modified files from the last commit, stages
-        them, and creates an auto-commit with an optional message. It also
-        handles JIRA integration if available. If there is an error generating
-        the commit summary, an exception is raised.
-
+        
+        This method processes the modified files from the last commit, stages them, and creates an auto-commit with an optional
+        message. It also handles JIRA integration if available. If there is an error generating the commit summary, an exception
+        is raised.
+        
         Args:
             msg (Optional[str]): An optional message to include in the commit.
-            edit_commit_message (bool): A flag indicating whether to open the git commit edit terminal after
-                committing.
-            generate_description (bool): A flag indicating whether to include a description in the commit
-                message.
-
+            edit_commit_message (bool): A flag indicating whether to open the git commit edit terminal after committing.
+            generate_description (bool): A flag indicating whether to include a description in the commit message.
+        
         Raises:
             Exception: If there is an error generating the commit summary.
         """
@@ -111,18 +114,18 @@ class CommitDocGenHook(BaseAnalyzer):
             self._amend_commit()
     
     def process_jira_integration(self, title: str, description: str, msg: str) -> tuple:
+        # Look for JIRA issue keys in commit message, title, description and user message
         """Process JIRA integration for the commit message.
-
+        
         Args:
             title (str): Generated commit title.
             description (str): Generated commit description.
             msg (str): Original user message that might contain JIRA references.
-
+        
         Returns:
             tuple: A tuple containing the updated commit title and description with
                 included JIRA information.
         """
-        # Look for JIRA issue keys in commit message, title, description and user message
         issue_keys = []
         if self.jira_client:
             # Extract from message content
@@ -161,11 +164,10 @@ class CommitDocGenHook(BaseAnalyzer):
 
     def _amend_commit(self):
         """Open the default git editor for editing the commit message.
-
-        This function changes the current working directory to the repository
-        path, runs the git command to amend the last commit, and opens the
-        default editor for the user to modify the commit message. After the
-        operation, it returns to the original directory.
+        
+        This function changes the current working directory to the repository path, runs the git command to amend the last
+        commit, and opens the default editor for the user to modify the commit message. After the operation, it returns to the
+        original directory.
         """
         try:
             # Change to the repository directory
