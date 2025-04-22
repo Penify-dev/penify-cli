@@ -4,22 +4,29 @@ import logging
 import os
 
 def generate_doc(api_url, token, location=None):
-    """Generates documentation based on the given parameters.
 
-    This function initializes an API client using the provided API URL and
-    token. It then generates documentation by analyzing the specified
-    location, which can be a folder, a file, or the current working
-    directory if no location is provided. The function handles different
-    types of analysis based on the input location and reports any errors
-    encountered during the process.
-
+    """Save the processed files map to a JSON file.
+    
+    Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+    description of each parameter is optional, but should be included if not obvious.
+    
     Args:
-        api_url (str): The URL of the API to connect to for documentation generation.
-        token (str): The authentication token for accessing the API.
-        location (str?): The path to a specific file or folder to analyze. If not provided, the
-            current working directory is used.
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
     """
-
     import os
     import sys
     from ..folder_analyzer import FolderAnalyzerGenHook
@@ -80,19 +87,30 @@ You can generate documentation for:
 """
 
 def setup_docgen_parser(parser):
-    """Set up and configure a parser for documentation generation using Git
-    commands.
-
-    This function configures a parser with various subcommands and arguments
-    necessary for generating documentation for Git diffs, files, or folders.
-    It also installs and uninstalls commit hooks to automate documentation
-    generation on commits.
-
-    Args:
-        parser (argparse.ArgumentParser): The parser to configure.
-    """
 
     # We don't need to create a new docgen_parser since it's passed as a parameter
+    """Save the processed files map to a JSON file.
+    
+    Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+    description of each parameter is optional, but should be included if not obvious.
+    
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+    """
     docgen_parser_description = """
 It generates Documentation for the Git diff, file or folder.
 1. By default, it will git diff documentation - visit https://penify.wiki/dcdc for more details.
@@ -122,19 +140,30 @@ It generates Documentation for the Git diff, file or folder.
                                       default=os.getcwd())
 
 def handle_docgen(args):
-    """Handle various subcommands related to document generation and hook
-    management.
-
-    This function processes different subcommands such as installing or
-    uninstalling git hooks, and directly generating documentation based on
-    provided arguments.
-
-    Args:
-        args (Namespace): Parsed command-line arguments containing the subcommand and location
-            details.
-    """
 
     # Only import dependencies needed for docgen functionality here
+    """Save the processed files map to a JSON file.
+    
+    Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+    description of each parameter is optional, but should be included if not obvious.
+    
+    Args:
+        dictionary (dict): The processed files map.
+    
+    Returns:
+        bool: True if successful, False otherwise.
+        The return type is optional and may be specified at the beginning of
+        the ``Returns`` section followed by a colon.
+        The ``Returns`` section may span multiple lines and paragraphs.
+        Following lines should be indented to match the first line.
+        The ``Returns`` section supports any reStructuredText formatting,
+        including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+    """
     from penify_hook.commands.config_commands import get_token
     import sys
     from penify_hook.commands.doc_commands import generate_doc
