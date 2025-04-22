@@ -24,28 +24,16 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        
-        Parameters
-        ----------
-        dictionary : dict
-            The processed files map.
-        
-        Returns
-        -------
-        bool
-            True if successful, False otherwise.
-        
-            The return type is optional and may be specified at the beginning of
-        
-            the ``Returns`` section followed by a colon.
-        
-            The ``Returns`` section may span multiple lines and paragraphs.
-        
-            Following lines should be indented to match the first line.
-        
-            The ``Returns`` section supports any reStructuredText formatting,
-        
-            including literal blocks::
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
             
             {
             'param1': param1,
@@ -63,28 +51,16 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        
-        Parameters
-        ----------
-        dictionary : dict
-            The processed files map.
-        
-        Returns
-        -------
-        bool
-            True if successful, False otherwise.
-        
-            The return type is optional and may be specified at the beginning of
-        
-            the ``Returns`` section followed by a colon.
-        
-            The ``Returns`` section may span multiple lines and paragraphs.
-        
-            Following lines should be indented to match the first line.
-        
-            The ``Returns`` section supports any reStructuredText formatting,
-        
-            including literal blocks::
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
             
             {
             'param1': param1,
@@ -159,28 +135,16 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        
-        Parameters
-        ----------
-        dictionary : dict
-            The processed files map.
-        
-        Returns
-        -------
-        bool
-            True if successful, False otherwise.
-        
-            The return type is optional and may be specified at the beginning of
-        
-            the ``Returns`` section followed by a colon.
-        
-            The ``Returns`` section may span multiple lines and paragraphs.
-        
-            Following lines should be indented to match the first line.
-        
-            The ``Returns`` section supports any reStructuredText formatting,
-        
-            including literal blocks::
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
             
             {
             'param1': param1,
@@ -198,28 +162,16 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
         description of each parameter is optional, but should be included if not obvious.
         
-        
-        Parameters
-        ----------
-        dictionary : dict
-            The processed files map.
-        
-        Returns
-        -------
-        bool
-            True if successful, False otherwise.
-        
-            The return type is optional and may be specified at the beginning of
-        
-            the ``Returns`` section followed by a colon.
-        
-            The ``Returns`` section may span multiple lines and paragraphs.
-        
-            Following lines should be indented to match the first line.
-        
-            The ``Returns`` section supports any reStructuredText formatting,
-        
-            including literal blocks::
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
             
             {
             'param1': param1,

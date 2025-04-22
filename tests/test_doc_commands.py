@@ -28,28 +28,16 @@ def test_generate_doc_no_location(mock_getcwd, mock_api_client,
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -86,28 +74,16 @@ def test_generate_doc_file_location(mock_api_client, mock_folder_analyzer,
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -143,28 +119,16 @@ def test_generate_doc_folder_location(mock_api_client, mock_folder_analyzer,
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -198,28 +162,16 @@ def test_generate_doc_error_handling(mock_api_client, mock_git_analyzer, mock_ex
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -244,28 +196,16 @@ def test_setup_docgen_parser():
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -304,28 +244,16 @@ def test_handle_docgen_install_hook(mock_exit, mock_get_token, mock_generate_doc
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -356,28 +284,16 @@ def test_handle_docgen_uninstall_hook(mock_exit, mock_get_token, mock_generate_d
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -407,28 +323,16 @@ def test_handle_docgen_generate(mock_get_token, mock_generate_doc,
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -455,28 +359,16 @@ def test_handle_docgen_no_token(mock_exit, mock_get_token):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -499,28 +391,16 @@ def test_generate_doc_with_file_exception(mock_api_client, mock_getcwd):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
@@ -545,28 +425,16 @@ def test_generate_doc_with_folder_exception(mock_api_client, mock_getcwd):
     Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
     description of each parameter is optional, but should be included if not obvious.
     
-    
-    Parameters
-    ----------
-    dictionary : dict
-        The processed files map.
-    
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
-    
-        The return type is optional and may be specified at the beginning of
-    
-        the ``Returns`` section followed by a colon.
-    
-        The ``Returns`` section may span multiple lines and paragraphs.
-    
-        Following lines should be indented to match the first line.
-    
-        The ``Returns`` section supports any reStructuredText formatting,
-    
-        including literal blocks::
+    @type dictionary: dict
+    @param dictionary: The processed files map.
+    @rtype: bool
+    @return: True if successful, False otherwise.
+    @return: The return type is optional and may be specified at the beginning of
+    @return: the ``Returns`` section followed by a colon.
+    @return: The ``Returns`` section may span multiple lines and paragraphs.
+    @return: Following lines should be indented to match the first line.
+    @return: The ``Returns`` section supports any reStructuredText formatting,
+    @return: including literal blocks::
         
         {
         'param1': param1,
