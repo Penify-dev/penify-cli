@@ -18,19 +18,52 @@ logger = logging.getLogger(__name__)
 
 class GitDocGenHook(BaseAnalyzer):
     def __init__(self, repo_path: str, api_client: APIClient):
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
+        """
         super().__init__(repo_path, api_client)
 
     def get_modified_files_in_last_commit(self):
-        """Get the list of files modified in the last commit.
-
-        This function retrieves the files that were modified in the most recent
-        commit of the repository. It accesses the last commit and iterates
-        through the differences to compile a list of unique file paths that were
-        changed. The function returns this list for further processing or
-        analysis.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
         Returns:
-            list: A list of file paths that were modified in the last commit.
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         last_commit = self.repo.head.commit
         modified_files = []
@@ -40,19 +73,27 @@ class GitDocGenHook(BaseAnalyzer):
         return modified_files
 
     def get_modified_lines(self, diff_text):
-        """Extract modified line numbers from a diff text.
-
-        This function processes a diff text to identify and extract the line
-        numbers that have been modified. It distinguishes between added and
-        deleted lines and keeps track of the current line number as it parses
-        through the diff. The function handles hunk headers and ensures that any
-        deletions at the end of the file are also captured.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
         Args:
-            diff_text (str): A string containing the diff text to be processed.
-
+            dictionary (dict): The processed files map.
+        
         Returns:
-            list: A sorted list of unique line numbers that have been modified.
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         modified_lines = []
         current_line = 0
@@ -89,23 +130,27 @@ class GitDocGenHook(BaseAnalyzer):
         return sorted(set(modified_lines))  # Remove duplicates and sort
 
     def process_file(self, file_path):
-        """Process a file by checking its type, reading its content, and sending it
-        to an API.
-
-        This method constructs the absolute path of the specified file and
-        verifies if the file has a valid extension. If the file type is
-        supported, it reads the content of the file and retrieves the
-        differences from the last commit in the repository. If changes are
-        detected, it sends the file content along with the modified lines to an
-        API for further processing. If the API response indicates no changes,
-        the original file will not be overwritten.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
         Args:
-            file_path (str): The relative path to the file to be processed.
-
+            dictionary (dict): The processed files map.
+        
         Returns:
-            bool: True if the file was successfully processed and updated, False
-                otherwise.
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         file_abs_path = os.path.join(self.repo_path, file_path)
         file_extension = os.path.splitext(file_path)[1].lower()
@@ -150,16 +195,27 @@ class GitDocGenHook(BaseAnalyzer):
         return True
 
     def run(self):
-        """Run the post-commit hook.
-
-        This method retrieves the list of modified files from the last commit
-        and processes each file. It stages any files that have been modified
-        during processing and creates an auto-commit if changes were made. A
-        progress bar is displayed to indicate the processing status of each
-        file. The method handles any exceptions that occur during file
-        processing, printing an error message for each file that fails to
-        process. If any modifications are made to the files, an auto-commit is
-        created to save those changes.
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         logger.info("Starting doc_gen_hook processing")
         print_info("Starting doc_gen_hook processing")
