@@ -13,34 +13,55 @@ from .api_client import APIClient
 
 class CommitDocGenHook(BaseAnalyzer):
     def __init__(self, repo_path: str, api_client: APIClient, llm_client=None, jira_client=None):
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
+        """
         super().__init__(repo_path, api_client)
 
         self.llm_client = llm_client  # Add LLM client as an optional parameter
         self.jira_client: JiraClient = jira_client  # Add JIRA client as an optional parameter
 
     def get_summary(self, instruction: str, generate_description: bool) -> dict:
-        """Generate a summary for the commit based on the staged changes.
-
-        This function retrieves the differences of the staged changes in the
-        repository and generates a commit summary using the provided
-        instruction. If there are no changes staged for commit, an exception is
-        raised. If a JIRA client is connected, it will attempt to extract issue
-        keys from the current branch and use them to fetch context. The summary
-        can be generated either with a Language Model (LLM) client or through
-        the API client.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
         Args:
-            instruction (str): A string containing instructions for generating the commit summary.
-            generate_description (bool): Whether to include detailed descriptions in the summary.
-
+            dictionary (dict): The processed files map.
+        
         Returns:
-            dict: The generated commit summary based on the staged changes, provided
-                instruction, and any relevant JIRA context. The dictionary contains keys
-                such as 'summary', 'description', etc., depending on whether a
-                description was requested.
-
-        Raises:
-            ValueError: If there are no changes staged for commit.
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         diff = self.repo.git.diff('--cached')
         if not diff:
@@ -71,22 +92,27 @@ class CommitDocGenHook(BaseAnalyzer):
     
    
     def run(self, msg: Optional[str], edit_commit_message: bool, generate_description: bool):
-        """Run the post-commit hook.
-
-        This method processes the modified files from the last commit, stages
-        them, and creates an auto-commit with an optional message. It also
-        handles JIRA integration if available. If there is an error generating
-        the commit summary, an exception is raised.
-
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
         Args:
-            msg (Optional[str]): An optional message to include in the commit.
-            edit_commit_message (bool): A flag indicating whether to open the git commit edit terminal after
-                committing.
-            generate_description (bool): A flag indicating whether to include a description in the commit
-                message.
-
-        Raises:
-            Exception: If there is an error generating the commit summary.
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         summary: dict = self.get_summary(msg, True)
         if not summary:
@@ -111,18 +137,29 @@ class CommitDocGenHook(BaseAnalyzer):
             self._amend_commit()
     
     def process_jira_integration(self, title: str, description: str, msg: str) -> tuple:
-        """Process JIRA integration for the commit message.
-
-        Args:
-            title (str): Generated commit title.
-            description (str): Generated commit description.
-            msg (str): Original user message that might contain JIRA references.
-
-        Returns:
-            tuple: A tuple containing the updated commit title and description with
-                included JIRA information.
-        """
         # Look for JIRA issue keys in commit message, title, description and user message
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
+        """
         issue_keys = []
         if self.jira_client:
             # Extract from message content
@@ -160,12 +197,27 @@ class CommitDocGenHook(BaseAnalyzer):
         return title, description
 
     def _amend_commit(self):
-        """Open the default git editor for editing the commit message.
-
-        This function changes the current working directory to the repository
-        path, runs the git command to amend the last commit, and opens the
-        default editor for the user to modify the commit message. After the
-        operation, it returns to the original directory.
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        Args:
+            dictionary (dict): The processed files map.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+                
+                {
+                'param1': param1,
+                'param2': param2
+                }
         """
         try:
             # Change to the repository directory
