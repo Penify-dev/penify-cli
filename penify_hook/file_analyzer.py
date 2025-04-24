@@ -19,26 +19,53 @@ logger = logging.getLogger(__name__)
 
 class FileAnalyzerGenHook(BaseAnalyzer):
     def __init__(self, file_path: str, api_client: APIClient):
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+        """
         self.file_path = file_path
         super().__init__(file_path, api_client)
         
 
 
     def process_file(self, file_path, pbar):
-        """Process a file by reading its content and sending it to an API for
-        processing.
-
-        This function validates the provided file extension, reads the content
-        of the file, and sends it to an API client for further processing. If
-        the API responds successfully, the original file content is replaced
-        with the response.
-
-        Args:
-            file_path (str): The relative path to the file that needs to be processed.
-            pbar (tqdm): Progress bar to update during processing.
-
-        Returns:
-            bool: True if the file was processed successfully, False otherwise.
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
         """
         file_abs_path = os.path.join(os.getcwd(), file_path)
         file_extension = os.path.splitext(file_path)[1].lower()
@@ -103,29 +130,54 @@ class FileAnalyzerGenHook(BaseAnalyzer):
             return False
     
     def print_processing(self, file_path):
-        """Print a processing message for a file.
-
-        Args:
-            file_path (str): The path to the file being processed.
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
         """
         formatted_path = format_file_path(file_path)
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
     def run(self):
-        """Run the post-commit hook.
-
-        This method executes the post-commit hook by processing a specified
-        file. It attempts to process the file located at `self.file_path`. If an
-        error occurs during the processing, it catches the exception and prints
-        an error message indicating that the file was not processed. The method
-        displays a progress bar and colored output to provide visual feedback on
-        the processing status.
-
-        Args:
-            self (PostCommitHook): An instance of the PostCommitHook class.
-        """
         
         # Create a progress bar with appropriate stages
+        """Save the processed files map to a JSON file.
+        
+        Function parameters should be documented in the ``Args`` section. The name of each parameter is required. The type and
+        description of each parameter is optional, but should be included if not obvious.
+        
+        @type dictionary: dict
+        @param dictionary: The processed files map.
+        @rtype: bool
+        @return: True if successful, False otherwise.
+        @return: The return type is optional and may be specified at the beginning of
+        @return: the ``Returns`` section followed by a colon.
+        @return: The ``Returns`` section may span multiple lines and paragraphs.
+        @return: Following lines should be indented to match the first line.
+        @return: The ``Returns`` section supports any reStructuredText formatting,
+        @return: including literal blocks::
+            
+            {
+            'param1': param1,
+            'param2': param2
+            }
+        """
         stages = ["Validating", "Reading content", "Documenting", "Writing changes", "Completed"]
         pbar, _ = create_stage_progress_bar(stages, f"Starting documenting")
         
