@@ -6,3 +6,10 @@ __pycache__/
 build/
 .penify/
 .penify/*
+.env/
+*.env
+*.DS_Store
+*.log
+*.sqlite3
+*.db
+.env

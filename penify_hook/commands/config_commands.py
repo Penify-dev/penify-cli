@@ -497,12 +497,16 @@ def config_jira_web():
 def get_token() -> Optional[str]:
     """
     Get the API token based on priority:
-    1. Environment variable PENIFY_API_TOKEN
+    1. Environment variable PENIFY_API_TOKEN from any .env file
     2. Config file 'api_keys' value
     
     Returns:
         str or None: API token if found, None otherwise
     """
+    # Ensure environment variables are loaded from all .env files
+    if DOTENV_AVAILABLE:
+        load_env_files()
+    
     # Check environment variable first
     env_token = get_env_var_or_default('PENIFY_API_TOKEN')
     if env_token:
