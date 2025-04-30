@@ -10,7 +10,6 @@ from threading import Thread
 import logging
 import sys
 from typing import Dict, Any, Optional, Union
-from penify_hook.utils import recursive_search_git_folder
 
 # Try to import dotenv, but don't fail if it's not available
 try:
@@ -40,6 +39,7 @@ def load_env_files() -> None:
     
     # Load from Git repo root
     try:
+        from penify_hook.utils import recursive_search_git_folder
         current_dir = os.getcwd()
         repo_root = recursive_search_git_folder(current_dir)
         if repo_root:
@@ -69,6 +69,7 @@ def get_penify_config() -> Path:
     and its parent directories until it finds it or reaches the home directory.
     """
     current_dir = os.getcwd()
+    from penify_hook.utils import recursive_search_git_folder
     home_dir = recursive_search_git_folder(current_dir)
     
 
