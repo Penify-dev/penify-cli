@@ -20,15 +20,10 @@ except ImportError:
 
 
 def load_env_files() -> None:
-    """
-    Load environment variables from .env files in various locations,
-    with proper priority (later files override earlier ones):
-    1. User home directory .env (lowest priority)
-    2. Git repo root directory .env (if in a git repo)
-    3. Current directory .env (highest priority)
-    
-    This function is called when the module is imported, ensuring env variables
-    are available throughout the application lifecycle.
+    """Load environment variables from .env files in various locations,
+    with proper priority (later files override earlier ones): 1. User home directory .env (lowest priority) 2. Git repo root
+    directory .env (if in a git repo, medium priority) 3. Current directory .env (highest priority)  This function is called
+    when the module is imported to ensure that environment variables are available throughout the application lifecycle.
     """
     if not DOTENV_AVAILABLE:
         logging.warning("python-dotenv is not installed. .env file loading is disabled.")
@@ -67,12 +62,11 @@ load_env_files()
 
 def get_penify_config() -> Path:
     """Get the home directory for the .penify configuration file.
-
-    This function searches for the `.penify` file in the current directory
-    and its parent directories until it finds it or reaches the home
-    directory. If not found, it creates the `.penify` directory and an empty
-    `config.json` file.
-
+    
+    This function searches for the `.penify` directory in the current directory and its parent directories until it finds it
+    or reaches the home directory. If not found, it creates the `.penify` directory and an empty `config.json` file within
+    it.
+    
     Returns:
         Path: The path to the `config.json` file within the `.penify` directory.
     """
@@ -103,26 +97,34 @@ def get_penify_config() -> Path:
 
 
 def get_env_var_or_default(env_var: str, default: Any = None) -> Any:
-    """
-    Get environment variable or return default value.
+    """Retrieve the value of an environment variable or return a default value if it is not set.
+    
+    This function attempts to fetch the value of a specified environment variable. If the environment variable is not found,
+    it returns a provided default value instead.
     
     Args:
-        env_var: The environment variable name
-        default: Default value if environment variable is not set
-        
+        env_var (str): The name of the environment variable to retrieve.
+        default (Any?): The default value to return if the environment variable is not set. Defaults to None.
+    
     Returns:
-        Value of the environment variable or default
+        Any: The value of the environment variable or the specified default value.
     """
     return os.environ.get(env_var, default)
 
 
 def save_llm_config(model, api_base, api_key):
-    """
-    Save LLM configuration settings to .env file.
+    """Save LLM (Large Language Model) configuration settings to a .env file.
     
-    This function saves LLM configuration in the following priority:
-    1. Git repo root .env (if inside a git repo)
-    2. User home directory .env
+    This function saves the LLM configuration with priority: 1. Git repo root .env (if inside a git repository) 2. User home
+    directory .env
+    
+    Args:
+        model (str): The name of the LLM model.
+        api_base (str): The base URL for the LLM API.
+        api_key (str): The API key for accessing the LLM.
+    
+    Returns:
+        bool: True if the configuration was successfully saved, False otherwise.
     """
     from pathlib import Path
     import os
@@ -175,12 +177,18 @@ def save_llm_config(model, api_base, api_key):
 
 
 def save_jira_config(url, username, api_token):
-    """
-    Save JIRA configuration settings to .env file.
+    """Save JIRA configuration settings to .env file.
     
-    This function saves JIRA configuration in the following priority:
-    1. Git repo root .env (if inside a git repo)
-    2. User home directory .env
+    This function saves JIRA configuration in the following priority: 1. Git repo root .env (if inside a git repo) 2. User
+    home directory .env
+    
+    Args:
+        url (str): The JIRA URL.
+        username (str): The JIRA username.
+        api_token (str): The JIRA API token.
+    
+    Returns:
+        bool: True if the configuration was saved successfully, False otherwise.
     """
     from pathlib import Path
     import os
@@ -233,18 +241,17 @@ def save_jira_config(url, username, api_token):
 
 
 def get_llm_config() -> Dict[str, str]:
-    """
-    Get LLM configuration from environment variables.
+    # Ensure environment variables are loaded
+    """Retrieve LLM configuration from environment variables.
     
-    Environment variables:
-    - PENIFY_LLM_MODEL: Model name
-    - PENIFY_LLM_API_BASE: API base URL
-    - PENIFY_LLM_API_KEY: API key
+    This function fetches the configuration settings required to interact with a Language Learning Model (LLM) from the
+    system's environment variables. The settings include the model name, API base URL, and API key. If any of these values
+    are missing or empty, they will be excluded from the returned configuration dictionary.
     
     Returns:
-        dict: Configuration dictionary with model, api_base, and api_key
+        dict: A dictionary containing the LLM configuration with keys 'model', 'api_base', and 'api_key'. Only non-empty values are
+            included.
     """
-    # Ensure environment variables are loaded
     if DOTENV_AVAILABLE:
         load_env_files()
     
@@ -262,18 +269,17 @@ def get_llm_config() -> Dict[str, str]:
 
 
 def get_jira_config() -> Dict[str, str]:
-    """
-    Get JIRA configuration from environment variables.
+    # Ensure environment variables are loaded
+    """Retrieve JIRA configuration from environment variables.
     
-    Environment variables:
-    - PENIFY_JIRA_URL: JIRA URL
-    - PENIFY_JIRA_USER: JIRA username
-    - PENIFY_JIRA_TOKEN: JIRA API token
+    This function fetches the JIRA URL, username, and API token from the environment variables. It returns a dictionary
+    containing these values, excluding any that are empty.  Environment variables: - PENIFY_JIRA_URL: The base URL of the
+    JIRA instance. - PENIFY_JIRA_USER: The username for authenticating with the JIRA API. - PENIFY_JIRA_TOKEN: The API token
+    for authenticating with the JIRA API.
     
     Returns:
-        dict: Configuration dictionary with url, username, and api_token
+        dict: A dictionary containing the JIRA configuration with keys 'url', 'username', and 'api_token'.
     """
-    # Ensure environment variables are loaded
     if DOTENV_AVAILABLE:
         load_env_files()
     
@@ -423,12 +429,10 @@ def config_llm_web():
 
 def config_jira_web():
     """Open a web browser interface for configuring JIRA settings.
-
-    This function sets up a simple HTTP server using Python's built-in
-    `http.server` module to handle GET and POST requests. The server serves
-    an HTML page for configuration and handles saving the JIRA configuration
-    details through API tokens and URLs. Upon successful configuration, it
-    shuts down the server gracefully.
+    
+    This function sets up a simple HTTP server using Python's built-in `http.server` module to handle GET and POST requests.
+    The server serves an HTML page for configuration and handles saving the JIRA configuration details through API tokens
+    and URLs. Upon successful configuration, it shuts down the server gracefully.
     """
     redirect_port = random.randint(30000, 50000)
     server_url = f"http://localhost:{redirect_port}"
@@ -551,15 +555,16 @@ def config_jira_web():
 
 
 def get_token() -> Optional[str]:
-    """
-    Get the API token based on priority:
-    1. Environment variable PENIFY_API_TOKEN from any .env file
-    2. Config file 'api_keys' value
+    # Ensure environment variables are loaded from all .env files
+    """Retrieve the API token based on priority from environment variables or configuration files.
+    
+    This function attempts to fetch the API token using the following methods in order: 1. From the environment variable
+    `PENIFY_API_TOKEN` as defined in any `.env` file. 2. From the value associated with the key `'api_keys'` in a
+    configuration file named `.penify`.  If neither method yields an API token, the function returns `None`.
     
     Returns:
-        str or None: API token if found, None otherwise
+        str or None: The API token if found, otherwise `None`.
     """
-    # Ensure environment variables are loaded from all .env files
     if DOTENV_AVAILABLE:
         load_env_files()
     
