@@ -13,3 +13,4 @@ build/
 *.sqlite3
 *.db
 .env
+coverage.xml
