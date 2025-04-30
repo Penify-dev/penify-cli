@@ -122,19 +122,17 @@ It generates Documentation for the Git diff, file or folder.
                                       default=os.getcwd())
 
 def handle_docgen(args):
-    """Handle various subcommands related to document generation and hook
-    management.
-
-    This function processes different subcommands such as installing or
-    uninstalling git hooks, and directly generating documentation based on
-    provided arguments.
-
-    Args:
-        args (Namespace): Parsed command-line arguments containing the subcommand and location
-            details.
-    """
 
     # Only import dependencies needed for docgen functionality here
+    """Handle various subcommands related to document generation and hook management.
+    
+    This function processes different subcommands such as installing or uninstalling git hooks, and directly generating
+    documentation based on provided arguments. It handles authentication by retrieving a token and performs actions based on
+    the specified subcommand.
+    
+    Args:
+        args (Namespace): Parsed command-line arguments containing the subcommand and location details.
+    """
     from penify_hook.commands.config_commands import get_token
     import sys
     from penify_hook.commands.doc_commands import generate_doc
