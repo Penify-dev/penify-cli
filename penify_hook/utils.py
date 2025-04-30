@@ -11,18 +11,21 @@ class GitRepoNotFoundError(Exception):
 
 
 def get_repo_details(repo: Repo):
-    """Get the details of the repository, including the hosting service,
+    """Get details of a Git repository, including its hosting service,
     organization name, and repository name.
 
-    This method checks the remote URL of the repository to determine whether
-    it is hosted on GitHub, Azure DevOps, Bitbucket, GitLab, or another
-    service. It extracts the organization (or user) name and the repository
-    name from the URL. If the hosting service cannot be determined, it will
-    return "Unknown Hosting Service".
+    This function extracts these details from the remote URL of the provided
+    Git repository. It supports popular platforms like GitHub, Azure DevOps,
+    Bitbucket, and GitLab. If the hosting service cannot be determined, it
+    defaults to "Unknown Hosting Service".
+
+    Args:
+        repo (Repo): The GitPython Repo object representing the repository.
 
     Returns:
-        dict: A dictionary containing the organization name, repository name, and
-            hosting service.
+        dict: A dictionary containing keys for 'organization_name', 'repo_name', and
+            'vendor' which represent the organization name, repository name, and
+            hosting service respectively.
     """
     remote_url = None
     hosting_service = "Unknown"
@@ -75,17 +78,12 @@ def recursive_search_git_folder(folder_path):
     """Recursively search for the .git folder in the specified directory and
     return its parent directory.
 
-    This function takes a folder path as input and checks if the specified
-    directory contains a '.git' folder. If it does, the function returns the
-    path of that directory. If not, it recursively searches the parent
-    directory until it finds a '.git' folder or reaches the root of the
-    filesystem.
-
     Args:
         folder_path (str): The path of the directory to search for the .git folder.
 
     Returns:
-        str: The path of the directory containing the .git folder.
+        str: The path of the directory containing the .git folder. If no .git folder
+            is found, returns None.
     """
     if os.path.isdir(folder_path):
         if '.git' in os.listdir(folder_path):
@@ -112,7 +110,8 @@ def find_git_parent(path):
         str: The absolute path to the parent directory containing the `.git` folder.
 
     Raises:
-        GitRepoNotFoundError: If no Git repository is found in the specified path or any
+        GitRepoNotFoundError: If no Git repository is found in the specified path or any of its parent
+            directories.
     """
 
     current_dir = os.path.abspath(path)

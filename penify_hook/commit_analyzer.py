@@ -24,18 +24,23 @@ class CommitDocGenHook(BaseAnalyzer):
         This function retrieves the differences of the staged changes in the
         repository and generates a commit summary using the provided
         instruction. If there are no changes staged for commit, an exception is
-        raised. If an LLM client is provided, it will use that for generating
-        the summary, otherwise it will use the API client.
+        raised. If a JIRA client is connected, it will attempt to extract issue
+        keys from the current branch and use them to fetch context. The summary
+        can be generated either with a Language Model (LLM) client or through
+        the API client.
 
         Args:
             instruction (str): A string containing instructions for generating the commit summary.
+            generate_description (bool): Whether to include detailed descriptions in the summary.
 
         Returns:
-            str: The generated commit summary based on the staged changes and provided
-                instruction.
+            dict: The generated commit summary based on the staged changes, provided
+                instruction, and any relevant JIRA context. The dictionary contains keys
+                such as 'summary', 'description', etc., depending on whether a
+                description was requested.
 
         Raises:
-            Exception: If there are no changes staged for commit.
+            ValueError: If there are no changes staged for commit.
         """
         diff = self.repo.git.diff('--cached')
         if not diff:
@@ -68,17 +73,17 @@ class CommitDocGenHook(BaseAnalyzer):
     def run(self, msg: Optional[str], edit_commit_message: bool, generate_description: bool):
         """Run the post-commit hook.
 
-        This method retrieves the list of modified files from the last commit
-        and processes each file. It stages any files that have been modified
-        during processing and creates an auto-commit if changes were made. A
-        progress bar is displayed to indicate the processing status of each
-        file. If there is an error generating the commit summary, an exception
-        is raised.
+        This method processes the modified files from the last commit, stages
+        them, and creates an auto-commit with an optional message. It also
+        handles JIRA integration if available. If there is an error generating
+        the commit summary, an exception is raised.
 
         Args:
             msg (Optional[str]): An optional message to include in the commit.
-            edit_commit_message (bool): A flag indicating whether to open the
-                git commit edit terminal after committing.
+            edit_commit_message (bool): A flag indicating whether to open the git commit edit terminal after
+                committing.
+            generate_description (bool): A flag indicating whether to include a description in the commit
+                message.
 
         Raises:
             Exception: If there is an error generating the commit summary.
@@ -106,16 +111,16 @@ class CommitDocGenHook(BaseAnalyzer):
             self._amend_commit()
     
     def process_jira_integration(self, title: str, description: str, msg: str) -> tuple:
-        """
-        Process JIRA integration for the commit message.
-        
+        """Process JIRA integration for the commit message.
+
         Args:
-            title: Generated commit title
-            description: Generated commit description 
-            msg: Original user message that might contain JIRA references
-            
+            title (str): Generated commit title.
+            description (str): Generated commit description.
+            msg (str): Original user message that might contain JIRA references.
+
         Returns:
-            tuple: (updated_title, updated_description) with JIRA information
+            tuple: A tuple containing the updated commit title and description with
+                included JIRA information.
         """
         # Look for JIRA issue keys in commit message, title, description and user message
         issue_keys = []

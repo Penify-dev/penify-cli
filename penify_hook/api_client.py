@@ -23,11 +23,15 @@ class APIClient:
             file_name (str): The path to the file being sent.
             content (str): The content of the file to be processed.
             line_numbers (list): A list of line numbers that have been modified.
-            repo_details (str?): Additional repository details if applicable.
+            repo_details (str?): Additional repository details if applicable. Defaults to None.
 
         Returns:
             str: The modified content returned by the API, or the original content if the
                 request fails.
+
+        Raises:
+            Exception: If there is an error in processing the file and no specific error
+                message is provided.
         """
         payload = {
             'file_path': file_name,
@@ -59,12 +63,15 @@ class APIClient:
 
         Args:
             git_diff (str): The git diff of the commit.
-            instruction (str?): Additional instruction for the commit. Defaults to "".
-            repo_details (dict?): Details of the git repository. Defaults to None.
-            jira_context (dict?): JIRA issue details to enhance the commit summary. Defaults to None.
+            instruction (str??): Additional instruction for the commit. Defaults to "".
+            repo_details (dict??): Details of the git repository. Defaults to None.
+            jira_context (dict??): JIRA issue details to enhance the commit summary. Defaults to None.
 
         Returns:
             dict: The response from the API if the request is successful, None otherwise.
+
+        Raises:
+            Exception: If there is an error during the API request.
         """
         payload = {
             'git_diff': git_diff,
@@ -95,10 +102,11 @@ class APIClient:
     def get_supported_file_types(self) -> list[str]:
         """Retrieve the supported file types from the API.
 
-        This function sends a request to the API to obtain a list of supported
-        file types. If the API responds successfully, it returns the list of
-        supported file types. If the API call fails, it returns a default list
-        of common file types.
+        This function sends a request to the API endpoint
+        `/v1/file/supported_languages` to obtain a list of supported file types.
+        If the API call is successful (status code 200), it parses the JSON
+        response and returns the list of supported file types. If the API call
+        fails, it returns a default list of common file types.
 
         Returns:
             list[str]: A list of supported file types, either from the API or a default set.
@@ -113,18 +121,20 @@ class APIClient:
             return ["py", "js", "ts", "java", "kt", "cs", "c"]
 
     def generate_commit_summary_with_llm(self, diff, message, generate_description: bool, repo_details, llm_client : LLMClient, jira_context=None):
-        """
-        Generate a commit summary using a local LLM client instead of the API.
-        
+        """Generates a commit summary using a local LLM client. If an error occurs
+        during the generation process,
+        it falls back to using the API.
+
         Args:
-            diff: Git diff of changes
-            message: User-provided commit message or instructions
-            repo_details: Details about the repository
-            llm_client: Instance of LLMClient
-            jira_context: Optional JIRA issue context to enhance the summary
-            
+            diff (str): The Git diff of changes.
+            message (str): User-provided commit message or instructions.
+            generate_description (bool): Flag indicating whether to generate a description for the commit.
+            repo_details (dict): Details about the repository.
+            llm_client (LLMClient): An instance of LLMClient used to generate the summary.
+            jira_context (JIRAContext?): Optional JIRA issue context to enhance the summary.
+
         Returns:
-            Dict with title and description for the commit
+            dict: A dictionary containing the title and description for the commit.
         """
         try:
             return llm_client.generate_commit_summary(diff, message, generate_description, repo_details, jira_context)
@@ -134,6 +144,16 @@ class APIClient:
             return self.generate_commit_summary(diff, message, repo_details, jira_context)
 
     def get_api_key(self):
+        """Fetch an API key from a specified URL.
+
+        This function sends a GET request to retrieve an API token using a
+        Bearer token in the headers. It handles the response and returns the API
+        key if the request is successful, or `None` otherwise.
+
+        Returns:
+            str: The API key if the request is successful, `None` otherwise.
+        """
+
 
         url = self.api_url+"/v1/apiToken/get"
         response = requests.get(url, headers={"Authorization": f"Bearer {self.BEARER_TOKEN}"}, timeout=60*10)

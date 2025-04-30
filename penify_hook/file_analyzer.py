@@ -28,10 +28,10 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         """Process a file by reading its content and sending it to an API for
         processing.
 
-        This function checks if the provided file has a supported extension. If
-        the file is valid, it reads the content of the file and sends it to an
-        API client for further processing. If the API responds successfully, the
-        original file content is replaced with the response.
+        This function validates the provided file extension, reads the content
+        of the file, and sends it to an API client for further processing. If
+        the API responds successfully, the original file content is replaced
+        with the response.
 
         Args:
             file_path (str): The relative path to the file that needs to be processed.
@@ -103,7 +103,11 @@ class FileAnalyzerGenHook(BaseAnalyzer):
             return False
     
     def print_processing(self, file_path):
-        """Print a processing message for a file."""
+        """Print a processing message for a file.
+
+        Args:
+            file_path (str): The path to the file being processed.
+        """
         formatted_path = format_file_path(file_path)
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
@@ -116,6 +120,9 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         an error message indicating that the file was not processed. The method
         displays a progress bar and colored output to provide visual feedback on
         the processing status.
+
+        Args:
+            self (PostCommitHook): An instance of the PostCommitHook class.
         """
         
         # Create a progress bar with appropriate stages
