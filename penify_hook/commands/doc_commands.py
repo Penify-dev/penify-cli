@@ -143,7 +143,7 @@ def handle_docgen(args):
 
     token = get_token()
     if not token:
-        logging.error("Error: Unable to authenticate. Please run 'penifycli login'.")
+        logging.error("Error: Unable to authenticate. Please run 'penify login'.")
         sys.exit(1)
 
     if args.docgen_subcommand == "install-hook":

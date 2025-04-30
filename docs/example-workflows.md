@@ -9,13 +9,13 @@ This document demonstrates how to use Penify CLI in real-world development workf
 First, configure your local LLM for offline operation:
 
 ```bash
-penifycli config llm
+penify config llm
 ```
 
 Configure your JIRA integration for enhanced commit messages:
 
 ```bash
-penifycli config jira
+penify config jira
 ```
 
 ### Daily Workflow
@@ -24,7 +24,7 @@ penifycli config jira
 2. When ready to commit, use Penify to generate a smart commit message:
 
 ```bash
-penifycli commit
+penify commit
 ```
 
 3. Review and confirm the generated commit message
@@ -43,13 +43,13 @@ penifycli commit
 Login to Penify to access advanced documentation features:
 
 ```bash
-penifycli login
+penify login
 ```
 
 Install the Git hook for automatic documentation generation:
 
 ```bash
-penifycli docgen install-hook
+penify docgen install-hook
 ```
 
 ### Daily Workflow
@@ -64,7 +64,7 @@ penifycli docgen install-hook
 For specific files or folders:
 
 ```bash
-penifycli docgen -l src/components/authentication
+penify docgen -l src/components/authentication
 ```
 
 ### Benefits
@@ -80,7 +80,7 @@ penifycli docgen -l src/components/authentication
 Ensure you're logged into Penify:
 
 ```bash
-penifycli login
+penify login
 ```
 
 ### Workflow
@@ -88,7 +88,7 @@ penifycli login
 1. Before submitting a PR, generate documentation for changed files:
 
 ```bash
-penifycli docgen
+penify docgen
 ```
 
 2. Include the generated documentation in your PR
@@ -107,7 +107,7 @@ penifycli docgen
 Generate comprehensive documentation for the entire codebase:
 
 ```bash
-penifycli docgen -l .
+penify docgen -l .
 ```
 
 ### For New Team Members
@@ -115,7 +115,7 @@ penifycli docgen -l .
 Generate focused documentation for components you're working on:
 
 ```bash
-penifycli docgen -l src/components/my-feature
+penify docgen -l src/components/my-feature
 ```
 
 ### Benefits
@@ -130,10 +130,10 @@ When working with unfamiliar legacy code:
 
 ```bash
 # Document a specific complex file
-penifycli docgen -l src/legacy/complex_module.py
+penify docgen -l src/legacy/complex_module.py
 
 # Document an entire legacy component
-penifycli docgen -l src/legacy/old_component
+penify docgen -l src/legacy/old_component
 ```
 
 ### Benefits

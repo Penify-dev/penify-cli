@@ -5,7 +5,7 @@ The `commit` command allows you to generate smart, AI-powered commit messages fo
 ## Basic Usage
 
 ```bash
-penifycli commit
+penify commit
 ```
 
 By default, this command:
@@ -20,7 +20,7 @@ By default, this command:
 Provide context for the commit message generation:
 
 ```bash
-penifycli commit -m "Fix login flow"
+penify commit -m "Fix login flow"
 ```
 
 This hint helps the AI understand your intention and improves the quality of the generated message.
@@ -30,7 +30,7 @@ This hint helps the AI understand your intention and improves the quality of the
 Open an editor to review and edit the generated commit message before committing:
 
 ```bash
-penifycli commit -e
+penify commit -e
 ```
 
 This opens your default Git editor with the generated message for review.
@@ -40,7 +40,7 @@ This opens your default Git editor with the generated message for review.
 Generate a detailed commit message with both title and description:
 
 ```bash
-penifycli commit -d
+penify commit -d
 ```
 
 Without this flag, only the commit title is generated.
@@ -52,32 +52,32 @@ You can combine these options for different workflows:
 ### Generate Title Only with Context
 
 ```bash
-penifycli commit -m "Update login UI"
+penify commit -m "Update login UI"
 ```
 
 ### Generate Title and Description with Context
 
 ```bash
-penifycli commit -m "Update login UI" -d
+penify commit -m "Update login UI" -d
 ```
 
 ### Generate and Edit Full Commit Message
 
 ```bash
-penifycli commit -d -e
+penify commit -d -e
 ```
 
 ### Generate, Edit, and Provide Context
 
 ```bash
-penifycli commit -m "Refactor authentication" -d -e
+penify commit -m "Refactor authentication" -d -e
 ```
 
 ## LLM and JIRA Integration
 
 ### Using Local LLM
 
-If you've configured a local LLM using `penifycli config llm`, the commit command will automatically use it for message generation.
+If you've configured a local LLM using `penify config llm`, the commit command will automatically use it for message generation.
 
 Benefits:
 - Privacy: your code changes don't leave your machine
@@ -86,7 +86,7 @@ Benefits:
 
 ### JIRA Enhancement
 
-If you've configured JIRA integration using `penifycli config jira`, the commit command will:
+If you've configured JIRA integration using `penify config jira`, the commit command will:
 
 1. Detect JIRA issue references in your changes
 2. Fetch issue details from your JIRA instance
@@ -109,11 +109,11 @@ PROJ-123: Fix authentication bug in login flow
 For the `commit` command to work:
 
 1. You must have configured either:
-   - Local LLM via `penifycli config llm`, OR
-   - Logged in via `penifycli login`
+   - Local LLM via `penify config llm`, OR
+   - Logged in via `penify login`
    
 2. For JIRA enhancement (optional):
-   - Configure JIRA via `penifycli config jira`
+   - Configure JIRA via `penify config jira`
 
 ## Examples
 
@@ -124,7 +124,7 @@ For the `commit` command to work:
 git add .
 
 # Generate commit message
-penifycli commit
+penify commit
 
 # Commit with the generated message
 git commit -m "Generated message here"
@@ -138,7 +138,7 @@ git add .
 
 # Generate detailed commit message with JIRA integration, 
 # provide context, and open editor for review
-penifycli commit -m "Fix login issue" -d -e
+penify commit -m "Fix login issue" -d -e
 
 # The commit is automatically completed after you save and exit the editor
 ```
@@ -148,8 +148,8 @@ penifycli commit -m "Fix login issue" -d -e
 ### Common Issues
 
 1. **"No LLM model or API token provided"**
-   - Run `penifycli config llm` to configure a local LLM, or
-   - Run `penifycli login` to authenticate with Penify
+   - Run `penify config llm` to configure a local LLM, or
+   - Run `penify login` to authenticate with Penify
 
 2. **"Failed to connect to JIRA"**
    - Check your JIRA configuration with `cat ~/.penify`

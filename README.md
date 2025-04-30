@@ -17,7 +17,7 @@ A CLI tool to generate smart commit messages, code documentation, and more.
 Install from PyPI:
 
 ```bash
-pip install penifycli
+pip install penify
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ Penify CLI provides several subcommands for different functionalities, organized
 Generate smart commit messages using local LLM:
 
 ```bash
-penifycli commit [-m "Optional message"] [-e] [-d]
+penify commit [-m "Optional message"] [-e] [-d]
 ```
 
 Options:
@@ -45,16 +45,16 @@ Configure local LLM and JIRA settings:
 
 ```bash
 # Configure LLM settings
-penifycli config llm --model MODEL_NAME [--api-base API_URL] [--api-key API_KEY]
+penify config llm --model MODEL_NAME [--api-base API_URL] [--api-key API_KEY]
 
 # Configure LLM settings through web interface
-penifycli config llm-web
+penify config llm-web
 
 # Configure JIRA settings
-penifycli config jira --url JIRA_URL --username USERNAME --api-token TOKEN [--verify]
+penify config jira --url JIRA_URL --username USERNAME --api-token TOKEN [--verify]
 
 # Configure JIRA settings through web interface
-penifycli config jira-web
+penify config jira-web
 ```
 
 ## Advanced Commands (Login required)
@@ -64,7 +64,7 @@ penifycli config jira-web
 To log in and obtain an API token:
 
 ```bash
-penifycli login
+penify login
 ```
 
 This command will open a browser window for authentication. After successful login, the API key will be saved locally for future use.
@@ -75,10 +75,10 @@ Generate documentation for Git diff, files or folders:
 
 ```bash
 # Generate documentation for latest Git commit diff
-penifycli docgen
+penify docgen
 
 # Generate documentation for specific file or folder
-penifycli docgen -l /path/to/file/or/folder
+penify docgen -l /path/to/file/or/folder
 ```
 
 Options:
@@ -90,10 +90,10 @@ Install or uninstall Git post-commit hooks:
 
 ```bash
 # Install Git hook
-penifycli docgen install-hook [-l /path/to/repo]
+penify docgen install-hook [-l /path/to/repo]
 
 # Uninstall Git hook
-penifycli docgen uninstall-hook [-l /path/to/repo]
+penify docgen uninstall-hook [-l /path/to/repo]
 ```
 
 Options:
@@ -110,7 +110,7 @@ If no token is available and you try to access an advanced feature, you'll be pr
 For commit message generation, Penify can use a local LLM. Configure it using:
 
 ```bash
-penifycli config llm --model MODEL_NAME --api-base API_URL --api-key API_KEY
+penify config llm --model MODEL_NAME --api-base API_URL --api-key API_KEY
 ```
 
 Common configurations:
@@ -122,7 +122,7 @@ Common configurations:
 Configure JIRA integration to enhance commit messages with issue details:
 
 ```bash
-penifycli config jira --url https://your-domain.atlassian.net --username your-email@example.com --api-token YOUR_API_TOKEN
+penify config jira --url https://your-domain.atlassian.net --username your-email@example.com --api-token YOUR_API_TOKEN
 ```
 
 ## Development
@@ -159,7 +159,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Issues
 
-If you encounter any problems or have suggestions, please file an issue on the [GitHub repository](https://github.com/SingularityX-ai/penifycli/issues).
+If you encounter any problems or have suggestions, please file an issue on the [GitHub repository](https://github.com/SingularityX-ai/penify/issues).
 
 ## Support
 

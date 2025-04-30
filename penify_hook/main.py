@@ -59,9 +59,9 @@ def main():
     if '--version' in sys.argv or '-v' in sys.argv:
         from importlib.metadata import version
         try:
-            print(f"penifycli version {version('penifycli')}")
+            print(f"penify version {version('penify')}")
         except:
-            print("penifycli version 0.2.2")
+            print("penify version 0.2.2")
         return 0
     
     # Parse the arguments to determine which command was requested

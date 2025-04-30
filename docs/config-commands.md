@@ -14,17 +14,17 @@ Penify CLI stores configuration in a JSON file at `~/.penify/config.json`. The c
 
 ```bash
 # Configure LLM settings
-penifycli config llm
+penify config llm
 
 # Configure JIRA integration
-penifycli config jira
+penify config jira
 ```
 
 ## LLM Configuration
 
 ### Web Interface
 
-Running `penifycli config llm` opens a web interface in your browser where you can configure:
+Running `penify config llm` opens a web interface in your browser where you can configure:
 
 1. **Model**: The LLM model to use (e.g., `gpt-3.5-turbo`)
 2. **API Base URL**: The endpoint URL for your LLM API (e.g., `https://api.openai.com/v1`)
@@ -72,7 +72,7 @@ After configuration, your `~/.penify/config.json` will contain:
 
 ### Web Interface
 
-Running `penifycli config jira` opens a web interface where you can configure:
+Running `penify config jira` opens a web interface where you can configure:
 
 1. **JIRA URL**: Your JIRA instance URL (e.g., `https://yourcompany.atlassian.net`)
 2. **Username**: Your JIRA username (typically your email)
@@ -123,7 +123,7 @@ You can override configuration settings using environment variables:
 Example:
 ```bash
 export PENIFY_LLM_MODEL="gpt-4"
-penifycli commit
+penify commit
 ```
 
 ## Command-Line Configuration
