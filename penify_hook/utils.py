@@ -11,22 +11,7 @@ class GitRepoNotFoundError(Exception):
 
 
 def get_repo_details(repo: Repo):
-    """Get details of a Git repository, including its hosting service,
-    organization name, and repository name.
-
-    This function extracts these details from the remote URL of the provided
-    Git repository. It supports popular platforms like GitHub, Azure DevOps,
-    Bitbucket, and GitLab. If the hosting service cannot be determined, it
-    defaults to "Unknown Hosting Service".
-
-    Args:
-        repo (Repo): The GitPython Repo object representing the repository.
-
-    Returns:
-        dict: A dictionary containing keys for 'organization_name', 'repo_name', and
-            'vendor' which represent the organization name, repository name, and
-            hosting service respectively.
-    """
+    """Determine the details of a repository including its remote URL, hosting service, organization name, and repository name."""
     remote_url = None
     hosting_service = "Unknown"
     org_name = None
@@ -75,16 +60,7 @@ def get_repo_details(repo: Repo):
     }
 
 def recursive_search_git_folder(folder_path):
-    """Recursively search for the .git folder in the specified directory and
-    return its parent directory.
-
-    Args:
-        folder_path (str): The path of the directory to search for the .git folder.
-
-    Returns:
-        str: The path of the directory containing the .git folder. If no .git folder
-            is found, returns None.
-    """
+    """Recursively searches for a .git folder starting from the given directory."""
     if os.path.isdir(folder_path):
         if '.git' in os.listdir(folder_path):
             return folder_path
@@ -95,25 +71,8 @@ def recursive_search_git_folder(folder_path):
             return recursive_search_git_folder(os.path.dirname(folder_path))
         
 def find_git_parent(path):
-    """Find the parent directory of a Git repository.
 
-    This function traverses up the directory structure from the given path
-    to locate the nearest parent directory that contains a `.git` folder. If
-    such a directory is found, it returns the path to that directory. If no
-    Git repository is found in the specified path or any of its parent
-    directories, it raises a custom exception.
-
-    Args:
-        path (str): The path from which to start searching for the Git repository.
-
-    Returns:
-        str: The absolute path to the parent directory containing the `.git` folder.
-
-    Raises:
-        GitRepoNotFoundError: If no Git repository is found in the specified path or any of its parent
-            directories.
-    """
-
+    """Traverse up from the given path to find the nearest directory containing a .git subdirectory."""
     current_dir = os.path.abspath(path)
 
     while current_dir != os.path.dirname(current_dir):  # Traverse up to the root directory

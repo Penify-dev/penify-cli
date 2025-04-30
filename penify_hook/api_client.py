@@ -40,7 +40,7 @@ class APIClient:
         }
         if repo_details:
             payload['git_repo'] = repo_details
-        url = self.api_url+"/v1/hook/file/generate/doc"
+        url = self.api_url+"/v1/cli/file/generate/doc"
         response = requests.post(url, json=payload,headers={"api-key": f"{self.AUTH_TOKEN}"}, timeout=60*10)
         if response.status_code == 200:
             response = response.json()
@@ -84,7 +84,7 @@ class APIClient:
         if jira_context:
             payload['jira_context'] = jira_context
 
-        url = self.api_url+"/v1/hook/commit/summary"
+        url = self.api_url+"/v1/cli/commit/summary"
         try:
             response = requests.post(url, json=payload, headers
             ={"api-key": f"{self.AUTH_TOKEN}"}, timeout=60*10)
@@ -112,7 +112,7 @@ class APIClient:
             list[str]: A list of supported file types, either from the API or a default set.
         """
 
-        url = self.api_url+"/v1/file/supported_languages"
+        url = self.api_url+"/v1/cli/supported_languages"
         response = requests.get(url)
         if response.status_code == 200:
             response = response.json()
