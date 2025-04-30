@@ -9,18 +9,21 @@ from threading import Thread
 from pathlib import Path
 
 def save_credentials(api_key):
-    """
-    Save the token and API keys based on priority:
-    1. .env file in Git repo root (if in a git repo)
-    2. .penify file in home directory (global fallback)
+    # Try to save in .env file in git repo first
+    """Save the API key to a configuration file based on priority.
+    
+    This function attempts to save the provided API key in the following locations, in order of precedence: 1. A `.env` file
+    located at the root of the Git repository (if the current directory is within a Git repo). 2. A `.penify` file located
+    in the user's home directory (global fallback).  The function will read existing content from the target file, update or
+    append the API key, and then save the changes. If any error occurs during the process, it will print an error message
+    and attempt to save the credentials in the next available location.
     
     Args:
-        api_key: The API key to save
-        
+        api_key (str): The API key to be saved.
+    
     Returns:
-        bool: True if saved successfully, False otherwise
+        bool: True if the API key was saved successfully, False otherwise.
     """
-    # Try to save in .env file in git repo first
     try:
         from ..utils import recursive_search_git_folder
         current_dir = os.getcwd()
@@ -80,20 +83,16 @@ def save_credentials(api_key):
         return False
 
 def login(api_url, dashboard_url):
-    """Open the login page in a web browser and listen for the redirect URL to
-    capture the token.
-
-    This function generates a random redirect port, constructs the full
-    login URL with the provided dashboard URL, opens the login page in the
-    default web browser, and sets up a simple HTTP server to listen for the
-    redirect. Upon receiving the redirect, it extracts the token from the
-    query parameters, fetches API keys using the token, saves them if
-    successful, and handles login failures by notifying the user.
-
+    """Open the login page in a web browser and listen for the redirect URL to capture the token.
+    
+    This function generates a random redirect port, constructs the full login URL with the provided dashboard URL, opens the
+    login page in the default web browser, and sets up a simple HTTP server to listen for the redirect. Upon receiving the
+    redirect, it extracts the token from the query parameters, fetches API keys using the token, saves them if successful,
+    and handles login failures by notifying the user.
+    
     Args:
         api_url (str): The URL of the API service to fetch API keys.
-        dashboard_url (str): The URL of the dashboard where the user will be redirected after logging
-            in.
+        dashboard_url (str): The URL of the dashboard where the user will be redirected after logging in.
     """
     redirect_port = random.randint(30000, 50000)
     redirect_url = f"http://localhost:{redirect_port}/callback"
