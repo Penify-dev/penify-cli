@@ -14,3 +14,10 @@ build/
 *.db
 .env
 coverage.xml
+*.coverage
+*.cover
+*.egg
+*.egg-info
+*.whl
+*.zip
+.coverage
