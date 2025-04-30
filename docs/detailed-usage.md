@@ -31,7 +31,7 @@ This document provides in-depth information about all features and capabilities 
 
 ### Login Process
 
-When you run `penifycli login`, the tool:
+When you run `penify login`, the tool:
 
 1. Opens your default web browser
 2. Redirects you to Penify's login page
@@ -58,7 +58,7 @@ API tokens are stored in your home directory in the `.penify` file. This JSON fi
 ## Command Overview
 
 ```
-penifycli
+penify
 ├── commit        Generate smart commit messages
 ├── config        Configure local LLM and JIRA
 │   ├── llm       Configure local LLM settings
@@ -91,7 +91,7 @@ The `docgen` command generates documentation for your code:
 
 ### Authentication Requirement
 
-This feature requires authentication with a Penify account. Run `penifycli login` before using documentation features.
+This feature requires authentication with a Penify account. Run `penify login` before using documentation features.
 
 ## Configuration Settings
 
@@ -108,16 +108,16 @@ Penify can install Git hooks to automate documentation generation:
 
 ### Post-Commit Hook
 
-- **Install**: `penifycli docgen install-hook`
+- **Install**: `penify docgen install-hook`
 - **What it does**: Automatically generates documentation for changed files after each commit
-- **Uninstall**: `penifycli docgen uninstall-hook`
+- **Uninstall**: `penify docgen uninstall-hook`
 
 ### Custom Hook Location
 
 You can specify a custom location for Git hooks:
 
 ```bash
-penifycli docgen install-hook -l /path/to/git/repo
+penify docgen install-hook -l /path/to/git/repo
 ```
 
 ## Advanced Use Cases
@@ -136,14 +136,14 @@ Generate documentation for an entire repository:
 ```bash
 git clone https://github.com/user/repo
 cd repo
-penifycli docgen -l .
+penify docgen -l .
 ```
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **API Key Errors**: Ensure you've run `penifycli login` or set `PENIFY_API_TOKEN`
+1. **API Key Errors**: Ensure you've run `penify login` or set `PENIFY_API_TOKEN`
 2. **LLM Configuration**: Check your LLM settings with `cat ~/.penify`
 3. **JIRA Integration**: Verify JIRA credentials in your configuration
 

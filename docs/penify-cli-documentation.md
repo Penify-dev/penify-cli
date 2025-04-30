@@ -12,7 +12,7 @@ Penify CLI is a powerful tool for enhancing your development workflow with AI-po
 ## Installation
 
 ```bash
-pip install penifycli
+pip install penify
 ```
 
 ## Getting Started
@@ -20,7 +20,7 @@ pip install penifycli
 After installation, you can check the version of Penify CLI:
 
 ```bash
-penifycli --version
+penify --version
 ```
 
 ## Commands Overview
@@ -39,7 +39,7 @@ The `commit` command generates intelligent commit messages using local LLM model
 #### Usage:
 
 ```bash
-penifycli commit [options]
+penify commit [options]
 ```
 
 #### Options:
@@ -52,23 +52,23 @@ penifycli commit [options]
 
 **Basic usage:**
 ```bash
-penifycli commit
+penify commit
 ```
 
 **Provide context for better results:**
 ```bash
-penifycli commit -m "Fixed the login button"
+penify commit -m "Fixed the login button"
 ```
 
 **Generate a detailed commit message and open editor:**
 ```bash
-penifycli commit -e -d
+penify commit -e -d
 ```
 
 #### Requirements:
 
-- Either a local LLM configuration (via `penifycli config llm`) or Penify login
-- For JIRA integration, configure JIRA settings (via `penifycli config jira`)
+- Either a local LLM configuration (via `penify config llm`) or Penify login
+- For JIRA integration, configure JIRA settings (via `penify config jira`)
 
 ---
 
@@ -79,7 +79,7 @@ The `config` command helps you configure local LLM settings and JIRA integration
 #### Usage:
 
 ```bash
-penifycli config [subcommand]
+penify config [subcommand]
 ```
 
 #### Subcommands:
@@ -91,7 +91,7 @@ penifycli config [subcommand]
 
 **Configure local LLM:**
 ```bash
-penifycli config llm
+penify config llm
 ```
 This opens a web interface to configure:
 - Model name (e.g., gpt-3.5-turbo, llama2)
@@ -100,7 +100,7 @@ This opens a web interface to configure:
 
 **Configure JIRA integration:**
 ```bash
-penifycli config jira
+penify config jira
 ```
 This opens a web interface to configure:
 - JIRA URL (e.g., https://your-domain.atlassian.net)
@@ -116,7 +116,7 @@ The `login` command authenticates you with Penify for advanced features like cod
 #### Usage:
 
 ```bash
-penifycli login
+penify login
 ```
 
 #### What happens:
@@ -127,7 +127,7 @@ penifycli login
 #### Example:
 
 ```bash
-penifycli login
+penify login
 ```
 
 ---
@@ -139,7 +139,7 @@ The `docgen` command generates documentation for your code using Penify's AI ser
 #### Usage:
 
 ```bash
-penifycli docgen [options] [subcommand]
+penify docgen [options] [subcommand]
 ```
 
 #### Options:
@@ -155,32 +155,32 @@ penifycli docgen [options] [subcommand]
 
 **Document current Git diff:**
 ```bash
-penifycli docgen
+penify docgen
 ```
 
 **Document a specific file:**
 ```bash
-penifycli docgen -l src/main.py
+penify docgen -l src/main.py
 ```
 
 **Document an entire folder:**
 ```bash
-penifycli docgen -l src/components
+penify docgen -l src/components
 ```
 
 **Install the Git hook for automatic documentation:**
 ```bash
-penifycli docgen install-hook
+penify docgen install-hook
 ```
 
 **Uninstall the Git hook:**
 ```bash
-penifycli docgen uninstall-hook
+penify docgen uninstall-hook
 ```
 
 #### Requirements:
 
-- Requires login to Penify (`penifycli login`)
+- Requires login to Penify (`penify login`)
 
 ## Configuration Files
 
