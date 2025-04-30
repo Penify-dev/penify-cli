@@ -25,21 +25,12 @@ class FileAnalyzerGenHook(BaseAnalyzer):
 
 
     def process_file(self, file_path, pbar):
-        """Process a file by reading its content and sending it to an API for
-        processing.
-
-        This function validates the provided file extension, reads the content
-        of the file, and sends it to an API client for further processing. If
-        the API responds successfully, the original file content is replaced
-        with the response.
-
+        """Processes a file by validating its extension, reading content, generating documentation,
+        and writing changes back to the file.
+        
         Args:
-            file_path (str): The relative path to the file that needs to be processed.
-            pbar (tqdm): Progress bar to update during processing.
-
-        Returns:
-            bool: True if the file was processed successfully, False otherwise.
-        """
+            file_path (str): The path of the file to be processed.
+            pbar (tqdm.tqdm): A progress bar object to update the status of processing stages."""
         file_abs_path = os.path.join(os.getcwd(), file_path)
         file_extension = os.path.splitext(file_path)[1].lower()
         
@@ -103,29 +94,14 @@ class FileAnalyzerGenHook(BaseAnalyzer):
             return False
     
     def print_processing(self, file_path):
-        """Print a processing message for a file.
-
-        Args:
-            file_path (str): The path to the file being processed.
-        """
+        """Prints a formatted message indicating that a file is being processed."""
         formatted_path = format_file_path(file_path)
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
     def run(self):
-        """Run the post-commit hook.
-
-        This method executes the post-commit hook by processing a specified
-        file. It attempts to process the file located at `self.file_path`. If an
-        error occurs during the processing, it catches the exception and prints
-        an error message indicating that the file was not processed. The method
-        displays a progress bar and colored output to provide visual feedback on
-        the processing status.
-
-        Args:
-            self (PostCommitHook): An instance of the PostCommitHook class.
-        """
         
         # Create a progress bar with appropriate stages
+        """Runs the documentation process with a progress bar."""
         stages = ["Validating", "Reading content", "Documenting", "Writing changes", "Completed"]
         pbar, _ = create_stage_progress_bar(stages, f"Starting documenting")
         
