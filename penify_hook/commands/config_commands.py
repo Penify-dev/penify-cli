@@ -21,10 +21,11 @@ except ImportError:
 
 def load_env_files() -> None:
     """
-    Load environment variables from .env files in various locations:
-    1. Current directory
-    2. Git repo root directory
-    3. User home directory
+    Load environment variables from .env files in various locations,
+    with proper priority (later files override earlier ones):
+    1. User home directory .env (lowest priority)
+    2. Git repo root directory .env (if in a git repo)
+    3. Current directory .env (highest priority)
     
     This function is called when the module is imported, ensuring env variables
     are available throughout the application lifecycle.
@@ -34,28 +35,30 @@ def load_env_files() -> None:
         logging.warning("Run 'pip install python-dotenv' to enable .env file support.")
         return
 
-    # Load from current directory
-    load_dotenv(override=True)
+    # Load from user home directory (lowest priority)
+    try:
+        home_env = Path.home() / '.env'
+        if home_env.exists():
+            load_dotenv(dotenv_path=home_env, override=False)
+    except Exception as e:
+        logging.warning(f"Failed to load .env from home directory: {str(e)}")
     
-    # Load from Git repo root
+    # Load from Git repo root (medium priority)
     try:
         from penify_hook.utils import recursive_search_git_folder
         current_dir = os.getcwd()
         repo_root = recursive_search_git_folder(current_dir)
-        if repo_root:
+        if repo_root and repo_root != str(Path.home()):
             repo_env = Path(repo_root) / '.env'
-            if repo_env.exists():
+            if repo_env.exists() and repo_env != home_env:
                 load_dotenv(dotenv_path=repo_env, override=True)
     except Exception as e:
         logging.warning(f"Failed to load .env from Git repo: {str(e)}")
     
-    # Load from user home directory
-    try:
-        home_env = Path.home() / '.env'
-        if home_env.exists():
-            load_dotenv(dotenv_path=home_env, override=True)
-    except Exception as e:
-        logging.warning(f"Failed to load .env from home directory: {str(e)}")
+    # Load from current directory (highest priority)
+    current_env = Path(os.getcwd()) / '.env'
+    if current_env.exists() and (not repo_root or current_env != Path(repo_root) / '.env'):
+        load_dotenv(dotenv_path=current_env, override=True)
 
 
 # Load environment variables when module is imported
@@ -110,31 +113,56 @@ def get_env_var_or_default(env_var: str, default: Any = None) -> Any:
 
 def save_llm_config(model, api_base, api_key):
     """
-    Save LLM configuration settings in the .penify file.
+    Save LLM configuration settings to .env file.
+    
+    This function saves LLM configuration in the following priority:
+    1. Git repo root .env (if inside a git repo)
+    2. User home directory .env
     """
-
-    penify_file = get_penify_config()
+    from pathlib import Path
+    import os
     
-    config = {}
-    if penify_file.exists():
-        try:
-            with open(penify_file, 'r') as f:
-                config = json.load(f)
-        except (json.JSONDecodeError, IOError, OSError) as e:
-            print(f"Error reading configuration file: {str(e)}")
-            # Continue with empty config
+    if not DOTENV_AVAILABLE:
+        print("python-dotenv is not installed. Run 'pip install python-dotenv' to enable .env file support.")
+        return False
     
-    # Update or add LLM configuration
-    config['llm'] = {
-        'model': model,
-        'api_base': api_base,
-        'api_key': api_key
-    }
-    
+    # Try to find Git repo root
     try:
-        with open(penify_file, 'w') as f:
-            json.dump(config, f)
-        print(f"LLM configuration saved to {penify_file}")
+        from penify_hook.utils import recursive_search_git_folder
+        current_dir = os.getcwd()
+        repo_root = recursive_search_git_folder(current_dir)
+        env_file = Path(repo_root) / '.env' if repo_root else Path.home() / '.env'
+    except Exception as e:
+        print(f"Failed to determine Git repo root: {str(e)}")
+        env_file = Path.home() / '.env'
+    
+    # Read existing .env content
+    env_content = {}
+    if env_file.exists():
+        with open(env_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    env_content[key.strip()] = value.strip()
+    
+    # Update LLM configuration
+    env_content['PENIFY_LLM_MODEL'] = model
+    env_content['PENIFY_LLM_API_BASE'] = api_base
+    env_content['PENIFY_LLM_API_KEY'] = api_key
+    
+    # Write back to .env file
+    try:
+        with open(env_file, 'w') as f:
+            for key, value in env_content.items():
+                f.write(f"{key}={value}\n")
+        print(f"LLM configuration saved to {env_file}")
+        
+        # Reload environment variables to make changes immediately available
+        if DOTENV_AVAILABLE:
+            from dotenv import load_dotenv
+            load_dotenv(dotenv_path=env_file, override=True)
+            
         return True
     except Exception as e:
         print(f"Error saving LLM configuration: {str(e)}")
@@ -143,31 +171,56 @@ def save_llm_config(model, api_base, api_key):
 
 def save_jira_config(url, username, api_token):
     """
-    Save JIRA configuration settings in the .penify file.
+    Save JIRA configuration settings to .env file.
+    
+    This function saves JIRA configuration in the following priority:
+    1. Git repo root .env (if inside a git repo)
+    2. User home directory .env
     """
-    from penify_hook.utils import recursive_search_git_folder
-
-    penify_file = get_penify_config()
+    from pathlib import Path
+    import os
     
-    config = {}
-    if penify_file.exists():
-        try:
-            with open(penify_file, 'r') as f:
-                config = json.load(f)
-        except json.JSONDecodeError:
-            pass
+    if not DOTENV_AVAILABLE:
+        print("python-dotenv is not installed. Run 'pip install python-dotenv' to enable .env file support.")
+        return False
     
-    # Update or add JIRA configuration
-    config['jira'] = {
-        'url': url,
-        'username': username,
-        'api_token': api_token
-    }
-    
+    # Try to find Git repo root
     try:
-        with open(penify_file, 'w') as f:
-            json.dump(config, f)
-        print(f"JIRA configuration saved to {penify_file}")
+        from penify_hook.utils import recursive_search_git_folder
+        current_dir = os.getcwd()
+        repo_root = recursive_search_git_folder(current_dir)
+        env_file = Path(repo_root) / '.env' if repo_root else Path.home() / '.env'
+    except Exception as e:
+        print(f"Failed to determine Git repo root: {str(e)}")
+        env_file = Path.home() / '.env'
+    
+    # Read existing .env content
+    env_content = {}
+    if env_file.exists():
+        with open(env_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    env_content[key.strip()] = value.strip()
+    
+    # Update JIRA configuration
+    env_content['PENIFY_JIRA_URL'] = url
+    env_content['PENIFY_JIRA_USER'] = username
+    env_content['PENIFY_JIRA_TOKEN'] = api_token
+    
+    # Write back to .env file
+    try:
+        with open(env_file, 'w') as f:
+            for key, value in env_content.items():
+                f.write(f"{key}={value}\n")
+        print(f"JIRA configuration saved to {env_file}")
+        
+        # Reload environment variables to make changes immediately available
+        if DOTENV_AVAILABLE:
+            from dotenv import load_dotenv
+            load_dotenv(dotenv_path=env_file, override=True)
+            
         return True
     except Exception as e:
         print(f"Error saving JIRA configuration: {str(e)}")
@@ -176,7 +229,7 @@ def save_jira_config(url, username, api_token):
 
 def get_llm_config() -> Dict[str, str]:
     """
-    Get LLM configuration with environment variables having highest priority.
+    Get LLM configuration from environment variables.
     
     Environment variables:
     - PENIFY_LLM_MODEL: Model name
@@ -186,41 +239,26 @@ def get_llm_config() -> Dict[str, str]:
     Returns:
         dict: Configuration dictionary with model, api_base, and api_key
     """
-    # Initialize with environment variables
+    # Ensure environment variables are loaded
+    if DOTENV_AVAILABLE:
+        load_env_files()
+    
+    # Get values from environment variables
     config = {
-        'model': get_env_var_or_default('PENIFY_LLM_MODEL'),
-        'api_base': get_env_var_or_default('PENIFY_LLM_API_BASE'),
-        'api_key': get_env_var_or_default('PENIFY_LLM_API_KEY')
+        'model': get_env_var_or_default('PENIFY_LLM_MODEL', ''),
+        'api_base': get_env_var_or_default('PENIFY_LLM_API_BASE', ''),
+        'api_key': get_env_var_or_default('PENIFY_LLM_API_KEY', '')
     }
     
-    # Remove None values
-    config = {k: v for k, v in config.items() if v is not None}
-    
-    # If we have all config from environment variables, return early
-    if all(k in config for k in ['model', 'api_base', 'api_key']):
-        return config
-    
-    # Otherwise load from config file and merge
-    config_file = get_penify_config()
-    if config_file.exists():
-        try:
-            with open(config_file, 'r') as f:
-                file_config = json.load(f)
-                file_llm_config = file_config.get('llm', {})
-                
-                # Only override values not set by environment variables
-                for k, v in file_llm_config.items():
-                    if k not in config:
-                        config[k] = v
-        except (json.JSONDecodeError, Exception) as e:
-            print(f"Error reading .penify config file: {str(e)}")
+    # Remove empty values
+    config = {k: v for k, v in config.items() if v}
     
     return config
 
 
 def get_jira_config() -> Dict[str, str]:
     """
-    Get JIRA configuration with environment variables having highest priority.
+    Get JIRA configuration from environment variables.
     
     Environment variables:
     - PENIFY_JIRA_URL: JIRA URL
@@ -230,34 +268,19 @@ def get_jira_config() -> Dict[str, str]:
     Returns:
         dict: Configuration dictionary with url, username, and api_token
     """
-    # Initialize with environment variables
+    # Ensure environment variables are loaded
+    if DOTENV_AVAILABLE:
+        load_env_files()
+    
+    # Get values from environment variables
     config = {
-        'url': get_env_var_or_default('PENIFY_JIRA_URL'),
-        'username': get_env_var_or_default('PENIFY_JIRA_USER'),
-        'api_token': get_env_var_or_default('PENIFY_JIRA_TOKEN')
+        'url': get_env_var_or_default('PENIFY_JIRA_URL', ''),
+        'username': get_env_var_or_default('PENIFY_JIRA_USER', ''),
+        'api_token': get_env_var_or_default('PENIFY_JIRA_TOKEN', '')
     }
     
-    # Remove None values
-    config = {k: v for k, v in config.items() if v is not None}
-    
-    # If we have all config from environment variables, return early
-    if all(k in config for k in ['url', 'username', 'api_token']):
-        return config
-    
-    # Otherwise load from config file and merge
-    config_file = get_penify_config()
-    if config_file.exists():
-        try:
-            with open(config_file, 'r') as f:
-                file_config = json.load(f)
-                file_jira_config = file_config.get('jira', {})
-                
-                # Only override values not set by environment variables
-                for k, v in file_jira_config.items():
-                    if k not in config:
-                        config[k] = v
-        except (json.JSONDecodeError, Exception) as e:
-            print(f"Error reading .penify config file: {str(e)}")
+    # Remove empty values
+    config = {k: v for k, v in config.items() if v}
     
     return config
 
