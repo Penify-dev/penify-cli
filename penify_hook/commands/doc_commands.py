@@ -2,6 +2,8 @@
 import argparse
 import logging
 import os
+import sys
+import time
 
 def generate_doc(api_url, token, location=None):
     """Generates documentation based on the given parameters.
@@ -19,13 +21,9 @@ def generate_doc(api_url, token, location=None):
         location (str?): The path to a specific file or folder to analyze. If not provided, the
             current working directory is used.
     """
-
-    import os
-    import sys
-    from ..folder_analyzer import FolderAnalyzerGenHook
-    from ..file_analyzer import FileAnalyzerGenHook
-    from ..git_analyzer import GitDocGenHook
+    t1 = time.time()
     from ..api_client import APIClient
+    print(f"Time taken to laod APIClinet: {time.time() - t1:.2f} seconds")
     """Generates documentation based on the given parameters.
 
     This function initializes an API client using the provided API URL and
@@ -45,6 +43,7 @@ def generate_doc(api_url, token, location=None):
     if location is None:
         current_folder_path = os.getcwd()
         try:
+            from ..git_analyzer import GitDocGenHook
             analyzer = GitDocGenHook(current_folder_path, api_client)
             analyzer.run()
         except Exception as e:
@@ -54,6 +53,7 @@ def generate_doc(api_url, token, location=None):
     # if location is a file
     elif len(location.split('.')) > 1:
         try:
+            from ..file_analyzer import FileAnalyzerGenHook
             analyzer = FileAnalyzerGenHook(location, api_client)
             analyzer.run()
         except Exception as e:
@@ -62,6 +62,7 @@ def generate_doc(api_url, token, location=None):
 
     else:
         try:
+            from ..folder_analyzer import FolderAnalyzerGenHook
             analyzer = FolderAnalyzerGenHook(location, api_client)
             analyzer.run()
         except Exception as e:

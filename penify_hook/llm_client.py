@@ -2,7 +2,10 @@ import json
 import os
 import sys
 from typing import Dict, Optional, List, Any, Union
-import litellm
+import time
+
+# Removed eager litellm import and timing code
+# Will lazy load litellm only when needed
 
 class LLMClient:
     """
@@ -24,6 +27,15 @@ class LLMClient:
             os.environ["OPENAI_API_BASE"] = api_base
         if api_key:
             os.environ["OPENAI_API_KEY"] = api_key
+        self._litellm = None
+    
+    @property
+    def litellm(self):
+        """Lazy load litellm only when needed."""
+        if self._litellm is None:
+            import litellm
+            self._litellm = litellm
+        return self._litellm
     
     def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None) -> Dict:
         """Generate a commit summary using the LLM.
@@ -118,8 +130,8 @@ class LLMClient:
         """
         
         try:
-            # Call the LLM using litellm
-            response = litellm.completion(
+            # Call the LLM using litellm - now using the lazy-loaded property
+            response = self.litellm.completion(
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.2,
