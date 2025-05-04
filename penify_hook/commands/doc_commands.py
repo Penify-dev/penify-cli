@@ -6,21 +6,16 @@ import sys
 import time
 
 def generate_doc(api_url, token, location=None):
-    """Generates documentation based on the given parameters.
-
-    This function initializes an API client using the provided API URL and
-    token. It then generates documentation by analyzing the specified
-    location, which can be a folder, a file, or the current working
-    directory if no location is provided. The function handles different
-    types of analysis based on the input location and reports any errors
-    encountered during the process.
-
+    """Generates documentation using an API client based on the specified location.
+    
+    Initializes an API client and generates documentation by analyzing a folder, file, or the current working directory if
+    no location is provided. Handles different types of analysis and exits with an error message if any issues occur.
+    
     Args:
         api_url (str): The URL of the API to connect to for documentation generation.
         token (str): The authentication token for accessing the API.
-        location (str?): The path to a specific file or folder to analyze. If not provided, the
-            current working directory is used.
-    """
+        location (str?): The path to a specific file or folder to analyze.
+            If not provided, the current working directory is used."""
     t1 = time.time()
     from ..api_client import APIClient
     print(f"Time taken to laod APIClinet: {time.time() - t1:.2f} seconds")
