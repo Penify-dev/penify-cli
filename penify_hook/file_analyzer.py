@@ -66,7 +66,7 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         # --- STAGE 3: Documenting ---
         update_stage(pbar, "Documenting")
         
-        response = self.api_client.send_file_for_docstring_generation(file_path, content, modified_lines, self.repo_details)
+        response = self.api_client.send_file_for_docstring_generation(self.relative_file_path, content, modified_lines, self.repo_details)
         
         if response is None:
             return False
