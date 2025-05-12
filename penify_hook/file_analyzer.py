@@ -25,12 +25,12 @@ class FileAnalyzerGenHook(BaseAnalyzer):
 
 
     def process_file(self, file_path, pbar):
-        """Processes a file by validating its extension, reading content, generating documentation,
-        and writing changes back to the file.
-        
-        Args:
-            file_path (str): The path of the file to be processed.
-            pbar (tqdm.tqdm): A progress bar object to update the status of processing stages."""
+        """Processes a file by validating its extension, reading its content, generating
+        documentation,
+        and writing changes back to the file.  The function goes through several
+        stages: validation, reading content, documenting, and writing changes. It uses
+        a progress bar to indicate the current stage and updates it after each step is
+        completed. If any step fails, the function logs an error and returns False."""
         file_abs_path = os.path.join(os.getcwd(), file_path)
         file_extension = os.path.splitext(file_path)[1].lower()
         
