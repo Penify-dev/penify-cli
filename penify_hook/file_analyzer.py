@@ -24,7 +24,7 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         
 
 
-    def process_file(self, file_path, pbar):
+    def process_file(self, file_path, pbar, new_param: str = ""):
         """Processes a file by validating its extension, reading content, generating documentation,
         and writing changes back to the file.
         
