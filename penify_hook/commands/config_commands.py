@@ -20,15 +20,13 @@ except ImportError:
 
 
 def load_env_files() -> None:
-    """
-    Load environment variables from .env files in various locations,
-    with proper priority (later files override earlier ones):
-    1. User home directory .env (lowest priority)
-    2. Git repo root directory .env (if in a git repo)
-    3. Current directory .env (highest priority)
+    """Load environment variables from .env files in various locations with proper
+    priority.
     
-    This function is called when the module is imported, ensuring env variables
-    are available throughout the application lifecycle.
+    This function loads environment variables from .env files located in different
+    directories, prioritizing the current directory over the Git repo root and the
+    user home directory. The loading process ensures that later files override
+    earlier ones.
     """
     if not DOTENV_AVAILABLE:
         logging.warning("python-dotenv is not installed. .env file loading is disabled.")
@@ -66,16 +64,8 @@ load_env_files()
 
 
 def get_penify_config() -> Path:
-    """Get the home directory for the .penify configuration file.
-
-    This function searches for the `.penify` file in the current directory
-    and its parent directories until it finds it or reaches the home
-    directory. If not found, it creates the `.penify` directory and an empty
-    `config.json` file.
-
-    Returns:
-        Path: The path to the `config.json` file within the `.penify` directory.
-    """
+    """Returns the path to the `config.json` file within the `.penify` directory,
+    creating it if necessary."""
     current_dir = os.getcwd()
     from penify_hook.utils import recursive_search_git_folder
     home_dir = recursive_search_git_folder(current_dir)
@@ -103,26 +93,26 @@ def get_penify_config() -> Path:
 
 
 def get_env_var_or_default(env_var: str, default: Any = None) -> Any:
-    """
-    Get environment variable or return default value.
-    
-    Args:
-        env_var: The environment variable name
-        default: Default value if environment variable is not set
-        
-    Returns:
-        Value of the environment variable or default
-    """
+    """Get environment variable or return default value."""
     return os.environ.get(env_var, default)
 
 
 def save_llm_config(model, api_base, api_key):
-    """
-    Save LLM configuration settings to .env file.
+    """Save LLM configuration settings to an .env file.
     
-    This function saves LLM configuration in the following priority:
-    1. Git repo root .env (if inside a git repo)
-    2. User home directory .env
+    This function saves the LLM configuration following a specific priority: 1. Git
+    repo root .env (if inside a git repo) 2. User home directory .env  It handles
+    the detection of the Git repo root, reads the existing .env content, updates it
+    with the new LLM configuration, and writes it back to the file. It also reloads
+    the environment variables to make changes immediately available.
+    
+    Args:
+        model (str): The name of the language model.
+        api_base (str): The base URL for the API.
+        api_key (str): The API key for authentication.
+    
+    Returns:
+        bool: True if the configuration is saved successfully, False otherwise.
     """
     from pathlib import Path
     import os
@@ -175,12 +165,24 @@ def save_llm_config(model, api_base, api_key):
 
 
 def save_jira_config(url, username, api_token):
-    """
-    Save JIRA configuration settings to .env file.
+    """Save JIRA configuration settings to a .env file.
     
-    This function saves JIRA configuration in the following priority:
-    1. Git repo root .env (if inside a git repo)
-    2. User home directory .env
+    This function saves JIRA configuration following these steps: 1. Determine the
+    target .env file location based on whether the current directory is inside a
+    Git repository. 2. If inside a Git repo, use the Git repo root's .env file;
+    otherwise, use the user home directory's .env file. 3. Read the existing
+    content of the .env file (if it exists) to preserve other settings. 4. Update
+    the .env content with the new JIRA configuration. 5. Write the updated content
+    back to the .env file. 6. Optionally, reload environment variables to make
+    changes immediately available.
+    
+    Args:
+        url (str): The JIRA URL to be saved in the .env file.
+        username (str): The JIRA username to be saved in the .env file.
+        api_token (str): The JIRA API token to be saved in the .env file.
+    
+    Returns:
+        bool: True if the configuration was successfully saved, False otherwise.
     """
     from pathlib import Path
     import os
@@ -233,18 +235,8 @@ def save_jira_config(url, username, api_token):
 
 
 def get_llm_config() -> Dict[str, str]:
-    """
-    Get LLM configuration from environment variables.
-    
-    Environment variables:
-    - PENIFY_LLM_MODEL: Model name
-    - PENIFY_LLM_API_BASE: API base URL
-    - PENIFY_LLM_API_KEY: API key
-    
-    Returns:
-        dict: Configuration dictionary with model, api_base, and api_key
-    """
     # Ensure environment variables are loaded
+    """Retrieve LLM configuration from environment variables."""
     if DOTENV_AVAILABLE:
         load_env_files()
     
@@ -262,18 +254,8 @@ def get_llm_config() -> Dict[str, str]:
 
 
 def get_jira_config() -> Dict[str, str]:
-    """
-    Get JIRA configuration from environment variables.
-    
-    Environment variables:
-    - PENIFY_JIRA_URL: JIRA URL
-    - PENIFY_JIRA_USER: JIRA username
-    - PENIFY_JIRA_TOKEN: JIRA API token
-    
-    Returns:
-        dict: Configuration dictionary with url, username, and api_token
-    """
     # Ensure environment variables are loaded
+    """Retrieve JIRA configuration from environment variables."""
     if DOTENV_AVAILABLE:
         load_env_files()
     
@@ -291,17 +273,7 @@ def get_jira_config() -> Dict[str, str]:
 
 
 def config_llm_web():
-    """Open a web browser interface for configuring LLM settings.
-
-    This function starts a temporary HTTP server that serves an HTML
-    template for configuring Large Language Model (LLM) settings. It handles
-    GET and POST requests to retrieve the current configuration, save new
-    configurations, and suppress log messages.  The server runs on a random
-    port between 30000 and 50000, and it is accessible via a URL like
-    http://localhost:<redirect_port>. The function opens this URL in the
-    default web browser for configuration. Once configured, the server shuts
-    down.
-    """
+    """Starts an HTTP server for configuring LLM settings via a web interface."""
     redirect_port = random.randint(30000, 50000)
     server_url = f"http://localhost:{redirect_port}"
     
@@ -309,15 +281,8 @@ def config_llm_web():
     
     class ConfigHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
-            """Handle HTTP GET requests.
 
-            This function processes incoming GET requests and sends appropriate
-            responses based on the requested path. It serves an HTML template for
-            the root path ("/") and returns a JSON response with the current LLM
-            configuration for the "/get_config" path. For any other paths, it
-            returns a "Not Found" error.
-            """
-
+            """Handle HTTP GET requests and serve appropriate responses based on path."""
             if self.path == "/":
                 self.send_response(200)
                 self.send_header("Content-type", "text/html")
@@ -359,17 +324,8 @@ def config_llm_web():
                 self.wfile.write(b"Not Found")
 
         def do_POST(self):
-            """Handle POST requests on the /save endpoint.
 
-            This method processes incoming POST requests to save language model
-            configuration data. It extracts the necessary parameters from the
-            request body, saves the configuration using the provided details, and
-            then schedules the server to shut down after a successful save.
-
-            Args:
-                self (HTTPRequestHandler): The instance of the HTTPRequestHandler class handling the request.
-            """
-
+            """Handle POST requests to save language model configuration data."""
             if self.path == "/save":
                 content_length = int(self.headers['Content-Length'])
                 post_data = self.rfile.read(content_length)
@@ -410,6 +366,7 @@ def config_llm_web():
         
         def log_message(self, format, *args):
             # Suppress log messages
+            """Suppresses log messages."""
             return
 
     with socketserver.TCPServer(("", redirect_port), ConfigHandler) as httpd:
@@ -422,14 +379,7 @@ def config_llm_web():
 
 
 def config_jira_web():
-    """Open a web browser interface for configuring JIRA settings.
-
-    This function sets up a simple HTTP server using Python's built-in
-    `http.server` module to handle GET and POST requests. The server serves
-    an HTML page for configuration and handles saving the JIRA configuration
-    details through API tokens and URLs. Upon successful configuration, it
-    shuts down the server gracefully.
-    """
+    """Starts a web server for configuring JIRA settings."""
     redirect_port = random.randint(30000, 50000)
     server_url = f"http://localhost:{redirect_port}"
     
@@ -437,14 +387,8 @@ def config_jira_web():
     
     class ConfigHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
-            """Handle GET requests for different paths.
 
-            This function processes GET requests based on the path requested. It
-            serves an HTML template for the root path, returns a JSON configuration
-            for a specific endpoint, and handles any other paths by returning a 404
-            error.
-            """
-
+            """Handle GET requests by serving HTML, JSON, or 404 responses based on the path."""
             if self.path == "/":
                 self.send_response(200)
                 self.send_header("Content-type", "text/html")
@@ -486,16 +430,8 @@ def config_jira_web():
                 self.wfile.write(b"Not Found")
 
         def do_POST(self):
-            """Handle HTTP POST requests to save JIRA configuration.
 
-            This method processes incoming POST requests to save JIRA configuration
-            details. It reads JSON data from the request body, extracts necessary
-            parameters (URL, username, API token, and verify), saves the
-            configuration using the `save_jira_config` function, and responds with
-            success or error messages. If an exception occurs during the process, it
-            sends a 500 Internal Server Error response.
-            """
-
+            """Handle HTTP POST requests to save JIRA configuration."""
             if self.path == "/save":
                 content_length = int(self.headers['Content-Length'])
                 post_data = self.rfile.read(content_length)
@@ -539,6 +475,7 @@ def config_jira_web():
         
         def log_message(self, format, *args):
             # Suppress log messages
+            """Suppresses log messages."""
             return
 
     with socketserver.TCPServer(("", redirect_port), ConfigHandler) as httpd:
@@ -551,15 +488,17 @@ def config_jira_web():
 
 
 def get_token() -> Optional[str]:
-    """
-    Get the API token based on priority:
-    1. Environment variable PENIFY_API_TOKEN from any .env file
-    2. Config file 'api_keys' value
+    # Ensure environment variables are loaded from all .env files
+    """Retrieves an API token using a prioritized method.
+    
+    This function first attempts to load environment variables from all `.env`
+    files and checks if the `PENIFY_API_TOKEN` environment variable is set. If
+    found, it returns the token. If not, it looks for the API key in a
+    configuration file named 'api_keys'. If both methods fail, it returns None.
     
     Returns:
-        str or None: API token if found, None otherwise
+        str or None: The API token if found, otherwise None.
     """
-    # Ensure environment variables are loaded from all .env files
     if DOTENV_AVAILABLE:
         load_env_files()
     

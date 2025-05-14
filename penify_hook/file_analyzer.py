@@ -25,12 +25,17 @@ class FileAnalyzerGenHook(BaseAnalyzer):
 
 
     def process_file(self, file_path, pbar, new_param: str = ""):
-        """Processes a file by validating its extension, reading content, generating documentation,
-        and writing changes back to the file.
+        """Processes a file by validating its extension, reading content,
+        generating documentation, and writing changes back to the file.  The function
+        performs several stages of processing: 1. Validates the file's extension to
+        ensure it is supported. 2. Reads the content of the file. 3. Sends the file
+        content for documentation generation. 4. Writes the generated documentation
+        back to the file if there are changes.
         
         Args:
             file_path (str): The path of the file to be processed.
-            pbar (tqdm.tqdm): A progress bar object to update the status of processing stages."""
+            pbar (tqdm.tqdm): A progress bar object to update the status of processing stages.
+            new_param (str?): An additional parameter for future use. Defaults to an empty string."""
         file_abs_path = os.path.join(os.getcwd(), file_path)
         file_extension = os.path.splitext(file_path)[1].lower()
         
@@ -94,14 +99,20 @@ class FileAnalyzerGenHook(BaseAnalyzer):
             return False
     
     def print_processing(self, file_path):
-        """Prints a formatted message indicating that a file is being processed."""
+        """Prints a message indicating that a file is being processed."""
         formatted_path = format_file_path(file_path)
         print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
     def run(self):
         
         # Create a progress bar with appropriate stages
-        """Runs the documentation process with a progress bar."""
+        """Runs the documentation process with a progress bar.
+        
+        This method orchestrates the documentation process by creating a progress bar,
+        processing the file, and handling exceptions to ensure the progress bar
+        completes properly. It updates the progress bar through various stages and
+        provides feedback based on the result of the file processing.
+        """
         stages = ["Validating", "Reading content", "Documenting", "Writing changes", "Completed"]
         pbar, _ = create_stage_progress_bar(stages, f"Starting documenting")
         

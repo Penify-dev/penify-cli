@@ -20,25 +20,18 @@ class CommitDocGenHook(BaseAnalyzer):
 
     def get_summary(self, instruction: str, generate_description: bool) -> dict:
         """Generate a summary for the commit based on the staged changes.
-
-        This function retrieves the differences of the staged changes in the
-        repository and generates a commit summary using the provided
-        instruction. If there are no changes staged for commit, an exception is
-        raised. If a JIRA client is connected, it will attempt to extract issue
-        keys from the current branch and use them to fetch context. The summary
-        can be generated either with a Language Model (LLM) client or through
-        the API client.
-
+        
+        This function retrieves the differences of the staged changes in the repository
+        and generates a commit summary using the provided instruction. If there are no
+        changes staged for commit, an exception is raised. If a JIRA client is
+        connected, it will attempt to extract issue keys from the current branch and
+        use them to fetch context. The summary can be generated either with a Language
+        Model (LLM) client or through the API client.
+        
         Args:
             instruction (str): A string containing instructions for generating the commit summary.
             generate_description (bool): Whether to include detailed descriptions in the summary.
-
-        Returns:
-            dict: The generated commit summary based on the staged changes, provided
-                instruction, and any relevant JIRA context. The dictionary contains keys
-                such as 'summary', 'description', etc., depending on whether a
-                description was requested.
-
+        
         Raises:
             ValueError: If there are no changes staged for commit.
         """
@@ -72,21 +65,18 @@ class CommitDocGenHook(BaseAnalyzer):
    
     def run(self, msg: Optional[str], edit_commit_message: bool, generate_description: bool):
         """Run the post-commit hook.
-
-        This method processes the modified files from the last commit, stages
-        them, and creates an auto-commit with an optional message. It also
-        handles JIRA integration if available. If there is an error generating
-        the commit summary, an exception is raised.
-
+        
+        This method processes the modified files from the last commit, stages them, and
+        creates an auto-commit with an optional message. It also handles JIRA
+        integration if available. If there is an error generating the commit summary,
+        an exception is raised.
+        
         Args:
             msg (Optional[str]): An optional message to include in the commit.
-            edit_commit_message (bool): A flag indicating whether to open the git commit edit terminal after
-                committing.
-            generate_description (bool): A flag indicating whether to include a description in the commit
-                message.
-
-        Raises:
-            Exception: If there is an error generating the commit summary.
+            edit_commit_message (bool): A flag indicating whether to open the git commit
+                edit terminal after committing.
+            generate_description (bool): A flag indicating whether to include a description
+                in the commit message.
         """
         summary: dict = self.get_summary(msg, True)
         if not summary:
@@ -111,18 +101,24 @@ class CommitDocGenHook(BaseAnalyzer):
             self._amend_commit()
     
     def process_jira_integration(self, title: str, description: str, msg: str) -> tuple:
-        """Process JIRA integration for the commit message.
-
-        Args:
-            title (str): Generated commit title.
-            description (str): Generated commit description.
-            msg (str): Original user message that might contain JIRA references.
-
-        Returns:
-            tuple: A tuple containing the updated commit title and description with
-                included JIRA information.
-        """
         # Look for JIRA issue keys in commit message, title, description and user message
+        """Process JIRA integration by extracting issue keys from commit message
+        components and branch name.
+        
+        This function looks for JIRA issue keys in the provided commit title,
+        description, original user message, and the active branch name. It uses these
+        keys to update the commit message with JIRA information and adds comments to
+        the corresponding JIRA issues. If no keys are found, it logs a warning.
+        
+        Args:
+            title (str): The generated commit title.
+            description (str): The generated commit description.
+            msg (str): The original user message that might contain JIRA references.
+        
+        Returns:
+            tuple: A tuple containing the updated commit title and description with included JIRA
+                information.
+        """
         issue_keys = []
         if self.jira_client:
             # Extract from message content
@@ -160,13 +156,7 @@ class CommitDocGenHook(BaseAnalyzer):
         return title, description
 
     def _amend_commit(self):
-        """Open the default git editor for editing the commit message.
-
-        This function changes the current working directory to the repository
-        path, runs the git command to amend the last commit, and opens the
-        default editor for the user to modify the commit message. After the
-        operation, it returns to the original directory.
-        """
+        """Amends the last commit message in the repository."""
         try:
             # Change to the repository directory
             os.chdir(self.repo_path)
