@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands" xml:lang="en-US">
+
+<para>This document provides a detailed guide to all permutations and combinations of the <computeroutput>docgen</computeroutput> command, including extensive information about Git hook commands for automating documentation generation.</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md64">
+<title>Table of Contents</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Basic Usage</para>
+</listitem><listitem>
+<para>Command Options</para>
+</listitem><listitem>
+<para>Option Combinations</para>
+</listitem><listitem>
+<para>Git Hook Commands<itemizedlist>
+<listitem>
+<para>Hook Installation</para>
+</listitem><listitem>
+<para>Hook Customization</para>
+</listitem><listitem>
+<para>Hook Uninstallation</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Advanced Use Cases</para>
+</listitem><listitem>
+<para>Troubleshooting</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md65">
+<title>Basic Usage</title>
+
+<para><literallayout><computeroutput>penify&#32;docgen
+</computeroutput></literallayout></para>
+
+<para>By default, this command:<itemizedlist>
+<listitem>
+<para>Analyzes the current Git diff (changes since last commit)</para>
+</listitem><listitem>
+<para>Generates documentation for changed files only</para>
+</listitem><listitem>
+<para>Requires authentication via <computeroutput>penify login</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md66">
+<title>Command Options</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md67">
+<title>&lt;tt&gt;-l, --location&lt;/tt&gt;</title>
+
+<para>Specify a target for documentation generation:</para>
+
+<para><literallayout><computeroutput>#&#32;Generate&#32;documentation&#32;for&#32;a&#32;specific&#32;file
+penify&#32;docgen&#32;-l&#32;path/to/file.py
+
+#&#32;Generate&#32;documentation&#32;for&#32;a&#32;specific&#32;folder
+penify&#32;docgen&#32;-l&#32;path/to/folder
+</computeroutput></literallayout></para>
+
+<para>Without this flag, Penify analyzes only Git-tracked modified files.</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md68">
+<title>Subcommands</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md69">
+<title>&lt;tt&gt;install-hook&lt;/tt&gt;</title>
+
+<para>Install a Git post-commit hook to automatically generate documentation:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;install-hook
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md70">
+<title>&lt;tt&gt;uninstall-hook&lt;/tt&gt;</title>
+
+<para>Remove the Git post-commit hook:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;uninstall-hook
+</computeroutput></literallayout></para>
+</section>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md71">
+<title>Option Combinations</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md72">
+<title>Generate Documentation for Current Git Diff</title>
+
+<para><literallayout><computeroutput>#&#32;Basic&#32;usage&#32;-&#32;current&#32;Git&#32;diff
+penify&#32;docgen
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md73">
+<title>Generate Documentation for a Specific File</title>
+
+<para><literallayout><computeroutput>#&#32;Single&#32;file&#32;documentation
+penify&#32;docgen&#32;-l&#32;src/main.py
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md74">
+<title>Generate Documentation for a Folder</title>
+
+<para><literallayout><computeroutput>#&#32;Folder&#32;documentation
+penify&#32;docgen&#32;-l&#32;src/models/
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md75">
+<title>Install Hook in Current Repository</title>
+
+<para><literallayout><computeroutput>#&#32;Install&#32;hook&#32;in&#32;current&#32;Git&#32;repository
+penify&#32;docgen&#32;install-hook
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md76">
+<title>Install Hook in Specific Repository</title>
+
+<para><literallayout><computeroutput>#&#32;Install&#32;hook&#32;in&#32;a&#32;specific&#32;Git&#32;repository
+penify&#32;docgen&#32;install-hook&#32;-l&#32;/path/to/repo
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md77">
+<title>Uninstall Hook from Current Repository</title>
+
+<para><literallayout><computeroutput>#&#32;Uninstall&#32;hook&#32;from&#32;current&#32;Git&#32;repository
+penify&#32;docgen&#32;uninstall-hook
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md78">
+<title>Uninstall Hook from Specific Repository</title>
+
+<para><literallayout><computeroutput>#&#32;Uninstall&#32;hook&#32;from&#32;a&#32;specific&#32;Git&#32;repository
+penify&#32;docgen&#32;uninstall-hook&#32;-l&#32;/path/to/repo
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md79">
+<title>Git Hook Commands</title>
+
+<para>Penify provides Git hook commands to automate documentation generation as part of your Git workflow.</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md80">
+<title>Hook Installation</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md81">
+<title>How Hooks Work</title>
+
+<para>When you install a Git hook with <computeroutput>penify docgen install-hook</computeroutput>, Penify:</para>
+
+<para><orderedlist>
+<listitem>
+<para>Creates a post-commit hook script in the <computeroutput>.git/hooks</computeroutput> directory</para>
+</listitem><listitem>
+<para>Makes the script executable</para>
+</listitem><listitem>
+<para>Configures the hook to run <computeroutput>penify docgen</computeroutput> after each commit</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md82">
+<title>Hook Script Content</title>
+
+<para>The generated post-commit hook contains:</para>
+
+<para><literallayout><computeroutput>#!/bin/sh
+#&#32;This&#32;is&#32;a&#32;post-commit&#32;hook&#32;generated&#32;by&#32;penify.
+#&#32;Automatically&#32;generates&#32;documentation&#32;for&#32;changed&#32;files&#32;after&#32;each&#32;commit.
+
+penify&#32;docgen&#32;-gf&#32;/path/to/git/repository&#32;-t&#32;your_api_token
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md83">
+<title>Installation Location</title>
+
+<para>By default, hooks are installed in the current Git repository. You can specify a different location:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;install-hook&#32;-l&#32;/path/to/repo
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md84">
+<title>Installation Requirements</title>
+
+<para>To install hooks, you need:<itemizedlist>
+<listitem>
+<para>A valid Penify API token (login first with <computeroutput>penify login</computeroutput>)</para>
+</listitem><listitem>
+<para>Write permissions to the <computeroutput>.git/hooks</computeroutput> directory</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md85">
+<title>Verifying Installation</title>
+
+<para>After installation, you can verify that the hook is installed:</para>
+
+<para><literallayout><computeroutput>cat&#32;.git/hooks/post-commit
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md86">
+<title>Hook Customization</title>
+
+<para>You can customize the post-commit hook after installation:</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md87">
+<title>Modifying Hook Behavior</title>
+
+<para><orderedlist>
+<listitem>
+<para>Edit the <computeroutput>.git/hooks/post-commit</computeroutput> file</para>
+</listitem><listitem>
+<para>Add additional options to the <computeroutput>penify docgen</computeroutput> command</para>
+</listitem><listitem>
+<para>Add other commands to run after commit</para>
+</listitem></orderedlist>
+</para>
+
+<para>Example of a customized hook:</para>
+
+<para><literallayout><computeroutput>#!/bin/sh
+#&#32;This&#32;is&#32;a&#32;post-commit&#32;hook&#32;generated&#32;by&#32;penify.
+#&#32;Automatically&#32;generates&#32;documentation&#32;for&#32;changed&#32;files&#32;after&#32;each&#32;commit.
+
+#&#32;Generate&#32;documentation
+penify&#32;docgen&#32;-gf&#32;/path/to/git/repository&#32;-t&#32;your_api_token
+
+#&#32;Additional&#32;custom&#32;commands
+echo&#32;&quot;Documentation&#32;generation&#32;complete!&quot;
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md88">
+<title>Advanced Hook Scenarios</title>
+
+<para><emphasis role="bold">Conditional Documentation Generation</emphasis>:</para>
+
+<para><literallayout><computeroutput>#!/bin/sh
+#&#32;Only&#32;generate&#32;documentation&#32;for&#32;commits&#32;to&#32;the&#32;main&#32;branch
+BRANCH=$(git&#32;rev-parse&#32;--abbrev-ref&#32;HEAD)
+if&#32;[&#32;&quot;$BRANCH&quot;&#32;=&#32;&quot;main&quot;&#32;];&#32;then
+&#32;&#32;penify&#32;docgen&#32;-gf&#32;/path/to/git/repository&#32;-t&#32;your_api_token
+fi
+</computeroutput></literallayout></para>
+
+<para><emphasis role="bold">Documenting Specific Files/Folders</emphasis>:</para>
+
+<para><literallayout><computeroutput>#!/bin/sh
+#&#32;Only&#32;document&#32;Python&#32;files&#32;in&#32;the&#32;src&#32;directory
+penify&#32;docgen&#32;-l&#32;src/&#32;-gf&#32;/path/to/git/repository&#32;-t&#32;your_api_token
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md89">
+<title>Hook Uninstallation</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md90">
+<title>Standard Uninstallation</title>
+
+<para>To remove a hook from the current repository:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;uninstall-hook
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md91">
+<title>Specific Repository Uninstallation</title>
+
+<para>To remove a hook from a specific repository:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;uninstall-hook&#32;-l&#32;/path/to/repo
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md92">
+<title>Manual Hook Removal</title>
+
+<para>If needed, you can manually remove the hook:</para>
+
+<para><literallayout><computeroutput>rm&#32;.git/hooks/post-commit
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md93">
+<title>Verifying Uninstallation</title>
+
+<para>Check that the hook was successfully removed:</para>
+
+<para><literallayout><computeroutput>ls&#32;-la&#32;.git/hooks/post-commit&#32;&#32;#&#32;Should&#32;return&#32;&quot;No&#32;such&#32;file&#32;or&#32;directory&quot;
+</computeroutput></literallayout></para>
+</section>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md94">
+<title>Advanced Use Cases</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md95">
+<title>Continuous Integration</title>
+
+<para>Run documentation generation in CI pipelines:</para>
+
+<para><literallayout><computeroutput>#&#32;In&#32;your&#32;CI&#32;script
+export&#32;PENIFY_API_TOKEN=your_api_token
+penify&#32;docgen&#32;-l&#32;src/
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md96">
+<title>Batch Documentation</title>
+
+<para>Generate documentation for multiple repositories:</para>
+
+<para><literallayout><computeroutput>#&#32;Bash&#32;script&#32;for&#32;batch&#32;documentation
+for&#32;repo&#32;in&#32;repo1&#32;repo2&#32;repo3;&#32;do
+&#32;&#32;cd&#32;/path/to/$repo
+&#32;&#32;penify&#32;docgen&#32;-l&#32;.
+done
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md97">
+<title>Custom Git Hook Integration</title>
+
+<para>Integrate with other Git hooks:</para>
+
+<para><literallayout><computeroutput>#&#32;In&#32;.git/hooks/pre-push
+penify&#32;docgen&#32;-l&#32;src/
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md98">
+<title>Documenting Release Tags</title>
+
+<para>Generate documentation when creating a release tag:</para>
+
+<para><literallayout><computeroutput>#&#32;Document&#32;everything&#32;when&#32;creating&#32;a&#32;tag
+git&#32;tag&#32;-a&#32;v1.0.0
+penify&#32;docgen&#32;-l&#32;.&#32;&#32;#&#32;Document&#32;entire&#32;codebase
+git&#32;commit&#32;--amend&#32;-m&#32;&quot;Release&#32;v1.0.0&#32;with&#32;updated&#32;documentation&quot;
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md99">
+<title>Troubleshooting</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md100">
+<title>Common Issues</title>
+
+<para><orderedlist>
+<listitem>
+<para>**&quot;Authentication required&quot;**<itemizedlist>
+<listitem>
+<para>Run <computeroutput>penify login</computeroutput> before using documentation features</para>
+</listitem><listitem>
+<para>Check your API token with <computeroutput>cat ~/.penify</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>**&quot;Permission denied when installing hook&quot;**<itemizedlist>
+<listitem>
+<para>Check Git repository permissions</para>
+</listitem><listitem>
+<para>Try running with sudo (if appropriate for your environment)</para>
+</listitem><listitem>
+<para>Ensure the <computeroutput>.git/hooks</computeroutput> directory exists</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>**&quot;Hook installed but not running&quot;**<itemizedlist>
+<listitem>
+<para>Check if the hook is executable: <computeroutput>ls -la .git/hooks/post-commit</computeroutput></para>
+</listitem><listitem>
+<para>Make it executable if needed: <computeroutput>chmod +x .git/hooks/post-commit</computeroutput></para>
+</listitem><listitem>
+<para>Check for syntax errors in the hook script</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>**&quot;File or directory not found&quot;**<itemizedlist>
+<listitem>
+<para>Verify the path provided to the <computeroutput>-l</computeroutput> option</para>
+</listitem><listitem>
+<para>Ensure you&apos;re running the command from the correct directory</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>**&quot;Hook uninstallation failed&quot;**<itemizedlist>
+<listitem>
+<para>Check permissions on the <computeroutput>.git/hooks</computeroutput> directory</para>
+</listitem><listitem>
+<para>Try manual removal: <computeroutput>rm .git/hooks/post-commit</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md101">
+<title>Debugging</title>
+
+<para>For detailed output when running documentation commands:</para>
+
+<para><literallayout><computeroutput>export&#32;PENIFY_DEBUG=1
+penify&#32;docgen&#32;-l&#32;src/
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_1autotoc_md102">
+<title>Getting Help</title>
+
+<para>For command-specific help:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;--help
+penify&#32;docgen&#32;install-hook&#32;--help
+penify&#32;docgen&#32;uninstall-hook&#32;--help
+</computeroutput></literallayout> </para>
+</section>
+</section>
+</section>

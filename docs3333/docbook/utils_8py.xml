@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_utils_8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpenify__hook_1_1utils_1_1GitRepoNotFoundError">penify_hook.utils.GitRepoNotFoundError</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook">penify_hook</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1utils">penify_hook.utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1utils_1ae236f3c4c8bf5dcddbb92b4c2065eea3">penify_hook.utils.get_repo_details</link> (Repo repo)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f">penify_hook.utils.recursive_search_git_folder</link> (folder_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1utils_1a4ec5335a4026c22a34a3a8ccf665a5f2">penify_hook.utils.find_git_parent</link> (path)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1utils_1a0c0c1ed6b197038085c94a90ceedfb01">penify_hook.utils.logger</link> = logging.getLogger(__name__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

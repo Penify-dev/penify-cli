@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1config__command" kind="namespace" language="Python">
+    <compoundname>penify_hook::config_command</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1config__command_1a4f3eb92164a69df1446d745f8a09285e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.config_command.setup_config_parser</definition>
+        <argsstring>(parent_parser)</argsstring>
+        <name>setup_config_parser</name>
+        <qualifiedname>penify_hook.config_command.setup_config_parser</qualifiedname>
+        <param>
+          <type>parent_parser</type>
+          <defname>parent_parser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set up a configuration parser with subparsers for different types of
+configurations.
+
+This function configures and adds subcommands to the parent parser. Each
+subcommand corresponds to a specific type of configuration, such as LLM
+(Language Model) or JIRA. It allows users to configure settings for
+these systems through command-line arguments.
+
+Args:
+    parent_parser (argparse.ArgumentParser): The parent parser to which the config subparsers will be added.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/config_command.py" line="4" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/config_command.py" bodystart="4" bodyend="40"/>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="87">penify_hook.main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.config_command.handle_config</definition>
+        <argsstring>(args)</argsstring>
+        <name>handle_config</name>
+        <qualifiedname>penify_hook.config_command.handle_config</qualifiedname>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handle configuration settings based on the specified config type.
+
+This function processes different types of configurations such as LLM
+(Language Model) and JIRA. It saves configurations, sets up web-based
+configurations, and verifies JIRA connections.
+
+Args:
+    args (argparse.Namespace): Command-line arguments containing the type of configuration to handle.
+
+Returns:
+    int: Exit code indicating success or failure.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/config_command.py" line="41" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/config_command.py" bodystart="41" bodyend="98"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" compoundref="config__commands_8py" startline="424" endline="552">penify_hook.commands.config_commands.config_jira_web</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c" compoundref="config__commands_8py" startline="293" endline="423">penify_hook.commands.config_commands.config_llm_web</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4" compoundref="config__commands_8py" startline="177" endline="234">penify_hook.commands.config_commands.save_jira_config</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4" compoundref="config__commands_8py" startline="119" endline="176">penify_hook.commands.config_commands.save_llm_config</references>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="87">penify_hook.main.main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/config_command.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

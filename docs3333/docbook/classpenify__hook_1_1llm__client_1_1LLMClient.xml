@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1llm__client_1_1LLMClient" xml:lang="en-US">
+<title>penify_hook.llm_client.LLMClient Class Reference</title>
+<indexterm><primary>penify_hook.llm_client.LLMClient</primary></indexterm>
+Collaboration diagram for penify_hook.llm_client.LLMClient:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1llm__client_1_1LLMClient__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient_1a76d92354f585ab4bb291169f9f530764">__init__</link> (self, str <link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10">model</link>=None, str api_base=None, str api_key=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e">litellm</link> (self)</para>
+</listitem>
+            <listitem><para>Dict <link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000">generate_commit_summary</link> (self, str diff, str message, bool generate_description, Dict repo_details, Dict jira_context=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10">model</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient_1a76c2e9805f805624ab9c55a9f1f8d362">_litellm</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Client for interacting with LLM models using LiteLLM.
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1llm__client_1_1LLMClient_1a76d92354f585ab4bb291169f9f530764"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.llm_client.LLMClient</secondary></indexterm>
+<indexterm><primary>penify_hook.llm_client.LLMClient</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.llm_client.LLMClient.__init__ ( self, str  model = <computeroutput>None</computeroutput>
+, str  api_base = <computeroutput>None</computeroutput>
+, str  api_key = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Initialize the LLM client.
+
+Args:
+    model: LLM model to use (e.g., &quot;gpt-4&quot;, &quot;ollama/llama2&quot;, etc.)
+    api_base: Base URL for API requests (e.g., &quot;http://localhost:11434&quot; for Ollama)
+    api_key: API key for the LLM service
+</computeroutput></literallayout> </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000"/><section>
+    <title>generate_commit_summary()</title>
+<indexterm><primary>generate_commit_summary</primary><secondary>penify_hook.llm_client.LLMClient</secondary></indexterm>
+<indexterm><primary>penify_hook.llm_client.LLMClient</primary><secondary>generate_commit_summary</secondary></indexterm>
+<para><computeroutput> Dict penify_hook.llm_client.LLMClient.generate_commit_summary ( self, str diff, str message, bool generate_description, Dict repo_details, Dict  jira_context = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a commit summary using the LLM.
+
+This function generates a concise and descriptive commit summary based
+on the provided Git diff, user instructions, repository details, and
+optional JIRA context. It constructs a prompt for the LLM to produce a
+commit title and an optional detailed description, adhering to Semantic
+Commit Messages guidelines. If the JIRA context is provided, it enriches
+the prompt with relevant issue information.
+
+Args:
+    diff (str): Git diff of changes.
+    message (str): User-provided commit message or instructions.
+    generate_description (bool): Flag indicating whether to include a detailed description in the
+        summary.
+    repo_details (Dict): Details about the repository.
+    jira_context (Dict?): Optional JIRA issue context to enhance the summary.
+
+Returns:
+    Dict: A dictionary containing the title and description for the commit. If
+        generate_description is False,
+        the &apos;description&apos; key may be absent.
+
+Raises:
+    ValueError: If the LLM model is not configured.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e"/><section>
+    <title>litellm()</title>
+<indexterm><primary>litellm</primary><secondary>penify_hook.llm_client.LLMClient</secondary></indexterm>
+<indexterm><primary>penify_hook.llm_client.LLMClient</primary><secondary>litellm</secondary></indexterm>
+<para><computeroutput>def penify_hook.llm_client.LLMClient.litellm ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Lazy load litellm only when needed.</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1llm__client_1_1LLMClient_ad6f06658ca922793f879474f2234518e_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1llm__client_1_1LLMClient_1a76c2e9805f805624ab9c55a9f1f8d362"/><section>
+    <title>_litellm</title>
+<indexterm><primary>_litellm</primary><secondary>penify_hook.llm_client.LLMClient</secondary></indexterm>
+<indexterm><primary>penify_hook.llm_client.LLMClient</primary><secondary>_litellm</secondary></indexterm>
+<para><computeroutput>penify_hook.llm_client.LLMClient._litellm<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10"/><section>
+    <title>model</title>
+<indexterm><primary>model</primary><secondary>penify_hook.llm_client.LLMClient</secondary></indexterm>
+<indexterm><primary>penify_hook.llm_client.LLMClient</primary><secondary>model</secondary></indexterm>
+<para><computeroutput>penify_hook.llm_client.LLMClient.model</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_llm__client_8py">llm_client.py</link></section>
+</section>

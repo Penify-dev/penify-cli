@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1api__client_1_1APIClient" xml:lang="en-US">
+<title>penify_hook.api_client.APIClient Class Reference</title>
+<indexterm><primary>penify_hook.api_client.APIClient</primary></indexterm>
+Collaboration diagram for penify_hook.api_client.APIClient:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1api__client_1_1APIClient__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1ad9cb741a8baf2d13f845e25a36311086">__init__</link> (self, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872">api_url</link>, str api_token=None, str bearer_token=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1ac5aad61508c2cafdf6e88e6c7d6c82b3">send_file_for_docstring_generation</link> (self, file_name, content, line_numbers, repo_details=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce">generate_commit_summary</link> (self, git_diff, str instruction=&quot;&quot;, repo_details=None, dict jira_context=None)</para>
+</listitem>
+            <listitem><para>list[str] <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1a5d2b4a26b24352d951ea79ecc4ff3402">get_supported_file_types</link> (self)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3">generate_commit_summary_with_llm</link> (self, diff, message, bool generate_description, repo_details, <link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient">LLMClient</link> llm_client, jira_context=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1ad15b790608e703c8c122aa2ead7dfa99">get_api_key</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872">api_url</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1a5bb502603717946ad710b49ad9d95237">AUTH_TOKEN</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1api__client_1_1APIClient_1a7d7e2cf42c54eb4f25adee96a09ee7b0">BEARER_TOKEN</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1ad9cb741a8baf2d13f845e25a36311086"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.api_client.APIClient.__init__ ( self,  api_url, str  api_token = <computeroutput>None</computeroutput>
+, str  bearer_token = <computeroutput>None</computeroutput>
+)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce"/><section>
+    <title>generate_commit_summary()</title>
+<indexterm><primary>generate_commit_summary</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>generate_commit_summary</secondary></indexterm>
+<para><computeroutput>def penify_hook.api_client.APIClient.generate_commit_summary ( self,  git_diff, str  instruction = <computeroutput>&quot;&quot;</computeroutput>
+,  repo_details = <computeroutput>None</computeroutput>
+, dict  jira_context = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a commit summary by sending a POST request to the API endpoint.
+
+This function constructs a payload containing the git diff and any
+additional instructions provided. It then sends this payload to a
+specified API endpoint to generate a summary of the commit. If the
+request is successful, it returns the response from the API; otherwise,
+it returns None.
+
+Args:
+    git_diff (str): The git diff of the commit.
+    instruction (str??): Additional instruction for the commit. Defaults to &quot;&quot;.
+    repo_details (dict??): Details of the git repository. Defaults to None.
+    jira_context (dict??): JIRA issue details to enhance the commit summary. Defaults to None.
+
+Returns:
+    dict: The response from the API if the request is successful, None otherwise.
+
+Raises:
+    Exception: If there is an error during the API request.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1api__client_1_1APIClient_a7ff74798e7d428b4e2f20095287eb2ce_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3"/><section>
+    <title>generate_commit_summary_with_llm()</title>
+<indexterm><primary>generate_commit_summary_with_llm</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>generate_commit_summary_with_llm</secondary></indexterm>
+<para><computeroutput>def penify_hook.api_client.APIClient.generate_commit_summary_with_llm ( self,  diff,  message, bool generate_description,  repo_details, <link linkend="_classpenify__hook_1_1llm__client_1_1LLMClient">LLMClient</link> llm_client,  jira_context = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Generates a commit summary using a local LLM client. If an error occurs
+during the generation process,
+it falls back to using the API.
+
+Args:
+    diff (str): The Git diff of changes.
+    message (str): User-provided commit message or instructions.
+    generate_description (bool): Flag indicating whether to generate a description for the commit.
+    repo_details (dict): Details about the repository.
+    llm_client (LLMClient): An instance of LLMClient used to generate the summary.
+    jira_context (JIRAContext?): Optional JIRA issue context to enhance the summary.
+
+Returns:
+    dict: A dictionary containing the title and description for the commit.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1api__client_1_1APIClient_ac0ada470b897935f9fb372cd0e7e51e3_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1ad15b790608e703c8c122aa2ead7dfa99"/><section>
+    <title>get_api_key()</title>
+<indexterm><primary>get_api_key</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>get_api_key</secondary></indexterm>
+<para><computeroutput>def penify_hook.api_client.APIClient.get_api_key ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Fetch an API key from a specified URL.
+
+This function sends a GET request to retrieve an API token using a
+Bearer token in the headers. It handles the response and returns the API
+key if the request is successful, or `None` otherwise.
+
+Returns:
+    str: The API key if the request is successful, `None` otherwise.
+</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1a5d2b4a26b24352d951ea79ecc4ff3402"/><section>
+    <title>get_supported_file_types()</title>
+<indexterm><primary>get_supported_file_types</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>get_supported_file_types</secondary></indexterm>
+<para><computeroutput> list[str] penify_hook.api_client.APIClient.get_supported_file_types ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Retrieve the supported file types from the API.
+
+This function sends a request to the API endpoint
+`/v1/file/supported_languages` to obtain a list of supported file types.
+If the API call is successful (status code 200), it parses the JSON
+response and returns the list of supported file types. If the API call
+fails, it returns a default list of common file types.
+
+Returns:
+    list[str]: A list of supported file types, either from the API or a default set.
+</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1ac5aad61508c2cafdf6e88e6c7d6c82b3"/><section>
+    <title>send_file_for_docstring_generation()</title>
+<indexterm><primary>send_file_for_docstring_generation</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>send_file_for_docstring_generation</secondary></indexterm>
+<para><computeroutput>def penify_hook.api_client.APIClient.send_file_for_docstring_generation ( self,  file_name,  content,  line_numbers,  repo_details = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Send file content and modified lines to the API and return modified
+content.
+
+This function constructs a payload containing the file path, content,
+and modified line numbers, and sends it to a specified API endpoint for
+processing. It handles the response from the API, returning the modified
+content if the request is successful. If the request fails, it logs the
+error details and returns the original content.
+
+Args:
+    file_name (str): The path to the file being sent.
+    content (str): The content of the file to be processed.
+    line_numbers (list): A list of line numbers that have been modified.
+    repo_details (str?): Additional repository details if applicable. Defaults to None.
+
+Returns:
+    str: The modified content returned by the API, or the original content if the
+        request fails.
+
+Raises:
+    Exception: If there is an error in processing the file and no specific error
+        message is provided.
+</computeroutput></literallayout> </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872"/><section>
+    <title>api_url</title>
+<indexterm><primary>api_url</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>api_url</secondary></indexterm>
+<para><computeroutput>penify_hook.api_client.APIClient.api_url</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1a5bb502603717946ad710b49ad9d95237"/><section>
+    <title>AUTH_TOKEN</title>
+<indexterm><primary>AUTH_TOKEN</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>AUTH_TOKEN</secondary></indexterm>
+<para><computeroutput>penify_hook.api_client.APIClient.AUTH_TOKEN</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1api__client_1_1APIClient_1a7d7e2cf42c54eb4f25adee96a09ee7b0"/><section>
+    <title>BEARER_TOKEN</title>
+<indexterm><primary>BEARER_TOKEN</primary><secondary>penify_hook.api_client.APIClient</secondary></indexterm>
+<indexterm><primary>penify_hook.api_client.APIClient</primary><secondary>BEARER_TOKEN</secondary></indexterm>
+<para><computeroutput>penify_hook.api_client.APIClient.BEARER_TOKEN</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_api__client_8py">api_client.py</link></section>
+</section>

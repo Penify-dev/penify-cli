@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_doc__commands_8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook">penify_hook</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands">penify_hook.commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands">penify_hook.commands.doc_commands</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1a4daac68bc563432bf25c85dc78081a25">penify_hook.commands.doc_commands.generate_doc</link> (api_url, token, location=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1acc7f4ead1b11951d885fa5c151c2cbe0">penify_hook.commands.doc_commands.setup_docgen_parser</link> (parser)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704">penify_hook.commands.doc_commands.handle_docgen</link> (args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1a3e42540047da37565afffeaf106cb948">penify_hook.commands.doc_commands.docgen_description</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

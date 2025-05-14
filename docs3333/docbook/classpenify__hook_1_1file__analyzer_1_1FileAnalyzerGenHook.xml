@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook" xml:lang="en-US">
+<title>penify_hook.file_analyzer.FileAnalyzerGenHook Class Reference</title>
+<indexterm><primary>penify_hook.file_analyzer.FileAnalyzerGenHook</primary></indexterm>
+Inheritance diagram for penify_hook.file_analyzer.FileAnalyzerGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for penify_hook.file_analyzer.FileAnalyzerGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a190c473090b2a07e7cb43073a3211c4b">__init__</link> (self, str <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32">file_path</link>, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2">api_client</link>)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e">process_file</link> (self, <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32">file_path</link>, pbar, str new_param=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a6ab39391dfb7686f2a2d21a702dd3073">print_processing</link> (self, <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32">file_path</link>)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1">run</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32">file_path</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a190c473090b2a07e7cb43073a3211c4b"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.file_analyzer.FileAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.file_analyzer.FileAnalyzerGenHook</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.file_analyzer.FileAnalyzerGenHook.__init__ ( self, str file_path, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> api_client)</computeroutput></para><para>
+Reimplemented from <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">penify_hook.base_analyzer.BaseAnalyzer</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a6ab39391dfb7686f2a2d21a702dd3073"/><section>
+    <title>print_processing()</title>
+<indexterm><primary>print_processing</primary><secondary>penify_hook.file_analyzer.FileAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.file_analyzer.FileAnalyzerGenHook</primary><secondary>print_processing</secondary></indexterm>
+<para><computeroutput>def penify_hook.file_analyzer.FileAnalyzerGenHook.print_processing ( self,  file_path)</computeroutput></para>
+<para><literallayout><computeroutput>Prints a formatted message indicating that a file is being processed.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_a6ab39391dfb7686f2a2d21a702dd3073_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e"/><section>
+    <title>process_file()</title>
+<indexterm><primary>process_file</primary><secondary>penify_hook.file_analyzer.FileAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.file_analyzer.FileAnalyzerGenHook</primary><secondary>process_file</secondary></indexterm>
+<para><computeroutput>def penify_hook.file_analyzer.FileAnalyzerGenHook.process_file ( self,  file_path,  pbar, str  new_param = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Processes a file by validating its extension, reading content, generating documentation,
+and writing changes back to the file.
+
+Args:
+    file_path (str): The path of the file to be processed.
+    pbar (tqdm.tqdm): A progress bar object to update the status of processing stages.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_a2cc6c22ef588fccf3eed9bbc57fb6d6e_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_a2cc6c22ef588fccf3eed9bbc57fb6d6e_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>penify_hook.file_analyzer.FileAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.file_analyzer.FileAnalyzerGenHook</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>def penify_hook.file_analyzer.FileAnalyzerGenHook.run ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Runs the documentation process with a progress bar.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_a4f4dffbc432fac3e259d957dd1e187f1_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32"/><section>
+    <title>file_path</title>
+<indexterm><primary>file_path</primary><secondary>penify_hook.file_analyzer.FileAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.file_analyzer.FileAnalyzerGenHook</primary><secondary>file_path</secondary></indexterm>
+<para><computeroutput>penify_hook.file_analyzer.FileAnalyzerGenHook.file_path</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_file__analyzer_8py">file_analyzer.py</link></section>
+</section>

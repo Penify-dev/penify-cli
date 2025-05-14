@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1base__analyzer" xml:lang="en-US">
+<title>penify_hook.base_analyzer Namespace Reference</title>
+<indexterm><primary>penify_hook.base_analyzer</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer">BaseAnalyzer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

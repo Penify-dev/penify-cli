@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1ui__utils" xml:lang="en-US">
+<title>penify_hook.ui_utils Namespace Reference</title>
+<indexterm><primary>penify_hook.ui_utils</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6">format_info</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a532cdb4de7c679ce8b29c3e9116c4776">format_success</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a0a6fd2613c6fe053b6e4356cd9e5cda2">format_warning</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a4dd934568897433fa73f9cc182ac4a3e">format_error</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1adcb97fc26b405d2b9cdf5eb7aecc5452">format_highlight</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4">format_file_path</link> (file_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44">print_info</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a">print_success</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa">print_warning</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f">print_error</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115">print_processing</link> (file_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c">print_status</link> (status, message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c">create_progress_bar</link> (total, desc=&quot;Processing&quot;, unit=&quot;item&quot;)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef">create_stage_progress_bar</link> (stages, desc=&quot;Processing&quot;)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d">update_stage</link> (pbar, stage_name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1ab560cfade398ac1e0bd47befb52d9f71">autoreset</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a9fdcb180915696f5d217032a62c3857c">INFO_COLOR</link> = Fore.CYAN</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a22c450c5e2b5394618ecf9b636560df4">SUCCESS_COLOR</link> = Fore.GREEN</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a177bc9b44157844c999e0c1c2c6936ff">WARNING_COLOR</link> = Fore.YELLOW</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a4ab4e61dfab7973c87bef59c6e1977fe">ERROR_COLOR</link> = Fore.RED</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1aba01b8259f0d66cdc2b4a1b58f9736fc">HIGHLIGHT_COLOR</link> = Fore.BLUE</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1aca0fcee81606857497520ae4290bc9f5">NEUTRAL_COLOR</link> = Fore.WHITE</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1a3c6fe4bd17c1a5fe76587225ae4beb3e">SUCCESS_SYMBOL</link> = &quot;✓&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1a6eaea98f1a8cbe16a181647da2fc0a16">WARNING_SYMBOL</link> = &quot;○&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1aa564e1e1d016c8227d076542e74cecb0">ERROR_SYMBOL</link> = &quot;✗&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1a3b208e2750a38dd09467a73e4afd9756">PROCESSING_SYMBOL</link> = &quot;⟳&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>UI utilities for Penify CLI.
+
+This module provides utility functions for consistent UI formatting,
+colored output, and progress indicators across the Penify CLI application.
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c"/><section>
+    <title>create_progress_bar()</title>
+<indexterm><primary>create_progress_bar</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>create_progress_bar</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.create_progress_bar ( total,  desc = <computeroutput>&quot;Processing&quot;</computeroutput>
+,  unit = <computeroutput>&quot;item&quot;</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Create a tqdm progress bar with consistent styling.
+
+Args:
+    total (int): Total number of items to process.
+    desc (str): Description for the progress bar. Defaults to &quot;Processing&quot;.
+    unit (str): Unit label for the progress items. Defaults to &quot;item&quot;.
+
+Returns:
+    tqdm: A configured tqdm progress bar instance.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef"/><section>
+    <title>create_stage_progress_bar()</title>
+<indexterm><primary>create_stage_progress_bar</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>create_stage_progress_bar</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.create_stage_progress_bar ( stages,  desc = <computeroutput>&quot;Processing&quot;</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Create a tqdm progress bar for processing stages with consistent
+styling.
+
+This function initializes and returns a tqdm progress bar object for
+tracking the progress through a series of stages. It also provides a
+description for the progress bar to enhance its usability.
+
+Args:
+    stages (list): A list of strings representing individual stages in the process.
+    desc (str?): A description for the progress bar. Defaults to &quot;Processing&quot;.
+
+Returns:
+    tuple: A tuple containing the tqdm progress bar object and the list of stages.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a4dd934568897433fa73f9cc182ac4a3e"/><section>
+    <title>format_error()</title>
+<indexterm><primary>format_error</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>format_error</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.format_error ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Format an error message with appropriate color.
+
+This function takes a plain error message and wraps it in ANSI escape
+codes to apply the specified error color, ensuring that the error
+message is visually distinct when output. The function supports various
+error colors defined by constants like `ERROR_COLOR`.
+
+Args:
+    message (str): The plain text error message to be formatted.
+
+Returns:
+    str: The formatted error message with the error color applied.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a4dd934568897433fa73f9cc182ac4a3e_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4"/><section>
+    <title>format_file_path()</title>
+<indexterm><primary>format_file_path</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>format_file_path</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.format_file_path ( file_path)</computeroutput></para>
+<para><literallayout><computeroutput>Format a file path with appropriate color.
+
+This function takes a file path as input and wraps it in ANSI escape
+codes to apply a warning color. The original file path is then reset to
+default style using Style.RESET_ALL.
+
+Args:
+    file_path (str): The file path to be formatted.
+
+Returns:
+    str: The formatted file path with the warning color applied.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_af3441fb3c2c3850b8b3b6455a9fdaba4_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1adcb97fc26b405d2b9cdf5eb7aecc5452"/><section>
+    <title>format_highlight()</title>
+<indexterm><primary>format_highlight</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>format_highlight</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.format_highlight ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Format a highlighted message with appropriate color.
+
+Args:
+    message (str): The message to be formatted and highlighted.
+
+Returns:
+    str: The formatted message with applied highlight style.
+</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6"/><section>
+    <title>format_info()</title>
+<indexterm><primary>format_info</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>format_info</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.format_info ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Format an informational message with appropriate color.
+
+Args:
+    message (str): The text of the informational message to be formatted.
+
+Returns:
+    str: The formatted informational message with the specified color.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a92c3e466d1912058167be2eacf85b9f6_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a532cdb4de7c679ce8b29c3e9116c4776"/><section>
+    <title>format_success()</title>
+<indexterm><primary>format_success</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>format_success</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.format_success ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Format a success message with appropriate color.
+
+This function takes a message as input and wraps it in ANSI escape codes
+to display it in green, indicating a successful operation. The
+Style.RESET_ALL is applied at the end to ensure that any subsequent text
+is displayed in the default style.
+
+Args:
+    message (str): The message to be formatted as a success message.
+
+Returns:
+    str: The formatted success message with green color and reset style.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a532cdb4de7c679ce8b29c3e9116c4776_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a0a6fd2613c6fe053b6e4356cd9e5cda2"/><section>
+    <title>format_warning()</title>
+<indexterm><primary>format_warning</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>format_warning</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.format_warning ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Format a warning message with appropriate color.
+
+Args:
+    message (str): The warning message to be formatted.
+
+Returns:
+    str: The formatted warning message with the specified color.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a0a6fd2613c6fe053b6e4356cd9e5cda2_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f"/><section>
+    <title>print_error()</title>
+<indexterm><primary>print_error</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>print_error</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.print_error ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Print an error message with appropriate formatting.
+
+This function takes a string message, formats it as an error message,
+and then prints it. The formatting typically includes prefixing the
+message with &quot;Error: &quot; to clearly indicate that it is an error.
+
+Args:
+    message (str): The error message to be printed.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44"/><section>
+    <title>print_info()</title>
+<indexterm><primary>print_info</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>print_info</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.print_info ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Print an informational message with appropriate formatting.
+
+This function takes a string message as input and prints it in a
+formatted manner. It utilizes the `format_info` function to apply any
+necessary formatting before printing.
+
+Args:
+    message (str): The message to be printed.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115"/><section>
+    <title>print_processing()</title>
+<indexterm><primary>print_processing</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>print_processing</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.print_processing ( file_path)</computeroutput></para>
+<para><literallayout><computeroutput>Print a processing message for a specified file.
+
+This function takes a file path, formats it using `format_file_path`,
+and then prints a formatted message indicating that the file is being
+processed. The formatted path is highlighted using `format_highlight`.
+
+Args:
+    file_path (str): The path of the file to be processed.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c"/><section>
+    <title>print_status()</title>
+<indexterm><primary>print_status</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>print_status</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.print_status ( status,  message)</computeroutput></para>
+<para><literallayout><computeroutput>Print a status message with an appropriate symbol.
+
+This function takes a status and a message, then prints them with a
+colored symbol that corresponds to the given status. The available
+statuses are &apos;success&apos;, &apos;warning&apos;, &apos;error&apos;, and any other value will
+default to a processing indicator.
+
+Args:
+    status (str): The status type (&apos;success&apos;, &apos;warning&apos;, &apos;error&apos;) or another string.
+    message (str): The message to be displayed along with the symbol.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_aa6e684c00e26199440137a87ed9b195c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a"/><section>
+    <title>print_success()</title>
+<indexterm><primary>print_success</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>print_success</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.print_success ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Print a formatted success message.
+
+This function takes a string `message` and prints it as a formatted
+success message. The formatting includes adding a prefix &quot;Success: &quot; to
+the message and enclosing it within asterisks for emphasis.
+
+Args:
+    message (str): The message to be printed as a success message.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa"/><section>
+    <title>print_warning()</title>
+<indexterm><primary>print_warning</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>print_warning</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.print_warning ( message)</computeroutput></para>
+<para><literallayout><computeroutput>Print a warning message with appropriate formatting.
+
+This function takes a warning message as input and prints it with
+formatted output. The formatting may include color, timestamp, or other
+styles to emphasize that it is a warning.
+
+Args:
+    message (str): The warning message to be printed.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d"/><section>
+    <title>update_stage()</title>
+<indexterm><primary>update_stage</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>update_stage</secondary></indexterm>
+<para><computeroutput>def penify_hook.ui_utils.update_stage ( pbar,  stage_name)</computeroutput></para>
+<para><literallayout><computeroutput>Update the progress bar with a new stage name.
+
+This function updates the provided tqdm progress bar to reflect the
+current stage of a process. It clears any existing postfix and sets a
+new description based on the provided stage name. The display is then
+refreshed to ensure that the update is visible immediately.
+
+Args:
+    pbar (tqdm): The progress bar object to be updated.
+    stage_name (str): A string representing the current stage of the process.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1ui__utils_a5a7340d0fc60fb80f17514d60bf45f1d_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1ab560cfade398ac1e0bd47befb52d9f71"/><section>
+    <title>autoreset</title>
+<indexterm><primary>autoreset</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>autoreset</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.autoreset</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a4ab4e61dfab7973c87bef59c6e1977fe"/><section>
+    <title>ERROR_COLOR</title>
+<indexterm><primary>ERROR_COLOR</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>ERROR_COLOR</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.ERROR_COLOR = Fore.RED</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1aa564e1e1d016c8227d076542e74cecb0"/><section>
+    <title>ERROR_SYMBOL</title>
+<indexterm><primary>ERROR_SYMBOL</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>ERROR_SYMBOL</secondary></indexterm>
+<para><computeroutput>string penify_hook.ui_utils.ERROR_SYMBOL = &quot;✗&quot;</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1aba01b8259f0d66cdc2b4a1b58f9736fc"/><section>
+    <title>HIGHLIGHT_COLOR</title>
+<indexterm><primary>HIGHLIGHT_COLOR</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>HIGHLIGHT_COLOR</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.HIGHLIGHT_COLOR = Fore.BLUE</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a9fdcb180915696f5d217032a62c3857c"/><section>
+    <title>INFO_COLOR</title>
+<indexterm><primary>INFO_COLOR</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>INFO_COLOR</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.INFO_COLOR = Fore.CYAN</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1aca0fcee81606857497520ae4290bc9f5"/><section>
+    <title>NEUTRAL_COLOR</title>
+<indexterm><primary>NEUTRAL_COLOR</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>NEUTRAL_COLOR</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.NEUTRAL_COLOR = Fore.WHITE</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a3b208e2750a38dd09467a73e4afd9756"/><section>
+    <title>PROCESSING_SYMBOL</title>
+<indexterm><primary>PROCESSING_SYMBOL</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>PROCESSING_SYMBOL</secondary></indexterm>
+<para><computeroutput>string penify_hook.ui_utils.PROCESSING_SYMBOL = &quot;⟳&quot;</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a22c450c5e2b5394618ecf9b636560df4"/><section>
+    <title>SUCCESS_COLOR</title>
+<indexterm><primary>SUCCESS_COLOR</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>SUCCESS_COLOR</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.SUCCESS_COLOR = Fore.GREEN</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a3c6fe4bd17c1a5fe76587225ae4beb3e"/><section>
+    <title>SUCCESS_SYMBOL</title>
+<indexterm><primary>SUCCESS_SYMBOL</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>SUCCESS_SYMBOL</secondary></indexterm>
+<para><computeroutput>string penify_hook.ui_utils.SUCCESS_SYMBOL = &quot;✓&quot;</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a177bc9b44157844c999e0c1c2c6936ff"/><section>
+    <title>WARNING_COLOR</title>
+<indexterm><primary>WARNING_COLOR</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>WARNING_COLOR</secondary></indexterm>
+<para><computeroutput>penify_hook.ui_utils.WARNING_COLOR = Fore.YELLOW</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1ui__utils_1a6eaea98f1a8cbe16a181647da2fc0a16"/><section>
+    <title>WARNING_SYMBOL</title>
+<indexterm><primary>WARNING_SYMBOL</primary><secondary>penify_hook.ui_utils</secondary></indexterm>
+<indexterm><primary>penify_hook.ui_utils</primary><secondary>WARNING_SYMBOL</secondary></indexterm>
+<para><computeroutput>string penify_hook.ui_utils.WARNING_SYMBOL = &quot;○&quot;</computeroutput></para></section>
+</section>
+</section>

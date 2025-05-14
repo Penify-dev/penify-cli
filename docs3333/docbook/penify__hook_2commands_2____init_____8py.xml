@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_penify__hook_2commands_2____init_____8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/__init__.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/__init__.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook">penify_hook</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands">penify_hook.commands</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

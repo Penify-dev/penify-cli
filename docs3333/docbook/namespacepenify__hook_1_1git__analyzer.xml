@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1git__analyzer" xml:lang="en-US">
+<title>penify_hook.git_analyzer Namespace Reference</title>
+<indexterm><primary>penify_hook.git_analyzer</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook">GitDocGenHook</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1git__analyzer_1ac4ce143fdca789a79c66852c37d7363a">logger</link> = logging.getLogger(__name__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1git__analyzer_1ac4ce143fdca789a79c66852c37d7363a"/><section>
+    <title>logger</title>
+<indexterm><primary>logger</primary><secondary>penify_hook.git_analyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.git_analyzer</primary><secondary>logger</secondary></indexterm>
+<para><computeroutput>penify_hook.git_analyzer.logger = logging.getLogger(__name__)</computeroutput></para></section>
+</section>
+</section>

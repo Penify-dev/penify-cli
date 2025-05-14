@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1jira__client" xml:lang="en-US">
+<title>penify_hook.jira_client Namespace Reference</title>
+<indexterm><primary>penify_hook.jira_client</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient">JiraClient</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_namespacepenify__hook_1_1jira__client_1a5593ea3415081eca1eea92e4c1ad1aa2">JIRA_AVAILABLE</link> = True</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1jira__client_1a5593ea3415081eca1eea92e4c1ad1aa2"/><section>
+    <title>JIRA_AVAILABLE</title>
+<indexterm><primary>JIRA_AVAILABLE</primary><secondary>penify_hook.jira_client</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client</primary><secondary>JIRA_AVAILABLE</secondary></indexterm>
+<para><computeroutput>bool penify_hook.jira_client.JIRA_AVAILABLE = True</computeroutput></para></section>
+</section>
+</section>

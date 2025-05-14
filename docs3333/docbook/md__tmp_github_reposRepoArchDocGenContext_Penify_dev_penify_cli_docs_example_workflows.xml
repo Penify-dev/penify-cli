@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows" xml:lang="en-US">
+
+<para>This document demonstrates how to use Penify CLI in real-world development workflows to improve your productivity.</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md104">
+<title>Workflow 1: Efficient Git Commits with AI</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md105">
+<title>Setup</title>
+
+<para>First, configure your local LLM for offline operation:</para>
+
+<para><literallayout><computeroutput>penify&#32;config&#32;llm
+</computeroutput></literallayout></para>
+
+<para>Configure your JIRA integration for enhanced commit messages:</para>
+
+<para><literallayout><computeroutput>penify&#32;config&#32;jira
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md106">
+<title>Daily Workflow</title>
+
+<para><orderedlist>
+<listitem>
+<para>Make your code changes as usual</para>
+</listitem><listitem>
+<para>When ready to commit, use Penify to generate a smart commit message:</para>
+</listitem></orderedlist>
+</para>
+
+<para><literallayout><computeroutput>penify&#32;commit
+</computeroutput></literallayout></para>
+
+<para><orderedlist>
+<listitem>
+<para>Review and confirm the generated commit message</para>
+</listitem><listitem>
+<para>Git commit and push as usual</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md107">
+<title>Benefits</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Consistent and descriptive commit messages</para>
+</listitem><listitem>
+<para>Automatic inclusion of relevant JIRA ticket information</para>
+</listitem><listitem>
+<para>Time saved from writing detailed commit messages</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md108">
+<title>Workflow 2: Documentation Generation Pipeline</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md109">
+<title>Setup</title>
+
+<para>Login to Penify to access advanced documentation features:</para>
+
+<para><literallayout><computeroutput>penify&#32;login
+</computeroutput></literallayout></para>
+
+<para>Install the Git hook for automatic documentation generation:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;install-hook
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md110">
+<title>Daily Workflow</title>
+
+<para><orderedlist>
+<listitem>
+<para>Make your code changes as usual</para>
+</listitem><listitem>
+<para>Commit your changes</para>
+</listitem><listitem>
+<para>Documentation is automatically generated for changed files</para>
+</listitem><listitem>
+<para>Review the generated documentation</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md111">
+<title>Manual Documentation</title>
+
+<para>For specific files or folders:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;-l&#32;src/components/authentication
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md112">
+<title>Benefits</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Always up-to-date documentation</para>
+</listitem><listitem>
+<para>Consistent documentation style</para>
+</listitem><listitem>
+<para>Time saved from writing detailed documentation</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md113">
+<title>Workflow 3: Code Review Enhancement</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md114">
+<title>Setup</title>
+
+<para>Ensure you&apos;re logged into Penify:</para>
+
+<para><literallayout><computeroutput>penify&#32;login
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md115">
+<title>Workflow</title>
+
+<para><orderedlist>
+<listitem>
+<para>Before submitting a PR, generate documentation for changed files:</para>
+</listitem></orderedlist>
+</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen
+</computeroutput></literallayout></para>
+
+<para><orderedlist>
+<listitem>
+<para>Include the generated documentation in your PR</para>
+</listitem><listitem>
+<para>Reviewers can better understand your changes with the AI-generated explanations</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md116">
+<title>Benefits</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Improved PR quality</para>
+</listitem><listitem>
+<para>Faster code reviews</para>
+</listitem><listitem>
+<para>Better team understanding of code changes</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md117">
+<title>Workflow 4: Onboarding New Team Members</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md118">
+<title>For Team Leads</title>
+
+<para>Generate comprehensive documentation for the entire codebase:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;-l&#32;.
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md119">
+<title>For New Team Members</title>
+
+<para>Generate focused documentation for components you&apos;re working on:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;-l&#32;src/components/my-feature
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md120">
+<title>Benefits</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Faster onboarding</para>
+</listitem><listitem>
+<para>Better understanding of code structure</para>
+</listitem><listitem>
+<para>Reduced questions to senior team members</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md121">
+<title>Workflow 5: Legacy Code Understanding</title>
+
+<para>When working with unfamiliar legacy code:</para>
+
+<para><literallayout><computeroutput>#&#32;Document&#32;a&#32;specific&#32;complex&#32;file
+penify&#32;docgen&#32;-l&#32;src/legacy/complex_module.py
+
+#&#32;Document&#32;an&#32;entire&#32;legacy&#32;component
+penify&#32;docgen&#32;-l&#32;src/legacy/old_component
+</computeroutput></literallayout></para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_1autotoc_md122">
+<title>Benefits</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Quickly understand complex legacy systems</para>
+</listitem><listitem>
+<para>Reduce time spent deciphering undocumented code</para>
+</listitem><listitem>
+<para>Make safer changes to legacy systems </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+</section>

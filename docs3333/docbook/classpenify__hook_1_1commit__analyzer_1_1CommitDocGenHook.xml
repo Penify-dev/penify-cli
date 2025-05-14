@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook" xml:lang="en-US">
+<title>penify_hook.commit_analyzer.CommitDocGenHook Class Reference</title>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary></indexterm>
+Inheritance diagram for penify_hook.commit_analyzer.CommitDocGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for penify_hook.commit_analyzer.CommitDocGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1af127d86729e226d74dbeb095b008db3e">__init__</link> (self, str <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a957e81a1ab561f6cecfbe999e7b85499">repo_path</link>, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2">api_client</link>, <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ad93360e31f2ec58a0d7c9f08b219028a">llm_client</link>=None, jira_client=None)</para>
+</listitem>
+            <listitem><para>dict <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a8496194276441fa2eb2fa014eaab9a37">get_summary</link> (self, str instruction, bool generate_description)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a6370a03f7ed9175ef6f81e931a105ea9">run</link> (self, Optional[str] msg, bool edit_commit_message, bool generate_description)</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1adda13cc121d96342476ccf72b63a007f">process_jira_integration</link> (self, str title, str description, str msg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ad93360e31f2ec58a0d7c9f08b219028a">llm_client</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ac999c5cbc852a7ec3b412ccb43c274ca">_amend_commit</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1af127d86729e226d74dbeb095b008db3e"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.commit_analyzer.CommitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.commit_analyzer.CommitDocGenHook.__init__ ( self, str repo_path, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> api_client,  llm_client = <computeroutput>None</computeroutput>
+,  jira_client = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Reimplemented from <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">penify_hook.base_analyzer.BaseAnalyzer</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ac999c5cbc852a7ec3b412ccb43c274ca"/><section>
+    <title>_amend_commit()</title>
+<indexterm><primary>_amend_commit</primary><secondary>penify_hook.commit_analyzer.CommitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary><secondary>_amend_commit</secondary></indexterm>
+<para><computeroutput>def penify_hook.commit_analyzer.CommitDocGenHook._amend_commit ( self)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Open the default git editor for editing the commit message.
+
+This function changes the current working directory to the repository
+path, runs the git command to amend the last commit, and opens the
+default editor for the user to modify the commit message. After the
+operation, it returns to the original directory.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ac999c5cbc852a7ec3b412ccb43c274ca_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a8496194276441fa2eb2fa014eaab9a37"/><section>
+    <title>get_summary()</title>
+<indexterm><primary>get_summary</primary><secondary>penify_hook.commit_analyzer.CommitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary><secondary>get_summary</secondary></indexterm>
+<para><computeroutput> dict penify_hook.commit_analyzer.CommitDocGenHook.get_summary ( self, str instruction, bool generate_description)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a summary for the commit based on the staged changes.
+
+This function retrieves the differences of the staged changes in the
+repository and generates a commit summary using the provided
+instruction. If there are no changes staged for commit, an exception is
+raised. If a JIRA client is connected, it will attempt to extract issue
+keys from the current branch and use them to fetch context. The summary
+can be generated either with a Language Model (LLM) client or through
+the API client.
+
+Args:
+    instruction (str): A string containing instructions for generating the commit summary.
+    generate_description (bool): Whether to include detailed descriptions in the summary.
+
+Returns:
+    dict: The generated commit summary based on the staged changes, provided
+        instruction, and any relevant JIRA context. The dictionary contains keys
+        such as &apos;summary&apos;, &apos;description&apos;, etc., depending on whether a
+        description was requested.
+
+Raises:
+    ValueError: If there are no changes staged for commit.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1adda13cc121d96342476ccf72b63a007f"/><section>
+    <title>process_jira_integration()</title>
+<indexterm><primary>process_jira_integration</primary><secondary>penify_hook.commit_analyzer.CommitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary><secondary>process_jira_integration</secondary></indexterm>
+<para><computeroutput> tuple penify_hook.commit_analyzer.CommitDocGenHook.process_jira_integration ( self, str title, str description, str msg)</computeroutput></para>
+<para><literallayout><computeroutput>Process JIRA integration for the commit message.
+
+Args:
+    title (str): Generated commit title.
+    description (str): Generated commit description.
+    msg (str): Original user message that might contain JIRA references.
+
+Returns:
+    tuple: A tuple containing the updated commit title and description with
+        included JIRA information.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a6370a03f7ed9175ef6f81e931a105ea9"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>penify_hook.commit_analyzer.CommitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>def penify_hook.commit_analyzer.CommitDocGenHook.run ( self, Optional[str] msg, bool edit_commit_message, bool generate_description)</computeroutput></para>
+<para><literallayout><computeroutput>Run the post-commit hook.
+
+This method processes the modified files from the last commit, stages
+them, and creates an auto-commit with an optional message. It also
+handles JIRA integration if available. If there is an error generating
+the commit summary, an exception is raised.
+
+Args:
+    msg (Optional[str]): An optional message to include in the commit.
+    edit_commit_message (bool): A flag indicating whether to open the git commit edit terminal after
+        committing.
+    generate_description (bool): A flag indicating whether to include a description in the commit
+        message.
+
+Raises:
+    Exception: If there is an error generating the commit summary.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a6370a03f7ed9175ef6f81e931a105ea9_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ad93360e31f2ec58a0d7c9f08b219028a"/><section>
+    <title>llm_client</title>
+<indexterm><primary>llm_client</primary><secondary>penify_hook.commit_analyzer.CommitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.commit_analyzer.CommitDocGenHook</primary><secondary>llm_client</secondary></indexterm>
+<para><computeroutput>penify_hook.commit_analyzer.CommitDocGenHook.llm_client</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_commit__analyzer_8py">commit_analyzer.py</link></section>
+</section>

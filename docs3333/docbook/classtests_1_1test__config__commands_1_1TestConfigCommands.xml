@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands" xml:lang="en-US">
+<title>tests.test_config_commands.TestConfigCommands Class Reference</title>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary></indexterm>
+Collaboration diagram for tests.test_config_commands.TestConfigCommands:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a2e8162082bcdd5652bb37bdb14cf453a">test_get_penify_config_existing_dir</link> (self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a33d4760eee3b67e1cde3aed755ebb948">test_get_penify_config_new_dir</link> (self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1adf9f2233a3f4cc5725b9d4f05758b167">test_get_llm_config_exists</link> (self, mock_file_open, mock_get_config)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1abd12f028b89aa9cd1152c0b9ece5d3cd">test_get_llm_config_empty</link> (self, mock_file_open, mock_get_config)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a473984d31452b56acd6ce4011a1248bd">test_get_llm_config_invalid_json</link> (self, mock_print, mock_file_open, mock_get_config)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1aee37b97432821d19758c6325d4c74bcf">test_get_jira_config_exists</link> (self, mock_file_open, mock_get_config)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1acd8df8219441b9e9871b903a681400d9">test_save_llm_config_success</link> (self, mock_print, mock_json_dump, mock_file_open, mock_get_config)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a73a264dfb21e16003e095b79f6eab2ac">test_save_llm_config_failure</link> (self, mock_print, mock_file_open, mock_get_config)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1af8d62310da2d768e21770f8f01ff5375">test_save_jira_config_success</link> (self, mock_print, mock_json_dump, mock_file_open, mock_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a3355f7d313bebaa71694387cf2bc5232">test_get_token_from_env</link> (self, mock_file_open, mock_path, mock_getenv)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a6c0207be563c3de59a6d16277805114c">test_get_token_from_config</link> (self, mock_file_open, mock_path, mock_getenv)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a400ca5d9fcdc159714e8df54920f9436">test_get_token_not_found</link> (self, mock_file_open, mock_path, mock_getenv)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1aee37b97432821d19758c6325d4c74bcf"/><section>
+    <title>test_get_jira_config_exists()</title>
+<indexterm><primary>test_get_jira_config_exists</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_jira_config_exists</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_jira_config_exists ( self,  mock_file_open,  mock_get_config)</computeroutput></para>
+<para><literallayout><computeroutput>Test that get_jira_config returns the correct JIRA configuration when
+the configuration file exists.
+
+It sets up a mock for the configuration file to simulate its existence
+and verifies that the function reads from the correct file and returns
+the expected JIRA configuration dictionary. Additionally, it checks that
+the mock file open is called with the appropriate arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_get_config (MagicMock): A mock for the `get_config` function, which is expected to return a mock
+        configuration file object.
+
+Returns:
+    None: This test function does not explicitly return anything. Its assertions
+        serve as the verification of its correctness.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_aee37b97432821d19758c6325d4c74bcf_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1abd12f028b89aa9cd1152c0b9ece5d3cd"/><section>
+    <title>test_get_llm_config_empty()</title>
+<indexterm><primary>test_get_llm_config_empty</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_llm_config_empty</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_llm_config_empty ( self,  mock_file_open,  mock_get_config)</computeroutput></para>
+<para><literallayout><computeroutput>Test the behavior of get_llm_config when called with an empty
+configuration file.
+
+This function sets up a mock configuration file that exists but returns
+no content. It then calls the `get_llm_config` function and asserts that
+it returns an empty dictionary and that the file open method was called
+exactly once with the correct arguments.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the built-in open function.
+    mock_get_config (MagicMock): A MagicMock object simulating the get_config function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_abd12f028b89aa9cd1152c0b9ece5d3cd_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1adf9f2233a3f4cc5725b9d4f05758b167"/><section>
+    <title>test_get_llm_config_exists()</title>
+<indexterm><primary>test_get_llm_config_exists</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_llm_config_exists</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_llm_config_exists ( self,  mock_file_open,  mock_get_config)</computeroutput></para>
+<para><literallayout><computeroutput>Test the get_llm_config function when the configuration file exists.
+
+This function sets up a mock configuration file that exists and returns
+it when called. It then calls the get_llm_config function and asserts
+that it returns the correct configuration dictionary. Additionally, it
+checks that the mock_file_open function was called with the correct
+arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the open() function.
+    mock_get_config (MagicMock): A mock for the get_config() function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_adf9f2233a3f4cc5725b9d4f05758b167_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a473984d31452b56acd6ce4011a1248bd"/><section>
+    <title>test_get_llm_config_invalid_json()</title>
+<indexterm><primary>test_get_llm_config_invalid_json</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_llm_config_invalid_json</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_llm_config_invalid_json ( self,  mock_print,  mock_file_open,  mock_get_config)</computeroutput></para>
+<para><literallayout><computeroutput>Test function to verify the behavior of get_llm_config when reading an
+invalid JSON file.
+
+It sets up a mock configuration file that exists but contains invalid
+JSON. The function is expected to handle this gracefully by printing an
+error message and returning an empty dictionary.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_get_config (MagicMock): Mock for the get_config function, which returns the mock configuration
+        file.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a473984d31452b56acd6ce4011a1248bd_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a2e8162082bcdd5652bb37bdb14cf453a"/><section>
+    <title>test_get_penify_config_existing_dir()</title>
+<indexterm><primary>test_get_penify_config_existing_dir</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_penify_config_existing_dir</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_penify_config_existing_dir ( self,  mock_file_open,  mock_makedirs,  mock_path,  mock_git_folder)</computeroutput></para>
+<para><literallayout><computeroutput>Test the get_penify_config function when the .penify config directory
+exists.
+
+It should not create a new directory and assert that all mocked
+functions were called correctly.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the open() function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
+    mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
+    mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a2e8162082bcdd5652bb37bdb14cf453a_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a33d4760eee3b67e1cde3aed755ebb948"/><section>
+    <title>test_get_penify_config_new_dir()</title>
+<indexterm><primary>test_get_penify_config_new_dir</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_penify_config_new_dir</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_penify_config_new_dir ( self,  mock_file_open,  mock_makedirs,  mock_path,  mock_git_folder)</computeroutput></para>
+<para><literallayout><computeroutput>Test the behavior of get_penify_config when the .penify directory does
+not exist.
+
+This function mocks various system calls to simulate a scenario where
+the .penify directory is not present. It then asserts that the
+appropriate actions are taken to create the directory and write an empty
+JSON file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the `open` function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the `os.makedirs` function.
+    mock_path (MagicMock): A MagicMock object simulating the `Path` class from `pathlib`.
+    mock_git_folder (MagicMock): A MagicMock object simulating a git folder search function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a33d4760eee3b67e1cde3aed755ebb948_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a6c0207be563c3de59a6d16277805114c"/><section>
+    <title>test_get_token_from_config()</title>
+<indexterm><primary>test_get_token_from_config</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_token_from_config</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_token_from_config ( self,  mock_file_open,  mock_path,  mock_getenv)</computeroutput></para>
+<para><literallayout><computeroutput>Test retrieving a token from the configuration.
+
+This function sets up mocks for environment variables and configuration
+files, calls the `get_token` function, and asserts its behavior. It
+verifies that when the environment variable is not found, the function
+reads a token from a configuration file located in the user&apos;s home
+directory.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_path (MagicMock): A mock for the `pathlib.Path` class.
+    mock_getenv (MagicMock): A mock for the `os.getenv` function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a6c0207be563c3de59a6d16277805114c_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a3355f7d313bebaa71694387cf2bc5232"/><section>
+    <title>test_get_token_from_env()</title>
+<indexterm><primary>test_get_token_from_env</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_token_from_env</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_token_from_env ( self,  mock_file_open,  mock_path,  mock_getenv)</computeroutput></para>
+<para><literallayout><computeroutput>Test retrieving a token from the environment variable.
+
+This function tests the behavior of `get_token` when an environment
+variable is set. It verifies that if the &apos;PENIFY_API_TOKEN&apos; environment
+variable exists, the function returns its value without attempting to
+read a file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object for simulating file operations.
+    mock_path (MagicMock): A MagicMock object for simulating path operations.
+    mock_getenv (MagicMock): A MagicMock object for simulating environment variable retrieval.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a3355f7d313bebaa71694387cf2bc5232_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a400ca5d9fcdc159714e8df54920f9436"/><section>
+    <title>test_get_token_not_found()</title>
+<indexterm><primary>test_get_token_not_found</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_get_token_not_found</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_get_token_not_found ( self,  mock_file_open,  mock_path,  mock_getenv)</computeroutput></para>
+<para><literallayout><computeroutput>Test the get_token function when the API token environment variable is
+not found.
+
+This function tests the scenario where the `PENIFY_API_TOKEN`
+environment variable is not set. It mocks the environment variable to
+return `None`, and verifies that the function returns `None`. The test
+also checks that the environment variable is accessed once and that a
+file open operation is attempted on a configuration file located in the
+user&apos;s home directory.
+
+Args:
+    mock_file_open (MagicMock): Mock for the built-in `open` function.
+    mock_path (MagicMock): Mock for the `pathlib.Path` module.
+    mock_getenv (MagicMock): Mock for the `os.getenv` function.
+
+Returns:
+    None: The function does not return anything; it asserts conditions to verify
+        correctness.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a400ca5d9fcdc159714e8df54920f9436_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1af8d62310da2d768e21770f8f01ff5375"/><section>
+    <title>test_save_jira_config_success()</title>
+<indexterm><primary>test_save_jira_config_success</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_save_jira_config_success</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_save_jira_config_success ( self,  mock_print,  mock_json_dump,  mock_file_open,  mock_path)</computeroutput></para>
+<para><literallayout><computeroutput>Test the save_jira_config function to ensure it saves JIRA configuration
+successfully.
+
+This function sets up mocks for various dependencies and tests the
+functionality of saving a JIRA configuration. It asserts that the
+function returns `True`, the JSON dump is called with the correct
+configuration, and the print statement contains the expected message.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_json_dump (MagicMock): Mock for the json.dump function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_path (MagicMock): Mock for the path module.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_af8d62310da2d768e21770f8f01ff5375_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1a73a264dfb21e16003e095b79f6eab2ac"/><section>
+    <title>test_save_llm_config_failure()</title>
+<indexterm><primary>test_save_llm_config_failure</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_save_llm_config_failure</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_save_llm_config_failure ( self,  mock_print,  mock_file_open,  mock_get_config)</computeroutput></para>
+<para><literallayout><computeroutput>Test function to verify that the save_llm_config function returns False
+and prints an error message when it fails to save the LLM configuration
+due to a permission error.
+
+It sets up a mock configuration file that exists and calls the
+save_llm_config function with valid parameters. The function is expected
+to return False and print &quot;Error saving LLM configuration: Permission
+denied&quot; in case of a failure.
+
+Args:
+    self (TestLLMConfig): An instance of the test class.
+    mock_print (MagicMock): A MagicMock object representing the print function, which will be used
+        to assert that it was called with the expected error message.
+    mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in
+        this test but is included as a parameter for completeness.
+    mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be
+        used to return the mock configuration file.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_a73a264dfb21e16003e095b79f6eab2ac_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__config__commands_1_1TestConfigCommands_1acd8df8219441b9e9871b903a681400d9"/><section>
+    <title>test_save_llm_config_success()</title>
+<indexterm><primary>test_save_llm_config_success</primary><secondary>tests.test_config_commands.TestConfigCommands</secondary></indexterm>
+<indexterm><primary>tests.test_config_commands.TestConfigCommands</primary><secondary>test_save_llm_config_success</secondary></indexterm>
+<para><computeroutput>def tests.test_config_commands.TestConfigCommands.test_save_llm_config_success ( self,  mock_print,  mock_json_dump,  mock_file_open,  mock_get_config)</computeroutput></para>
+<para><literallayout><computeroutput>Test the save_llm_config function successfully.
+
+This function tests that the save_llm_config function correctly saves an
+LLM configuration and handles various mock objects and side effects. It
+ensures that the function returns True upon successful execution, writes
+the expected configuration to a file, and prints a confirmation message.
+
+Args:
+    mock_print (MagicMock): A mock object for the print function.
+    mock_json_dump (MagicMock): A mock object for json.dump.
+    mock_file_open (MagicMock): A mock object for file opening.
+    mock_get_config (MagicMock): A mock object to return a configuration file mock.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__config__commands_1_1TestConfigCommands_acd8df8219441b9e9871b903a681400d9_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/<link linkend="_test__config__commands_8py">test_config_commands.py</link></section>
+</section>
