@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1commands" kind="namespace" language="Python">
+    <compoundname>penify_hook::commands</compoundname>
+    <innernamespace refid="namespacepenify__hook_1_1commands_1_1auth__commands">penify_hook::commands::auth_commands</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands_1_1commit__commands">penify_hook::commands::commit_commands</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands_1_1config__commands">penify_hook::commands::config_commands</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands_1_1doc__commands">penify_hook::commands::doc_commands</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands_1_1hook__commands">penify_hook::commands::hook_commands</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

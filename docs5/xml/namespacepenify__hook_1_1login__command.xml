@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1login__command" kind="namespace" language="Python">
+    <compoundname>penify_hook::login_command</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.login_command.setup_login_parser</definition>
+        <argsstring>(parser)</argsstring>
+        <name>setup_login_parser</name>
+        <qualifiedname>penify_hook.login_command.setup_login_parser</qualifiedname>
+        <param>
+          <type>parser</type>
+          <defname>parser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/login_command.py" line="1" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/login_command.py" bodystart="1" bodyend="4"/>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="87">penify_hook.main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.login_command.handle_login</definition>
+        <argsstring>(args)</argsstring>
+        <name>handle_login</name>
+        <qualifiedname>penify_hook.login_command.handle_login</qualifiedname>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handle the login command.
+
+Initiates a user login process by calling the `login` function from the
+`penify_hook.commands.auth_commands` module using predefined constants
+`API_URL` and `DASHBOARD_URL` from the `penify_hook.constants` module.
+
+Args:
+    args (argparse.Namespace): Parsed arguments containing necessary parameters for the login command.
+
+Returns:
+    None: This function does not return any value; it is expected to handle the
+        login process internally.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/login_command.py" line="5" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/login_command.py" bodystart="5" bodyend="26"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655" compoundref="auth__commands_8py" startline="82" endline="181">penify_hook.commands.auth_commands.login</references>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="87">penify_hook.main.main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/login_command.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
