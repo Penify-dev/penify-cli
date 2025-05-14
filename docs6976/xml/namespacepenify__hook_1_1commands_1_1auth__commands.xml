@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1commands_1_1auth__commands" kind="namespace" language="Python">
+    <compoundname>penify_hook::commands::auth_commands</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1auth__commands_1aa3956ca1749d4218ea1dc6e5b6218b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.auth_commands.save_credentials</definition>
+        <argsstring>(api_key)</argsstring>
+        <name>save_credentials</name>
+        <qualifiedname>penify_hook.commands.auth_commands.save_credentials</qualifiedname>
+        <param>
+          <type>api_key</type>
+          <defname>api_key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Save the token and API keys based on priority:
+1. .env file in Git repo root (if in a git repo)
+2. .penify file in home directory (global fallback)
+
+Args:
+    api_key: The API key to save
+    
+Returns:
+    bool: True if saved successfully, False otherwise
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/auth_commands.py" line="11" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/auth_commands.py" bodystart="11" bodyend="81"/>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="62" endline="72">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655" compoundref="auth__commands_8py" startline="82" endline="181">penify_hook.commands.auth_commands.login</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.auth_commands.login</definition>
+        <argsstring>(api_url, dashboard_url)</argsstring>
+        <name>login</name>
+        <qualifiedname>penify_hook.commands.auth_commands.login</qualifiedname>
+        <param>
+          <type>api_url</type>
+          <defname>api_url</defname>
+        </param>
+        <param>
+          <type>dashboard_url</type>
+          <defname>dashboard_url</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Open the login page in a web browser and listen for the redirect URL to
+capture the token.
+
+This function generates a random redirect port, constructs the full
+login URL with the provided dashboard URL, opens the login page in the
+default web browser, and sets up a simple HTTP server to listen for the
+redirect. Upon receiving the redirect, it extracts the token from the
+query parameters, fetches API keys using the token, saves them if
+successful, and handles login failures by notifying the user.
+
+Args:
+    api_url (str): The URL of the API service to fetch API keys.
+    dashboard_url (str): The URL of the dashboard where the user will be redirected after logging
+        in.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/auth_commands.py" line="82" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/auth_commands.py" bodystart="82" bodyend="181"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1auth__commands_1aa3956ca1749d4218ea1dc6e5b6218b24" compoundref="auth__commands_8py" startline="11" endline="81">penify_hook.commands.auth_commands.save_credentials</references>
+        <referencedby refid="namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd" compoundref="login__command_8py" startline="5" endline="26">penify_hook.login_command.handle_login</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/auth_commands.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

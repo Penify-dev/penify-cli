@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1llm__client" kind="namespace" language="Python">
+    <compoundname>penify_hook::llm_client</compoundname>
+    <innerclass refid="classpenify__hook_1_1llm__client_1_1LLMClient" prot="public">penify_hook::llm_client::LLMClient</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
