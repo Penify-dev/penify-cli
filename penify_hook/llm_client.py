@@ -31,35 +31,32 @@ class LLMClient:
     
     @property
     def litellm(self):
-        """Lazy load litellm only when needed."""
+        """Returns the litellm module, loading it if necessary."""
         if self._litellm is None:
             import litellm
             self._litellm = litellm
         return self._litellm
     
     def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None) -> Dict:
-        """Generate a commit summary using the LLM.
-
-        This function generates a concise and descriptive commit summary based
-        on the provided Git diff, user instructions, repository details, and
-        optional JIRA context. It constructs a prompt for the LLM to produce a
-        commit title and an optional detailed description, adhering to Semantic
-        Commit Messages guidelines. If the JIRA context is provided, it enriches
-        the prompt with relevant issue information.
-
+        """Generate a concise and descriptive commit summary based on Git diff, user
+        instructions, repository details, and optional JIRA context.
+        
+        This function constructs a prompt for an LLM to produce a commit title and, if
+        requested, a detailed description. The summary adheres to Semantic Commit
+        Messages guidelines. If JIRA context is provided, it enriches the prompt with
+        relevant issue information.
+        
         Args:
             diff (str): Git diff of changes.
             message (str): User-provided commit message or instructions.
-            generate_description (bool): Flag indicating whether to include a detailed description in the
-                summary.
+            generate_description (bool): Flag indicating whether to include a detailed description in the summary.
             repo_details (Dict): Details about the repository.
             jira_context (Dict?): Optional JIRA issue context to enhance the summary.
-
+        
         Returns:
             Dict: A dictionary containing the title and description for the commit. If
-                generate_description is False,
-                the 'description' key may be absent.
-
+                `generate_description` is False, the 'description' key may be absent.
+        
         Raises:
             ValueError: If the LLM model is not configured.
         """
