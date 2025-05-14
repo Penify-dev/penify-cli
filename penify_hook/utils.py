@@ -11,7 +11,23 @@ class GitRepoNotFoundError(Exception):
 
 
 def get_repo_details(repo: Repo):
-    """Determine the details of a repository including its remote URL, hosting service, organization name, and repository name."""
+    """Determine the details of a repository including its remote URL, hosting
+    service, organization name, and repository name.
+    
+    This function extracts the remote URL from the given Git repository object and
+    determines the hosting service (e.g., GitHub, Azure DevOps, Bitbucket, GitLab).
+    It then parses the URL to extract the organization name and repository name. If
+    the URL does not match any known hosting service pattern, it sets the hosting
+    service as "Unknown". The function handles exceptions that may occur during
+    this process and logs an error message if needed.
+    
+    Args:
+        repo (Repo): A GitPython Repo object representing the local git repository.
+    
+    Returns:
+        dict: A dictionary containing the organization name, repository name, and hosting
+            service.
+    """
     remote_url = None
     hosting_service = "Unknown"
     org_name = None
@@ -72,7 +88,8 @@ def recursive_search_git_folder(folder_path):
         
 def find_git_parent(path):
 
-    """Traverse up from the given path to find the nearest directory containing a .git subdirectory."""
+    """Traverse up from the given path to find the nearest directory containing a .git
+    subdirectory."""
     current_dir = os.path.abspath(path)
 
     while current_dir != os.path.dirname(current_dir):  # Traverse up to the root directory
