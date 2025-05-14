@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtests_1_1test__commit__commands_1_1TestCommitCommands" kind="class" language="Python" prot="public">
+    <compoundname>tests::test_commit_commands::TestCommitCommands</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.mock_api_client</definition>
+        <argsstring>(self)</argsstring>
+        <name>mock_api_client</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.mock_api_client</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Mocks an instance of APIClient using unittest.mock.
+
+This function creates a mock object for APIClient and yields it along
+with the mocked instance. It is useful for testing purposes where real
+API calls should be avoided.
+
+Yields:
+    tuple: A tuple containing the mock of APIClient and the mocked instance of
+        APIClient.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="11" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="11" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a20e78370ff5bd6223cc1dd4323a86ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.mock_llm_client</definition>
+        <argsstring>(self)</argsstring>
+        <name>mock_llm_client</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.mock_llm_client</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Mock an instance of LLMClient for testing purposes.
+
+This function yields a mock object representing an instance of
+LLMClient, which can be used to simulate interactions with a language
+model during testing. The mock is patched to replace the actual
+LLMClient class from the penify_hook module.
+
+Yields:
+    tuple: A tuple containing two elements:
+        - mock (MagicMock): The mock object for LLMClient.
+        - llm_client_instance (MagicMock): An instance of the mocked LLMClient.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="29" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="29" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a05adaa9a713ff1be657455d0667bc6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.mock_jira_client</definition>
+        <argsstring>(self)</argsstring>
+        <name>mock_jira_client</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.mock_jira_client</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a mock JIRA client for testing purposes.
+
+This function yields a tuple containing a mock JIRA client instance and
+its `is_connected` method. The mock client is configured to simulate an
+active connection. This is useful for unit tests that require
+interaction with a JIRA client without making actual network calls.
+
+Yields:
+    tuple: A tuple containing the mocked JIRA client instance and its
+        `is_connected` method.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="49" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="49" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1aa9b25a4bf692b8736164695072a398f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.mock_commit_doc_gen</definition>
+        <argsstring>(self)</argsstring>
+        <name>mock_commit_doc_gen</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.mock_commit_doc_gen</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Mocks the CommitDocGenHook class and returns a MagicMock instance.
+
+This function uses the `patch` decorator from the `unittest.mock` module
+to create a mock of the `CommitDocGenHook` class. It then sets up this
+mock to return a new `MagicMock` instance when invoked. The function
+yields both the mock object and the mocked instance, allowing for easy
+testing of functions that rely on `CommitDocGenHook`.
+
+Returns:
+    tuple: A tuple containing two elements:
+        - mock (patch): The patch object used to mock the `CommitDocGenHook`
+        class.
+        - doc_gen_instance (MagicMock): The mocked instance of
+        `CommitDocGenHook`.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="69" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="69" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.mock_git_folder_search</definition>
+        <argsstring>(self)</argsstring>
+        <name>mock_git_folder_search</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.mock_git_folder_search</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Mock the `recursive_search_git_folder` function to return a predefined
+git folder path.
+
+This function uses the `patch` decorator from the `unittest.mock` module
+to intercept calls to `penify_hook.utils.recursive_search_git_folder`.
+When called, it will return &apos;/mock/git/folder&apos; instead of performing an
+actual search. This is useful for testing purposes where you need a
+consistent response without interacting with the file system.
+
+Yields:
+    MagicMock: A mock object that simulates the `recursive_search_git_folder` function.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="92" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="92" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1afafbae3c9aeb0e50a75996256c02c8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.mock_print_functions</definition>
+        <argsstring>(self)</argsstring>
+        <name>mock_print_functions</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.mock_print_functions</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Mocks the print functions from `penify_hook.ui_utils` for testing
+purposes.
+
+This function uses Python&apos;s `unittest.mock.patch` to replace the actual
+print functions (`print`, `print_warning`, and `print_error`) with mock
+objects. These mock objects can be used in tests to capture calls made
+to these print functions without actually printing anything.
+
+Yields:
+    tuple: A tuple containing three mock objects corresponding to `print_info`,
+        `print_warning`,
+        and `print_error`.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="111" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="111" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acc4b1e4189792a3f7c11d2a745f479c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.test_commit_code_with_llm_client</definition>
+        <argsstring>(self, mock_error, mock_warning, mock_info, mock_git_folder_search, mock_doc_gen, mock_llm_client, mock_api_client)</argsstring>
+        <name>test_commit_code_with_llm_client</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.test_commit_code_with_llm_client</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_error</type>
+          <defname>mock_error</defname>
+        </param>
+        <param>
+          <type>mock_warning</type>
+          <defname>mock_warning</defname>
+        </param>
+        <param>
+          <type>mock_info</type>
+          <defname>mock_info</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" kindref="member">mock_git_folder_search</ref></type>
+          <defname>mock_git_folder_search</defname>
+        </param>
+        <param>
+          <type>mock_doc_gen</type>
+          <defname>mock_doc_gen</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a20e78370ff5bd6223cc1dd4323a86ea4" kindref="member">mock_llm_client</ref></type>
+          <defname>mock_llm_client</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" kindref="member">mock_api_client</ref></type>
+          <defname>mock_api_client</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test committing code using an LLM client.
+
+This function sets up mock objects for various components and then calls
+the `commit_code` function with specified parameters. It verifies that
+the correct mocks are created and called with the appropriate arguments.
+
+Args:
+    mock_error (MagicMock): Mock object for error handling.
+    mock_warning (MagicMock): Mock object for warning logging.
+    mock_info (MagicMock): Mock object for info logging.
+    mock_git_folder_search (MagicMock): Mock object to simulate git folder search.
+    mock_doc_gen (MagicMock): Mock object for document generation.
+    mock_llm_client (MagicMock): Mock object for LLM client interaction.
+    mock_api_client (MagicMock): Mock object for API client interaction.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="138" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="140" bodyend="190"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="99">penify_hook.commands.commit_commands.commit_code</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1af9c09013055ec39ddde86b487aefcf8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.test_commit_code_with_jira_client</definition>
+        <argsstring>(self, mock_error, mock_warning, mock_info, mock_git_folder_search, mock_doc_gen, mock_jira_client, mock_llm_client, mock_api_client)</argsstring>
+        <name>test_commit_code_with_jira_client</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.test_commit_code_with_jira_client</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_error</type>
+          <defname>mock_error</defname>
+        </param>
+        <param>
+          <type>mock_warning</type>
+          <defname>mock_warning</defname>
+        </param>
+        <param>
+          <type>mock_info</type>
+          <defname>mock_info</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" kindref="member">mock_git_folder_search</ref></type>
+          <defname>mock_git_folder_search</defname>
+        </param>
+        <param>
+          <type>mock_doc_gen</type>
+          <defname>mock_doc_gen</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a05adaa9a713ff1be657455d0667bc6be" kindref="member">mock_jira_client</ref></type>
+          <defname>mock_jira_client</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a20e78370ff5bd6223cc1dd4323a86ea4" kindref="member">mock_llm_client</ref></type>
+          <defname>mock_llm_client</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" kindref="member">mock_api_client</ref></type>
+          <defname>mock_api_client</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test committing code using a JIRA client.
+
+This function tests the commit_code function with various parameters,
+including API and JIRA credentials. It sets up mock objects for
+dependencies such as the JIRA client, LLM client, and doc generator to
+simulate the behavior of the real classes. The function then calls
+commit_code and verifies that the JIRA client and doc generator are
+called with the correct parameters.
+
+Args:
+    mock_error (MagicMock): A MagicMock object for simulating error logging.
+    mock_warning (MagicMock): A MagicMock object for simulating warning logging.
+    mock_info (MagicMock): A MagicMock object for simulating info logging.
+    mock_git_folder_search (MagicMock): A MagicMock object for simulating the git folder search function.
+    mock_doc_gen (MagicMock): A MagicMock object for simulating the doc generator function.
+    mock_jira_client (MagicMock): A MagicMock object for simulating the JIRA client class.
+    mock_llm_client (MagicMock): A MagicMock object for simulating the LLM client class.
+    mock_api_client (MagicMock): A MagicMock object for simulating the API client class.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="199" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="201" bodyend="260"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="99">penify_hook.commands.commit_commands.commit_code</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acea0d934ee0f2b914b0b893736e8fe4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.test_commit_code_with_jira_connection_failure</definition>
+        <argsstring>(self, mock_error, mock_warning, mock_info, mock_git_folder_search, mock_doc_gen, mock_jira_client, mock_api_client)</argsstring>
+        <name>test_commit_code_with_jira_connection_failure</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.test_commit_code_with_jira_connection_failure</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_error</type>
+          <defname>mock_error</defname>
+        </param>
+        <param>
+          <type>mock_warning</type>
+          <defname>mock_warning</defname>
+        </param>
+        <param>
+          <type>mock_info</type>
+          <defname>mock_info</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" kindref="member">mock_git_folder_search</ref></type>
+          <defname>mock_git_folder_search</defname>
+        </param>
+        <param>
+          <type>mock_doc_gen</type>
+          <defname>mock_doc_gen</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a05adaa9a713ff1be657455d0667bc6be" kindref="member">mock_jira_client</ref></type>
+          <defname>mock_jira_client</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" kindref="member">mock_api_client</ref></type>
+          <defname>mock_api_client</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the commit_code function when JIRA connection fails.
+
+This function tests the scenario where the JIRA connection fails during
+a code commit. It sets up various mocks to simulate different components
+of the system and then calls the `commit_code` function with specific
+parameters. The function is expected to handle the JIRA connection
+failure gracefully by logging an appropriate warning.
+
+Args:
+    mock_error (MagicMock): Mock for error logging.
+    mock_warning (MagicMock): Mock for warning logging.
+    mock_info (MagicMock): Mock for info logging.
+    mock_git_folder_search (MagicMock): Mock for searching the Git folder.
+    mock_doc_gen (MagicMock): Mock for generating documentation.
+    mock_jira_client (MagicMock): Mock for creating a JIRA client.
+    mock_api_client (MagicMock): Mock for creating an API client.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="268" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="270" bodyend="317"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="99">penify_hook.commands.commit_commands.commit_code</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a43c2ff3707124aa48e8eb581106b8691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.test_commit_code_error_handling</definition>
+        <argsstring>(self, mock_print, mock_exit, mock_git_folder_search, mock_doc_gen, mock_api_client)</argsstring>
+        <name>test_commit_code_error_handling</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.test_commit_code_error_handling</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_print</type>
+          <defname>mock_print</defname>
+        </param>
+        <param>
+          <type>mock_exit</type>
+          <defname>mock_exit</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" kindref="member">mock_git_folder_search</ref></type>
+          <defname>mock_git_folder_search</defname>
+        </param>
+        <param>
+          <type>mock_doc_gen</type>
+          <defname>mock_doc_gen</defname>
+        </param>
+        <param>
+          <type><ref refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" kindref="member">mock_api_client</ref></type>
+          <defname>mock_api_client</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the error handling in the test_commit_code function.
+
+This function sets up mocks to simulate exceptions and test the error
+handling of the commit_code function. It verifies that the function
+correctly prints an error message and exits with a status code of 1 when
+an exception occurs during documentation generation.
+
+Args:
+    mock_print (MagicMock): Mock for the print function, used to verify error message output.
+    mock_exit (MagicMock): Mock for the sys.exit function, used to verify exit behavior.
+    mock_git_folder_search (MagicMock): Mock for the git_folder_search function, returning a mock Git folder
+        path.
+    mock_doc_gen (MagicMock): Mock for the doc_gen function, simulating an exception during
+        documentation generation.
+    mock_api_client (MagicMock): Mock for the API client class, not directly used but referenced in the
+        function signature.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="323" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="324" bodyend="358"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="99">penify_hook.commands.commit_commands.commit_code</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a4d04b125e102190a768f65f1948f15bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.test_setup_commit_parser</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_setup_commit_parser</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.test_setup_commit_parser</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set up the argument parser for the commit command.
+
+This function configures an argument parser to handle various options
+for committing changes. It adds three arguments: - &apos;-m&apos; or &apos;--message&apos;:
+An optional argument to specify a contextual commit message with a
+default value of &quot;N/A&quot;. - &apos;-e&apos; or &apos;--terminal&apos;: A boolean flag to open
+an edit terminal before committing. - &apos;-d&apos; or &apos;--description&apos;: A boolean
+flag that, when set to False, indicates the generation of a commit
+message with title and description.
+
+Args:
+    parser (MagicMock): The argument parser to be configured.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="359" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="359" bodyend="382"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a8627583116eb78e31a4d3cdc16d2f15c" compoundref="commit__commands_8py" startline="100" endline="127">penify_hook.commands.commit_commands.setup_commit_parser</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__commit__commands_1_1TestCommitCommands_1ac13e368262340af98b30fd8ebdac6597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_commit_commands.TestCommitCommands.test_handle_commit</definition>
+        <argsstring>(self, mock_print_info, mock_commit_code, mock_get_token, mock_get_llm_config, mock_get_jira_config)</argsstring>
+        <name>test_handle_commit</name>
+        <qualifiedname>tests.test_commit_commands.TestCommitCommands.test_handle_commit</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_print_info</type>
+          <defname>mock_print_info</defname>
+        </param>
+        <param>
+          <type>mock_commit_code</type>
+          <defname>mock_commit_code</defname>
+        </param>
+        <param>
+          <type>mock_get_token</type>
+          <defname>mock_get_token</defname>
+        </param>
+        <param>
+          <type>mock_get_llm_config</type>
+          <defname>mock_get_llm_config</defname>
+        </param>
+        <param>
+          <type>mock_get_jira_config</type>
+          <defname>mock_get_jira_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the handle_commit function with various mock objects.
+
+This function sets up mocks for retrieving LLM configuration, JIRA
+configuration, and commit code. It then creates an argument object and
+calls the handle_commit function. Finally, it verifies that the mock
+functions were called with the expected arguments.
+
+Args:
+    mock_print_info (MagicMock): Mock object for printing information.
+    mock_commit_code (MagicMock): Mock object for committing code.
+    mock_get_token (MagicMock): Mock object for retrieving API token.
+    mock_get_llm_config (MagicMock): Mock object for retrieving LLM configuration.
+    mock_get_jira_config (MagicMock): Mock object for retrieving JIRA configuration.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="389" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="390" bodyend="435"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="128" endline="169">penify_hook.commands.commit_commands.handle_commit</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>tests.test_commit_commands.TestCommitCommands</label>
+        <link refid="classtests_1_1test__commit__commands_1_1TestCommitCommands"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="8" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" bodystart="8" bodyend="435"/>
+    <listofallmembers>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>mock_api_client</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1aa9b25a4bf692b8736164695072a398f6" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>mock_commit_doc_gen</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>mock_git_folder_search</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a05adaa9a713ff1be657455d0667bc6be" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>mock_jira_client</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a20e78370ff5bd6223cc1dd4323a86ea4" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>mock_llm_client</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1afafbae3c9aeb0e50a75996256c02c8be" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>mock_print_functions</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a43c2ff3707124aa48e8eb581106b8691" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>test_commit_code_error_handling</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1af9c09013055ec39ddde86b487aefcf8b" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>test_commit_code_with_jira_client</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acea0d934ee0f2b914b0b893736e8fe4e" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>test_commit_code_with_jira_connection_failure</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acc4b1e4189792a3f7c11d2a745f479c0" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>test_commit_code_with_llm_client</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1ac13e368262340af98b30fd8ebdac6597" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>test_handle_commit</name></member>
+      <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a4d04b125e102190a768f65f1948f15bc" prot="public" virt="non-virtual"><scope>tests::test_commit_commands::TestCommitCommands</scope><name>test_setup_commit_parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
