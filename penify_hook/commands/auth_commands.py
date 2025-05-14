@@ -9,18 +9,26 @@ from threading import Thread
 from pathlib import Path
 
 def save_credentials(api_key):
-    """
-    Save the token and API keys based on priority:
-    1. .env file in Git repo root (if in a git repo)
-    2. .penify file in home directory (global fallback)
+    # Try to save in .env file in git repo first
+    """Save the API key in a priority-based manner.
+    
+    This function attempts to save the API key in two locations, based on priority:
+    1. In a `.env` file located in the root of the Git repository if one is found.
+    2. In a global `.penify` file located in the user's home directory as a
+    fallback.  The function first tries to locate the Git repository using
+    `recursive_search_git_folder`. If a Git repository is found, it reads the
+    existing `.env` file (if present), updates or adds the API key under the key
+    `PENIFY_API_TOKEN`, and writes the updated content back. If any error occurs
+    during this process, it falls back to saving the credentials in the global
+    `.penify` file. The function handles exceptions and prints appropriate error
+    messages.
     
     Args:
-        api_key: The API key to save
-        
+        api_key (str): The API key to save.
+    
     Returns:
-        bool: True if saved successfully, False otherwise
+        bool: True if the API key is saved successfully, False otherwise.
     """
-    # Try to save in .env file in git repo first
     try:
         from ..utils import recursive_search_git_folder
         current_dir = os.getcwd()
@@ -80,21 +88,7 @@ def save_credentials(api_key):
         return False
 
 def login(api_url, dashboard_url):
-    """Open the login page in a web browser and listen for the redirect URL to
-    capture the token.
-
-    This function generates a random redirect port, constructs the full
-    login URL with the provided dashboard URL, opens the login page in the
-    default web browser, and sets up a simple HTTP server to listen for the
-    redirect. Upon receiving the redirect, it extracts the token from the
-    query parameters, fetches API keys using the token, saves them if
-    successful, and handles login failures by notifying the user.
-
-    Args:
-        api_url (str): The URL of the API service to fetch API keys.
-        dashboard_url (str): The URL of the dashboard where the user will be redirected after logging
-            in.
-    """
+    """Open the login page in a web browser and capture the token via redirect."""
     redirect_port = random.randint(30000, 50000)
     redirect_url = f"http://localhost:{redirect_port}/callback"
     
@@ -105,16 +99,9 @@ def login(api_url, dashboard_url):
     
     class TokenHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
-            """Handle a GET request to process login token and redirect or display
-            error message.
 
-            This method processes the incoming GET request, extracts the token from
-            the query string, and performs actions based on whether the token is
-            present. If the token is valid, it redirects the user to the Penify
-            dashboard and fetches API keys if successful. If the token is invalid,
-            it displays an error message.
-            """
-
+            """Handle a GET request to process login token and redirect or display error
+            message."""
             query = urllib.parse.urlparse(self.path).query
             query_components = urllib.parse.parse_qs(query)
             token = query_components.get("token", [None])[0]
@@ -171,6 +158,7 @@ def login(api_url, dashboard_url):
 
         def log_message(self, format, *args):
             # Suppress log messages
+            """Suppress log messages."""
             return
     
     with socketserver.TCPServer(("", redirect_port), TokenHandler) as httpd:
