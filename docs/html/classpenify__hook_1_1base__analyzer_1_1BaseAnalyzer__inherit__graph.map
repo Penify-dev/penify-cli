@@ -1,0 +1,7 @@
+<map id="penify_hook.base_analyzer.BaseAnalyzer" name="penify_hook.base_analyzer.BaseAnalyzer">
+<area shape="rect" id="node1" title=" " alt="" coords="370,5,573,185"/>
+<area shape="rect" id="node2" href="$classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook.html" title=" " alt="" coords="5,241,231,391"/>
+<area shape="rect" id="node3" href="$classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook.html" title=" " alt="" coords="255,248,445,384"/>
+<area shape="rect" id="node4" href="$classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook.html" title=" " alt="" coords="470,255,715,377"/>
+<area shape="rect" id="node5" href="$classpenify__hook_1_1git__analyzer_1_1GitDocGenHook.html" title=" " alt="" coords="740,233,928,399"/>
+</map>

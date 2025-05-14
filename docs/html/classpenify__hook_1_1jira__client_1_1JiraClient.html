@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="::git_url::" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>penify-cli: penify_hook.jira_client.JiraClient Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="::git_url::" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">penify-cli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classpenify__hook_1_1jira__client_1_1JiraClient.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classpenify__hook_1_1jira__client_1_1JiraClient-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">penify_hook.jira_client.JiraClient Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for penify_hook.jira_client.JiraClient:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient__coll__graph.svg" width="236" height="352"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a47efc1ec07389c960f2dfb37ba8c09f5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a47efc1ec07389c960f2dfb37ba8c09f5">__init__</a> (self, str <a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a3c0cfecff02a75cb7001509a595b8197">jira_url</a>=None, str <a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#ae56104d5aa7bda7bb26d169c4b46038c">jira_user</a>=None, str <a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#afc5c90e53b702f9fc27e2ee7d3f991b9">jira_api_token</a>=None)</td></tr>
+<tr class="separator:a47efc1ec07389c960f2dfb37ba8c09f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d0f9ae006313a21576362d26ac5ec8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a00d0f9ae006313a21576362d26ac5ec8">is_connected</a> (self)</td></tr>
+<tr class="separator:a00d0f9ae006313a21576362d26ac5ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093d6456fe053ef7a7862d5d6851910c"><td class="memItemLeft" align="right" valign="top">List[str]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a093d6456fe053ef7a7862d5d6851910c">extract_issue_keys_from_branch</a> (self, str branch_name)</td></tr>
+<tr class="separator:a093d6456fe053ef7a7862d5d6851910c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2823ad1d3baaedd38039913c3a97fd7"><td class="memItemLeft" align="right" valign="top">List[str]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#ad2823ad1d3baaedd38039913c3a97fd7">extract_issue_keys</a> (self, str text)</td></tr>
+<tr class="separator:ad2823ad1d3baaedd38039913c3a97fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f6924819084b7c8d268956a784804a"><td class="memItemLeft" align="right" valign="top">Optional[Dict[str, Any]]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a65f6924819084b7c8d268956a784804a">get_issue_details</a> (self, str issue_key)</td></tr>
+<tr class="separator:a65f6924819084b7c8d268956a784804a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f374116c64cd5f1492ec7f7e40f9c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#aa1f374116c64cd5f1492ec7f7e40f9c1">add_comment</a> (self, str issue_key, str comment)</td></tr>
+<tr class="separator:aa1f374116c64cd5f1492ec7f7e40f9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8837552d37bfd611de23441a240826"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#aca8837552d37bfd611de23441a240826">update_issue_status</a> (self, str issue_key, str transition_name)</td></tr>
+<tr class="separator:aca8837552d37bfd611de23441a240826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ea1149758f7f5212149d357b13cc23"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a49ea1149758f7f5212149d357b13cc23">format_commit_message_with_jira_info</a> (self, str commit_title, str commit_description, List[str] issue_keys=None)</td></tr>
+<tr class="separator:a49ea1149758f7f5212149d357b13cc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa967169a4b7970c67c0947b9ac56f746"><td class="memItemLeft" align="right" valign="top">Dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#aa967169a4b7970c67c0947b9ac56f746">get_detailed_issue_context</a> (self, str issue_key)</td></tr>
+<tr class="separator:aa967169a4b7970c67c0947b9ac56f746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb41ce6f13c30b1265d439ddf04bf2cd"><td class="memItemLeft" align="right" valign="top">Dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#afb41ce6f13c30b1265d439ddf04bf2cd">get_commit_context_from_issues</a> (self, List[str] issue_keys)</td></tr>
+<tr class="separator:afb41ce6f13c30b1265d439ddf04bf2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d2c5a6432aa6f238da0ff65d49a760"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a70d2c5a6432aa6f238da0ff65d49a760">enhance_commit_message</a> (self, str title, str description, List[str] issue_keys)</td></tr>
+<tr class="separator:a70d2c5a6432aa6f238da0ff65d49a760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3c0cfecff02a75cb7001509a595b8197"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#a3c0cfecff02a75cb7001509a595b8197">jira_url</a></td></tr>
+<tr class="separator:a3c0cfecff02a75cb7001509a595b8197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56104d5aa7bda7bb26d169c4b46038c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#ae56104d5aa7bda7bb26d169c4b46038c">jira_user</a></td></tr>
+<tr class="separator:ae56104d5aa7bda7bb26d169c4b46038c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5c90e53b702f9fc27e2ee7d3f991b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#afc5c90e53b702f9fc27e2ee7d3f991b9">jira_api_token</a></td></tr>
+<tr class="separator:afc5c90e53b702f9fc27e2ee7d3f991b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb3f96c79358cf3a95d96d3747235b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html#aefb3f96c79358cf3a95d96d3747235b6">jira_client</a></td></tr>
+<tr class="separator:aefb3f96c79358cf3a95d96d3747235b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">Client for interacting with JIRA API
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a47efc1ec07389c960f2dfb37ba8c09f5" name="a47efc1ec07389c960f2dfb37ba8c09f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47efc1ec07389c960f2dfb37ba8c09f5">&#9670;&nbsp;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def penify_hook.jira_client.JiraClient.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>jira_url</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>jira_user</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>jira_api_token</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Initialize the JIRA client.
+
+Args:
+    jira_url: Base URL for JIRA instance (e.g., "https://your-domain.atlassian.net")
+    jira_user: JIRA username or email
+    jira_api_token: JIRA API token
+</pre> 
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa1f374116c64cd5f1492ec7f7e40f9c1" name="aa1f374116c64cd5f1492ec7f7e40f9c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f374116c64cd5f1492ec7f7e40f9c1">&#9670;&nbsp;</a></span>add_comment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> bool penify_hook.jira_client.JiraClient.add_comment </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>issue_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>comment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Adds a comment to a JIRA issue.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1_cgraph.svg" width="411" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1_icgraph.svg" width="190" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a70d2c5a6432aa6f238da0ff65d49a760" name="a70d2c5a6432aa6f238da0ff65d49a760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d2c5a6432aa6f238da0ff65d49a760">&#9670;&nbsp;</a></span>enhance_commit_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> tuple penify_hook.jira_client.JiraClient.enhance_commit_message </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List[str]&#160;</td>
+          <td class="paramname"><em>issue_keys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Enhance a commit message with business and technical context from JIRA issues.
+
+This function first checks if the list of issue keys is empty or if there is no
+connection. If so, it returns the original title and description without
+modification. It then retrieves context information from the specified JIRA
+issues. If the primary issue is missing, it formats the commit message with
+basic JIRA info.  The function enhances the commit title by prefixing it with
+the primary issue key if not already included. It appends a business context
+section to the description, including details like issue type, status,
+priority, sprint, acceptance criteria, and a condensed issue description. If
+comments are available, they are added as technical notes. Finally, related
+issues are listed.
+
+Args:
+    title (str): Original commit title.
+    description (str): Original commit description.
+    issue_keys (List[str]): List of JIRA issue keys to include in the enhanced commit message.
+
+Returns:
+    tuple: A tuple containing the enhanced commit title and description with added
+        context from JIRA issues.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a70d2c5a6432aa6f238da0ff65d49a760_cgraph.svg" width="100%" height="523"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad2823ad1d3baaedd38039913c3a97fd7" name="ad2823ad1d3baaedd38039913c3a97fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2823ad1d3baaedd38039913c3a97fd7">&#9670;&nbsp;</a></span>extract_issue_keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> List[str] penify_hook.jira_client.JiraClient.extract_issue_keys </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Extract unique JIRA issue keys from the given text.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_ad2823ad1d3baaedd38039913c3a97fd7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a093d6456fe053ef7a7862d5d6851910c" name="a093d6456fe053ef7a7862d5d6851910c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093d6456fe053ef7a7862d5d6851910c">&#9670;&nbsp;</a></span>extract_issue_keys_from_branch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> List[str] penify_hook.jira_client.JiraClient.extract_issue_keys_from_branch </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>branch_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Extracts unique JIRA issue keys from a branch name.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a49ea1149758f7f5212149d357b13cc23" name="a49ea1149758f7f5212149d357b13cc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ea1149758f7f5212149d357b13cc23">&#9670;&nbsp;</a></span>format_commit_message_with_jira_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> tuple penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>commit_title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>commit_description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List[str] &#160;</td>
+          <td class="paramname"><em>issue_keys</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Format commit message with JIRA issue information.
+
+This function updates the provided commit title and description by
+incorporating JIRA issue keys. If no issue keys are supplied, it extracts them
+from the commit title and description. It then formats the commit title to
+include the first issue key if not already present and appends detailed
+information about each issue to the commit description.
+
+Args:
+    commit_title (str): The original commit title.
+    commit_description (str): The original commit description.
+    issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
+        provided, issue keys will be extracted from both the title and the description.
+
+Returns:
+    tuple: A tuple containing the updated commit title and description with JIRA
+        information included.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23_icgraph.svg" width="443" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afb41ce6f13c30b1265d439ddf04bf2cd" name="afb41ce6f13c30b1265d439ddf04bf2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb41ce6f13c30b1265d439ddf04bf2cd">&#9670;&nbsp;</a></span>get_commit_context_from_issues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> Dict[str, Any] penify_hook.jira_client.JiraClient.get_commit_context_from_issues </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List[str]&#160;</td>
+          <td class="paramname"><em>issue_keys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Gather contextual information from JIRA issues to improve commit messages.
+
+This function processes a list of JIRA issue keys, retrieves detailed context
+for each issue, and aggregates it into a dictionary that can be used to enhance
+commit messages. It first retrieves the primary issue (the first key in the
+list) and then gathers basic details for any related issues. The resulting
+context includes information from both the primary and related issues, along
+with all issue keys.
+
+Args:
+    issue_keys: List of JIRA issue keys to gather information from
+
+Returns:
+    Dict containing business and technical context from the issues
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd_cgraph.svg" width="652" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd_icgraph.svg" width="430" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa967169a4b7970c67c0947b9ac56f746" name="aa967169a4b7970c67c0947b9ac56f746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa967169a4b7970c67c0947b9ac56f746">&#9670;&nbsp;</a></span>get_detailed_issue_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> Dict[str, Any] penify_hook.jira_client.JiraClient.get_detailed_issue_context </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>issue_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Retrieve comprehensive details about a JIRA issue including context for better
+commit messages.
+
+This function fetches detailed information from a specified JIRA issue and
+constructs a dictionary containing various context fields such as the issue
+summary, description, type, status, priority, comments, URL, and additional
+custom fields like acceptance criteria and sprint information. It handles
+errors by logging appropriate warnings or errors.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
+
+Returns:
+    Dict[str, Any]: A dictionary containing business and technical context from the issue.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746_cgraph.svg" width="406" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746_icgraph.svg" width="651" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a65f6924819084b7c8d268956a784804a" name="a65f6924819084b7c8d268956a784804a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f6924819084b7c8d268956a784804a">&#9670;&nbsp;</a></span>get_issue_details()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> Optional[Dict[str, Any]] penify_hook.jira_client.JiraClient.get_issue_details </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>issue_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Retrieve details of a JIRA issue based on its key.
+
+This function fetches detailed information about a specified JIRA issue using
+the provided issue key. It first checks if the JIRA client is connected; if
+not, it logs a warning and returns `None`. If connected, it attempts to
+retrieve the issue from the JIRA server. On success, it constructs and returns
+a dictionary containing various details such as the issue's key, summary,
+status, description, assignee, reporter, type, priority, and URL. Errors during
+this process are logged, and `None` is returned.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a_cgraph.svg" width="431" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a00d0f9ae006313a21576362d26ac5ec8" name="a00d0f9ae006313a21576362d26ac5ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d0f9ae006313a21576362d26ac5ec8">&#9670;&nbsp;</a></span>is_connected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> bool penify_hook.jira_client.JiraClient.is_connected </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Check if the JIRA client is connected.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_a00d0f9ae006313a21576362d26ac5ec8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aca8837552d37bfd611de23441a240826" name="aca8837552d37bfd611de23441a240826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8837552d37bfd611de23441a240826">&#9670;&nbsp;</a></span>update_issue_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> bool penify_hook.jira_client.JiraClient.update_issue_status </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>issue_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>transition_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Update the status of a JIRA issue.
+
+This method checks if the JIRA client is connected, retrieves available
+transitions for the given issue, finds the transition ID by name, and updates
+the issue's status accordingly. If any step fails or the specified transition
+is not found, appropriate logs are generated, and False is returned.
+
+Args:
+    issue_key (str): The key of the JIRA issue to be updated.
+    transition_name (str): The name of the desired transition.
+
+Returns:
+    bool: True if the status was successfully updated, False otherwise.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classpenify__hook_1_1jira__client_1_1JiraClient_aca8837552d37bfd611de23441a240826_cgraph.svg" width="406" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="afc5c90e53b702f9fc27e2ee7d3f991b9" name="afc5c90e53b702f9fc27e2ee7d3f991b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5c90e53b702f9fc27e2ee7d3f991b9">&#9670;&nbsp;</a></span>jira_api_token</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.jira_client.JiraClient.jira_api_token</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefb3f96c79358cf3a95d96d3747235b6" name="aefb3f96c79358cf3a95d96d3747235b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb3f96c79358cf3a95d96d3747235b6">&#9670;&nbsp;</a></span>jira_client</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.jira_client.JiraClient.jira_client</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c0cfecff02a75cb7001509a595b8197" name="a3c0cfecff02a75cb7001509a595b8197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0cfecff02a75cb7001509a595b8197">&#9670;&nbsp;</a></span>jira_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.jira_client.JiraClient.jira_url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae56104d5aa7bda7bb26d169c4b46038c" name="ae56104d5aa7bda7bb26d169c4b46038c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae56104d5aa7bda7bb26d169c4b46038c">&#9670;&nbsp;</a></span>jira_user</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.jira_client.JiraClient.jira_user</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<a class="el" href="jira__client_8py.html">jira_client.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacepenify__hook.html">penify_hook</a></li><li class="navelem"><a class="el" href="namespacepenify__hook_1_1jira__client.html">jira_client</a></li><li class="navelem"><a class="el" href="classpenify__hook_1_1jira__client_1_1JiraClient.html">JiraClient</a></li>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/penify-logo.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>
