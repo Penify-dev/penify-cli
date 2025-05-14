@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>penify-cli</title>
+    </info>
+<chapter>
+    <title>Penify CLI - Commit Commands</title>
+    <xi:include href="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Penify CLI - Configuration Commands</title>
+    <xi:include href="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Penify CLI - Detailed Usage Guide</title>
+    <xi:include href="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Penify CLI - Documentation Generation Commands</title>
+    <xi:include href="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Penify CLI Example Workflows</title>
+    <xi:include href="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Penify CLI Tool</title>
+    <xi:include href="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespacepenify__hook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1api__client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1base__analyzer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commands_1_1auth__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commands_1_1commit__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commands_1_1config__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commands_1_1doc__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commands_1_1hook__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1commit__analyzer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1config__command.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1constants.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1file__analyzer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1folder__analyzer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1git__analyzer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1jira__client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1llm__client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1login__command.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1main.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1ui__utils.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepenify__hook_1_1utils.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacesetup.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1conftest.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1test__commit__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1test__config__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1test__doc__commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1test__web__config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="classpenify__hook_1_1api__client_1_1APIClient.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classException.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1utils_1_1GitRepoNotFoundError.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1jira__client_1_1JiraClient.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classpenify__hook_1_1llm__client_1_1LLMClient.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classtests_1_1test__commit__commands_1_1TestCommitCommands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classtests_1_1test__config__commands_1_1TestConfigCommands.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classtests_1_1test__web__config_1_1TestWebConfig.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="commit-commands_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="config-commands_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="detailed-usage_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="doc__commands_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="example-workflows_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="penify-cli-documentation_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="api__client_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="base__analyzer_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="penify__hook_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="penify__hook_2commands_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tests_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="auth__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="commit__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="config__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="doc__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="hook__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="commit__analyzer_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="config__command_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="constants_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="file__analyzer_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="folder__analyzer_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="git__analyzer_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="jira__client_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="llm__client_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="login__command_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ui__utils_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="utils_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="README_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="setup_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="conftest_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="test__commit__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="test__config__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="test__doc__commands_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="test__web__config_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

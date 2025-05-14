@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test__doc__commands_8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_doc_commands.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_doc_commands.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacetests">tests</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1test__doc__commands">tests.test_doc_commands</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a806110833eb0aad547156faf014b31d8">tests.test_doc_commands.test_generate_doc_no_location</link> (mock_getcwd, mock_api_client, mock_folder_analyzer, mock_file_analyzer, mock_git_analyzer)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a0e74c920f258f442914771164fe26b45">tests.test_doc_commands.test_generate_doc_file_location</link> (mock_api_client, mock_folder_analyzer, mock_file_analyzer, mock_git_analyzer)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a4bb75610e40d94d42bc169b25403c186">tests.test_doc_commands.test_generate_doc_folder_location</link> (mock_api_client, mock_folder_analyzer, mock_file_analyzer, mock_git_analyzer)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1aec76cc25c23476794234cdadbcaef0c0">tests.test_doc_commands.test_generate_doc_error_handling</link> (mock_api_client, mock_git_analyzer, mock_exit)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a0f27751d0ba2acfe40ef7e85bccf47d7">tests.test_doc_commands.test_setup_docgen_parser</link> ()</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1ab74688baa8c9b5ba302c2877a9789d05">tests.test_doc_commands.test_handle_docgen_install_hook</link> (mock_exit, mock_get_token, mock_generate_doc, mock_uninstall_hook, mock_install_hook)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a1458af9ad0128c3ca1263b552fd5e482">tests.test_doc_commands.test_handle_docgen_uninstall_hook</link> (mock_exit, mock_get_token, mock_generate_doc, mock_uninstall_hook, mock_install_hook)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1ab158ffa48469b6c097a7a55fcb20c21a">tests.test_doc_commands.test_handle_docgen_generate</link> (mock_get_token, mock_generate_doc, mock_uninstall_hook, mock_install_hook)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1af9b01e5fc89255cac96747fa081c442c">tests.test_doc_commands.test_handle_docgen_no_token</link> (mock_exit, mock_get_token)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a335e7fd4912192c7276cf31bbebc6eb0">tests.test_doc_commands.test_generate_doc_with_file_exception</link> (mock_api_client, mock_getcwd)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a64165ddfdb3071a88422f080f0e529a3">tests.test_doc_commands.test_generate_doc_with_folder_exception</link> (mock_api_client, mock_getcwd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

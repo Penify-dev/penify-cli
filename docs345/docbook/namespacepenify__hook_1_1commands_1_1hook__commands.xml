@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1commands_1_1hook__commands" xml:lang="en-US">
+<title>penify_hook.commands.hook_commands Namespace Reference</title>
+<indexterm><primary>penify_hook.commands.hook_commands</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1hook__commands_1adff8f5d3bf1c3795974a391ee95b72b2">install_git_hook</link> (location, token)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1hook__commands_1a81543eb5fa835fd1237f24e8bce6201d">uninstall_git_hook</link> (location)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1commands_1_1hook__commands_1ae82fd46e5a9219da1478b0476b8214b1">HOOK_FILENAME</link> = &quot;post-commit&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1commands_1_1hook__commands_1a6a45aad71c8d32ce11a6dff8cee8bee7">HOOK_TEMPLATE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1hook__commands_1adff8f5d3bf1c3795974a391ee95b72b2"/><section>
+    <title>install_git_hook()</title>
+<indexterm><primary>install_git_hook</primary><secondary>penify_hook.commands.hook_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.hook_commands</primary><secondary>install_git_hook</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.hook_commands.install_git_hook ( location,  token)</computeroutput></para>
+<para><literallayout><computeroutput>Install a post-commit hook in the specified location that generates
+documentation
+for changed files after each commit.
+
+Args:
+    location (str): The path to the Git repository where the hook should be installed.
+    token (str): The authentication token required to access the documentation generation
+        service.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1hook__commands_adff8f5d3bf1c3795974a391ee95b72b2_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1hook__commands_1a81543eb5fa835fd1237f24e8bce6201d"/><section>
+    <title>uninstall_git_hook()</title>
+<indexterm><primary>uninstall_git_hook</primary><secondary>penify_hook.commands.hook_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.hook_commands</primary><secondary>uninstall_git_hook</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.hook_commands.uninstall_git_hook ( location)</computeroutput></para>
+<para><literallayout><computeroutput>Uninstalls the post-commit hook from the specified location.
+
+This function attempts to remove a post-commit git hook located at the
+given path. It constructs the path to the hook and checks if it exists.
+If the hook is found, it is deleted, and a confirmation message is
+printed. If no hook is found, a message indicating this is also printed.
+
+Args:
+    location (Path): The base directory where the .git/hooks directory is located.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1hook__commands_a81543eb5fa835fd1237f24e8bce6201d_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1hook__commands_1ae82fd46e5a9219da1478b0476b8214b1"/><section>
+    <title>HOOK_FILENAME</title>
+<indexterm><primary>HOOK_FILENAME</primary><secondary>penify_hook.commands.hook_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.hook_commands</primary><secondary>HOOK_FILENAME</secondary></indexterm>
+<para><computeroutput>string penify_hook.commands.hook_commands.HOOK_FILENAME = &quot;post-commit&quot;</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1hook__commands_1a6a45aad71c8d32ce11a6dff8cee8bee7"/><section>
+    <title>HOOK_TEMPLATE</title>
+<indexterm><primary>HOOK_TEMPLATE</primary><secondary>penify_hook.commands.hook_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.hook_commands</primary><secondary>HOOK_TEMPLATE</secondary></indexterm>
+<para><computeroutput>string penify_hook.commands.hook_commands.HOOK_TEMPLATE</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;#!/bin/sh</emphasis>
+2 <emphasis role="stringliteral">#&#32;This&#32;is&#32;a&#32;post-commit&#32;hook&#32;generated&#32;by&#32;penify.</emphasis>
+3 <emphasis role="stringliteral">#&#32;Automatically&#32;generates&#32;documentation&#32;for&#32;changed&#32;files&#32;after&#32;each&#32;commit.</emphasis>
+4 <emphasis role="stringliteral"></emphasis>
+5 <emphasis role="stringliteral">penify&#32;docgen&#32;-gf&#32;{git_folder_path}&#32;-t&#32;{token}</emphasis>
+6 <emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+</programlisting></section>
+</section>
+</section>

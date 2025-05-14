@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1commands_1_1config__commands" xml:lang="en-US">
+<title>penify_hook.commands.config_commands Namespace Reference</title>
+<indexterm><primary>penify_hook.commands.config_commands</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>None <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae">load_env_files</link> ()</para>
+</listitem>
+            <listitem><para>Path <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20">get_penify_config</link> ()</para>
+</listitem>
+            <listitem><para>Any <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87">get_env_var_or_default</link> (str env_var, Any default=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4">save_llm_config</link> (model, api_base, api_key)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4">save_jira_config</link> (url, username, api_token)</para>
+</listitem>
+            <listitem><para>Dict[str, str] <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0">get_llm_config</link> ()</para>
+</listitem>
+            <listitem><para>Dict[str, str] <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2">get_jira_config</link> ()</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c">config_llm_web</link> ()</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06">config_jira_web</link> ()</para>
+</listitem>
+            <listitem><para>Optional[str] <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812">get_token</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a152642ab83cf6219b604bda6122aba67">DOTENV_AVAILABLE</link> = True</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a4b202072a3a3b8515c9c254622e9c880">path</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06"/><section>
+    <title>config_jira_web()</title>
+<indexterm><primary>config_jira_web</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>config_jira_web</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.config_commands.config_jira_web ( )</computeroutput></para>
+<para><literallayout><computeroutput>Open a web browser interface for configuring JIRA settings.
+
+This function sets up a simple HTTP server using Python&apos;s built-in
+`http.server` module to handle GET and POST requests. The server serves
+an HTML page for configuration and handles saving the JIRA configuration
+details through API tokens and URLs. Upon successful configuration, it
+shuts down the server gracefully.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c"/><section>
+    <title>config_llm_web()</title>
+<indexterm><primary>config_llm_web</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>config_llm_web</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.config_commands.config_llm_web ( )</computeroutput></para>
+<para><literallayout><computeroutput>Open a web browser interface for configuring LLM settings.
+
+This function starts a temporary HTTP server that serves an HTML
+template for configuring Large Language Model (LLM) settings. It handles
+GET and POST requests to retrieve the current configuration, save new
+configurations, and suppress log messages.  The server runs on a random
+port between 30000 and 50000, and it is accessible via a URL like
+http://localhost:&lt;redirect_port&gt;. The function opens this URL in the
+default web browser for configuration. Once configured, the server shuts
+down.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a185dfc34a655ed80e6c95939b6f3c35c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87"/><section>
+    <title>get_env_var_or_default()</title>
+<indexterm><primary>get_env_var_or_default</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>get_env_var_or_default</secondary></indexterm>
+<para><computeroutput> Any penify_hook.commands.config_commands.get_env_var_or_default (str env_var, Any  default = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Get environment variable or return default value.
+
+Args:
+    env_var: The environment variable name
+    default: Default value if environment variable is not set
+    
+Returns:
+    Value of the environment variable or default
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a3caf2b062dd33b1f1d7ddc7224f0ff87_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2"/><section>
+    <title>get_jira_config()</title>
+<indexterm><primary>get_jira_config</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>get_jira_config</secondary></indexterm>
+<para><computeroutput> Dict[str, str] penify_hook.commands.config_commands.get_jira_config ( )</computeroutput></para>
+<para><literallayout><computeroutput>Get JIRA configuration from environment variables.
+
+Environment variables:
+- PENIFY_JIRA_URL: JIRA URL
+- PENIFY_JIRA_USER: JIRA username
+- PENIFY_JIRA_TOKEN: JIRA API token
+
+Returns:
+    dict: Configuration dictionary with url, username, and api_token
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0"/><section>
+    <title>get_llm_config()</title>
+<indexterm><primary>get_llm_config</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>get_llm_config</secondary></indexterm>
+<para><computeroutput> Dict[str, str] penify_hook.commands.config_commands.get_llm_config ( )</computeroutput></para>
+<para><literallayout><computeroutput>Get LLM configuration from environment variables.
+
+Environment variables:
+- PENIFY_LLM_MODEL: Model name
+- PENIFY_LLM_API_BASE: API base URL
+- PENIFY_LLM_API_KEY: API key
+
+Returns:
+    dict: Configuration dictionary with model, api_base, and api_key
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20"/><section>
+    <title>get_penify_config()</title>
+<indexterm><primary>get_penify_config</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>get_penify_config</secondary></indexterm>
+<para><computeroutput> Path penify_hook.commands.config_commands.get_penify_config ( )</computeroutput></para>
+<para><literallayout><computeroutput>Get the home directory for the .penify configuration file.
+
+This function searches for the `.penify` file in the current directory
+and its parent directories until it finds it or reaches the home
+directory. If not found, it creates the `.penify` directory and an empty
+`config.json` file.
+
+Returns:
+    Path: The path to the `config.json` file within the `.penify` directory.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812"/><section>
+    <title>get_token()</title>
+<indexterm><primary>get_token</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>get_token</secondary></indexterm>
+<para><computeroutput> Optional[str] penify_hook.commands.config_commands.get_token ( )</computeroutput></para>
+<para><literallayout><computeroutput>Get the API token based on priority:
+1. Environment variable PENIFY_API_TOKEN from any .env file
+2. Config file &apos;api_keys&apos; value
+
+Returns:
+    str or None: API token if found, None otherwise
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae"/><section>
+    <title>load_env_files()</title>
+<indexterm><primary>load_env_files</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>load_env_files</secondary></indexterm>
+<para><computeroutput> None penify_hook.commands.config_commands.load_env_files ( )</computeroutput></para>
+<para><literallayout><computeroutput>Load environment variables from .env files in various locations,
+with proper priority (later files override earlier ones):
+1. User home directory .env (lowest priority)
+2. Git repo root directory .env (if in a git repo)
+3. Current directory .env (highest priority)
+
+This function is called when the module is imported, ensuring env variables
+are available throughout the application lifecycle.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4"/><section>
+    <title>save_jira_config()</title>
+<indexterm><primary>save_jira_config</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>save_jira_config</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.config_commands.save_jira_config ( url,  username,  api_token)</computeroutput></para>
+<para><literallayout><computeroutput>Save JIRA configuration settings to .env file.
+
+This function saves JIRA configuration in the following priority:
+1. Git repo root .env (if inside a git repo)
+2. User home directory .env
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4"/><section>
+    <title>save_llm_config()</title>
+<indexterm><primary>save_llm_config</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>save_llm_config</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.config_commands.save_llm_config ( model,  api_base,  api_key)</computeroutput></para>
+<para><literallayout><computeroutput>Save LLM configuration settings to .env file.
+
+This function saves LLM configuration in the following priority:
+1. Git repo root .env (if inside a git repo)
+2. User home directory .env
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a152642ab83cf6219b604bda6122aba67"/><section>
+    <title>DOTENV_AVAILABLE</title>
+<indexterm><primary>DOTENV_AVAILABLE</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>DOTENV_AVAILABLE</secondary></indexterm>
+<para><computeroutput>bool penify_hook.commands.config_commands.DOTENV_AVAILABLE = True</computeroutput></para></section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1config__commands_1a4b202072a3a3b8515c9c254622e9c880"/><section>
+    <title>path</title>
+<indexterm><primary>path</primary><secondary>penify_hook.commands.config_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.config_commands</primary><secondary>path</secondary></indexterm>
+<para><computeroutput>penify_hook.commands.config_commands.path</computeroutput></para></section>
+</section>
+</section>

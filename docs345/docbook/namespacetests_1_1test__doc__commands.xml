@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests_1_1test__doc__commands" xml:lang="en-US">
+<title>tests.test_doc_commands Namespace Reference</title>
+<indexterm><primary>tests.test_doc_commands</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a806110833eb0aad547156faf014b31d8">test_generate_doc_no_location</link> (mock_getcwd, mock_api_client, mock_folder_analyzer, mock_file_analyzer, mock_git_analyzer)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a0e74c920f258f442914771164fe26b45">test_generate_doc_file_location</link> (mock_api_client, mock_folder_analyzer, mock_file_analyzer, mock_git_analyzer)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a4bb75610e40d94d42bc169b25403c186">test_generate_doc_folder_location</link> (mock_api_client, mock_folder_analyzer, mock_file_analyzer, mock_git_analyzer)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1aec76cc25c23476794234cdadbcaef0c0">test_generate_doc_error_handling</link> (mock_api_client, mock_git_analyzer, mock_exit)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a0f27751d0ba2acfe40ef7e85bccf47d7">test_setup_docgen_parser</link> ()</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1ab74688baa8c9b5ba302c2877a9789d05">test_handle_docgen_install_hook</link> (mock_exit, mock_get_token, mock_generate_doc, mock_uninstall_hook, mock_install_hook)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a1458af9ad0128c3ca1263b552fd5e482">test_handle_docgen_uninstall_hook</link> (mock_exit, mock_get_token, mock_generate_doc, mock_uninstall_hook, mock_install_hook)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1ab158ffa48469b6c097a7a55fcb20c21a">test_handle_docgen_generate</link> (mock_get_token, mock_generate_doc, mock_uninstall_hook, mock_install_hook)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1af9b01e5fc89255cac96747fa081c442c">test_handle_docgen_no_token</link> (mock_exit, mock_get_token)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a335e7fd4912192c7276cf31bbebc6eb0">test_generate_doc_with_file_exception</link> (mock_api_client, mock_getcwd)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacetests_1_1test__doc__commands_1a64165ddfdb3071a88422f080f0e529a3">test_generate_doc_with_folder_exception</link> (mock_api_client, mock_getcwd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1aec76cc25c23476794234cdadbcaef0c0"/><section>
+    <title>test_generate_doc_error_handling()</title>
+<indexterm><primary>test_generate_doc_error_handling</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_generate_doc_error_handling</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_generate_doc_error_handling ( mock_api_client,  mock_git_analyzer,  mock_exit)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a documentation string for the provided code snippet using
+Google Docstring style.
+
+Short one line description: Test function to ensure proper error
+handling during API calls with GitAnalyzer.  Multiline long description:
+This test function is designed to verify that the generate_doc function
+handles exceptions correctly when an error occurs during API interaction
+with GitAnalyzer. It sets up a mock API client and a mock Git analyzer,
+causing the analyzer to raise an exception to simulate a failure
+condition. The function then asserts that the exit code is set to 1 when
+the error handling mechanism is invoked.
+
+Args:
+    mock_api_client (MagicMock): A mock object simulating the API client.
+    mock_git_analyzer (MagicMock): A mock object simulating the Git analyzer, configured to raise an
+        exception.
+    mock_exit (MagicMock): A mock object representing the exit function, which should be called
+        with an error code.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_aec76cc25c23476794234cdadbcaef0c0_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a0e74c920f258f442914771164fe26b45"/><section>
+    <title>test_generate_doc_file_location()</title>
+<indexterm><primary>test_generate_doc_file_location</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_generate_doc_file_location</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_generate_doc_file_location ( mock_api_client,  mock_folder_analyzer,  mock_file_analyzer,  mock_git_analyzer)</computeroutput></para>
+<para><literallayout><computeroutput>Test generating a documentation file location.
+
+This function tests the process of generating a documentation file
+location using mock objects for API client, folder analyzer, file
+analyzer, and Git analyzer. It sets up the necessary mocks, calls the
+`generate_doc` function with specified parameters, and asserts that the
+appropriate methods on the mock objects are called as expected.
+
+Args:
+    mock_api_client (MagicMock): Mock object for the API client.
+    mock_folder_analyzer (MagicMock): Mock object for the folder analyzer.
+    mock_file_analyzer (MagicMock): Mock object for the file analyzer.
+    mock_git_analyzer (MagicMock): Mock object for the Git analyzer.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a0e74c920f258f442914771164fe26b45_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a4bb75610e40d94d42bc169b25403c186"/><section>
+    <title>test_generate_doc_folder_location()</title>
+<indexterm><primary>test_generate_doc_folder_location</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_generate_doc_folder_location</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_generate_doc_folder_location ( mock_api_client,  mock_folder_analyzer,  mock_file_analyzer,  mock_git_analyzer)</computeroutput></para>
+<para><literallayout><computeroutput>Test the function to generate documentation for a folder location.
+
+It sets up mock objects for API client, folder analyzer, file analyzer,
+and Git analyzer, then calls the `generate_doc` function with specified
+parameters. Finally, it asserts that the correct methods on the mock
+objects were called as expected.
+
+Args:
+    mock_api_client (MagicMock): Mock object for the API client.
+    mock_folder_analyzer (MagicMock): Mock object for the folder analyzer.
+    mock_file_analyzer (MagicMock): Mock object for the file analyzer.
+    mock_git_analyzer (MagicMock): Mock object for the Git analyzer.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a4bb75610e40d94d42bc169b25403c186_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a806110833eb0aad547156faf014b31d8"/><section>
+    <title>test_generate_doc_no_location()</title>
+<indexterm><primary>test_generate_doc_no_location</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_generate_doc_no_location</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_generate_doc_no_location ( mock_getcwd,  mock_api_client,  mock_folder_analyzer,  mock_file_analyzer,  mock_git_analyzer)</computeroutput></para>
+<para><literallayout><computeroutput>Test function to generate documentation without location information.
+
+This function sets up mocks for the API client, current working
+directory, and Git analyzer. It then calls the `generate_doc` function
+with a fake API URL and token. The function is expected to initialize
+the API client, configure the Git analyzer, and run it without any
+location information.
+
+Args:
+    mock_getcwd (MagicMock): Mock for os.getcwd().
+    mock_api_client (MagicMock): Mock for creating an API client.
+    mock_folder_analyzer (MagicMock): Mock for folder analysis.
+    mock_file_analyzer (MagicMock): Mock for file analysis.
+    mock_git_analyzer (MagicMock): Mock for Git analyzer setup.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a806110833eb0aad547156faf014b31d8_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a335e7fd4912192c7276cf31bbebc6eb0"/><section>
+    <title>test_generate_doc_with_file_exception()</title>
+<indexterm><primary>test_generate_doc_with_file_exception</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_generate_doc_with_file_exception</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_generate_doc_with_file_exception ( mock_api_client,  mock_getcwd)</computeroutput></para>
+<para><literallayout><computeroutput>Generate documentation from a Python source file.
+
+This function reads a Python file and generates a docstring based on its
+content. It uses mock objects to simulate API calls and directory
+operations during testing.
+
+Args:
+    mock_api_client (unittest.mock.MagicMock): A mock object for simulating API client behavior.
+    mock_getcwd (unittest.mock.MagicMock): A mock object for simulating the current working directory function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a335e7fd4912192c7276cf31bbebc6eb0_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a64165ddfdb3071a88422f080f0e529a3"/><section>
+    <title>test_generate_doc_with_folder_exception()</title>
+<indexterm><primary>test_generate_doc_with_folder_exception</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_generate_doc_with_folder_exception</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_generate_doc_with_folder_exception ( mock_api_client,  mock_getcwd)</computeroutput></para>
+<para><literallayout><computeroutput>Generate documentation from a given API endpoint and save it to a
+folder.
+
+This function fetches data from the specified API endpoint, processes
+it, and saves the generated documentation in the provided folder. If an
+error occurs during the fetching process, a SystemExit exception is
+raised with an appropriate message.
+
+Args:
+    api_url (str): The URL of the API endpoint from which data will be fetched.
+    token (str): The authentication token required to access the API.
+    folder_path (str): The path to the folder where the documentation will be saved.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a64165ddfdb3071a88422f080f0e529a3_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1ab158ffa48469b6c097a7a55fcb20c21a"/><section>
+    <title>test_handle_docgen_generate()</title>
+<indexterm><primary>test_handle_docgen_generate</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_handle_docgen_generate</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_handle_docgen_generate ( mock_get_token,  mock_generate_doc,  mock_uninstall_hook,  mock_install_hook)</computeroutput></para>
+<para><literallayout><computeroutput>Test the direct documentation generation functionality.
+
+This function tests the `handle_docgen` function when no subcommand is
+provided. It verifies that the document generation hook is called and
+the uninstall and install hooks are not called.
+
+Args:
+    mock_get_token (MagicMock): Mocked function to get authentication token.
+    mock_generate_doc (MagicMock): Mocked function for generating documentation.
+    mock_uninstall_hook (MagicMock): Mocked function for uninstalling the document generation hook.
+    mock_install_hook (MagicMock): Mocked function for installing the document generation hook.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_ab158ffa48469b6c097a7a55fcb20c21a_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1ab74688baa8c9b5ba302c2877a9789d05"/><section>
+    <title>test_handle_docgen_install_hook()</title>
+<indexterm><primary>test_handle_docgen_install_hook</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_handle_docgen_install_hook</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_handle_docgen_install_hook ( mock_exit,  mock_get_token,  mock_generate_doc,  mock_uninstall_hook,  mock_install_hook)</computeroutput></para>
+<para><literallayout><computeroutput>Test the handling of the &apos;install-hook&apos; subcommand.
+
+This function sets up a mock environment where it simulates the
+execution of the &apos;install-hook&apos; subcommand. It verifies that the
+`mock_install_hook` is called with the correct arguments, while
+`mock_generate_doc` and `mock_uninstall_hook` are not called.
+
+Args:
+    mock_exit (MagicMock): Mock object for sys.exit.
+    mock_get_token (MagicMock): Mock object to simulate fetching a token.
+    mock_generate_doc (MagicMock): Mock object to simulate generating documentation.
+    mock_uninstall_hook (MagicMock): Mock object to simulate uninstalling a hook.
+    mock_install_hook (MagicMock): Mock object to simulate installing a hook.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_ab74688baa8c9b5ba302c2877a9789d05_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1af9b01e5fc89255cac96747fa081c442c"/><section>
+    <title>test_handle_docgen_no_token()</title>
+<indexterm><primary>test_handle_docgen_no_token</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_handle_docgen_no_token</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_handle_docgen_no_token ( mock_exit,  mock_get_token)</computeroutput></para>
+<para><literallayout><computeroutput>Test the behavior of the `handle_docgen` function when no token is
+provided.
+
+This function asserts that if no token is returned by `mock_get_token`,
+the `handle_docgen` function will call `mock_exit` with a status code of
+1.
+
+Args:
+    mock_exit (MagicMock): A MagicMock object simulating the `exit` function.
+    mock_get_token (MagicMock): A MagicMock object simulating the `get_token` function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_af9b01e5fc89255cac96747fa081c442c_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a1458af9ad0128c3ca1263b552fd5e482"/><section>
+    <title>test_handle_docgen_uninstall_hook()</title>
+<indexterm><primary>test_handle_docgen_uninstall_hook</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_handle_docgen_uninstall_hook</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_handle_docgen_uninstall_hook ( mock_exit,  mock_get_token,  mock_generate_doc,  mock_uninstall_hook,  mock_install_hook)</computeroutput></para>
+<para><literallayout><computeroutput>Test the uninstall-hook subcommand of the handle_docgen function.
+This test case sets up a mock environment and verifies that the
+uninstall-hook is called with the correct location, while generate_doc
+and install_hook are not called.
+
+Args:
+    mock_exit (MagicMock): A mock for the exit function.
+    mock_get_token (MagicMock): A mock for the get_token function.
+    mock_generate_doc (MagicMock): A mock for the generate_doc function.
+    mock_uninstall_hook (MagicMock): A mock for the uninstall_hook function.
+    mock_install_hook (MagicMock): A mock for the install_hook function.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a1458af9ad0128c3ca1263b552fd5e482_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacetests_1_1test__doc__commands_1a0f27751d0ba2acfe40ef7e85bccf47d7"/><section>
+    <title>test_setup_docgen_parser()</title>
+<indexterm><primary>test_setup_docgen_parser</primary><secondary>tests.test_doc_commands</secondary></indexterm>
+<indexterm><primary>tests.test_doc_commands</primary><secondary>test_setup_docgen_parser</secondary></indexterm>
+<para><computeroutput>def tests.test_doc_commands.test_setup_docgen_parser ( )</computeroutput></para>
+<para><literallayout><computeroutput>Test the setup_docgen_parser function to ensure it properly configures
+the ArgumentParser for docgen options.
+
+It verifies that the parser correctly sets up docgen options and handles
+different subcommands like &apos;install-hook&apos; and &apos;uninstall-hook&apos;.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacetests_1_1test__doc__commands_a0f27751d0ba2acfe40ef7e85bccf47d7_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

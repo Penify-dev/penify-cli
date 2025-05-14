@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1login__command" xml:lang="en-US">
+<title>penify_hook.login_command Namespace Reference</title>
+<indexterm><primary>penify_hook.login_command</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a">setup_login_parser</link> (parser)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd">handle_login</link> (args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd"/><section>
+    <title>handle_login()</title>
+<indexterm><primary>handle_login</primary><secondary>penify_hook.login_command</secondary></indexterm>
+<indexterm><primary>penify_hook.login_command</primary><secondary>handle_login</secondary></indexterm>
+<para><computeroutput>def penify_hook.login_command.handle_login ( args)</computeroutput></para>
+<para><literallayout><computeroutput>Handle the login command.
+
+Initiates a user login process by calling the `login` function from the
+`penify_hook.commands.auth_commands` module using predefined constants
+`API_URL` and `DASHBOARD_URL` from the `penify_hook.constants` module.
+
+Args:
+    args (argparse.Namespace): Parsed arguments containing necessary parameters for the login command.
+
+Returns:
+    None: This function does not return any value; it is expected to handle the
+        login process internally.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1login__command_ae4bf932fbafeff834b0a0c5a37f74ccd_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1login__command_ae4bf932fbafeff834b0a0c5a37f74ccd_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a"/><section>
+    <title>setup_login_parser()</title>
+<indexterm><primary>setup_login_parser</primary><secondary>penify_hook.login_command</secondary></indexterm>
+<indexterm><primary>penify_hook.login_command</primary><secondary>setup_login_parser</secondary></indexterm>
+<para><computeroutput>def penify_hook.login_command.setup_login_parser ( parser)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1login__command_aae63db4c484797bead34b7d874020c6a_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

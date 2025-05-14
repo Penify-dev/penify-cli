@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1llm__client_1_1LLMClient" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::llm_client::LLMClient</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.llm_client.LLMClient::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>penify_hook.llm_client.LLMClient.model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="25" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000" compoundref="llm__client_8py" startline="40" endline="177">penify_hook.llm_client.LLMClient.generate_commit_summary</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpenify__hook_1_1llm__client_1_1LLMClient_1a76c2e9805f805624ab9c55a9f1f8d362" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.llm_client.LLMClient::_litellm</definition>
+        <argsstring></argsstring>
+        <name>_litellm</name>
+        <qualifiedname>penify_hook.llm_client.LLMClient._litellm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="30" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e" compoundref="llm__client_8py" startline="33" endline="39">penify_hook.llm_client.LLMClient.litellm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpenify__hook_1_1llm__client_1_1LLMClient_1a76d92354f585ab4bb291169f9f530764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.llm_client.LLMClient.__init__</definition>
+        <argsstring>(self, str model=None, str api_base=None, str api_key=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>penify_hook.llm_client.LLMClient.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>model</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>api_base</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>api_key</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the LLM client.
+
+Args:
+    model: LLM model to use (e.g., &quot;gpt-4&quot;, &quot;ollama/llama2&quot;, etc.)
+    api_base: Base URL for API requests (e.g., &quot;http://localhost:11434&quot; for Ollama)
+    api_key: API key for the LLM service
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="15" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" bodystart="15" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.llm_client.LLMClient.litellm</definition>
+        <argsstring>(self)</argsstring>
+        <name>litellm</name>
+        <qualifiedname>penify_hook.llm_client.LLMClient.litellm</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Lazy load litellm only when needed.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="33" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" bodystart="33" bodyend="39"/>
+        <references refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a76c2e9805f805624ab9c55a9f1f8d362" compoundref="llm__client_8py" startline="30">penify_hook.llm_client.LLMClient._litellm</references>
+        <referencedby refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000" compoundref="llm__client_8py" startline="40" endline="177">penify_hook.llm_client.LLMClient.generate_commit_summary</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Dict</type>
+        <definition> Dict penify_hook.llm_client.LLMClient.generate_commit_summary</definition>
+        <argsstring>(self, str diff, str message, bool generate_description, Dict repo_details, Dict jira_context=None)</argsstring>
+        <name>generate_commit_summary</name>
+        <qualifiedname>penify_hook.llm_client.LLMClient.generate_commit_summary</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>diff</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>generate_description</declname>
+        </param>
+        <param>
+          <type>Dict</type>
+          <declname>repo_details</declname>
+        </param>
+        <param>
+          <type>Dict</type>
+          <declname>jira_context</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate a commit summary using the LLM.
+
+This function generates a concise and descriptive commit summary based
+on the provided Git diff, user instructions, repository details, and
+optional JIRA context. It constructs a prompt for the LLM to produce a
+commit title and an optional detailed description, adhering to Semantic
+Commit Messages guidelines. If the JIRA context is provided, it enriches
+the prompt with relevant issue information.
+
+Args:
+    diff (str): Git diff of changes.
+    message (str): User-provided commit message or instructions.
+    generate_description (bool): Flag indicating whether to include a detailed description in the
+        summary.
+    repo_details (Dict): Details about the repository.
+    jira_context (Dict?): Optional JIRA issue context to enhance the summary.
+
+Returns:
+    Dict: A dictionary containing the title and description for the commit. If
+        generate_description is False,
+        the &apos;description&apos; key may be absent.
+
+Raises:
+    ValueError: If the LLM model is not configured.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="40" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" bodystart="40" bodyend="177"/>
+        <references refid="classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e" compoundref="llm__client_8py" startline="33" endline="39">penify_hook.llm_client.LLMClient.litellm</references>
+        <references refid="classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10" compoundref="llm__client_8py" startline="25">penify_hook.llm_client.LLMClient.model</references>
+        <referencedby refid="classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3" compoundref="api__client_8py" startline="123" endline="145">penify_hook.api_client.APIClient.generate_commit_summary_with_llm</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Client for interacting with LLM models using LiteLLM.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>penify_hook.llm_client.LLMClient</label>
+        <link refid="classpenify__hook_1_1llm__client_1_1LLMClient"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" line="10" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/llm_client.py" bodystart="10" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a76d92354f585ab4bb291169f9f530764" prot="public" virt="non-virtual"><scope>penify_hook::llm_client::LLMClient</scope><name>__init__</name></member>
+      <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a76c2e9805f805624ab9c55a9f1f8d362" prot="private" virt="non-virtual"><scope>penify_hook::llm_client::LLMClient</scope><name>_litellm</name></member>
+      <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000" prot="public" virt="non-virtual"><scope>penify_hook::llm_client::LLMClient</scope><name>generate_commit_summary</name></member>
+      <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e" prot="public" virt="non-virtual"><scope>penify_hook::llm_client::LLMClient</scope><name>litellm</name></member>
+      <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10" prot="public" virt="non-virtual"><scope>penify_hook::llm_client::LLMClient</scope><name>model</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,447 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient" xml:lang="en-US">
+<title>penify_hook.jira_client.JiraClient Class Reference</title>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary></indexterm>
+Collaboration diagram for penify_hook.jira_client.JiraClient:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a47efc1ec07389c960f2dfb37ba8c09f5">__init__</link> (self, str <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a3c0cfecff02a75cb7001509a595b8197">jira_url</link>=None, str <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1ae56104d5aa7bda7bb26d169c4b46038c">jira_user</link>=None, str <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1afc5c90e53b702f9fc27e2ee7d3f991b9">jira_api_token</link>=None)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8">is_connected</link> (self)</para>
+</listitem>
+            <listitem><para>List[str] <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a093d6456fe053ef7a7862d5d6851910c">extract_issue_keys_from_branch</link> (self, str branch_name)</para>
+</listitem>
+            <listitem><para>List[str] <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1ad2823ad1d3baaedd38039913c3a97fd7">extract_issue_keys</link> (self, str text)</para>
+</listitem>
+            <listitem><para>Optional[Dict[str, Any]] <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a">get_issue_details</link> (self, str issue_key)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1">add_comment</link> (self, str issue_key, str comment)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826">update_issue_status</link> (self, str issue_key, str transition_name)</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23">format_commit_message_with_jira_info</link> (self, str commit_title, str commit_description, List[str] issue_keys=None)</para>
+</listitem>
+            <listitem><para>Dict[str, Any] <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746">get_detailed_issue_context</link> (self, str issue_key)</para>
+</listitem>
+            <listitem><para>Dict[str, Any] <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd">get_commit_context_from_issues</link> (self, List[str] issue_keys)</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760">enhance_commit_message</link> (self, str title, str description, List[str] issue_keys)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1a3c0cfecff02a75cb7001509a595b8197">jira_url</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1ae56104d5aa7bda7bb26d169c4b46038c">jira_user</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1afc5c90e53b702f9fc27e2ee7d3f991b9">jira_api_token</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6">jira_client</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Client for interacting with JIRA API
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a47efc1ec07389c960f2dfb37ba8c09f5"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.jira_client.JiraClient.__init__ ( self, str  jira_url = <computeroutput>None</computeroutput>
+, str  jira_user = <computeroutput>None</computeroutput>
+, str  jira_api_token = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Initialize the JIRA client.
+
+Args:
+    jira_url: Base URL for JIRA instance (e.g., &quot;https://your-domain.atlassian.net&quot;)
+    jira_user: JIRA username or email
+    jira_api_token: JIRA API token
+</computeroutput></literallayout> </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1"/><section>
+    <title>add_comment()</title>
+<indexterm><primary>add_comment</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>add_comment</secondary></indexterm>
+<para><computeroutput> bool penify_hook.jira_client.JiraClient.add_comment ( self, str issue_key, str comment)</computeroutput></para>
+<para><literallayout><computeroutput>Add a comment to a JIRA issue.
+
+Args:
+    issue_key (str): JIRA issue key (e.g., &quot;PROJECT-123&quot;)
+    comment (str): Comment text to add
+
+Returns:
+    bool: True if the comment was added successfully, False otherwise
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760"/><section>
+    <title>enhance_commit_message()</title>
+<indexterm><primary>enhance_commit_message</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>enhance_commit_message</secondary></indexterm>
+<para><computeroutput> tuple penify_hook.jira_client.JiraClient.enhance_commit_message ( self, str title, str description, List[str] issue_keys)</computeroutput></para>
+<para><literallayout><computeroutput>Enhance a commit message with business and technical context from JIRA
+issues.
+
+Args:
+    title (str): Original commit title.
+    description (str): Original commit description.
+    issue_keys (List[str]): List of JIRA issue keys to include in the enhanced commit message.
+
+Returns:
+    tuple: A tuple containing the enhanced commit title and description with added
+        context from JIRA issues.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a70d2c5a6432aa6f238da0ff65d49a760_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1ad2823ad1d3baaedd38039913c3a97fd7"/><section>
+    <title>extract_issue_keys()</title>
+<indexterm><primary>extract_issue_keys</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>extract_issue_keys</secondary></indexterm>
+<para><computeroutput> List[str] penify_hook.jira_client.JiraClient.extract_issue_keys ( self, str text)</computeroutput></para>
+<para><literallayout><computeroutput>Extract JIRA issue keys from a given text.
+
+This function searches through the provided text to find and return all
+unique JIRA issue keys. A JIRA issue key typically follows the pattern
+of PROJECT-123, where PROJECT is alphanumeric and consists of at least
+one uppercase letter followed by one or more alphanumeric characters,
+and 123 is a numeric sequence.
+
+Args:
+    text (str): The text in which to search for JIRA issue keys.
+
+Returns:
+    List[str]: A list of unique JIRA issue keys found in the text.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_ad2823ad1d3baaedd38039913c3a97fd7_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a093d6456fe053ef7a7862d5d6851910c"/><section>
+    <title>extract_issue_keys_from_branch()</title>
+<indexterm><primary>extract_issue_keys_from_branch</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>extract_issue_keys_from_branch</secondary></indexterm>
+<para><computeroutput> List[str] penify_hook.jira_client.JiraClient.extract_issue_keys_from_branch ( self, str branch_name)</computeroutput></para>
+<para><literallayout><computeroutput>Extracts JIRA issue keys from a branch name.
+
+This function searches through a given git branch name to find and
+return any JIRA issue keys that match the pattern. Common conventions
+for JIRA issue keys in branch names include: -
+feature/PROJECT-123-description - bugfix/PROJECT-123-fix-something -
+hotfix/PROJECT-123/short-desc
+
+Args:
+    branch_name (str): The name of the git branch to search for JIRA issue keys.
+
+Returns:
+    List[str]: A list of unique JIRA issue keys found in the branch name.
+
+Examples:
+    extract_issue_keys_from_branch(&quot;feature/PROJ-456-add-new-feature&quot;)
+    # Output: [&apos;PROJ-456&apos;]
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23"/><section>
+    <title>format_commit_message_with_jira_info()</title>
+<indexterm><primary>format_commit_message_with_jira_info</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>format_commit_message_with_jira_info</secondary></indexterm>
+<para><computeroutput> tuple penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info ( self, str commit_title, str commit_description, List[str]  issue_keys = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Format commit message with JIRA issue information.
+
+Args:
+    commit_title (str): The original commit title.
+    commit_description (str): The original commit description.
+    issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
+        provided, issue keys will be extracted from both the title and the
+        description.
+
+Returns:
+    tuple: A tuple containing the updated commit title and description with JIRA
+        information included.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd"/><section>
+    <title>get_commit_context_from_issues()</title>
+<indexterm><primary>get_commit_context_from_issues</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>get_commit_context_from_issues</secondary></indexterm>
+<para><computeroutput> Dict[str, Any] penify_hook.jira_client.JiraClient.get_commit_context_from_issues ( self, List[str] issue_keys)</computeroutput></para>
+<para><literallayout><computeroutput>Gather contextual information from JIRA issues to improve commit
+messages.
+
+This function processes a list of JIRA issue keys, retrieves detailed
+context for each issue, and aggregates it into a dictionary that can be
+used to enhance commit messages. It first retrieves the primary issue
+(the first key in the list) and then gathers basic details for any
+related issues. The resulting context includes information from both the
+primary and related issues, along with all issue keys.
+
+Args:
+    issue_keys: List of JIRA issue keys to gather information from
+
+Returns:
+    Dict containing business and technical context from the issues
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746"/><section>
+    <title>get_detailed_issue_context()</title>
+<indexterm><primary>get_detailed_issue_context</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>get_detailed_issue_context</secondary></indexterm>
+<para><computeroutput> Dict[str, Any] penify_hook.jira_client.JiraClient.get_detailed_issue_context ( self, str issue_key)</computeroutput></para>
+<para><literallayout><computeroutput>Retrieve comprehensive details about a JIRA issue including context for
+better commit messages.
+
+This function fetches detailed information from a specified JIRA issue
+and constructs a dictionary containing various context fields such as
+the issue summary, description, type, status, priority, comments, URL,
+and additional custom fields like acceptance criteria and sprint
+information. If any errors occur during the fetching process,
+appropriate warnings or errors are logged.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., &quot;PROJECT-123&quot;).
+
+Returns:
+    Dict[str, Any]: A dictionary containing business and technical context from the issue.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a"/><section>
+    <title>get_issue_details()</title>
+<indexterm><primary>get_issue_details</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>get_issue_details</secondary></indexterm>
+<para><computeroutput> Optional[Dict[str, Any]] penify_hook.jira_client.JiraClient.get_issue_details ( self, str issue_key)</computeroutput></para>
+<para><literallayout><computeroutput>Retrieve details of a JIRA issue based on its key.
+
+This function fetches detailed information about a specified JIRA issue
+using the provided issue key. It checks if the JIRA client is connected
+before attempting to retrieve the issue. If the client is not connected,
+it logs a warning and returns `None`. The function then attempts to
+fetch the issue from the JIRA server and constructs a dictionary
+containing various details about the issue such as its key, summary,
+status, description, assignee, reporter, type, priority, and URL. If any
+errors occur during this process, they are logged, and `None` is
+returned.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., &quot;PROJECT-123&quot;).
+
+Returns:
+    Dict[str, Any] or None: A dictionary containing the details of the JIRA
+        issue if found, otherwise `None`.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8"/><section>
+    <title>is_connected()</title>
+<indexterm><primary>is_connected</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>is_connected</secondary></indexterm>
+<para><computeroutput> bool penify_hook.jira_client.JiraClient.is_connected ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Check if the JIRA client is connected.
+
+This function verifies whether the JIRA client has successfully
+established a connection. It returns `True` if the client is connected,
+and `False` otherwise.
+
+Returns:
+    bool: True if the JIRA client is connected, False otherwise
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_a00d0f9ae006313a21576362d26ac5ec8_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826"/><section>
+    <title>update_issue_status()</title>
+<indexterm><primary>update_issue_status</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>update_issue_status</secondary></indexterm>
+<para><computeroutput> bool penify_hook.jira_client.JiraClient.update_issue_status ( self, str issue_key, str transition_name)</computeroutput></para>
+<para><literallayout><computeroutput>Update the status of a JIRA issue.
+
+Args:
+    issue_key (str): The key of the JIRA issue to be updated.
+    transition_name (str): The name of the desired transition.
+
+Returns:
+    bool: True if the status was successfully updated, False otherwise.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1jira__client_1_1JiraClient_aca8837552d37bfd611de23441a240826_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1afc5c90e53b702f9fc27e2ee7d3f991b9"/><section>
+    <title>jira_api_token</title>
+<indexterm><primary>jira_api_token</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>jira_api_token</secondary></indexterm>
+<para><computeroutput>penify_hook.jira_client.JiraClient.jira_api_token</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6"/><section>
+    <title>jira_client</title>
+<indexterm><primary>jira_client</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>jira_client</secondary></indexterm>
+<para><computeroutput>penify_hook.jira_client.JiraClient.jira_client</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1a3c0cfecff02a75cb7001509a595b8197"/><section>
+    <title>jira_url</title>
+<indexterm><primary>jira_url</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>jira_url</secondary></indexterm>
+<para><computeroutput>penify_hook.jira_client.JiraClient.jira_url</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1jira__client_1_1JiraClient_1ae56104d5aa7bda7bb26d169c4b46038c"/><section>
+    <title>jira_user</title>
+<indexterm><primary>jira_user</primary><secondary>penify_hook.jira_client.JiraClient</secondary></indexterm>
+<indexterm><primary>penify_hook.jira_client.JiraClient</primary><secondary>jira_user</secondary></indexterm>
+<para><computeroutput>penify_hook.jira_client.JiraClient.jira_user</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_jira__client_8py">jira_client.py</link></section>
+</section>

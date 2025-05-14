@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_063e2d5fe58a131099a7fe4200cca78c" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests Directory Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests Directory Reference</primary></indexterm>
+Directory dependency graph for tests:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_063e2d5fe58a131099a7fe4200cca78c_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_tests_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_conftest_8py">conftest.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_test__commit__commands_8py">test_commit_commands.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_test__config__commands_8py">test_config_commands.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_test__doc__commands_8py">test_doc_commands.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_test__web__config_8py">test_web_config.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

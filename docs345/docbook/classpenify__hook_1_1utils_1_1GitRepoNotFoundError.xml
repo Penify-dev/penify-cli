@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1utils_1_1GitRepoNotFoundError" xml:lang="en-US">
+<title>penify_hook.utils.GitRepoNotFoundError Class Reference</title>
+<indexterm><primary>penify_hook.utils.GitRepoNotFoundError</primary></indexterm>
+Inheritance diagram for penify_hook.utils.GitRepoNotFoundError:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1utils_1_1GitRepoNotFoundError__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for penify_hook.utils.GitRepoNotFoundError:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1utils_1_1GitRepoNotFoundError__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_utils_8py">utils.py</link></section>

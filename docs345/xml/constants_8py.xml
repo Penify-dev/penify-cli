@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="constants_8py" kind="file" language="Python">
+    <compoundname>constants.py</compoundname>
+    <innernamespace refid="namespacepenify__hook">penify_hook</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1constants">penify_hook::constants</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacepenify__hook_1_1constants_1af198b5d1fc2f44657a2061aa324af3e0" refkind="member"><highlight class="normal">API_URL<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;http://localhost:8000/api&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="namespacepenify__hook_1_1constants_1a316c5a606e4440fb8224c6544c3a15f0" refkind="member"><highlight class="normal">DASHBOARD_URL<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;https://dashboard.penify.dev/auth/localhost/login&quot;</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/constants.py"/>
+  </compounddef>
+</doxygen>

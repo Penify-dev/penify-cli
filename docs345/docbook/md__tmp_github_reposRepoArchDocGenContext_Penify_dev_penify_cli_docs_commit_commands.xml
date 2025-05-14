@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands" xml:lang="en-US">
+
+<para>The <computeroutput>commit</computeroutput> command allows you to generate smart, AI-powered commit messages for your Git changes. This document explains all available options and combinations.</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md1">
+<title>Basic Usage</title>
+
+<para><literallayout><computeroutput>penify&#32;commit
+</computeroutput></literallayout></para>
+
+<para>By default, this command:<itemizedlist>
+<listitem>
+<para>Analyzes your staged Git changes</para>
+</listitem><listitem>
+<para>Generates a concise commit title only</para>
+</listitem><listitem>
+<para>Uses local LLM if configured, or falls back to Penify API</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md2">
+<title>Command Options</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md3">
+<title>&lt;tt&gt;-m, --message&lt;/tt&gt;</title>
+
+<para>Provide context for the commit message generation:</para>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-m&#32;&quot;Fix&#32;login&#32;flow&quot;
+</computeroutput></literallayout></para>
+
+<para>This hint helps the AI understand your intention and improves the quality of the generated message.</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md4">
+<title>&lt;tt&gt;-e, --terminal&lt;/tt&gt;</title>
+
+<para>Open an editor to review and edit the generated commit message before committing:</para>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-e
+</computeroutput></literallayout></para>
+
+<para>This opens your default Git editor with the generated message for review.</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md5">
+<title>&lt;tt&gt;-d, --description&lt;/tt&gt;</title>
+
+<para>Generate a detailed commit message with both title and description:</para>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-d
+</computeroutput></literallayout></para>
+
+<para>Without this flag, only the commit title is generated.</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md6">
+<title>Option Combinations</title>
+
+<para>You can combine these options for different workflows:</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md7">
+<title>Generate Title Only with Context</title>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-m&#32;&quot;Update&#32;login&#32;UI&quot;
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md8">
+<title>Generate Title and Description with Context</title>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-m&#32;&quot;Update&#32;login&#32;UI&quot;&#32;-d
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md9">
+<title>Generate and Edit Full Commit Message</title>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-d&#32;-e
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md10">
+<title>Generate, Edit, and Provide Context</title>
+
+<para><literallayout><computeroutput>penify&#32;commit&#32;-m&#32;&quot;Refactor&#32;authentication&quot;&#32;-d&#32;-e
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md11">
+<title>LLM and JIRA Integration</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md12">
+<title>Using Local LLM</title>
+
+<para>If you&apos;ve configured a local LLM using <computeroutput>penify config llm</computeroutput>, the commit command will automatically use it for message generation.</para>
+
+<para>Benefits:<itemizedlist>
+<listitem>
+<para>Privacy: your code changes don&apos;t leave your machine</para>
+</listitem><listitem>
+<para>Speed: no network latency</para>
+</listitem><listitem>
+<para>Works offline</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md13">
+<title>JIRA Enhancement</title>
+
+<para>If you&apos;ve configured JIRA integration using <computeroutput>penify config jira</computeroutput>, the commit command will:</para>
+
+<para><orderedlist>
+<listitem>
+<para>Detect JIRA issue references in your changes</para>
+</listitem><listitem>
+<para>Fetch issue details from your JIRA instance</para>
+</listitem><listitem>
+<para>Include issue information in the commit message</para>
+</listitem><listitem>
+<para>Format the commit message according to JIRA&apos;s smart commit format</para>
+</listitem></orderedlist>
+</para>
+
+<para>Example output: <literallayout><computeroutput>PROJ-123:&#32;Fix&#32;authentication&#32;bug&#32;in&#32;login&#32;flow
+
+-&#32;Updated&#32;OAuth&#32;token&#32;validation
+-&#32;Fixed&#32;session&#32;timeout&#32;handling
+-&#32;Added&#32;unit&#32;tests&#32;for&#32;edge&#32;cases
+
+[PROJ-123]
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md14">
+<title>Configuration Requirements</title>
+
+<para>For the <computeroutput>commit</computeroutput> command to work:</para>
+
+<para><orderedlist>
+<listitem>
+<para>You must have configured either:<itemizedlist>
+<listitem>
+<para>Local LLM via <computeroutput>penify config llm</computeroutput>, OR</para>
+</listitem><listitem>
+<para>Logged in via <computeroutput>penify login</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>For JIRA enhancement (optional):<itemizedlist>
+<listitem>
+<para>Configure JIRA via <computeroutput>penify config jira</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md15">
+<title>Examples</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md16">
+<title>Basic Commit with Default Settings</title>
+
+<para><literallayout><computeroutput>#&#32;Stage&#32;your&#32;changes
+git&#32;add&#32;.
+
+#&#32;Generate&#32;commit&#32;message
+penify&#32;commit
+
+#&#32;Commit&#32;with&#32;the&#32;generated&#32;message
+git&#32;commit&#32;-m&#32;&quot;Generated&#32;message&#32;here&quot;
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md17">
+<title>Full Workflow with All Features</title>
+
+<para><literallayout><computeroutput>#&#32;Stage&#32;your&#32;changes
+git&#32;add&#32;.
+
+#&#32;Generate&#32;detailed&#32;commit&#32;message&#32;with&#32;JIRA&#32;integration,&#32;
+#&#32;provide&#32;context,&#32;and&#32;open&#32;editor&#32;for&#32;review
+penify&#32;commit&#32;-m&#32;&quot;Fix&#32;login&#32;issue&quot;&#32;-d&#32;-e
+
+#&#32;The&#32;commit&#32;is&#32;automatically&#32;completed&#32;after&#32;you&#32;save&#32;and&#32;exit&#32;the&#32;editor
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md18">
+<title>Troubleshooting</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_1autotoc_md19">
+<title>Common Issues</title>
+
+<para><orderedlist>
+<listitem>
+<para>**&quot;No LLM model or API token provided&quot;**<itemizedlist>
+<listitem>
+<para>Run <computeroutput>penify config llm</computeroutput> to configure a local LLM, or</para>
+</listitem><listitem>
+<para>Run <computeroutput>penify login</computeroutput> to authenticate with Penify</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>**&quot;Failed to connect to JIRA&quot;**<itemizedlist>
+<listitem>
+<para>Check your JIRA configuration with <computeroutput>cat ~/.penify</computeroutput></para>
+</listitem><listitem>
+<para>Verify your network connection</para>
+</listitem><listitem>
+<para>Ensure your JIRA credentials are valid</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>**&quot;Error initializing LLM client&quot;**<itemizedlist>
+<listitem>
+<para>Verify your LLM configuration settings</para>
+</listitem><listitem>
+<para>Ensure the LLM API is accessible </para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer" xml:lang="en-US">
+<title>penify_hook.base_analyzer.BaseAnalyzer Class Reference</title>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary></indexterm>
+Inheritance diagram for penify_hook.base_analyzer.BaseAnalyzer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for penify_hook.base_analyzer.BaseAnalyzer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">__init__</link> (self, str <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1aa67c06dd12b1bafaeaee81c41dcb7e25">folder_path</link>, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2">api_client</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1aa67c06dd12b1bafaeaee81c41dcb7e25">folder_path</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a957e81a1ab561f6cecfbe999e7b85499">repo_path</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a3a9ddfa1dfba81fe21214fe486389369">repo</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a9cca3465b0cc00d78324b0a9eac1d7f5">repo_details</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab702c0c3ba81d159d7c3bcd7ea2abba4">relative_file_path</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2">api_client</link></para>
+</listitem>
+            <listitem><para><link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a0cac0310ec635aa64a34857cf30ce1eb">supported_file_types</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.base_analyzer.BaseAnalyzer.__init__ ( self, str folder_path, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> api_client)</computeroutput></para><para>
+Reimplemented in <link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a1bb0358140931d82c7616f12efe31821">penify_hook.folder_analyzer.FolderAnalyzerGenHook</link>, <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a190c473090b2a07e7cb43073a3211c4b">penify_hook.file_analyzer.FileAnalyzerGenHook</link>, <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c">penify_hook.git_analyzer.GitDocGenHook</link>, and <link linkend="_classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1af127d86729e226d74dbeb095b008db3e">penify_hook.commit_analyzer.CommitDocGenHook</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2"/><section>
+    <title>api_client</title>
+<indexterm><primary>api_client</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>api_client</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.api_client</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1aa67c06dd12b1bafaeaee81c41dcb7e25"/><section>
+    <title>folder_path</title>
+<indexterm><primary>folder_path</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>folder_path</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.folder_path</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab702c0c3ba81d159d7c3bcd7ea2abba4"/><section>
+    <title>relative_file_path</title>
+<indexterm><primary>relative_file_path</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>relative_file_path</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.relative_file_path</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a3a9ddfa1dfba81fe21214fe486389369"/><section>
+    <title>repo</title>
+<indexterm><primary>repo</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>repo</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.repo</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a9cca3465b0cc00d78324b0a9eac1d7f5"/><section>
+    <title>repo_details</title>
+<indexterm><primary>repo_details</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>repo_details</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.repo_details</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a957e81a1ab561f6cecfbe999e7b85499"/><section>
+    <title>repo_path</title>
+<indexterm><primary>repo_path</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>repo_path</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.repo_path</computeroutput></para></section>
+<anchor xml:id="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a0cac0310ec635aa64a34857cf30ce1eb"/><section>
+    <title>supported_file_types</title>
+<indexterm><primary>supported_file_types</primary><secondary>penify_hook.base_analyzer.BaseAnalyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.base_analyzer.BaseAnalyzer</primary><secondary>supported_file_types</secondary></indexterm>
+<para><computeroutput>penify_hook.base_analyzer.BaseAnalyzer.supported_file_types</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_base__analyzer_8py">base_analyzer.py</link></section>
+</section>

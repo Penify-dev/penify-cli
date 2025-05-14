@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ui__utils_8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook">penify_hook</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1ui__utils">penify_hook.ui_utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6">penify_hook.ui_utils.format_info</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a532cdb4de7c679ce8b29c3e9116c4776">penify_hook.ui_utils.format_success</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a0a6fd2613c6fe053b6e4356cd9e5cda2">penify_hook.ui_utils.format_warning</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a4dd934568897433fa73f9cc182ac4a3e">penify_hook.ui_utils.format_error</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1adcb97fc26b405d2b9cdf5eb7aecc5452">penify_hook.ui_utils.format_highlight</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4">penify_hook.ui_utils.format_file_path</link> (file_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44">penify_hook.ui_utils.print_info</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a">penify_hook.ui_utils.print_success</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa">penify_hook.ui_utils.print_warning</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f">penify_hook.ui_utils.print_error</link> (message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115">penify_hook.ui_utils.print_processing</link> (file_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c">penify_hook.ui_utils.print_status</link> (status, message)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c">penify_hook.ui_utils.create_progress_bar</link> (total, desc=&quot;Processing&quot;, unit=&quot;item&quot;)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef">penify_hook.ui_utils.create_stage_progress_bar</link> (stages, desc=&quot;Processing&quot;)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d">penify_hook.ui_utils.update_stage</link> (pbar, stage_name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1ab560cfade398ac1e0bd47befb52d9f71">penify_hook.ui_utils.autoreset</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a9fdcb180915696f5d217032a62c3857c">penify_hook.ui_utils.INFO_COLOR</link> = Fore.CYAN</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a22c450c5e2b5394618ecf9b636560df4">penify_hook.ui_utils.SUCCESS_COLOR</link> = Fore.GREEN</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a177bc9b44157844c999e0c1c2c6936ff">penify_hook.ui_utils.WARNING_COLOR</link> = Fore.YELLOW</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1a4ab4e61dfab7973c87bef59c6e1977fe">penify_hook.ui_utils.ERROR_COLOR</link> = Fore.RED</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1aba01b8259f0d66cdc2b4a1b58f9736fc">penify_hook.ui_utils.HIGHLIGHT_COLOR</link> = Fore.BLUE</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1ui__utils_1aca0fcee81606857497520ae4290bc9f5">penify_hook.ui_utils.NEUTRAL_COLOR</link> = Fore.WHITE</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1a3c6fe4bd17c1a5fe76587225ae4beb3e">penify_hook.ui_utils.SUCCESS_SYMBOL</link> = &quot;✓&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1a6eaea98f1a8cbe16a181647da2fc0a16">penify_hook.ui_utils.WARNING_SYMBOL</link> = &quot;○&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1aa564e1e1d016c8227d076542e74cecb0">penify_hook.ui_utils.ERROR_SYMBOL</link> = &quot;✗&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1ui__utils_1a3b208e2750a38dd09467a73e4afd9756">penify_hook.ui_utils.PROCESSING_SYMBOL</link> = &quot;⟳&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

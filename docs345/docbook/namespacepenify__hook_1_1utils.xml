@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1utils" xml:lang="en-US">
+<title>penify_hook.utils Namespace Reference</title>
+<indexterm><primary>penify_hook.utils</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpenify__hook_1_1utils_1_1GitRepoNotFoundError">GitRepoNotFoundError</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1utils_1ae236f3c4c8bf5dcddbb92b4c2065eea3">get_repo_details</link> (Repo repo)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f">recursive_search_git_folder</link> (folder_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1utils_1a4ec5335a4026c22a34a3a8ccf665a5f2">find_git_parent</link> (path)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1utils_1a0c0c1ed6b197038085c94a90ceedfb01">logger</link> = logging.getLogger(__name__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1utils_1a4ec5335a4026c22a34a3a8ccf665a5f2"/><section>
+    <title>find_git_parent()</title>
+<indexterm><primary>find_git_parent</primary><secondary>penify_hook.utils</secondary></indexterm>
+<indexterm><primary>penify_hook.utils</primary><secondary>find_git_parent</secondary></indexterm>
+<para><computeroutput>def penify_hook.utils.find_git_parent ( path)</computeroutput></para>
+<para><literallayout><computeroutput>Traverse up from the given path to find the nearest directory containing a .git subdirectory.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1utils_1ae236f3c4c8bf5dcddbb92b4c2065eea3"/><section>
+    <title>get_repo_details()</title>
+<indexterm><primary>get_repo_details</primary><secondary>penify_hook.utils</secondary></indexterm>
+<indexterm><primary>penify_hook.utils</primary><secondary>get_repo_details</secondary></indexterm>
+<para><computeroutput>def penify_hook.utils.get_repo_details (Repo repo)</computeroutput></para>
+<para><literallayout><computeroutput>Determine the details of a repository including its remote URL, hosting service, organization name, and repository name.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f"/><section>
+    <title>recursive_search_git_folder()</title>
+<indexterm><primary>recursive_search_git_folder</primary><secondary>penify_hook.utils</secondary></indexterm>
+<indexterm><primary>penify_hook.utils</primary><secondary>recursive_search_git_folder</secondary></indexterm>
+<para><computeroutput>def penify_hook.utils.recursive_search_git_folder ( folder_path)</computeroutput></para>
+<para><literallayout><computeroutput>Recursively searches for a .git folder starting from the given directory.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1utils_1a0c0c1ed6b197038085c94a90ceedfb01"/><section>
+    <title>logger</title>
+<indexterm><primary>logger</primary><secondary>penify_hook.utils</secondary></indexterm>
+<indexterm><primary>penify_hook.utils</primary><secondary>logger</secondary></indexterm>
+<para><computeroutput>penify_hook.utils.logger = logging.getLogger(__name__)</computeroutput></para></section>
+</section>
+</section>

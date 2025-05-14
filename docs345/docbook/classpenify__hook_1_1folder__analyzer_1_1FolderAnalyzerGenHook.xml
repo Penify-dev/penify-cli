@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook" xml:lang="en-US">
+<title>penify_hook.folder_analyzer.FolderAnalyzerGenHook Class Reference</title>
+<indexterm><primary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</primary></indexterm>
+Inheritance diagram for penify_hook.folder_analyzer.FolderAnalyzerGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for penify_hook.folder_analyzer.FolderAnalyzerGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a1bb0358140931d82c7616f12efe31821">__init__</link> (self, str <link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393">dir_path</link>, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2">api_client</link>)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a70b845318fc7ac3b607daf26378e19ec">list_all_files_in_dir</link> (self, str <link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393">dir_path</link>)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc">run</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393">dir_path</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a1bb0358140931d82c7616f12efe31821"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.folder_analyzer.FolderAnalyzerGenHook.__init__ ( self, str dir_path, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> api_client)</computeroutput></para><para>
+Reimplemented from <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">penify_hook.base_analyzer.BaseAnalyzer</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a70b845318fc7ac3b607daf26378e19ec"/><section>
+    <title>list_all_files_in_dir()</title>
+<indexterm><primary>list_all_files_in_dir</primary><secondary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</primary><secondary>list_all_files_in_dir</secondary></indexterm>
+<para><computeroutput>def penify_hook.folder_analyzer.FolderAnalyzerGenHook.list_all_files_in_dir ( self, str dir_path)</computeroutput></para>
+<para><literallayout><computeroutput>List all non-hidden files in a directory and its subdirectories.
+
+This function recursively traverses the specified directory and its
+subdirectories, collecting paths of all non-hidden files. It filters out
+hidden directories and files (those starting with a dot) to ensure only
+visible files are returned.
+
+Args:
+    dir_path (str): The path to the directory whose files and subdirectory files need to be
+        listed.
+
+Returns:
+    list: A list containing the full paths of all non-hidden files within the
+        specified directory and its subdirectories.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a70b845318fc7ac3b607daf26378e19ec_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>def penify_hook.folder_analyzer.FolderAnalyzerGenHook.run ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Run the post-commit hook.
+
+This function processes all files in a specified directory using a
+progress bar. It lists all files, initializes a `FileAnalyzerGenHook`
+for each file, and runs it. Errors during processing of individual files
+are caught and logged, but do not stop the processing of other files. A
+progress bar is displayed indicating the number of files processed.
+
+Args:
+    self (PostCommitHook): The instance of the post-commit hook class.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_afd189d1b8c773bf710a899eb21fd76cc_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393"/><section>
+    <title>dir_path</title>
+<indexterm><primary>dir_path</primary><secondary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.folder_analyzer.FolderAnalyzerGenHook</primary><secondary>dir_path</secondary></indexterm>
+<para><computeroutput>penify_hook.folder_analyzer.FolderAnalyzerGenHook.dir_path</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_folder__analyzer_8py">folder_analyzer.py</link></section>
+</section>

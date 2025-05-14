@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b3b22d2ab7966b65f6b237e3231b41be" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli Directory Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_1648a057408aae8db85b8e3797335623">docs</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_f88c3381c1861b3f7ca1f3d63cf244b5">penify_hook</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_063e2d5fe58a131099a7fe4200cca78c">tests</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_setup_8py">setup.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

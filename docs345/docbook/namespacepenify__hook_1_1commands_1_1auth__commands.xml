@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1commands_1_1auth__commands" xml:lang="en-US">
+<title>penify_hook.commands.auth_commands Namespace Reference</title>
+<indexterm><primary>penify_hook.commands.auth_commands</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1auth__commands_1aa3956ca1749d4218ea1dc6e5b6218b24">save_credentials</link> (api_key)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655">login</link> (api_url, dashboard_url)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655"/><section>
+    <title>login()</title>
+<indexterm><primary>login</primary><secondary>penify_hook.commands.auth_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.auth_commands</primary><secondary>login</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.auth_commands.login ( api_url,  dashboard_url)</computeroutput></para>
+<para><literallayout><computeroutput>Open the login page in a web browser and listen for the redirect URL to
+capture the token.
+
+This function generates a random redirect port, constructs the full
+login URL with the provided dashboard URL, opens the login page in the
+default web browser, and sets up a simple HTTP server to listen for the
+redirect. Upon receiving the redirect, it extracts the token from the
+query parameters, fetches API keys using the token, saves them if
+successful, and handles login failures by notifying the user.
+
+Args:
+    api_url (str): The URL of the API service to fetch API keys.
+    dashboard_url (str): The URL of the dashboard where the user will be redirected after logging
+        in.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1auth__commands_1aa3956ca1749d4218ea1dc6e5b6218b24"/><section>
+    <title>save_credentials()</title>
+<indexterm><primary>save_credentials</primary><secondary>penify_hook.commands.auth_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.auth_commands</primary><secondary>save_credentials</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.auth_commands.save_credentials ( api_key)</computeroutput></para>
+<para><literallayout><computeroutput>Save the token and API keys based on priority:
+1. .env file in Git repo root (if in a git repo)
+2. .penify file in home directory (global fallback)
+
+Args:
+    api_key: The API key to save
+    
+Returns:
+    bool: True if saved successfully, False otherwise
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>
