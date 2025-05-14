@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>penify-cli: tests.test_config_commands.TestConfigCommands Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">penify-cli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part --><!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classtests_1_1test__config__commands_1_1TestConfigCommands.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classtests_1_1test__config__commands_1_1TestConfigCommands-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tests.test_config_commands.TestConfigCommands Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for tests.test_config_commands.TestConfigCommands:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands__coll__graph.svg" width="223" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2e8162082bcdd5652bb37bdb14cf453a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a2e8162082bcdd5652bb37bdb14cf453a">test_get_penify_config_existing_dir</a> (self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</td></tr>
+<tr class="separator:a2e8162082bcdd5652bb37bdb14cf453a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d4760eee3b67e1cde3aed755ebb948"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a33d4760eee3b67e1cde3aed755ebb948">test_get_penify_config_new_dir</a> (self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</td></tr>
+<tr class="separator:a33d4760eee3b67e1cde3aed755ebb948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9f2233a3f4cc5725b9d4f05758b167"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#adf9f2233a3f4cc5725b9d4f05758b167">test_get_llm_config_exists</a> (self, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:adf9f2233a3f4cc5725b9d4f05758b167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd12f028b89aa9cd1152c0b9ece5d3cd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#abd12f028b89aa9cd1152c0b9ece5d3cd">test_get_llm_config_empty</a> (self, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:abd12f028b89aa9cd1152c0b9ece5d3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473984d31452b56acd6ce4011a1248bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a473984d31452b56acd6ce4011a1248bd">test_get_llm_config_invalid_json</a> (self, mock_print, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a473984d31452b56acd6ce4011a1248bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee37b97432821d19758c6325d4c74bcf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#aee37b97432821d19758c6325d4c74bcf">test_get_jira_config_exists</a> (self, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:aee37b97432821d19758c6325d4c74bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd8df8219441b9e9871b903a681400d9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#acd8df8219441b9e9871b903a681400d9">test_save_llm_config_success</a> (self, mock_print, mock_json_dump, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:acd8df8219441b9e9871b903a681400d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a264dfb21e16003e095b79f6eab2ac"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a73a264dfb21e16003e095b79f6eab2ac">test_save_llm_config_failure</a> (self, mock_print, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a73a264dfb21e16003e095b79f6eab2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d62310da2d768e21770f8f01ff5375"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#af8d62310da2d768e21770f8f01ff5375">test_save_jira_config_success</a> (self, mock_print, mock_json_dump, mock_file_open, mock_path)</td></tr>
+<tr class="separator:af8d62310da2d768e21770f8f01ff5375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3355f7d313bebaa71694387cf2bc5232"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a3355f7d313bebaa71694387cf2bc5232">test_get_token_from_env</a> (self, mock_file_open, mock_path, mock_getenv)</td></tr>
+<tr class="separator:a3355f7d313bebaa71694387cf2bc5232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0207be563c3de59a6d16277805114c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a6c0207be563c3de59a6d16277805114c">test_get_token_from_config</a> (self, mock_file_open, mock_path, mock_getenv)</td></tr>
+<tr class="separator:a6c0207be563c3de59a6d16277805114c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400ca5d9fcdc159714e8df54920f9436"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html#a400ca5d9fcdc159714e8df54920f9436">test_get_token_not_found</a> (self, mock_file_open, mock_path, mock_getenv)</td></tr>
+<tr class="separator:a400ca5d9fcdc159714e8df54920f9436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aee37b97432821d19758c6325d4c74bcf" name="aee37b97432821d19758c6325d4c74bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee37b97432821d19758c6325d4c74bcf">&#9670;&nbsp;</a></span>test_get_jira_config_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_jira_config_exists </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_get_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test that get_jira_config returns the correct JIRA configuration when
+the configuration file exists.
+
+It sets up a mock for the configuration file to simulate its existence
+and verifies that the function reads from the correct file and returns
+the expected JIRA configuration dictionary. Additionally, it checks that
+the mock file open is called with the appropriate arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_get_config (MagicMock): A mock for the `get_config` function, which is expected to return a mock
+        configuration file object.
+
+Returns:
+    None: This test function does not explicitly return anything. Its assertions
+        serve as the verification of its correctness.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_aee37b97432821d19758c6325d4c74bcf_cgraph.svg" width="100%" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abd12f028b89aa9cd1152c0b9ece5d3cd" name="abd12f028b89aa9cd1152c0b9ece5d3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd12f028b89aa9cd1152c0b9ece5d3cd">&#9670;&nbsp;</a></span>test_get_llm_config_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_llm_config_empty </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_get_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the behavior of get_llm_config when called with an empty
+configuration file.
+
+This function sets up a mock configuration file that exists but returns
+no content. It then calls the `get_llm_config` function and asserts that
+it returns an empty dictionary and that the file open method was called
+exactly once with the correct arguments.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the built-in open function.
+    mock_get_config (MagicMock): A MagicMock object simulating the get_config function.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_abd12f028b89aa9cd1152c0b9ece5d3cd_cgraph.svg" width="100%" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adf9f2233a3f4cc5725b9d4f05758b167" name="adf9f2233a3f4cc5725b9d4f05758b167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9f2233a3f4cc5725b9d4f05758b167">&#9670;&nbsp;</a></span>test_get_llm_config_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_llm_config_exists </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_get_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the get_llm_config function when the configuration file exists.
+
+This function sets up a mock configuration file that exists and returns
+it when called. It then calls the get_llm_config function and asserts
+that it returns the correct configuration dictionary. Additionally, it
+checks that the mock_file_open function was called with the correct
+arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the open() function.
+    mock_get_config (MagicMock): A mock for the get_config() function.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_adf9f2233a3f4cc5725b9d4f05758b167_cgraph.svg" width="100%" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a473984d31452b56acd6ce4011a1248bd" name="a473984d31452b56acd6ce4011a1248bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a473984d31452b56acd6ce4011a1248bd">&#9670;&nbsp;</a></span>test_get_llm_config_invalid_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_llm_config_invalid_json </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_get_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test function to verify the behavior of get_llm_config when reading an
+invalid JSON file.
+
+It sets up a mock configuration file that exists but contains invalid
+JSON. The function is expected to handle this gracefully by printing an
+error message and returning an empty dictionary.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_get_config (MagicMock): Mock for the get_config function, which returns the mock configuration
+        file.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a473984d31452b56acd6ce4011a1248bd_cgraph.svg" width="100%" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2e8162082bcdd5652bb37bdb14cf453a" name="a2e8162082bcdd5652bb37bdb14cf453a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8162082bcdd5652bb37bdb14cf453a">&#9670;&nbsp;</a></span>test_get_penify_config_existing_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_penify_config_existing_dir </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_makedirs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_git_folder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the get_penify_config function when the .penify config directory
+exists.
+
+It should not create a new directory and assert that all mocked
+functions were called correctly.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the open() function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
+    mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
+    mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a2e8162082bcdd5652bb37bdb14cf453a_cgraph.svg" width="100%" height="363"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a33d4760eee3b67e1cde3aed755ebb948" name="a33d4760eee3b67e1cde3aed755ebb948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d4760eee3b67e1cde3aed755ebb948">&#9670;&nbsp;</a></span>test_get_penify_config_new_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_penify_config_new_dir </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_makedirs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_git_folder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the behavior of get_penify_config when the .penify directory does
+not exist.
+
+This function mocks various system calls to simulate a scenario where
+the .penify directory is not present. It then asserts that the
+appropriate actions are taken to create the directory and write an empty
+JSON file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the `open` function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the `os.makedirs` function.
+    mock_path (MagicMock): A MagicMock object simulating the `Path` class from `pathlib`.
+    mock_git_folder (MagicMock): A MagicMock object simulating a git folder search function.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a33d4760eee3b67e1cde3aed755ebb948_cgraph.svg" width="100%" height="363"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6c0207be563c3de59a6d16277805114c" name="a6c0207be563c3de59a6d16277805114c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0207be563c3de59a6d16277805114c">&#9670;&nbsp;</a></span>test_get_token_from_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_token_from_config </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_getenv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test retrieving a token from the configuration.
+
+This function sets up mocks for environment variables and configuration
+files, calls the `get_token` function, and asserts its behavior. It
+verifies that when the environment variable is not found, the function
+reads a token from a configuration file located in the user's home
+directory.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_path (MagicMock): A mock for the `pathlib.Path` class.
+    mock_getenv (MagicMock): A mock for the `os.getenv` function.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a6c0207be563c3de59a6d16277805114c_cgraph.svg" width="100%" height="467"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3355f7d313bebaa71694387cf2bc5232" name="a3355f7d313bebaa71694387cf2bc5232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3355f7d313bebaa71694387cf2bc5232">&#9670;&nbsp;</a></span>test_get_token_from_env()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_token_from_env </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_getenv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test retrieving a token from the environment variable.
+
+This function tests the behavior of `get_token` when an environment
+variable is set. It verifies that if the 'PENIFY_API_TOKEN' environment
+variable exists, the function returns its value without attempting to
+read a file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object for simulating file operations.
+    mock_path (MagicMock): A MagicMock object for simulating path operations.
+    mock_getenv (MagicMock): A MagicMock object for simulating environment variable retrieval.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a3355f7d313bebaa71694387cf2bc5232_cgraph.svg" width="100%" height="467"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a400ca5d9fcdc159714e8df54920f9436" name="a400ca5d9fcdc159714e8df54920f9436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400ca5d9fcdc159714e8df54920f9436">&#9670;&nbsp;</a></span>test_get_token_not_found()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_get_token_not_found </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_getenv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the get_token function when the API token environment variable is
+not found.
+
+This function tests the scenario where the `PENIFY_API_TOKEN`
+environment variable is not set. It mocks the environment variable to
+return `None`, and verifies that the function returns `None`. The test
+also checks that the environment variable is accessed once and that a
+file open operation is attempted on a configuration file located in the
+user's home directory.
+
+Args:
+    mock_file_open (MagicMock): Mock for the built-in `open` function.
+    mock_path (MagicMock): Mock for the `pathlib.Path` module.
+    mock_getenv (MagicMock): Mock for the `os.getenv` function.
+
+Returns:
+    None: The function does not return anything; it asserts conditions to verify
+        correctness.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a400ca5d9fcdc159714e8df54920f9436_cgraph.svg" width="100%" height="467"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af8d62310da2d768e21770f8f01ff5375" name="af8d62310da2d768e21770f8f01ff5375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d62310da2d768e21770f8f01ff5375">&#9670;&nbsp;</a></span>test_save_jira_config_success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_save_jira_config_success </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_json_dump</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the save_jira_config function to ensure it saves JIRA configuration
+successfully.
+
+This function sets up mocks for various dependencies and tests the
+functionality of saving a JIRA configuration. It asserts that the
+function returns `True`, the JSON dump is called with the correct
+configuration, and the print statement contains the expected message.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_json_dump (MagicMock): Mock for the json.dump function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_path (MagicMock): Mock for the path module.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_af8d62310da2d768e21770f8f01ff5375_cgraph.svg" width="100%" height="363"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a73a264dfb21e16003e095b79f6eab2ac" name="a73a264dfb21e16003e095b79f6eab2ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73a264dfb21e16003e095b79f6eab2ac">&#9670;&nbsp;</a></span>test_save_llm_config_failure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_save_llm_config_failure </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_get_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test function to verify that the save_llm_config function returns False
+and prints an error message when it fails to save the LLM configuration
+due to a permission error.
+
+It sets up a mock configuration file that exists and calls the
+save_llm_config function with valid parameters. The function is expected
+to return False and print "Error saving LLM configuration: Permission
+denied" in case of a failure.
+
+Args:
+    self (TestLLMConfig): An instance of the test class.
+    mock_print (MagicMock): A MagicMock object representing the print function, which will be used
+        to assert that it was called with the expected error message.
+    mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in
+        this test but is included as a parameter for completeness.
+    mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be
+        used to return the mock configuration file.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_a73a264dfb21e16003e095b79f6eab2ac_cgraph.svg" width="100%" height="363"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acd8df8219441b9e9871b903a681400d9" name="acd8df8219441b9e9871b903a681400d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd8df8219441b9e9871b903a681400d9">&#9670;&nbsp;</a></span>test_save_llm_config_success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tests.test_config_commands.TestConfigCommands.test_save_llm_config_success </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_json_dump</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_file_open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mock_get_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the save_llm_config function successfully.
+
+This function tests that the save_llm_config function correctly saves an
+LLM configuration and handles various mock objects and side effects. It
+ensures that the function returns True upon successful execution, writes
+the expected configuration to a file, and prints a confirmation message.
+
+Args:
+    mock_print (MagicMock): A mock object for the print function.
+    mock_json_dump (MagicMock): A mock object for json.dump.
+    mock_file_open (MagicMock): A mock object for file opening.
+    mock_get_config (MagicMock): A mock object to return a configuration file mock.
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands_acd8df8219441b9e9871b903a681400d9_cgraph.svg" width="100%" height="363"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/<a class="el" href="test__config__commands_8py.html">test_config_commands.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacetests.html">tests</a></li><li class="navelem"><a class="el" href="namespacetests_1_1test__config__commands.html">test_config_commands</a></li><li class="navelem"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html">TestConfigCommands</a></li>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/_next/static/media/snorkell-dark-logo.9fa414f5.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>
