@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1file__analyzer" xml:lang="en-US">
+<title>penify_hook.file_analyzer Namespace Reference</title>
+<indexterm><primary>penify_hook.file_analyzer</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook">FileAnalyzerGenHook</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1file__analyzer_1af419a4965f079d58cac5a5281ddb1828">logger</link> = logging.getLogger(__name__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1file__analyzer_1af419a4965f079d58cac5a5281ddb1828"/><section>
+    <title>logger</title>
+<indexterm><primary>logger</primary><secondary>penify_hook.file_analyzer</secondary></indexterm>
+<indexterm><primary>penify_hook.file_analyzer</primary><secondary>logger</secondary></indexterm>
+<para><computeroutput>penify_hook.file_analyzer.logger = logging.getLogger(__name__)</computeroutput></para></section>
+</section>
+</section>

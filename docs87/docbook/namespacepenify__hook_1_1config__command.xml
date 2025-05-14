@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1config__command" xml:lang="en-US">
+<title>penify_hook.config_command Namespace Reference</title>
+<indexterm><primary>penify_hook.config_command</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1config__command_1a4f3eb92164a69df1446d745f8a09285e">setup_config_parser</link> (parent_parser)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde">handle_config</link> (args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde"/><section>
+    <title>handle_config()</title>
+<indexterm><primary>handle_config</primary><secondary>penify_hook.config_command</secondary></indexterm>
+<indexterm><primary>penify_hook.config_command</primary><secondary>handle_config</secondary></indexterm>
+<para><computeroutput>def penify_hook.config_command.handle_config ( args)</computeroutput></para>
+<para><literallayout><computeroutput>Handle configuration settings based on the specified config type.
+
+This function processes different types of configurations such as LLM
+(Language Model) and JIRA. It saves configurations, sets up web-based
+configurations, and verifies JIRA connections.
+
+Args:
+    args (argparse.Namespace): Command-line arguments containing the type of configuration to handle.
+
+Returns:
+    int: Exit code indicating success or failure.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1config__command_1a4f3eb92164a69df1446d745f8a09285e"/><section>
+    <title>setup_config_parser()</title>
+<indexterm><primary>setup_config_parser</primary><secondary>penify_hook.config_command</secondary></indexterm>
+<indexterm><primary>penify_hook.config_command</primary><secondary>setup_config_parser</secondary></indexterm>
+<para><computeroutput>def penify_hook.config_command.setup_config_parser ( parent_parser)</computeroutput></para>
+<para><literallayout><computeroutput>Set up a configuration parser with subparsers for different types of
+configurations.
+
+This function configures and adds subcommands to the parent parser. Each
+subcommand corresponds to a specific type of configuration, such as LLM
+(Language Model) or JIRA. It allows users to configure settings for
+these systems through command-line arguments.
+
+Args:
+    parent_parser (argparse.ArgumentParser): The parent parser to which the config subparsers will be added.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1config__command_a4f3eb92164a69df1446d745f8a09285e_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook" xml:lang="en-US">
+<title>penify_hook Namespace Reference</title>
+<indexterm><primary>penify_hook</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1api__client">api_client</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1base__analyzer">base_analyzer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands">commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commit__analyzer">commit_analyzer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1config__command">config_command</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1constants">constants</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1file__analyzer">file_analyzer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1folder__analyzer">folder_analyzer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1git__analyzer">git_analyzer</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1jira__client">jira_client</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1llm__client">llm_client</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1login__command">login_command</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1main">main</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1ui__utils">ui_utils</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1utils">utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

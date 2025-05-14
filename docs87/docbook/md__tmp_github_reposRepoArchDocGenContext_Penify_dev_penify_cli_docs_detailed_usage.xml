@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage" xml:lang="en-US">
+
+<para>This document provides in-depth information about all features and capabilities of the Penify CLI tool.</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md42">
+<title>Table of Contents</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Penify CLI - Detailed Usage Guide<itemizedlist>
+<listitem>
+<para>Table of Contents</para>
+</listitem><listitem>
+<para>Authentication<itemizedlist>
+<listitem>
+<para>Login Process</para>
+</listitem><listitem>
+<para>API Token Storage</para>
+</listitem><listitem>
+<para>Token Precedence</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Command Overview</para>
+</listitem><listitem>
+<para>Commit Message Generation</para>
+</listitem><listitem>
+<para>Code Documentation Generation<itemizedlist>
+<listitem>
+<para>Use Cases</para>
+</listitem><listitem>
+<para>Authentication Requirement</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Configuration Settings</para>
+</listitem><listitem>
+<para>Git Hooks<itemizedlist>
+<listitem>
+<para>Post-Commit Hook</para>
+</listitem><listitem>
+<para>Custom Hook Location</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Advanced Use Cases<itemizedlist>
+<listitem>
+<para>CI/CD Integration</para>
+</listitem><listitem>
+<para>Remote Repository Documentation</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Troubleshooting<itemizedlist>
+<listitem>
+<para>Common Issues</para>
+</listitem><listitem>
+<para>Logs</para>
+</listitem><listitem>
+<para>Support</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md43">
+<title>Authentication</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md44">
+<title>Login Process</title>
+
+<para>When you run <computeroutput>penify login</computeroutput>, the tool:</para>
+
+<para><orderedlist>
+<listitem>
+<para>Opens your default web browser</para>
+</listitem><listitem>
+<para>Redirects you to Penify&apos;s login page</para>
+</listitem><listitem>
+<para>Captures the authentication token after successful login</para>
+</listitem><listitem>
+<para>Saves the token in <computeroutput>~/.penify</computeroutput> file</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md45">
+<title>API Token Storage</title>
+
+<para>API tokens are stored in your home directory in the <computeroutput>.penify</computeroutput> file. This JSON file contains:</para>
+
+<para><literallayout><computeroutput>{
+&#32;&#32;&quot;api_keys&quot;:&#32;&quot;your-api-token&quot;,
+&#32;&#32;&quot;llm&quot;:&#32;{&#32;&quot;model&quot;:&#32;&quot;...&quot;,&#32;&quot;api_base&quot;:&#32;&quot;...&quot;,&#32;&quot;api_key&quot;:&#32;&quot;...&quot;&#32;},
+&#32;&#32;&quot;jira&quot;:&#32;{&#32;&quot;url&quot;:&#32;&quot;...&quot;,&#32;&quot;username&quot;:&#32;&quot;...&quot;,&#32;&quot;api_token&quot;:&#32;&quot;...&quot;&#32;}
+}
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md46">
+<title>Token Precedence</title>
+
+<para><orderedlist>
+<listitem>
+<para>Environment variable <computeroutput>PENIFY_API_TOKEN</computeroutput> (highest priority)</para>
+</listitem><listitem>
+<para>Token in <computeroutput>~/.penify</computeroutput> file</para>
+</listitem></orderedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md47">
+<title>Command Overview</title>
+
+<para><literallayout><computeroutput>penify
+├──&#32;commit&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Generate&#32;smart&#32;commit&#32;messages
+├──&#32;config&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Configure&#32;local&#32;LLM&#32;and&#32;JIRA
+│&#32;&#32;&#32;├──&#32;llm&#32;&#32;&#32;&#32;&#32;&#32;&#32;Configure&#32;local&#32;LLM&#32;settings
+│&#32;&#32;&#32;└──&#32;jira&#32;&#32;&#32;&#32;&#32;&#32;Configure&#32;JIRA&#32;integration
+├──&#32;login&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Log&#32;in&#32;to&#32;Penify&#32;account
+└──&#32;docgen&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Generate&#32;code&#32;documentation
+&#32;&#32;&#32;&#32;├──&#32;install-hook&#32;&#32;&#32;&#32;&#32;Install&#32;Git&#32;post-commit&#32;hook
+&#32;&#32;&#32;&#32;└──&#32;uninstall-hook&#32;&#32;&#32;Remove&#32;Git&#32;post-commit&#32;hook
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md48">
+<title>Commit Message Generation</title>
+
+<para>The <computeroutput>commit</computeroutput> command analyzes your staged changes and generates meaningful commit messages. It can:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Use a local LLM if configured</para>
+</listitem><listitem>
+<para>Enhance messages with JIRA issue details</para>
+</listitem><listitem>
+<para>Provide both title and description</para>
+</listitem></itemizedlist>
+</para>
+
+<para>For specific options and examples, see <link linkend="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands">docs/commit-commands.md</link>.</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md49">
+<title>Code Documentation Generation</title>
+
+<para>The <computeroutput>docgen</computeroutput> command generates documentation for your code:</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md50">
+<title>Use Cases</title>
+
+<para><orderedlist>
+<listitem>
+<para><emphasis role="bold">Current Git Diff</emphasis>: Default behavior, documents only changed files</para>
+</listitem><listitem>
+<para><emphasis role="bold">Specific File</emphasis>: Pass a file path with <computeroutput>-l path/to/file.py</computeroutput></para>
+</listitem><listitem>
+<para><emphasis role="bold">Entire Folder</emphasis>: Pass a folder path with <computeroutput>-l path/to/folder</computeroutput></para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md51">
+<title>Authentication Requirement</title>
+
+<para>This feature requires authentication with a Penify account. Run <computeroutput>penify login</computeroutput> before using documentation features.</para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md52">
+<title>Configuration Settings</title>
+
+<para>Configure local settings using the <computeroutput>config</computeroutput> command:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">LLM Settings</emphasis>: Configure a local LLM for commit message generation</para>
+</listitem><listitem>
+<para><emphasis role="bold">JIRA Settings</emphasis>: Set up JIRA integration for enhanced commit messages</para>
+</listitem></itemizedlist>
+</para>
+
+<para>For detailed configuration options, see <link linkend="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands">docs/config-commands.md</link>.</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md53">
+<title>Git Hooks</title>
+
+<para>Penify can install Git hooks to automate documentation generation:</para>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md54">
+<title>Post-Commit Hook</title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Install</emphasis>: <computeroutput>penify docgen install-hook</computeroutput></para>
+</listitem><listitem>
+<para><emphasis role="bold">What it does</emphasis>: Automatically generates documentation for changed files after each commit</para>
+</listitem><listitem>
+<para><emphasis role="bold">Uninstall</emphasis>: <computeroutput>penify docgen uninstall-hook</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md55">
+<title>Custom Hook Location</title>
+
+<para>You can specify a custom location for Git hooks:</para>
+
+<para><literallayout><computeroutput>penify&#32;docgen&#32;install-hook&#32;-l&#32;/path/to/git/repo
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md56">
+<title>Advanced Use Cases</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md57">
+<title>CI/CD Integration</title>
+
+<para>For CI/CD pipelines:</para>
+
+<para><orderedlist>
+<listitem>
+<para>Set <computeroutput>PENIFY_API_TOKEN</computeroutput> as an environment variable</para>
+</listitem><listitem>
+<para>Run commands without requiring interactive login</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md58">
+<title>Remote Repository Documentation</title>
+
+<para>Generate documentation for an entire repository:</para>
+
+<para><literallayout><computeroutput>git&#32;clone&#32;https://github.com/user/repo
+cd&#32;repo
+penify&#32;docgen&#32;-l&#32;.
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md59">
+<title>Troubleshooting</title>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md60">
+<title>Common Issues</title>
+
+<para><orderedlist>
+<listitem>
+<para><emphasis role="bold">API Key Errors</emphasis>: Ensure you&apos;ve run <computeroutput>penify login</computeroutput> or set <computeroutput>PENIFY_API_TOKEN</computeroutput></para>
+</listitem><listitem>
+<para><emphasis role="bold">LLM Configuration</emphasis>: Check your LLM settings with <computeroutput>cat ~/.penify</computeroutput></para>
+</listitem><listitem>
+<para><emphasis role="bold">JIRA Integration</emphasis>: Verify JIRA credentials in your configuration</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md61">
+<title>Logs</title>
+
+<para>For more detailed logs, you can set the environment variable:</para>
+
+<para><literallayout><computeroutput>export&#32;PENIFY_DEBUG=1
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_1autotoc_md62">
+<title>Support</title>
+
+<para>For additional help, visit <link xlink:href="https://docs.penify.dev/">https://docs.penify.dev/</link> or contact <link xlink:href="mailto:support@penify.dev">support@penify.dev</link> </para>
+</section>
+</section>
+</section>

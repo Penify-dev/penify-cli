@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook" xml:lang="en-US">
+<title>penify_hook.git_analyzer.GitDocGenHook Class Reference</title>
+<indexterm><primary>penify_hook.git_analyzer.GitDocGenHook</primary></indexterm>
+Inheritance diagram for penify_hook.git_analyzer.GitDocGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for penify_hook.git_analyzer.GitDocGenHook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c">__init__</link> (self, str <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a957e81a1ab561f6cecfbe999e7b85499">repo_path</link>, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2">api_client</link>)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a17549766100e91eb94b5f1a1d34bf481">get_modified_files_in_last_commit</link> (self)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a974d2f51315ed6a1965a7fd7e2ced0cd">get_modified_lines</link> (self, diff_text)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85">process_file</link> (self, file_path)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae">run</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>penify_hook.git_analyzer.GitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.git_analyzer.GitDocGenHook</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def penify_hook.git_analyzer.GitDocGenHook.__init__ ( self, str repo_path, <link linkend="_classpenify__hook_1_1api__client_1_1APIClient">APIClient</link> api_client)</computeroutput></para><para>
+Reimplemented from <link linkend="_classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">penify_hook.base_analyzer.BaseAnalyzer</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a92275fddb43dbef6dfdb6c1ed6e96d0c_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a92275fddb43dbef6dfdb6c1ed6e96d0c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a17549766100e91eb94b5f1a1d34bf481"/><section>
+    <title>get_modified_files_in_last_commit()</title>
+<indexterm><primary>get_modified_files_in_last_commit</primary><secondary>penify_hook.git_analyzer.GitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.git_analyzer.GitDocGenHook</primary><secondary>get_modified_files_in_last_commit</secondary></indexterm>
+<para><computeroutput>def penify_hook.git_analyzer.GitDocGenHook.get_modified_files_in_last_commit ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Get the list of files modified in the last commit.
+
+This function retrieves the files that were modified in the most recent
+commit of the repository. It accesses the last commit and iterates
+through the differences to compile a list of unique file paths that were
+changed. The function returns this list for further processing or
+analysis.
+
+Returns:
+    list: A list of file paths that were modified in the last commit.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a17549766100e91eb94b5f1a1d34bf481_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a974d2f51315ed6a1965a7fd7e2ced0cd"/><section>
+    <title>get_modified_lines()</title>
+<indexterm><primary>get_modified_lines</primary><secondary>penify_hook.git_analyzer.GitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.git_analyzer.GitDocGenHook</primary><secondary>get_modified_lines</secondary></indexterm>
+<para><computeroutput>def penify_hook.git_analyzer.GitDocGenHook.get_modified_lines ( self,  diff_text)</computeroutput></para>
+<para><literallayout><computeroutput>Extract modified line numbers from a diff text.
+
+This function processes a diff text to identify and extract the line
+numbers that have been modified. It distinguishes between added and
+deleted lines and keeps track of the current line number as it parses
+through the diff. The function handles hunk headers and ensures that any
+deletions at the end of the file are also captured.
+
+Args:
+    diff_text (str): A string containing the diff text to be processed.
+
+Returns:
+    list: A sorted list of unique line numbers that have been modified.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a974d2f51315ed6a1965a7fd7e2ced0cd_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85"/><section>
+    <title>process_file()</title>
+<indexterm><primary>process_file</primary><secondary>penify_hook.git_analyzer.GitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.git_analyzer.GitDocGenHook</primary><secondary>process_file</secondary></indexterm>
+<para><computeroutput>def penify_hook.git_analyzer.GitDocGenHook.process_file ( self,  file_path)</computeroutput></para>
+<para><literallayout><computeroutput>Process a file by checking its type, reading its content, and sending it
+to an API.
+
+This method constructs the absolute path of the specified file and
+verifies if the file has a valid extension. If the file type is
+supported, it reads the content of the file and retrieves the
+differences from the last commit in the repository. If changes are
+detected, it sends the file content along with the modified lines to an
+API for further processing. If the API response indicates no changes,
+the original file will not be overwritten.
+
+Args:
+    file_path (str): The relative path to the file to be processed.
+
+Returns:
+    bool: True if the file was successfully processed and updated, False
+        otherwise.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a05313caa22b173ce75638f0db08eeb85_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a05313caa22b173ce75638f0db08eeb85_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>penify_hook.git_analyzer.GitDocGenHook</secondary></indexterm>
+<indexterm><primary>penify_hook.git_analyzer.GitDocGenHook</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>def penify_hook.git_analyzer.GitDocGenHook.run ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Run the post-commit hook.
+
+This method retrieves the list of modified files from the last commit
+and processes each file. It stages any files that have been modified
+during processing and creates an auto-commit if changes were made. A
+progress bar is displayed to indicate the processing status of each
+file. The method handles any exceptions that occur during file
+processing, printing an error message for each file that fails to
+process. If any modifications are made to the files, an auto-commit is
+created to save those changes.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_a3beba14e92d717391a74bb70b1fab0ae_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/<link linkend="_git__analyzer_8py">git_analyzer.py</link></section>
+</section>

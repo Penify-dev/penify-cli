@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1jira__client" kind="namespace" language="Python">
+    <compoundname>penify_hook::jira_client</compoundname>
+    <innerclass refid="classpenify__hook_1_1jira__client_1_1JiraClient" prot="public">penify_hook::jira_client::JiraClient</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepenify__hook_1_1jira__client_1a5593ea3415081eca1eea92e4c1ad1aa2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool penify_hook::jira_client::JIRA_AVAILABLE</definition>
+        <argsstring></argsstring>
+        <name>JIRA_AVAILABLE</name>
+        <qualifiedname>penify_hook.jira_client.JIRA_AVAILABLE</qualifiedname>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="8" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1commands_1_1doc__commands" xml:lang="en-US">
+<title>penify_hook.commands.doc_commands Namespace Reference</title>
+<indexterm><primary>penify_hook.commands.doc_commands</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1a4daac68bc563432bf25c85dc78081a25">generate_doc</link> (api_url, token, location=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1acc7f4ead1b11951d885fa5c151c2cbe0">setup_docgen_parser</link> (parser)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704">handle_docgen</link> (args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands_1a3e42540047da37565afffeaf106cb948">docgen_description</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1doc__commands_1a4daac68bc563432bf25c85dc78081a25"/><section>
+    <title>generate_doc()</title>
+<indexterm><primary>generate_doc</primary><secondary>penify_hook.commands.doc_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.doc_commands</primary><secondary>generate_doc</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.doc_commands.generate_doc ( api_url,  token,  location = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Generates documentation based on the given parameters.
+
+This function initializes an API client using the provided API URL and
+token. It then generates documentation by analyzing the specified
+location, which can be a folder, a file, or the current working
+directory if no location is provided. The function handles different
+types of analysis based on the input location and reports any errors
+encountered during the process.
+
+Args:
+    api_url (str): The URL of the API to connect to for documentation generation.
+    token (str): The authentication token for accessing the API.
+    location (str?): The path to a specific file or folder to analyze. If not provided, the
+        current working directory is used.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1doc__commands_a4daac68bc563432bf25c85dc78081a25_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704"/><section>
+    <title>handle_docgen()</title>
+<indexterm><primary>handle_docgen</primary><secondary>penify_hook.commands.doc_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.doc_commands</primary><secondary>handle_docgen</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.doc_commands.handle_docgen ( args)</computeroutput></para>
+<para><literallayout><computeroutput>Handle various subcommands related to document generation and hook
+management.
+
+This function processes different subcommands such as installing or
+uninstalling git hooks, and directly generating documentation based on
+provided arguments.
+
+Args:
+    args (Namespace): Parsed command-line arguments containing the subcommand and location
+        details.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1doc__commands_1acc7f4ead1b11951d885fa5c151c2cbe0"/><section>
+    <title>setup_docgen_parser()</title>
+<indexterm><primary>setup_docgen_parser</primary><secondary>penify_hook.commands.doc_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.doc_commands</primary><secondary>setup_docgen_parser</secondary></indexterm>
+<para><computeroutput>def penify_hook.commands.doc_commands.setup_docgen_parser ( parser)</computeroutput></para>
+<para><literallayout><computeroutput>Set up and configure a parser for documentation generation using Git
+commands.
+
+This function configures a parser with various subcommands and arguments
+necessary for generating documentation for Git diffs, files, or folders.
+It also installs and uninstalls commit hooks to automate documentation
+generation on commits.
+
+Args:
+    parser (argparse.ArgumentParser): The parser to configure.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1commands_1_1doc__commands_acc7f4ead1b11951d885fa5c151c2cbe0_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1commands_1_1doc__commands_1a3e42540047da37565afffeaf106cb948"/><section>
+    <title>docgen_description</title>
+<indexterm><primary>docgen_description</primary><secondary>penify_hook.commands.doc_commands</secondary></indexterm>
+<indexterm><primary>penify_hook.commands.doc_commands</primary><secondary>docgen_description</secondary></indexterm>
+<para><computeroutput>string penify_hook.commands.doc_commands.docgen_description</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;Generate&#32;code&#32;documentation&#32;using&#32;Penify.</emphasis>
+2 <emphasis role="stringliteral"></emphasis>
+3 <emphasis role="stringliteral">This&#32;command&#32;requires&#32;you&#32;to&#32;be&#32;logged&#32;in&#32;to&#32;your&#32;Penify&#32;account.</emphasis>
+4 <emphasis role="stringliteral">You&#32;can&#32;generate&#32;documentation&#32;for:</emphasis>
+5 <emphasis role="stringliteral">-&#32;Current&#32;Git&#32;diff&#32;(default)</emphasis>
+6 <emphasis role="stringliteral">-&#32;Specific&#32;file</emphasis>
+7 <emphasis role="stringliteral">-&#32;Specific&#32;folder</emphasis>
+8 <emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+</programlisting></section>
+</section>
+</section>

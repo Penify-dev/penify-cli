@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests" xml:lang="en-US">
+<title>tests Namespace Reference</title>
+<indexterm><primary>tests</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1conftest">conftest</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1test__commit__commands">test_commit_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1test__config__commands">test_config_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1test__doc__commands">test_doc_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1test__web__config">test_web_config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

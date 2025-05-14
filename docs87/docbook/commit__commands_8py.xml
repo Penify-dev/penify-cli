@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_commit__commands_8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook">penify_hook</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands">penify_hook.commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1commit__commands">penify_hook.commands.commit_commands</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a">penify_hook.commands.commit_commands.commit_code</link> (api_url, token, message, open_terminal, generate_description, llm_model=None, llm_api_base=None, llm_api_key=None, jira_url=None, jira_user=None, jira_api_token=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1commit__commands_1a8627583116eb78e31a4d3cdc16d2f15c">penify_hook.commands.commit_commands.setup_commit_parser</link> (parser)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23">penify_hook.commands.commit_commands.handle_commit</link> (args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

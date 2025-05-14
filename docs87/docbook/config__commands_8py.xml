@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_config__commands_8py" xml:lang="en-US">
+<title>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py File Reference</title>
+<indexterm><primary>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook">penify_hook</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands">penify_hook.commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands">penify_hook.commands.config_commands</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>None <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae">penify_hook.commands.config_commands.load_env_files</link> ()</para>
+</listitem>
+            <listitem><para>Path <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20">penify_hook.commands.config_commands.get_penify_config</link> ()</para>
+</listitem>
+            <listitem><para>Any <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87">penify_hook.commands.config_commands.get_env_var_or_default</link> (str env_var, Any default=None)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4">penify_hook.commands.config_commands.save_llm_config</link> (model, api_base, api_key)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4">penify_hook.commands.config_commands.save_jira_config</link> (url, username, api_token)</para>
+</listitem>
+            <listitem><para>Dict[str, str] <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0">penify_hook.commands.config_commands.get_llm_config</link> ()</para>
+</listitem>
+            <listitem><para>Dict[str, str] <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2">penify_hook.commands.config_commands.get_jira_config</link> ()</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c">penify_hook.commands.config_commands.config_llm_web</link> ()</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06">penify_hook.commands.config_commands.config_jira_web</link> ()</para>
+</listitem>
+            <listitem><para>Optional[str] <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812">penify_hook.commands.config_commands.get_token</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a152642ab83cf6219b604bda6122aba67">penify_hook.commands.config_commands.DOTENV_AVAILABLE</link> = True</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepenify__hook_1_1commands_1_1config__commands_1a4b202072a3a3b8515c9c254622e9c880">penify_hook.commands.config_commands.path</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

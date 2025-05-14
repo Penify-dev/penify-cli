@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="hook__commands_8py" kind="file" language="Python">
+    <compoundname>hook_commands.py</compoundname>
+    <innernamespace refid="namespacepenify__hook">penify_hook</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands">penify_hook::commands</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands_1_1hook__commands">penify_hook::commands::hook_commands</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacepenify__hook_1_1commands_1_1hook__commands" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pathlib<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Path</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="namespacepenify__hook_1_1commands_1_1hook__commands_1ae82fd46e5a9219da1478b0476b8214b1" refkind="member"><highlight class="normal">HOOK_FILENAME<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;post-commit&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacepenify__hook_1_1commands_1_1hook__commands_1a6a45aad71c8d32ce11a6dff8cee8bee7" refkind="member"><highlight class="normal">HOOK_TEMPLATE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;#!/bin/sh</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral">#<sp/>This<sp/>is<sp/>a<sp/>post-commit<sp/>hook<sp/>generated<sp/>by<sp/>penify.</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">#<sp/>Automatically<sp/>generates<sp/>documentation<sp/>for<sp/>changed<sp/>files<sp/>after<sp/>each<sp/>commit.</highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral">penify<sp/>docgen<sp/>-gf<sp/>{git_folder_path}<sp/>-t<sp/>{token}</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespacepenify__hook_1_1commands_1_1hook__commands_1adff8f5d3bf1c3795974a391ee95b72b2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacepenify__hook_1_1commands_1_1hook__commands_1adff8f5d3bf1c3795974a391ee95b72b2" kindref="member">install_git_hook</ref>(location,<sp/>token):</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Install<sp/>a<sp/>post-commit<sp/>hook<sp/>in<sp/>the<sp/>specified<sp/>location<sp/>that<sp/>generates</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>documentation</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>changed<sp/>files<sp/>after<sp/>each<sp/>commit.</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>location<sp/>(str):<sp/>The<sp/>path<sp/>to<sp/>the<sp/>Git<sp/>repository<sp/>where<sp/>the<sp/>hook<sp/>should<sp/>be<sp/>installed.</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>token<sp/>(str):<sp/>The<sp/>authentication<sp/>token<sp/>required<sp/>to<sp/>access<sp/>the<sp/>documentation<sp/>generation</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>service.</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>hooks_dir<sp/>=<sp/>Path(location)<sp/>/<sp/>&quot;.git/hooks&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>hook_path<sp/>=<sp/>hooks_dir<sp/>/<sp/>HOOK_FILENAME</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>hooks_dir.exists():</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;Error:<sp/>The<sp/>hooks<sp/>directory<sp/>{hooks_dir}<sp/>does<sp/>not<sp/>exist.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sys.exit(1)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>hook_content<sp/>=<sp/>HOOK_TEMPLATE.format(token=token,<sp/>git_folder_path=location)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>hook_path.write_text(hook_content)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>hook_path.chmod(0o755)<sp/><sp/></highlight><highlight class="comment">#<sp/>Make<sp/>the<sp/>hook<sp/>script<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;Post-commit<sp/>hook<sp/>installed<sp/>in<sp/>{hook_path}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;Documentation<sp/>will<sp/>now<sp/>be<sp/>automatically<sp/>generated<sp/>after<sp/>each<sp/>commit.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="namespacepenify__hook_1_1commands_1_1hook__commands_1a81543eb5fa835fd1237f24e8bce6201d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacepenify__hook_1_1commands_1_1hook__commands_1a81543eb5fa835fd1237f24e8bce6201d" kindref="member">uninstall_git_hook</ref>(location):</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Uninstalls<sp/>the<sp/>post-commit<sp/>hook<sp/>from<sp/>the<sp/>specified<sp/>location.</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>This<sp/>function<sp/>attempts<sp/>to<sp/>remove<sp/>a<sp/>post-commit<sp/>git<sp/>hook<sp/>located<sp/>at<sp/>the</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>given<sp/>path.<sp/>It<sp/>constructs<sp/>the<sp/>path<sp/>to<sp/>the<sp/>hook<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>checks<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>it<sp/>exists.</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>If<sp/>the<sp/>hook<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>found,<sp/>it<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>deleted,<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>a<sp/>confirmation<sp/>message<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>printed.<sp/>If<sp/>no<sp/>hook<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>found,<sp/>a<sp/>message<sp/>indicating<sp/>this<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>also<sp/>printed.</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>location<sp/>(Path):<sp/>The<sp/>base<sp/>directory<sp/>where<sp/>the<sp/>.git/hooks<sp/>directory<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>located.</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>hook_path<sp/>=<sp/>Path(location)<sp/>/<sp/>&quot;.git/hooks&quot;</highlight><highlight class="normal"><sp/>/<sp/>HOOK_FILENAME</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>hook_path.exists():</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hook_path.unlink()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;Post-commit<sp/>hook<sp/>uninstalled<sp/>from<sp/>{hook_path}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;No<sp/>post-commit<sp/>hook<sp/>found<sp/>in<sp/>{hook_path}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/hook_commands.py"/>
+  </compounddef>
+</doxygen>

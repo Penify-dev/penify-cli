@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1commands" xml:lang="en-US">
+<title>penify_hook.commands Namespace Reference</title>
+<indexterm><primary>penify_hook.commands</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1auth__commands">auth_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1commit__commands">commit_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1config__commands">config_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1doc__commands">doc_commands</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacepenify__hook_1_1commands_1_1hook__commands">hook_commands</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classtests_1_1test__web__config_1_1TestWebConfig" xml:lang="en-US">
+<title>tests.test_web_config.TestWebConfig Class Reference</title>
+<indexterm><primary>tests.test_web_config.TestWebConfig</primary></indexterm>
+Collaboration diagram for tests.test_web_config.TestWebConfig:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__web__config_1_1TestWebConfig__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35">test_config_llm_web_server_setup</link> (self, mock_resource_filename, mock_server, mock_webbrowser)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a">test_config_jira_web_server_setup</link> (self, mock_resource_filename, mock_server, mock_webbrowser)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a"/><section>
+    <title>test_config_jira_web_server_setup()</title>
+<indexterm><primary>test_config_jira_web_server_setup</primary><secondary>tests.test_web_config.TestWebConfig</secondary></indexterm>
+<indexterm><primary>tests.test_web_config.TestWebConfig</primary><secondary>test_config_jira_web_server_setup</secondary></indexterm>
+<para><computeroutput>def tests.test_web_config.TestWebConfig.test_config_jira_web_server_setup ( self,  mock_resource_filename,  mock_server,  mock_webbrowser)</computeroutput></para>
+<para><literallayout><computeroutput>Test the configuration and setup of a JIRA web server.
+
+This function tests the entire process of setting up a JIRA web server,
+including mocking necessary resources, configuring the server to shut
+down after handling one request, and verifying that the web browser is
+opened with the correct URL. The function uses several mocks to simulate
+external dependencies such as resource files, servers, and web browsers.
+
+Args:
+    mock_resource_filename (MagicMock): A MagicMock object for simulating the `resource_filename` function.
+    mock_server (MagicMock): A MagicMock object for simulating the server setup.
+    mock_webbrowser (MagicMock): A MagicMock object for simulating the web browser opening.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__web__config_1_1TestWebConfig_a06e600222e426b003850509cb1d3190a_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35"/><section>
+    <title>test_config_llm_web_server_setup()</title>
+<indexterm><primary>test_config_llm_web_server_setup</primary><secondary>tests.test_web_config.TestWebConfig</secondary></indexterm>
+<indexterm><primary>tests.test_web_config.TestWebConfig</primary><secondary>test_config_llm_web_server_setup</secondary></indexterm>
+<para><computeroutput>def tests.test_web_config.TestWebConfig.test_config_llm_web_server_setup ( self,  mock_resource_filename,  mock_server,  mock_webbrowser)</computeroutput></para>
+<para><literallayout><computeroutput>Set up and test the web server configuration for an LLM (Large Language
+Model) web interface.
+
+This function configures a mock web server for testing purposes,
+including setting up resource filenames, mocking server behavior, and
+verifying that the web browser is opened and the server starts
+correctly. The function uses various mocks to simulate external
+dependencies such as `resource_filename` and `server`.
+
+Args:
+    mock_resource_filename (MagicMock): A MagicMock object simulating the `resource_filename` function.
+    mock_server (MagicMock): A MagicMock object simulating the context manager for the web server.
+    mock_webbrowser (MagicMock): A MagicMock object simulating the `webbrowser` module.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtests_1_1test__web__config_1_1TestWebConfig_afc6440352201d207ea8b4d26f8ccfa35_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/<link linkend="_test__web__config_8py">test_web_config.py</link></section>
+</section>

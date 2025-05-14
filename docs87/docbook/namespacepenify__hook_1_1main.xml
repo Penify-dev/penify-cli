@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepenify__hook_1_1main" xml:lang="en-US">
+<title>penify_hook.main Namespace Reference</title>
+<indexterm><primary>penify_hook.main</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>penify_hook.main</secondary></indexterm>
+<indexterm><primary>penify_hook.main</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>def penify_hook.main.main ( )</computeroutput></para>
+<para><literallayout><computeroutput>Main function to handle command-line interface (CLI) interactions with
+Penify services.
+
+This tool provides a command-line interface for generating smart commit
+messages, configuring local-LLM and JIRA, and generating code
+documentation. It supports basic commands that do not require login and
+advanced commands that require user authentication. The `--version` flag
+can be used to display the version information.
+
+Returns:
+    int: Exit status of the program (0 for success, 1 for error).
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1main_a16838b20df4bd14ee4b5e1dd2906738f_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespacepenify__hook_1_1main_a16838b20df4bd14ee4b5e1dd2906738f_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

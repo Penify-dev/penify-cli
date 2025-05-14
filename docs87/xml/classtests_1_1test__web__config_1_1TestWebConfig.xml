@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtests_1_1test__web__config_1_1TestWebConfig" kind="class" language="Python" prot="public">
+    <compoundname>tests::test_web_config::TestWebConfig</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_web_config.TestWebConfig.test_config_llm_web_server_setup</definition>
+        <argsstring>(self, mock_resource_filename, mock_server, mock_webbrowser)</argsstring>
+        <name>test_config_llm_web_server_setup</name>
+        <qualifiedname>tests.test_web_config.TestWebConfig.test_config_llm_web_server_setup</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_resource_filename</type>
+          <defname>mock_resource_filename</defname>
+        </param>
+        <param>
+          <type>mock_server</type>
+          <defname>mock_server</defname>
+        </param>
+        <param>
+          <type>mock_webbrowser</type>
+          <defname>mock_webbrowser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set up and test the web server configuration for an LLM (Large Language
+Model) web interface.
+
+This function configures a mock web server for testing purposes,
+including setting up resource filenames, mocking server behavior, and
+verifying that the web browser is opened and the server starts
+correctly. The function uses various mocks to simulate external
+dependencies such as `resource_filename` and `server`.
+
+Args:
+    mock_resource_filename (MagicMock): A MagicMock object simulating the `resource_filename` function.
+    mock_server (MagicMock): A MagicMock object simulating the context manager for the web server.
+    mock_webbrowser (MagicMock): A MagicMock object simulating the `webbrowser` module.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py" line="18" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py" bodystart="18" bodyend="55"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c" compoundref="config__commands_8py" startline="293" endline="423">penify_hook.commands.config_commands.config_llm_web</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_web_config.TestWebConfig.test_config_jira_web_server_setup</definition>
+        <argsstring>(self, mock_resource_filename, mock_server, mock_webbrowser)</argsstring>
+        <name>test_config_jira_web_server_setup</name>
+        <qualifiedname>tests.test_web_config.TestWebConfig.test_config_jira_web_server_setup</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_resource_filename</type>
+          <defname>mock_resource_filename</defname>
+        </param>
+        <param>
+          <type>mock_server</type>
+          <defname>mock_server</defname>
+        </param>
+        <param>
+          <type>mock_webbrowser</type>
+          <defname>mock_webbrowser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the configuration and setup of a JIRA web server.
+
+This function tests the entire process of setting up a JIRA web server,
+including mocking necessary resources, configuring the server to shut
+down after handling one request, and verifying that the web browser is
+opened with the correct URL. The function uses several mocks to simulate
+external dependencies such as resource files, servers, and web browsers.
+
+Args:
+    mock_resource_filename (MagicMock): A MagicMock object for simulating the `resource_filename` function.
+    mock_server (MagicMock): A MagicMock object for simulating the server setup.
+    mock_webbrowser (MagicMock): A MagicMock object for simulating the web browser opening.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py" line="59" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py" bodystart="59" bodyend="95"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" compoundref="config__commands_8py" startline="424" endline="552">penify_hook.commands.config_commands.config_jira_web</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>tests.test_web_config.TestWebConfig</label>
+        <link refid="classtests_1_1test__web__config_1_1TestWebConfig"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py" line="13" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py" bodystart="13" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a" prot="public" virt="non-virtual"><scope>tests::test_web_config::TestWebConfig</scope><name>test_config_jira_web_server_setup</name></member>
+      <member refid="classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35" prot="public" virt="non-virtual"><scope>tests::test_web_config::TestWebConfig</scope><name>test_config_llm_web_server_setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
