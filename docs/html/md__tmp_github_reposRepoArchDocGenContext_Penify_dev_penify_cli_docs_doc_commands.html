@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>penify-cli: Penify CLI - Documentation Generation Commands</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">penify-cli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part --><!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Penify CLI - Documentation Generation Commands </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p >This document provides a detailed guide to all permutations and combinations of the <code>docgen</code> command, including extensive information about Git hook commands for automating documentation generation.</p>
+<h1><a class="anchor" id="autotoc_md64"></a>
+Table of Contents</h1>
+<ul>
+<li>Basic Usage</li>
+<li>Command Options</li>
+<li>Option Combinations</li>
+<li>Git Hook Commands<ul>
+<li>Hook Installation</li>
+<li>Hook Customization</li>
+<li>Hook Uninstallation</li>
+</ul>
+</li>
+<li>Advanced Use Cases</li>
+<li>Troubleshooting</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md65"></a>
+Basic Usage</h1>
+<div class="fragment"><div class="line">penify docgen</div>
+</div><!-- fragment --><p >By default, this command:</p><ul>
+<li>Analyzes the current Git diff (changes since last commit)</li>
+<li>Generates documentation for changed files only</li>
+<li>Requires authentication via <code>penify login</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md66"></a>
+Command Options</h1>
+<h2><a class="anchor" id="autotoc_md67"></a>
+&lt;tt&gt;-l, --location&lt;/tt&gt;</h2>
+<p >Specify a target for documentation generation:</p>
+<div class="fragment"><div class="line"># Generate documentation for a specific file</div>
+<div class="line">penify docgen -l path/to/file.py</div>
+<div class="line"> </div>
+<div class="line"># Generate documentation for a specific folder</div>
+<div class="line">penify docgen -l path/to/folder</div>
+</div><!-- fragment --><p >Without this flag, Penify analyzes only Git-tracked modified files.</p>
+<h2><a class="anchor" id="autotoc_md68"></a>
+Subcommands</h2>
+<h3><a class="anchor" id="autotoc_md69"></a>
+&lt;tt&gt;install-hook&lt;/tt&gt;</h3>
+<p >Install a Git post-commit hook to automatically generate documentation:</p>
+<div class="fragment"><div class="line">penify docgen install-hook</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md70"></a>
+&lt;tt&gt;uninstall-hook&lt;/tt&gt;</h3>
+<p >Remove the Git post-commit hook:</p>
+<div class="fragment"><div class="line">penify docgen uninstall-hook</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md71"></a>
+Option Combinations</h1>
+<h2><a class="anchor" id="autotoc_md72"></a>
+Generate Documentation for Current Git Diff</h2>
+<div class="fragment"><div class="line"># Basic usage - current Git diff</div>
+<div class="line">penify docgen</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
+Generate Documentation for a Specific File</h2>
+<div class="fragment"><div class="line"># Single file documentation</div>
+<div class="line">penify docgen -l src/main.py</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md74"></a>
+Generate Documentation for a Folder</h2>
+<div class="fragment"><div class="line"># Folder documentation</div>
+<div class="line">penify docgen -l src/models/</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
+Install Hook in Current Repository</h2>
+<div class="fragment"><div class="line"># Install hook in current Git repository</div>
+<div class="line">penify docgen install-hook</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md76"></a>
+Install Hook in Specific Repository</h2>
+<div class="fragment"><div class="line"># Install hook in a specific Git repository</div>
+<div class="line">penify docgen install-hook -l /path/to/repo</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
+Uninstall Hook from Current Repository</h2>
+<div class="fragment"><div class="line"># Uninstall hook from current Git repository</div>
+<div class="line">penify docgen uninstall-hook</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md78"></a>
+Uninstall Hook from Specific Repository</h2>
+<div class="fragment"><div class="line"># Uninstall hook from a specific Git repository</div>
+<div class="line">penify docgen uninstall-hook -l /path/to/repo</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md79"></a>
+Git Hook Commands</h1>
+<p >Penify provides Git hook commands to automate documentation generation as part of your Git workflow.</p>
+<h2><a class="anchor" id="autotoc_md80"></a>
+Hook Installation</h2>
+<h3><a class="anchor" id="autotoc_md81"></a>
+How Hooks Work</h3>
+<p >When you install a Git hook with <code>penify docgen install-hook</code>, Penify:</p>
+<ol type="1">
+<li>Creates a post-commit hook script in the <code>.git/hooks</code> directory</li>
+<li>Makes the script executable</li>
+<li>Configures the hook to run <code>penify docgen</code> after each commit</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md82"></a>
+Hook Script Content</h3>
+<p >The generated post-commit hook contains:</p>
+<div class="fragment"><div class="line">#!/bin/sh</div>
+<div class="line"># This is a post-commit hook generated by penify.</div>
+<div class="line"># Automatically generates documentation for changed files after each commit.</div>
+<div class="line"> </div>
+<div class="line">penify docgen -gf /path/to/git/repository -t your_api_token</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md83"></a>
+Installation Location</h3>
+<p >By default, hooks are installed in the current Git repository. You can specify a different location:</p>
+<div class="fragment"><div class="line">penify docgen install-hook -l /path/to/repo</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md84"></a>
+Installation Requirements</h3>
+<p >To install hooks, you need:</p><ul>
+<li>A valid Penify API token (login first with <code>penify login</code>)</li>
+<li>Write permissions to the <code>.git/hooks</code> directory</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md85"></a>
+Verifying Installation</h3>
+<p >After installation, you can verify that the hook is installed:</p>
+<div class="fragment"><div class="line">cat .git/hooks/post-commit</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md86"></a>
+Hook Customization</h2>
+<p >You can customize the post-commit hook after installation:</p>
+<h3><a class="anchor" id="autotoc_md87"></a>
+Modifying Hook Behavior</h3>
+<ol type="1">
+<li>Edit the <code>.git/hooks/post-commit</code> file</li>
+<li>Add additional options to the <code>penify docgen</code> command</li>
+<li>Add other commands to run after commit</li>
+</ol>
+<p >Example of a customized hook:</p>
+<div class="fragment"><div class="line">#!/bin/sh</div>
+<div class="line"># This is a post-commit hook generated by penify.</div>
+<div class="line"># Automatically generates documentation for changed files after each commit.</div>
+<div class="line"> </div>
+<div class="line"># Generate documentation</div>
+<div class="line">penify docgen -gf /path/to/git/repository -t your_api_token</div>
+<div class="line"> </div>
+<div class="line"># Additional custom commands</div>
+<div class="line">echo &quot;Documentation generation complete!&quot;</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md88"></a>
+Advanced Hook Scenarios</h3>
+<p ><b>Conditional Documentation Generation</b>:</p>
+<div class="fragment"><div class="line">#!/bin/sh</div>
+<div class="line"># Only generate documentation for commits to the main branch</div>
+<div class="line">BRANCH=$(git rev-parse --abbrev-ref HEAD)</div>
+<div class="line">if [ &quot;$BRANCH&quot; = &quot;main&quot; ]; then</div>
+<div class="line">  penify docgen -gf /path/to/git/repository -t your_api_token</div>
+<div class="line">fi</div>
+</div><!-- fragment --><p ><b>Documenting Specific Files/Folders</b>:</p>
+<div class="fragment"><div class="line">#!/bin/sh</div>
+<div class="line"># Only document Python files in the src directory</div>
+<div class="line">penify docgen -l src/ -gf /path/to/git/repository -t your_api_token</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
+Hook Uninstallation</h2>
+<h3><a class="anchor" id="autotoc_md90"></a>
+Standard Uninstallation</h3>
+<p >To remove a hook from the current repository:</p>
+<div class="fragment"><div class="line">penify docgen uninstall-hook</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md91"></a>
+Specific Repository Uninstallation</h3>
+<p >To remove a hook from a specific repository:</p>
+<div class="fragment"><div class="line">penify docgen uninstall-hook -l /path/to/repo</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md92"></a>
+Manual Hook Removal</h3>
+<p >If needed, you can manually remove the hook:</p>
+<div class="fragment"><div class="line">rm .git/hooks/post-commit</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md93"></a>
+Verifying Uninstallation</h3>
+<p >Check that the hook was successfully removed:</p>
+<div class="fragment"><div class="line">ls -la .git/hooks/post-commit  # Should return &quot;No such file or directory&quot;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md94"></a>
+Advanced Use Cases</h1>
+<h2><a class="anchor" id="autotoc_md95"></a>
+Continuous Integration</h2>
+<p >Run documentation generation in CI pipelines:</p>
+<div class="fragment"><div class="line"># In your CI script</div>
+<div class="line">export PENIFY_API_TOKEN=your_api_token</div>
+<div class="line">penify docgen -l src/</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md96"></a>
+Batch Documentation</h2>
+<p >Generate documentation for multiple repositories:</p>
+<div class="fragment"><div class="line"># Bash script for batch documentation</div>
+<div class="line">for repo in repo1 repo2 repo3; do</div>
+<div class="line">  cd /path/to/$repo</div>
+<div class="line">  penify docgen -l .</div>
+<div class="line">done</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md97"></a>
+Custom Git Hook Integration</h2>
+<p >Integrate with other Git hooks:</p>
+<div class="fragment"><div class="line"># In .git/hooks/pre-push</div>
+<div class="line">penify docgen -l src/</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md98"></a>
+Documenting Release Tags</h2>
+<p >Generate documentation when creating a release tag:</p>
+<div class="fragment"><div class="line"># Document everything when creating a tag</div>
+<div class="line">git tag -a v1.0.0</div>
+<div class="line">penify docgen -l .  # Document entire codebase</div>
+<div class="line">git commit --amend -m &quot;Release v1.0.0 with updated documentation&quot;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md99"></a>
+Troubleshooting</h1>
+<h2><a class="anchor" id="autotoc_md100"></a>
+Common Issues</h2>
+<ol type="1">
+<li>**"Authentication required"**<ul>
+<li>Run <code>penify login</code> before using documentation features</li>
+<li>Check your API token with <code>cat ~/.penify</code></li>
+</ul>
+</li>
+<li>**"Permission denied when installing hook"**<ul>
+<li>Check Git repository permissions</li>
+<li>Try running with sudo (if appropriate for your environment)</li>
+<li>Ensure the <code>.git/hooks</code> directory exists</li>
+</ul>
+</li>
+<li>**"Hook installed but not running"**<ul>
+<li>Check if the hook is executable: <code>ls -la .git/hooks/post-commit</code></li>
+<li>Make it executable if needed: <code>chmod +x .git/hooks/post-commit</code></li>
+<li>Check for syntax errors in the hook script</li>
+</ul>
+</li>
+<li>**"File or directory not found"**<ul>
+<li>Verify the path provided to the <code>-l</code> option</li>
+<li>Ensure you're running the command from the correct directory</li>
+</ul>
+</li>
+<li>**"Hook uninstallation failed"**<ul>
+<li>Check permissions on the <code>.git/hooks</code> directory</li>
+<li>Try manual removal: <code>rm .git/hooks/post-commit</code></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md101"></a>
+Debugging</h2>
+<p >For detailed output when running documentation commands:</p>
+<div class="fragment"><div class="line">export PENIFY_DEBUG=1</div>
+<div class="line">penify docgen -l src/</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md102"></a>
+Getting Help</h2>
+<p >For command-specific help:</p>
+<div class="fragment"><div class="line">penify docgen --help</div>
+<div class="line">penify docgen install-hook --help</div>
+<div class="line">penify docgen uninstall-hook --help</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/penify-logo.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>
