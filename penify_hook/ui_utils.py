@@ -50,7 +50,7 @@ def format_file_path(file_path):
     return f"{WARNING_COLOR}{file_path}{Style.RESET_ALL}"
 
 def print_info(message):
-    """Prints an informational message with formatting."""
+    """Prints an informational message."""
     print(format_info(message))
 
 def print_success(message):
@@ -58,15 +58,15 @@ def print_success(message):
     print(format_success(message))
 
 def print_warning(message):
-    """Prints a warning message with formatted output."""
+    """Prints a formatted warning message."""
     print(format_warning(message))
 
 def print_error(message):
-    """Print an error message with appropriate formatting."""
+    """Prints an error message with formatting."""
     print(format_error(message))
 
 def print_processing(file_path):
-    """Print a processing message for a specified file."""
+    """Prints a processing message for a specified file."""
     formatted_path = format_file_path(file_path)
     print(f"\n{format_highlight(f'Processing file: {formatted_path}')}")
 
