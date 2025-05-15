@@ -1,0 +1,11 @@
+<map id="penify_hook.jira_client.JiraClient.get_commit_context_from_issues" name="penify_hook.jira_client.JiraClient.get_commit_context_from_issues">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,179,125"/>
+<area shape="rect" id="Node000002" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html#aa967169a4b7970c67c0947b9ac56f746" title=" " alt="" coords="239,5,413,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,71,225,58,227,63,180,76"/>
+<area shape="rect" id="Node000003" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html#a00d0f9ae006313a21576362d26ac5ec8" title=" " alt="" coords="473,78,647,118"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="179,95,459,95,459,101,179,101"/>
+<area shape="rect" id="Node000004" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html#a65f6924819084b7c8d268956a784804a" title=" " alt="" coords="227,135,425,175"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,117,231,129,230,135,178,122"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="414,54,475,72,474,77,412,59"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="408,133,464,119,465,124,409,138"/>
+</map>
