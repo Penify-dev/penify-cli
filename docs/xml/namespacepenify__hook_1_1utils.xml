@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1utils" kind="namespace" language="Python">
+    <compoundname>penify_hook::utils</compoundname>
+    <innerclass refid="classpenify__hook_1_1utils_1_1GitRepoNotFoundError" prot="public">penify_hook::utils::GitRepoNotFoundError</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepenify__hook_1_1utils_1a0c0c1ed6b197038085c94a90ceedfb01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::utils.logger</definition>
+        <argsstring></argsstring>
+        <name>logger</name>
+        <qualifiedname>penify_hook.utils.logger</qualifiedname>
+        <initializer>=  logging.getLogger(__name__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" line="6" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1utils_1ae236f3c4c8bf5dcddbb92b4c2065eea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.utils.get_repo_details</definition>
+        <argsstring>(Repo repo)</argsstring>
+        <name>get_repo_details</name>
+        <qualifiedname>penify_hook.utils.get_repo_details</qualifiedname>
+        <param>
+          <type>Repo</type>
+          <declname>repo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Determine the details of a repository including its remote URL, hosting
+service, organization name, and repository name.
+
+This function extracts the remote URL from the given Git repository object and
+determines the hosting service (e.g., GitHub, Azure DevOps, Bitbucket, GitLab).
+It then parses the URL to extract the organization name and repository name. If
+the URL does not match any known hosting service pattern, it sets the hosting
+service as &quot;Unknown&quot;. The function handles exceptions that may occur during
+this process and logs an error message if needed.
+
+Args:
+    repo (Repo): A GitPython Repo object representing the local git repository.
+
+Returns:
+    dict: A dictionary containing the organization name, repository name, and hosting
+        service.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" line="13" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" bodystart="13" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.utils.recursive_search_git_folder</definition>
+        <argsstring>(folder_path)</argsstring>
+        <name>recursive_search_git_folder</name>
+        <qualifiedname>penify_hook.utils.recursive_search_git_folder</qualifiedname>
+        <param>
+          <type>folder_path</type>
+          <defname>folder_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Recursively searches for a .git folder starting from the given directory.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" line="78" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" bodystart="78" bodyend="88"/>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="97">penify_hook.commands.commit_commands.commit_code</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20" compoundref="config__commands_8py" startline="66" endline="94">penify_hook.commands.config_commands.get_penify_config</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" compoundref="config__commands_8py" startline="22" endline="62">penify_hook.commands.config_commands.load_env_files</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1auth__commands_1aa3956ca1749d4218ea1dc6e5b6218b24" compoundref="auth__commands_8py" startline="11" endline="89">penify_hook.commands.auth_commands.save_credentials</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4" compoundref="config__commands_8py" startline="167" endline="236">penify_hook.commands.config_commands.save_jira_config</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4" compoundref="config__commands_8py" startline="100" endline="166">penify_hook.commands.config_commands.save_llm_config</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1utils_1a4ec5335a4026c22a34a3a8ccf665a5f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.utils.find_git_parent</definition>
+        <argsstring>(path)</argsstring>
+        <name>find_git_parent</name>
+        <qualifiedname>penify_hook.utils.find_git_parent</qualifiedname>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Traverse up from the given path to find the nearest directory containing a .git
+subdirectory.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" line="89" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" bodystart="89" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

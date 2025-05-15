@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1commands_1_1commit__commands" kind="namespace" language="Python">
+    <compoundname>penify_hook::commands::commit_commands</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.commit_commands.commit_code</definition>
+        <argsstring>(api_url, token, message, open_terminal, generate_description, llm_model=None, llm_api_base=None, llm_api_key=None, jira_url=None, jira_user=None, jira_api_token=None)</argsstring>
+        <name>commit_code</name>
+        <qualifiedname>penify_hook.commands.commit_commands.commit_code</qualifiedname>
+        <param>
+          <type>api_url</type>
+          <defname>api_url</defname>
+        </param>
+        <param>
+          <type>token</type>
+          <defname>token</defname>
+        </param>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <param>
+          <type>open_terminal</type>
+          <defname>open_terminal</defname>
+        </param>
+        <param>
+          <type>generate_description</type>
+          <defname>generate_description</defname>
+        </param>
+        <param>
+          <type>llm_model</type>
+          <defname>llm_model</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>llm_api_base</type>
+          <defname>llm_api_base</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>llm_api_key</type>
+          <defname>llm_api_key</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>jira_url</type>
+          <defname>jira_url</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>jira_user</type>
+          <defname>jira_user</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>jira_api_token</type>
+          <defname>jira_api_token</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Enhance Git commits with AI-powered commit messages.
+
+This function allows for the generation of enhanced commit messages using
+natural language processing models and optionally integrates with JIRA for
+additional context. It processes the current Git folder to find relevant files
+and generates a detailed commit message based on the provided parameters.
+
+Args:
+    api_url (str): URL of the API endpoint.
+    token (str): Authentication token for the API.
+    message (str): Initial commit message provided by the user.
+    open_terminal (bool): Whether to open the terminal after committing.
+    generate_description (bool): Whether to generate a detailed description in the commit message.
+    llm_model (str?): The language model to use for generating the commit message. Defaults to None.
+    llm_api_base (str?): Base URL of the LLM API. Defaults to None.
+    llm_api_key (str?): API key for accessing the LLM service. Defaults to None.
+    jira_url (str?): URL of the JIRA instance. Defaults to None.
+    jira_user (str?): Username for authenticating with JIRA. Defaults to None.
+    jira_api_token (str?): API token for accessing JIRA. Defaults to None.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" line="8" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" bodystart="10" bodyend="97"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f" compoundref="ui__utils_8py" startline="64" endline="67">penify_hook.ui_utils.print_error</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" compoundref="ui__utils_8py" startline="52" endline="55">penify_hook.ui_utils.print_info</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa" compoundref="ui__utils_8py" startline="60" endline="63">penify_hook.ui_utils.print_warning</references>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="116" endline="147">penify_hook.commands.commit_commands.handle_commit</referencedby>
+        <referencedby refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a43c2ff3707124aa48e8eb581106b8691" compoundref="test__commit__commands_8py" startline="324" endline="358">tests.test_commit_commands.TestCommitCommands.test_commit_code_error_handling</referencedby>
+        <referencedby refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1af9c09013055ec39ddde86b487aefcf8b" compoundref="test__commit__commands_8py" startline="201" endline="260">tests.test_commit_commands.TestCommitCommands.test_commit_code_with_jira_client</referencedby>
+        <referencedby refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acea0d934ee0f2b914b0b893736e8fe4e" compoundref="test__commit__commands_8py" startline="270" endline="317">tests.test_commit_commands.TestCommitCommands.test_commit_code_with_jira_connection_failure</referencedby>
+        <referencedby refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acc4b1e4189792a3f7c11d2a745f479c0" compoundref="test__commit__commands_8py" startline="140" endline="190">tests.test_commit_commands.TestCommitCommands.test_commit_code_with_llm_client</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1commit__commands_1a8627583116eb78e31a4d3cdc16d2f15c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.commit_commands.setup_commit_parser</definition>
+        <argsstring>(parser)</argsstring>
+        <name>setup_commit_parser</name>
+        <qualifiedname>penify_hook.commands.commit_commands.setup_commit_parser</qualifiedname>
+        <param>
+          <type>parser</type>
+          <defname>parser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sets up an argument parser for generating smart commit messages.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" line="98" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" bodystart="98" bodyend="115"/>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</referencedby>
+        <referencedby refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a4d04b125e102190a768f65f1948f15bc" compoundref="test__commit__commands_8py" startline="359" endline="382">tests.test_commit_commands.TestCommitCommands.test_setup_commit_parser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.commit_commands.handle_commit</definition>
+        <argsstring>(args)</argsstring>
+        <name>handle_commit</name>
+        <qualifiedname>penify_hook.commands.commit_commands.handle_commit</qualifiedname>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handle commit functionality by processing arguments and invoking the
+appropriate commands.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" line="116" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" bodystart="116" bodyend="147"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="97">penify_hook.commands.commit_commands.commit_code</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" compoundref="config__commands_8py" startline="256" endline="274">penify_hook.commands.config_commands.get_jira_config</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" compoundref="config__commands_8py" startline="237" endline="255">penify_hook.commands.config_commands.get_llm_config</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" compoundref="ui__utils_8py" startline="52" endline="55">penify_hook.ui_utils.print_info</references>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</referencedby>
+        <referencedby refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1ac13e368262340af98b30fd8ebdac6597" compoundref="test__commit__commands_8py" startline="390" endline="435">tests.test_commit_commands.TestCommitCommands.test_handle_commit</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/commit_commands.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.4" xml:lang="en-US">
+  <compound refid="classpenify__hook_1_1api__client_1_1APIClient" kind="class"><name>penify_hook::api_client::APIClient</name>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" kind="variable"><name>api_url</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a5bb502603717946ad710b49ad9d95237" kind="variable"><name>AUTH_TOKEN</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a7d7e2cf42c54eb4f25adee96a09ee7b0" kind="variable"><name>BEARER_TOKEN</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ad9cb741a8baf2d13f845e25a36311086" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ac5aad61508c2cafdf6e88e6c7d6c82b3" kind="function"><name>send_file_for_docstring_generation</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce" kind="function"><name>generate_commit_summary</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a5d2b4a26b24352d951ea79ecc4ff3402" kind="function"><name>get_supported_file_types</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3" kind="function"><name>generate_commit_summary_with_llm</name></member>
+    <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ad15b790608e703c8c122aa2ead7dfa99" kind="function"><name>get_api_key</name></member>
+  </compound>
+  <compound refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer" kind="class"><name>penify_hook::base_analyzer::BaseAnalyzer</name>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1aa67c06dd12b1bafaeaee81c41dcb7e25" kind="variable"><name>folder_path</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a957e81a1ab561f6cecfbe999e7b85499" kind="variable"><name>repo_path</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a3a9ddfa1dfba81fe21214fe486389369" kind="variable"><name>repo</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a9cca3465b0cc00d78324b0a9eac1d7f5" kind="variable"><name>repo_details</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab702c0c3ba81d159d7c3bcd7ea2abba4" kind="variable"><name>relative_file_path</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2" kind="variable"><name>api_client</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a0cac0310ec635aa64a34857cf30ce1eb" kind="variable"><name>supported_file_types</name></member>
+    <member refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344" kind="function"><name>__init__</name></member>
+  </compound>
+  <compound refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook" kind="class"><name>penify_hook::commit_analyzer::CommitDocGenHook</name>
+    <member refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ad93360e31f2ec58a0d7c9f08b219028a" kind="variable"><name>llm_client</name></member>
+    <member refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1af127d86729e226d74dbeb095b008db3e" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a8496194276441fa2eb2fa014eaab9a37" kind="function"><name>get_summary</name></member>
+    <member refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a6370a03f7ed9175ef6f81e931a105ea9" kind="function"><name>run</name></member>
+    <member refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1adda13cc121d96342476ccf72b63a007f" kind="function"><name>process_jira_integration</name></member>
+    <member refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1ac999c5cbc852a7ec3b412ccb43c274ca" kind="function"><name>_amend_commit</name></member>
+  </compound>
+  <compound refid="classException" kind="class"><name>Exception</name>
+  </compound>
+  <compound refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook" kind="class"><name>penify_hook::file_analyzer::FileAnalyzerGenHook</name>
+    <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32" kind="variable"><name>file_path</name></member>
+    <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a190c473090b2a07e7cb43073a3211c4b" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" kind="function"><name>process_file</name></member>
+    <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a6ab39391dfb7686f2a2d21a702dd3073" kind="function"><name>print_processing</name></member>
+    <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook" kind="class"><name>penify_hook::folder_analyzer::FolderAnalyzerGenHook</name>
+    <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393" kind="variable"><name>dir_path</name></member>
+    <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a1bb0358140931d82c7616f12efe31821" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a70b845318fc7ac3b607daf26378e19ec" kind="function"><name>list_all_files_in_dir</name></member>
+    <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook" kind="class"><name>penify_hook::git_analyzer::GitDocGenHook</name>
+    <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a17549766100e91eb94b5f1a1d34bf481" kind="function"><name>get_modified_files_in_last_commit</name></member>
+    <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a974d2f51315ed6a1965a7fd7e2ced0cd" kind="function"><name>get_modified_lines</name></member>
+    <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85" kind="function"><name>process_file</name></member>
+    <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classpenify__hook_1_1utils_1_1GitRepoNotFoundError" kind="class"><name>penify_hook::utils::GitRepoNotFoundError</name>
+  </compound>
+  <compound refid="classpenify__hook_1_1jira__client_1_1JiraClient" kind="class"><name>penify_hook::jira_client::JiraClient</name>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a3c0cfecff02a75cb7001509a595b8197" kind="variable"><name>jira_url</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1ae56104d5aa7bda7bb26d169c4b46038c" kind="variable"><name>jira_user</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afc5c90e53b702f9fc27e2ee7d3f991b9" kind="variable"><name>jira_api_token</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" kind="variable"><name>jira_client</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a47efc1ec07389c960f2dfb37ba8c09f5" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" kind="function"><name>is_connected</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a093d6456fe053ef7a7862d5d6851910c" kind="function"><name>extract_issue_keys_from_branch</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1ad2823ad1d3baaedd38039913c3a97fd7" kind="function"><name>extract_issue_keys</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" kind="function"><name>get_issue_details</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" kind="function"><name>add_comment</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826" kind="function"><name>update_issue_status</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" kind="function"><name>format_commit_message_with_jira_info</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746" kind="function"><name>get_detailed_issue_context</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" kind="function"><name>get_commit_context_from_issues</name></member>
+    <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760" kind="function"><name>enhance_commit_message</name></member>
+  </compound>
+  <compound refid="classpenify__hook_1_1llm__client_1_1LLMClient" kind="class"><name>penify_hook::llm_client::LLMClient</name>
+    <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1abc2cb6b1d6d9b5dc16401ca078ec8c10" kind="variable"><name>model</name></member>
+    <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a76c2e9805f805624ab9c55a9f1f8d362" kind="variable"><name>_litellm</name></member>
+    <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a76d92354f585ab4bb291169f9f530764" kind="function"><name>__init__</name></member>
+    <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1ad6f06658ca922793f879474f2234518e" kind="function"><name>litellm</name></member>
+    <member refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000" kind="function"><name>generate_commit_summary</name></member>
+  </compound>
+  <compound refid="classtests_1_1test__commit__commands_1_1TestCommitCommands" kind="class"><name>tests::test_commit_commands::TestCommitCommands</name>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1abcd2354a2af4afe19e57877628d3acc2" kind="function"><name>mock_api_client</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a20e78370ff5bd6223cc1dd4323a86ea4" kind="function"><name>mock_llm_client</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a05adaa9a713ff1be657455d0667bc6be" kind="function"><name>mock_jira_client</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1aa9b25a4bf692b8736164695072a398f6" kind="function"><name>mock_commit_doc_gen</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a2842f456a8c0f1bf0f4def17c183c04e" kind="function"><name>mock_git_folder_search</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1afafbae3c9aeb0e50a75996256c02c8be" kind="function"><name>mock_print_functions</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acc4b1e4189792a3f7c11d2a745f479c0" kind="function"><name>test_commit_code_with_llm_client</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1af9c09013055ec39ddde86b487aefcf8b" kind="function"><name>test_commit_code_with_jira_client</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1acea0d934ee0f2b914b0b893736e8fe4e" kind="function"><name>test_commit_code_with_jira_connection_failure</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a43c2ff3707124aa48e8eb581106b8691" kind="function"><name>test_commit_code_error_handling</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1a4d04b125e102190a768f65f1948f15bc" kind="function"><name>test_setup_commit_parser</name></member>
+    <member refid="classtests_1_1test__commit__commands_1_1TestCommitCommands_1ac13e368262340af98b30fd8ebdac6597" kind="function"><name>test_handle_commit</name></member>
+  </compound>
+  <compound refid="classtests_1_1test__config__commands_1_1TestConfigCommands" kind="class"><name>tests::test_config_commands::TestConfigCommands</name>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a2e8162082bcdd5652bb37bdb14cf453a" kind="function"><name>test_get_penify_config_existing_dir</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a33d4760eee3b67e1cde3aed755ebb948" kind="function"><name>test_get_penify_config_new_dir</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1adf9f2233a3f4cc5725b9d4f05758b167" kind="function"><name>test_get_llm_config_exists</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1abd12f028b89aa9cd1152c0b9ece5d3cd" kind="function"><name>test_get_llm_config_empty</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a473984d31452b56acd6ce4011a1248bd" kind="function"><name>test_get_llm_config_invalid_json</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1aee37b97432821d19758c6325d4c74bcf" kind="function"><name>test_get_jira_config_exists</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1acd8df8219441b9e9871b903a681400d9" kind="function"><name>test_save_llm_config_success</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a73a264dfb21e16003e095b79f6eab2ac" kind="function"><name>test_save_llm_config_failure</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1af8d62310da2d768e21770f8f01ff5375" kind="function"><name>test_save_jira_config_success</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a3355f7d313bebaa71694387cf2bc5232" kind="function"><name>test_get_token_from_env</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a6c0207be563c3de59a6d16277805114c" kind="function"><name>test_get_token_from_config</name></member>
+    <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a400ca5d9fcdc159714e8df54920f9436" kind="function"><name>test_get_token_not_found</name></member>
+  </compound>
+  <compound refid="classtests_1_1test__web__config_1_1TestWebConfig" kind="class"><name>tests::test_web_config::TestWebConfig</name>
+    <member refid="classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35" kind="function"><name>test_config_llm_web_server_setup</name></member>
+    <member refid="classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a" kind="function"><name>test_config_jira_web_server_setup</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook" kind="namespace"><name>penify_hook</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1api__client" kind="namespace"><name>penify_hook::api_client</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1base__analyzer" kind="namespace"><name>penify_hook::base_analyzer</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commands" kind="namespace"><name>penify_hook::commands</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commands_1_1auth__commands" kind="namespace"><name>penify_hook::commands::auth_commands</name>
+    <member refid="namespacepenify__hook_1_1commands_1_1auth__commands_1aa3956ca1749d4218ea1dc6e5b6218b24" kind="function"><name>save_credentials</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655" kind="function"><name>login</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commands_1_1commit__commands" kind="namespace"><name>penify_hook::commands::commit_commands</name>
+    <member refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" kind="function"><name>commit_code</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a8627583116eb78e31a4d3cdc16d2f15c" kind="function"><name>setup_commit_parser</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" kind="function"><name>handle_commit</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commands_1_1config__commands" kind="namespace"><name>penify_hook::commands::config_commands</name>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a152642ab83cf6219b604bda6122aba67" kind="variable"><name>DOTENV_AVAILABLE</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a4b202072a3a3b8515c9c254622e9c880" kind="variable"><name>path</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" kind="function"><name>load_env_files</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20" kind="function"><name>get_penify_config</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87" kind="function"><name>get_env_var_or_default</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4" kind="function"><name>save_llm_config</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4" kind="function"><name>save_jira_config</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" kind="function"><name>get_llm_config</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" kind="function"><name>get_jira_config</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c" kind="function"><name>config_llm_web</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" kind="function"><name>config_jira_web</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" kind="function"><name>get_token</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commands_1_1doc__commands" kind="namespace"><name>penify_hook::commands::doc_commands</name>
+    <member refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a3e42540047da37565afffeaf106cb948" kind="variable"><name>docgen_description</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a4daac68bc563432bf25c85dc78081a25" kind="function"><name>generate_doc</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1doc__commands_1acc7f4ead1b11951d885fa5c151c2cbe0" kind="function"><name>setup_docgen_parser</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704" kind="function"><name>handle_docgen</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commands_1_1hook__commands" kind="namespace"><name>penify_hook::commands::hook_commands</name>
+    <member refid="namespacepenify__hook_1_1commands_1_1hook__commands_1ae82fd46e5a9219da1478b0476b8214b1" kind="variable"><name>HOOK_FILENAME</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1hook__commands_1a6a45aad71c8d32ce11a6dff8cee8bee7" kind="variable"><name>HOOK_TEMPLATE</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1hook__commands_1adff8f5d3bf1c3795974a391ee95b72b2" kind="function"><name>install_git_hook</name></member>
+    <member refid="namespacepenify__hook_1_1commands_1_1hook__commands_1a81543eb5fa835fd1237f24e8bce6201d" kind="function"><name>uninstall_git_hook</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1commit__analyzer" kind="namespace"><name>penify_hook::commit_analyzer</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1config__command" kind="namespace"><name>penify_hook::config_command</name>
+    <member refid="namespacepenify__hook_1_1config__command_1a4f3eb92164a69df1446d745f8a09285e" kind="function"><name>setup_config_parser</name></member>
+    <member refid="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" kind="function"><name>handle_config</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1constants" kind="namespace"><name>penify_hook::constants</name>
+    <member refid="namespacepenify__hook_1_1constants_1af198b5d1fc2f44657a2061aa324af3e0" kind="variable"><name>API_URL</name></member>
+    <member refid="namespacepenify__hook_1_1constants_1a316c5a606e4440fb8224c6544c3a15f0" kind="variable"><name>DASHBOARD_URL</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1file__analyzer" kind="namespace"><name>penify_hook::file_analyzer</name>
+    <member refid="namespacepenify__hook_1_1file__analyzer_1af419a4965f079d58cac5a5281ddb1828" kind="variable"><name>logger</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1folder__analyzer" kind="namespace"><name>penify_hook::folder_analyzer</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1git__analyzer" kind="namespace"><name>penify_hook::git_analyzer</name>
+    <member refid="namespacepenify__hook_1_1git__analyzer_1ac4ce143fdca789a79c66852c37d7363a" kind="variable"><name>logger</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1jira__client" kind="namespace"><name>penify_hook::jira_client</name>
+    <member refid="namespacepenify__hook_1_1jira__client_1a5593ea3415081eca1eea92e4c1ad1aa2" kind="variable"><name>JIRA_AVAILABLE</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1llm__client" kind="namespace"><name>penify_hook::llm_client</name>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1login__command" kind="namespace"><name>penify_hook::login_command</name>
+    <member refid="namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a" kind="function"><name>setup_login_parser</name></member>
+    <member refid="namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd" kind="function"><name>handle_login</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1main" kind="namespace"><name>penify_hook::main</name>
+    <member refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1ui__utils" kind="namespace"><name>penify_hook::ui_utils</name>
+    <member refid="namespacepenify__hook_1_1ui__utils_1ab560cfade398ac1e0bd47befb52d9f71" kind="variable"><name>autoreset</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a9fdcb180915696f5d217032a62c3857c" kind="variable"><name>INFO_COLOR</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a22c450c5e2b5394618ecf9b636560df4" kind="variable"><name>SUCCESS_COLOR</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a177bc9b44157844c999e0c1c2c6936ff" kind="variable"><name>WARNING_COLOR</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a4ab4e61dfab7973c87bef59c6e1977fe" kind="variable"><name>ERROR_COLOR</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1aba01b8259f0d66cdc2b4a1b58f9736fc" kind="variable"><name>HIGHLIGHT_COLOR</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1aca0fcee81606857497520ae4290bc9f5" kind="variable"><name>NEUTRAL_COLOR</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a3c6fe4bd17c1a5fe76587225ae4beb3e" kind="variable"><name>SUCCESS_SYMBOL</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a6eaea98f1a8cbe16a181647da2fc0a16" kind="variable"><name>WARNING_SYMBOL</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1aa564e1e1d016c8227d076542e74cecb0" kind="variable"><name>ERROR_SYMBOL</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a3b208e2750a38dd09467a73e4afd9756" kind="variable"><name>PROCESSING_SYMBOL</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6" kind="function"><name>format_info</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a532cdb4de7c679ce8b29c3e9116c4776" kind="function"><name>format_success</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a0a6fd2613c6fe053b6e4356cd9e5cda2" kind="function"><name>format_warning</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a4dd934568897433fa73f9cc182ac4a3e" kind="function"><name>format_error</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1adcb97fc26b405d2b9cdf5eb7aecc5452" kind="function"><name>format_highlight</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4" kind="function"><name>format_file_path</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" kind="function"><name>print_info</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a" kind="function"><name>print_success</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa" kind="function"><name>print_warning</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f" kind="function"><name>print_error</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115" kind="function"><name>print_processing</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c" kind="function"><name>print_status</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c" kind="function"><name>create_progress_bar</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef" kind="function"><name>create_stage_progress_bar</name></member>
+    <member refid="namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d" kind="function"><name>update_stage</name></member>
+  </compound>
+  <compound refid="namespacepenify__hook_1_1utils" kind="namespace"><name>penify_hook::utils</name>
+    <member refid="namespacepenify__hook_1_1utils_1a0c0c1ed6b197038085c94a90ceedfb01" kind="variable"><name>logger</name></member>
+    <member refid="namespacepenify__hook_1_1utils_1ae236f3c4c8bf5dcddbb92b4c2065eea3" kind="function"><name>get_repo_details</name></member>
+    <member refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" kind="function"><name>recursive_search_git_folder</name></member>
+    <member refid="namespacepenify__hook_1_1utils_1a4ec5335a4026c22a34a3a8ccf665a5f2" kind="function"><name>find_git_parent</name></member>
+  </compound>
+  <compound refid="namespacesetup" kind="namespace"><name>setup</name>
+    <member refid="namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f" kind="variable"><name>name</name></member>
+    <member refid="namespacesetup_1a2aa722b36a933088812b50ea79b97a5c" kind="variable"><name>version</name></member>
+    <member refid="namespacesetup_1aff2375a361fd5865c77bd9aa093be747" kind="variable"><name>packages</name></member>
+    <member refid="namespacesetup_1abead4f26b530856f858f0d44c7cf2588" kind="variable"><name>install_requires</name></member>
+    <member refid="namespacesetup_1ada7058afc98897f073d3f3b8b9157059" kind="variable"><name>entry_points</name></member>
+    <member refid="namespacesetup_1a3a57a4772d418a06835249cbade0d86a" kind="variable"><name>author</name></member>
+    <member refid="namespacesetup_1a5b08034343aa2be607722a8b315f3625" kind="variable"><name>author_email</name></member>
+    <member refid="namespacesetup_1aedf461ec52a946bda975938ba0b93ec0" kind="variable"><name>description</name></member>
+    <member refid="namespacesetup_1a4cda9dbfb952875376a0749fe08a5bde" kind="variable"><name>long_description</name></member>
+    <member refid="namespacesetup_1a3796ea10c998699d07d391414ff5d720" kind="variable"><name>long_description_content_type</name></member>
+    <member refid="namespacesetup_1afc13124aa5c0124e84e1d965e3f4b0fb" kind="variable"><name>url</name></member>
+    <member refid="namespacesetup_1abe96a9c38c1c61f9f0fdb002c482f785" kind="variable"><name>classifiers</name></member>
+    <member refid="namespacesetup_1aa7ca7bc9391b217e81efeb03689d8dbf" kind="variable"><name>python_requires</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespacetests" kind="namespace"><name>tests</name>
+  </compound>
+  <compound refid="namespacetests_1_1conftest" kind="namespace"><name>tests::conftest</name>
+  </compound>
+  <compound refid="namespacetests_1_1test__commit__commands" kind="namespace"><name>tests::test_commit_commands</name>
+  </compound>
+  <compound refid="namespacetests_1_1test__config__commands" kind="namespace"><name>tests::test_config_commands</name>
+  </compound>
+  <compound refid="namespacetests_1_1test__doc__commands" kind="namespace"><name>tests::test_doc_commands</name>
+    <member refid="namespacetests_1_1test__doc__commands_1a806110833eb0aad547156faf014b31d8" kind="function"><name>test_generate_doc_no_location</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1a0e74c920f258f442914771164fe26b45" kind="function"><name>test_generate_doc_file_location</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1a4bb75610e40d94d42bc169b25403c186" kind="function"><name>test_generate_doc_folder_location</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1aec76cc25c23476794234cdadbcaef0c0" kind="function"><name>test_generate_doc_error_handling</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1a0f27751d0ba2acfe40ef7e85bccf47d7" kind="function"><name>test_setup_docgen_parser</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1ab74688baa8c9b5ba302c2877a9789d05" kind="function"><name>test_handle_docgen_install_hook</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1a1458af9ad0128c3ca1263b552fd5e482" kind="function"><name>test_handle_docgen_uninstall_hook</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1ab158ffa48469b6c097a7a55fcb20c21a" kind="function"><name>test_handle_docgen_generate</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1af9b01e5fc89255cac96747fa081c442c" kind="function"><name>test_handle_docgen_no_token</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1a335e7fd4912192c7276cf31bbebc6eb0" kind="function"><name>test_generate_doc_with_file_exception</name></member>
+    <member refid="namespacetests_1_1test__doc__commands_1a64165ddfdb3071a88422f080f0e529a3" kind="function"><name>test_generate_doc_with_folder_exception</name></member>
+  </compound>
+  <compound refid="namespacetests_1_1test__web__config" kind="namespace"><name>tests::test_web_config</name>
+  </compound>
+  <compound refid="commit-commands_8md" kind="file"><name>commit-commands.md</name>
+  </compound>
+  <compound refid="config-commands_8md" kind="file"><name>config-commands.md</name>
+  </compound>
+  <compound refid="detailed-usage_8md" kind="file"><name>detailed-usage.md</name>
+  </compound>
+  <compound refid="doc__commands_8md" kind="file"><name>doc_commands.md</name>
+  </compound>
+  <compound refid="example-workflows_8md" kind="file"><name>example-workflows.md</name>
+  </compound>
+  <compound refid="penify-cli-documentation_8md" kind="file"><name>penify-cli-documentation.md</name>
+  </compound>
+  <compound refid="api__client_8py" kind="file"><name>api_client.py</name>
+  </compound>
+  <compound refid="base__analyzer_8py" kind="file"><name>base_analyzer.py</name>
+  </compound>
+  <compound refid="penify__hook_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="penify__hook_2commands_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="tests_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="auth__commands_8py" kind="file"><name>auth_commands.py</name>
+  </compound>
+  <compound refid="commit__commands_8py" kind="file"><name>commit_commands.py</name>
+  </compound>
+  <compound refid="config__commands_8py" kind="file"><name>config_commands.py</name>
+  </compound>
+  <compound refid="doc__commands_8py" kind="file"><name>doc_commands.py</name>
+  </compound>
+  <compound refid="hook__commands_8py" kind="file"><name>hook_commands.py</name>
+  </compound>
+  <compound refid="commit__analyzer_8py" kind="file"><name>commit_analyzer.py</name>
+  </compound>
+  <compound refid="config__command_8py" kind="file"><name>config_command.py</name>
+  </compound>
+  <compound refid="constants_8py" kind="file"><name>constants.py</name>
+  </compound>
+  <compound refid="file__analyzer_8py" kind="file"><name>file_analyzer.py</name>
+  </compound>
+  <compound refid="folder__analyzer_8py" kind="file"><name>folder_analyzer.py</name>
+  </compound>
+  <compound refid="git__analyzer_8py" kind="file"><name>git_analyzer.py</name>
+  </compound>
+  <compound refid="jira__client_8py" kind="file"><name>jira_client.py</name>
+  </compound>
+  <compound refid="llm__client_8py" kind="file"><name>llm_client.py</name>
+  </compound>
+  <compound refid="login__command_8py" kind="file"><name>login_command.py</name>
+  </compound>
+  <compound refid="main_8py" kind="file"><name>main.py</name>
+  </compound>
+  <compound refid="ui__utils_8py" kind="file"><name>ui_utils.py</name>
+  </compound>
+  <compound refid="utils_8py" kind="file"><name>utils.py</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="setup_8py" kind="file"><name>setup.py</name>
+  </compound>
+  <compound refid="conftest_8py" kind="file"><name>conftest.py</name>
+  </compound>
+  <compound refid="test__commit__commands_8py" kind="file"><name>test_commit_commands.py</name>
+  </compound>
+  <compound refid="test__config__commands_8py" kind="file"><name>test_config_commands.py</name>
+  </compound>
+  <compound refid="test__doc__commands_8py" kind="file"><name>test_doc_commands.py</name>
+  </compound>
+  <compound refid="test__web__config_8py" kind="file"><name>test_web_config.py</name>
+  </compound>
+  <compound refid="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands" kind="page"><name>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands</name>
+  </compound>
+  <compound refid="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands" kind="page"><name>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands</name>
+  </compound>
+  <compound refid="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage" kind="page"><name>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage</name>
+  </compound>
+  <compound refid="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands" kind="page"><name>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands</name>
+  </compound>
+  <compound refid="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows" kind="page"><name>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows</name>
+  </compound>
+  <compound refid="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README" kind="page"><name>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README</name>
+  </compound>
+  <compound refid="dir_624fa2a8bce97f0444ac5cca335d4e23" kind="dir"><name>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands</name>
+  </compound>
+  <compound refid="dir_1648a057408aae8db85b8e3797335623" kind="dir"><name>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs</name>
+  </compound>
+  <compound refid="dir_b3b22d2ab7966b65f6b237e3231b41be" kind="dir"><name>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli</name>
+  </compound>
+  <compound refid="dir_f88c3381c1861b3f7ca1f3d63cf244b5" kind="dir"><name>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook</name>
+  </compound>
+  <compound refid="dir_063e2d5fe58a131099a7fe4200cca78c" kind="dir"><name>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::git_analyzer::GitDocGenHook</compoundname>
+    <basecompoundref refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer" prot="public" virt="non-virtual">penify_hook.base_analyzer.BaseAnalyzer</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.git_analyzer.GitDocGenHook.__init__</definition>
+        <argsstring>(self, str repo_path, APIClient api_client)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>penify_hook.git_analyzer.GitDocGenHook.__init__</qualifiedname>
+        <reimplements refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>repo_path</declname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1api__client_1_1APIClient" kindref="compound">APIClient</ref></type>
+          <declname>api_client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" line="20" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" bodystart="20" bodyend="22"/>
+        <references refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c" compoundref="git__analyzer_8py" startline="20" endline="22">penify_hook.git_analyzer.GitDocGenHook.__init__</references>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c" compoundref="git__analyzer_8py" startline="20" endline="22">penify_hook.git_analyzer.GitDocGenHook.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a17549766100e91eb94b5f1a1d34bf481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.git_analyzer.GitDocGenHook.get_modified_files_in_last_commit</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_modified_files_in_last_commit</name>
+        <qualifiedname>penify_hook.git_analyzer.GitDocGenHook.get_modified_files_in_last_commit</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the list of files modified in the last commit.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" line="23" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" bodystart="23" bodyend="31"/>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a3a9ddfa1dfba81fe21214fe486389369" compoundref="base__analyzer_8py" startline="12">penify_hook.base_analyzer.BaseAnalyzer.repo</references>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a974d2f51315ed6a1965a7fd7e2ced0cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.git_analyzer.GitDocGenHook.get_modified_lines</definition>
+        <argsstring>(self, diff_text)</argsstring>
+        <name>get_modified_lines</name>
+        <qualifiedname>penify_hook.git_analyzer.GitDocGenHook.get_modified_lines</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>diff_text</type>
+          <defname>diff_text</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extract modified line numbers from a diff text.
+
+This function processes a diff text to identify and extract the line numbers
+that have been modified. It distinguishes between added and deleted lines and
+keeps track of the current line number as it parses through the diff. The
+function handles hunk headers and ensures that any deletions at the end of the
+file are also captured.
+
+Args:
+    diff_text (str): A string containing the diff text to be processed.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" line="32" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" bodystart="32" bodyend="77"/>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85" compoundref="git__analyzer_8py" startline="78" endline="133">penify_hook.git_analyzer.GitDocGenHook.process_file</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.git_analyzer.GitDocGenHook.process_file</definition>
+        <argsstring>(self, file_path)</argsstring>
+        <name>process_file</name>
+        <qualifiedname>penify_hook.git_analyzer.GitDocGenHook.process_file</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>file_path</type>
+          <defname>file_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Processes a file by checking its type, reading its content, and sending it to
+an API.
+
+This method constructs the absolute path of the specified file and verifies if
+the file has a valid extension. If the file type is supported, it reads the
+content of the file and retrieves the differences from the last commit in the
+repository. If changes are detected, it sends the file content along with the
+modified lines to an API for further processing. If the API response indicates
+no changes, the original file will not be overwritten.
+
+Args:
+    file_path (str): The relative path to the file to be processed.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" line="78" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" bodystart="78" bodyend="133"/>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2" compoundref="base__analyzer_8py" startline="19">penify_hook.base_analyzer.BaseAnalyzer.api_client</references>
+        <references refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a974d2f51315ed6a1965a7fd7e2ced0cd" compoundref="git__analyzer_8py" startline="32" endline="77">penify_hook.git_analyzer.GitDocGenHook.get_modified_lines</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a3a9ddfa1dfba81fe21214fe486389369" compoundref="base__analyzer_8py" startline="12">penify_hook.base_analyzer.BaseAnalyzer.repo</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a9cca3465b0cc00d78324b0a9eac1d7f5" compoundref="base__analyzer_8py" startline="13">penify_hook.base_analyzer.BaseAnalyzer.repo_details</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a957e81a1ab561f6cecfbe999e7b85499" compoundref="base__analyzer_8py" startline="11">penify_hook.base_analyzer.BaseAnalyzer.repo_path</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a0cac0310ec635aa64a34857cf30ce1eb" compoundref="base__analyzer_8py" startline="20">penify_hook.base_analyzer.BaseAnalyzer.supported_file_types</references>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.git_analyzer.GitDocGenHook.run</definition>
+        <argsstring>(self)</argsstring>
+        <name>run</name>
+        <qualifiedname>penify_hook.git_analyzer.GitDocGenHook.run</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Run the post-commit hook.
+
+This method retrieves the list of modified files from the last commit and
+processes each file. It stages any files that have been modified during
+processing and creates an auto-commit if changes were made. A progress bar is
+displayed to indicate the processing status of each file. The method handles
+any exceptions that occur during file processing, printing an error message for
+each file that fails to process. If any modifications are made to the files, an
+auto-commit is created to save those changes.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" line="134" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" bodystart="134" bodyend="178"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c" compoundref="ui__utils_8py" startline="84" endline="93">penify_hook.ui_utils.create_progress_bar</references>
+        <references refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a17549766100e91eb94b5f1a1d34bf481" compoundref="git__analyzer_8py" startline="23" endline="31">penify_hook.git_analyzer.GitDocGenHook.get_modified_files_in_last_commit</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" compoundref="ui__utils_8py" startline="52" endline="55">penify_hook.ui_utils.print_info</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115" compoundref="ui__utils_8py" startline="68" endline="72">penify_hook.ui_utils.print_processing</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c" compoundref="ui__utils_8py" startline="73" endline="83">penify_hook.ui_utils.print_status</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a" compoundref="ui__utils_8py" startline="56" endline="59">penify_hook.ui_utils.print_success</references>
+        <references refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85" compoundref="git__analyzer_8py" startline="78" endline="133">penify_hook.git_analyzer.GitDocGenHook.process_file</references>
+        <references refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" compoundref="file__analyzer_8py" startline="27" endline="100">penify_hook.file_analyzer.FileAnalyzerGenHook.process_file</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a3a9ddfa1dfba81fe21214fe486389369" compoundref="base__analyzer_8py" startline="12">penify_hook.base_analyzer.BaseAnalyzer.repo</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>penify_hook.git_analyzer.GitDocGenHook</label>
+        <link refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>penify_hook.base_analyzer.BaseAnalyzer</label>
+        <link refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>penify_hook.git_analyzer.GitDocGenHook</label>
+        <link refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>penify_hook.base_analyzer.BaseAnalyzer</label>
+        <link refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" line="19" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/git_analyzer.py" bodystart="19" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a92275fddb43dbef6dfdb6c1ed6e96d0c" prot="public" virt="non-virtual"><scope>penify_hook::git_analyzer::GitDocGenHook</scope><name>__init__</name></member>
+      <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a17549766100e91eb94b5f1a1d34bf481" prot="public" virt="non-virtual"><scope>penify_hook::git_analyzer::GitDocGenHook</scope><name>get_modified_files_in_last_commit</name></member>
+      <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a974d2f51315ed6a1965a7fd7e2ced0cd" prot="public" virt="non-virtual"><scope>penify_hook::git_analyzer::GitDocGenHook</scope><name>get_modified_lines</name></member>
+      <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85" prot="public" virt="non-virtual"><scope>penify_hook::git_analyzer::GitDocGenHook</scope><name>process_file</name></member>
+      <member refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" prot="public" virt="non-virtual"><scope>penify_hook::git_analyzer::GitDocGenHook</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
