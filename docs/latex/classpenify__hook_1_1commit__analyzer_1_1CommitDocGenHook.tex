@@ -1,0 +1,209 @@
+\hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook}{}\doxysection{penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook Class Reference}
+\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook}\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+
+
+Inheritance diagram for penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_a957e81a1ab561f6cecfbe999e7b85499}{repo\+\_\+path}}, \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient}{APIClient}} \mbox{\hyperlink{classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_a81e9c55709205aaf4ebbe2b41683baf2}{api\+\_\+client}}, \mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ad93360e31f2ec58a0d7c9f08b219028a}{llm\+\_\+client}}=None, jira\+\_\+client=None)
+\item 
+dict \mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37}{get\+\_\+summary}} (self, str instruction, bool generate\+\_\+description)
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a6370a03f7ed9175ef6f81e931a105ea9}{run}} (self, Optional\mbox{[}str\mbox{]} msg, bool edit\+\_\+commit\+\_\+message, bool generate\+\_\+description)
+\item 
+tuple \mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f}{process\+\_\+jira\+\_\+integration}} (self, str title, str description, str msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ad93360e31f2ec58a0d7c9f08b219028a}{llm\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ac999c5cbc852a7ec3b412ccb43c274ca}{\+\_\+amend\+\_\+commit}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e}\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e}} 
+\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{repo\+\_\+path,  }\item[{\mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient}{APIClient}}}]{api\+\_\+client,  }\item[{}]{llm\+\_\+client = {\ttfamily None},  }\item[{}]{jira\+\_\+client = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_ab1296a3d1e9070d891801876b66f7344}{penify\+\_\+hook.\+base\+\_\+analyzer.\+Base\+Analyzer}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_af127d86729e226d74dbeb095b008db3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ac999c5cbc852a7ec3b412ccb43c274ca}\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ac999c5cbc852a7ec3b412ccb43c274ca}} 
+\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}!\_amend\_commit@{\_amend\_commit}}
+\index{\_amend\_commit@{\_amend\_commit}!penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+\doxysubsubsection{\texorpdfstring{\_amend\_commit()}{\_amend\_commit()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook.\+\_\+amend\+\_\+commit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}Amends the last commit message in the repository.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ac999c5cbc852a7ec3b412ccb43c274ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37}\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37}} 
+\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}!get\_summary@{get\_summary}}
+\index{get\_summary@{get\_summary}!penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+\doxysubsubsection{\texorpdfstring{get\_summary()}{get\_summary()}}
+{\footnotesize\ttfamily  dict penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook.\+get\+\_\+summary (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{instruction,  }\item[{bool}]{generate\+\_\+description }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a summary for the commit based on the staged changes.
+
+This function retrieves the differences of the staged changes in the repository
+and generates a commit summary using the provided instruction. If there are no
+changes staged for commit, an exception is raised. If a JIRA client is
+connected, it will attempt to extract issue keys from the current branch and
+use them to fetch context. The summary can be generated either with a Language
+Model (LLM) client or through the API client.
+
+Args:
+    instruction (str): A string containing instructions for generating the commit summary.
+    generate_description (bool): Whether to include detailed descriptions in the summary.
+
+Raises:
+    ValueError: If there are no changes staged for commit.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a8496194276441fa2eb2fa014eaab9a37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f}\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f}} 
+\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}!process\_jira\_integration@{process\_jira\_integration}}
+\index{process\_jira\_integration@{process\_jira\_integration}!penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+\doxysubsubsection{\texorpdfstring{process\_jira\_integration()}{process\_jira\_integration()}}
+{\footnotesize\ttfamily  tuple penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook.\+process\+\_\+jira\+\_\+integration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{title,  }\item[{str}]{description,  }\item[{str}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Process JIRA integration by extracting issue keys from commit message
+components and branch name.
+
+This function looks for JIRA issue keys in the provided commit title,
+description, original user message, and the active branch name. It uses these
+keys to update the commit message with JIRA information and adds comments to
+the corresponding JIRA issues. If no keys are found, it logs a warning.
+
+Args:
+    title (str): The generated commit title.
+    description (str): The generated commit description.
+    msg (str): The original user message that might contain JIRA references.
+
+Returns:
+    tuple: A tuple containing the updated commit title and description with included JIRA
+        information.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_adda13cc121d96342476ccf72b63a007f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a6370a03f7ed9175ef6f81e931a105ea9}\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a6370a03f7ed9175ef6f81e931a105ea9}} 
+\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}!run@{run}}
+\index{run@{run}!penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}str\mbox{]}}]{msg,  }\item[{bool}]{edit\+\_\+commit\+\_\+message,  }\item[{bool}]{generate\+\_\+description }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the post-commit hook.
+
+This method processes the modified files from the last commit, stages them, and
+creates an auto-commit with an optional message. It also handles JIRA
+integration if available. If there is an error generating the commit summary,
+an exception is raised.
+
+Args:
+    msg (Optional[str]): An optional message to include in the commit.
+    edit_commit_message (bool): A flag indicating whether to open the git commit
+        edit terminal after committing.
+    generate_description (bool): A flag indicating whether to include a description
+        in the commit message.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_a6370a03f7ed9175ef6f81e931a105ea9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ad93360e31f2ec58a0d7c9f08b219028a}\label{classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_ad93360e31f2ec58a0d7c9f08b219028a}} 
+\index{penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}!llm\_client@{llm\_client}}
+\index{llm\_client@{llm\_client}!penify\_hook.commit\_analyzer.CommitDocGenHook@{penify\_hook.commit\_analyzer.CommitDocGenHook}}
+\doxysubsubsection{\texorpdfstring{llm\_client}{llm\_client}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+commit\+\_\+analyzer.\+Commit\+Doc\+Gen\+Hook.\+llm\+\_\+client}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/penify\+\_\+hook/\mbox{\hyperlink{commit__analyzer_8py}{commit\+\_\+analyzer.\+py}}\end{DoxyCompactItemize}

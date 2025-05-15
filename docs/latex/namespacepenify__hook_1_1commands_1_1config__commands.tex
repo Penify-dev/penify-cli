@@ -1,0 +1,314 @@
+\hypertarget{namespacepenify__hook_1_1commands_1_1config__commands}{}\doxysection{penify\+\_\+hook.\+commands.\+config\+\_\+commands Namespace Reference}
+\label{namespacepenify__hook_1_1commands_1_1config__commands}\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae}{load\+\_\+env\+\_\+files}} ()
+\item 
+Path \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20}{get\+\_\+penify\+\_\+config}} ()
+\item 
+Any \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a3caf2b062dd33b1f1d7ddc7224f0ff87}{get\+\_\+env\+\_\+var\+\_\+or\+\_\+default}} (str env\+\_\+var, Any default=None)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4}{save\+\_\+llm\+\_\+config}} (model, api\+\_\+base, api\+\_\+key)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4}{save\+\_\+jira\+\_\+config}} (url, username, api\+\_\+token)
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0}{get\+\_\+llm\+\_\+config}} ()
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2}{get\+\_\+jira\+\_\+config}} ()
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a185dfc34a655ed80e6c95939b6f3c35c}{config\+\_\+llm\+\_\+web}} ()
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06}{config\+\_\+jira\+\_\+web}} ()
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812}{get\+\_\+token}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a152642ab83cf6219b604bda6122aba67}{DOTENV\+\_\+\+AVAILABLE}} = True
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1config__commands_a4b202072a3a3b8515c9c254622e9c880}{path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06}\label{namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!config\_jira\_web@{config\_jira\_web}}
+\index{config\_jira\_web@{config\_jira\_web}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{config\_jira\_web()}{config\_jira\_web()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+config\+\_\+jira\+\_\+web (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Starts a web server for configuring JIRA settings.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_af115198ea5d6808ccb98733957f50b06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a185dfc34a655ed80e6c95939b6f3c35c}\label{namespacepenify__hook_1_1commands_1_1config__commands_a185dfc34a655ed80e6c95939b6f3c35c}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!config\_llm\_web@{config\_llm\_web}}
+\index{config\_llm\_web@{config\_llm\_web}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{config\_llm\_web()}{config\_llm\_web()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+config\+\_\+llm\+\_\+web (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Starts an HTTP server for configuring LLM settings via a web interface.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a185dfc34a655ed80e6c95939b6f3c35c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a3caf2b062dd33b1f1d7ddc7224f0ff87}\label{namespacepenify__hook_1_1commands_1_1config__commands_a3caf2b062dd33b1f1d7ddc7224f0ff87}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!get\_env\_var\_or\_default@{get\_env\_var\_or\_default}}
+\index{get\_env\_var\_or\_default@{get\_env\_var\_or\_default}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{get\_env\_var\_or\_default()}{get\_env\_var\_or\_default()}}
+{\footnotesize\ttfamily  Any penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+get\+\_\+env\+\_\+var\+\_\+or\+\_\+default (\begin{DoxyParamCaption}\item[{str}]{env\+\_\+var,  }\item[{Any }]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get environment variable or return default value.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a3caf2b062dd33b1f1d7ddc7224f0ff87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2}\label{namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!get\_jira\_config@{get\_jira\_config}}
+\index{get\_jira\_config@{get\_jira\_config}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{get\_jira\_config()}{get\_jira\_config()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+get\+\_\+jira\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve JIRA configuration from environment variables.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a15bf3685c4dcb5c15ba6a4055e484cf2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0}\label{namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!get\_llm\_config@{get\_llm\_config}}
+\index{get\_llm\_config@{get\_llm\_config}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{get\_llm\_config()}{get\_llm\_config()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+get\+\_\+llm\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve LLM configuration from environment variables.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a6492bc8e7df6e38bb06ad05e572d4cc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20}\label{namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!get\_penify\_config@{get\_penify\_config}}
+\index{get\_penify\_config@{get\_penify\_config}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{get\_penify\_config()}{get\_penify\_config()}}
+{\footnotesize\ttfamily  Path penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+get\+\_\+penify\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the path to the `config.json` file within the `.penify` directory,
+creating it if necessary.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a6559a82d0bf727703d550d1003d3ed20_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812}\label{namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!get\_token@{get\_token}}
+\index{get\_token@{get\_token}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{get\_token()}{get\_token()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+get\+\_\+token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves an API token using a prioritized method.
+
+This function first attempts to load environment variables from all `.env`
+files and checks if the `PENIFY_API_TOKEN` environment variable is set. If
+found, it returns the token. If not, it looks for the API key in a
+configuration file named 'api_keys'. If both methods fail, it returns None.
+
+Returns:
+    str or None: The API token if found, otherwise None.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a5503d51c905e2f1b299b12d2a73bd812_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae}\label{namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!load\_env\_files@{load\_env\_files}}
+\index{load\_env\_files@{load\_env\_files}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{load\_env\_files()}{load\_env\_files()}}
+{\footnotesize\ttfamily  None penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+load\+\_\+env\+\_\+files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load environment variables from .env files in various locations with proper
+priority.
+
+This function loads environment variables from .env files located in different
+directories, prioritizing the current directory over the Git repo root and the
+user home directory. The loading process ensures that later files override
+earlier ones.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_aabe277132ce0bc0aacef951cf1dee2ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4}\label{namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!save\_jira\_config@{save\_jira\_config}}
+\index{save\_jira\_config@{save\_jira\_config}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{save\_jira\_config()}{save\_jira\_config()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+save\+\_\+jira\+\_\+config (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{username,  }\item[{}]{api\+\_\+token }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save JIRA configuration settings to a .env file.
+
+This function saves JIRA configuration following these steps: 1. Determine the
+target .env file location based on whether the current directory is inside a
+Git repository. 2. If inside a Git repo, use the Git repo root's .env file;
+otherwise, use the user home directory's .env file. 3. Read the existing
+content of the .env file (if it exists) to preserve other settings. 4. Update
+the .env content with the new JIRA configuration. 5. Write the updated content
+back to the .env file. 6. Optionally, reload environment variables to make
+changes immediately available.
+
+Args:
+    url (str): The JIRA URL to be saved in the .env file.
+    username (str): The JIRA username to be saved in the .env file.
+    api_token (str): The JIRA API token to be saved in the .env file.
+
+Returns:
+    bool: True if the configuration was successfully saved, False otherwise.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_ab2486ac2bf16b4a671e49625bfa4f9b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4}\label{namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!save\_llm\_config@{save\_llm\_config}}
+\index{save\_llm\_config@{save\_llm\_config}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{save\_llm\_config()}{save\_llm\_config()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+save\+\_\+llm\+\_\+config (\begin{DoxyParamCaption}\item[{}]{model,  }\item[{}]{api\+\_\+base,  }\item[{}]{api\+\_\+key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save LLM configuration settings to an .env file.
+
+This function saves the LLM configuration following a specific priority: 1. Git
+repo root .env (if inside a git repo) 2. User home directory .env  It handles
+the detection of the Git repo root, reads the existing .env content, updates it
+with the new LLM configuration, and writes it back to the file. It also reloads
+the environment variables to make changes immediately available.
+
+Args:
+    model (str): The name of the language model.
+    api_base (str): The base URL for the API.
+    api_key (str): The API key for authentication.
+
+Returns:
+    bool: True if the configuration is saved successfully, False otherwise.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1config__commands_a4617bc5956e502c9555dc0dda0376df4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a152642ab83cf6219b604bda6122aba67}\label{namespacepenify__hook_1_1commands_1_1config__commands_a152642ab83cf6219b604bda6122aba67}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!DOTENV\_AVAILABLE@{DOTENV\_AVAILABLE}}
+\index{DOTENV\_AVAILABLE@{DOTENV\_AVAILABLE}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{DOTENV\_AVAILABLE}{DOTENV\_AVAILABLE}}
+{\footnotesize\ttfamily bool penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+DOTENV\+\_\+\+AVAILABLE = True}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1config__commands_a4b202072a3a3b8515c9c254622e9c880}\label{namespacepenify__hook_1_1commands_1_1config__commands_a4b202072a3a3b8515c9c254622e9c880}} 
+\index{penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}!path@{path}}
+\index{path@{path}!penify\_hook.commands.config\_commands@{penify\_hook.commands.config\_commands}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+commands.\+config\+\_\+commands.\+path}
+

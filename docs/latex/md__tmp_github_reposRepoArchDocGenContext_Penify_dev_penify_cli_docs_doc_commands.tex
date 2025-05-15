@@ -1,0 +1,327 @@
+This document provides a detailed guide to all permutations and combinations of the {\ttfamily docgen} command, including extensive information about Git hook commands for automating documentation generation.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md64}{}\doxysection{Table of Contents}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md64}
+
+\begin{DoxyItemize}
+\item Basic Usage
+\item Command Options
+\item Option Combinations
+\item Git Hook Commands
+\begin{DoxyItemize}
+\item Hook Installation
+\item Hook Customization
+\item Hook Uninstallation
+\end{DoxyItemize}
+\item Advanced Use Cases
+\item Troubleshooting
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md65}{}\doxysection{Basic Usage}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md65}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen}
+
+\end{DoxyCode}
+
+
+By default, this command\+:
+\begin{DoxyItemize}
+\item Analyzes the current Git diff (changes since last commit)
+\item Generates documentation for changed files only
+\item Requires authentication via {\ttfamily penify login}
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md66}{}\doxysection{Command Options}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md66}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md67}{}\doxysubsection{$<$tt$>$-\/l, -\/-\/location$<$/tt$>$}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md67}
+Specify a target for documentation generation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Generate documentation for a specific file}
+\DoxyCodeLine{penify docgen -\/l path/to/file.py}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Generate documentation for a specific folder}
+\DoxyCodeLine{penify docgen -\/l path/to/folder}
+
+\end{DoxyCode}
+
+
+Without this flag, Penify analyzes only Git-\/tracked modified files.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md68}{}\doxysubsection{Subcommands}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md68}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md69}{}\doxysubsubsection{$<$tt$>$install-\/hook$<$/tt$>$}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md69}
+Install a Git post-\/commit hook to automatically generate documentation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen install-\/hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md70}{}\doxysubsubsection{$<$tt$>$uninstall-\/hook$<$/tt$>$}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md70}
+Remove the Git post-\/commit hook\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen uninstall-\/hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md71}{}\doxysection{Option Combinations}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md71}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md72}{}\doxysubsection{Generate Documentation for Current Git Diff}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md72}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Basic usage -\/ current Git diff}
+\DoxyCodeLine{penify docgen}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md73}{}\doxysubsection{Generate Documentation for a Specific File}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md73}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Single file documentation}
+\DoxyCodeLine{penify docgen -\/l src/main.py}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md74}{}\doxysubsection{Generate Documentation for a Folder}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md74}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Folder documentation}
+\DoxyCodeLine{penify docgen -\/l src/models/}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md75}{}\doxysubsection{Install Hook in Current Repository}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md75}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Install hook in current Git repository}
+\DoxyCodeLine{penify docgen install-\/hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md76}{}\doxysubsection{Install Hook in Specific Repository}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md76}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Install hook in a specific Git repository}
+\DoxyCodeLine{penify docgen install-\/hook -\/l /path/to/repo}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md77}{}\doxysubsection{Uninstall Hook from Current Repository}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md77}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Uninstall hook from current Git repository}
+\DoxyCodeLine{penify docgen uninstall-\/hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md78}{}\doxysubsection{Uninstall Hook from Specific Repository}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md78}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Uninstall hook from a specific Git repository}
+\DoxyCodeLine{penify docgen uninstall-\/hook -\/l /path/to/repo}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md79}{}\doxysection{Git Hook Commands}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md79}
+Penify provides Git hook commands to automate documentation generation as part of your Git workflow.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md80}{}\doxysubsection{Hook Installation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md80}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md81}{}\doxysubsubsection{How Hooks Work}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md81}
+When you install a Git hook with {\ttfamily penify docgen install-\/hook}, Penify\+:
+
+
+\begin{DoxyEnumerate}
+\item Creates a post-\/commit hook script in the {\ttfamily .git/hooks} directory
+\item Makes the script executable
+\item Configures the hook to run {\ttfamily penify docgen} after each commit
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md82}{}\doxysubsubsection{Hook Script Content}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md82}
+The generated post-\/commit hook contains\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#!/bin/sh}
+\DoxyCodeLine{\# This is a post-\/commit hook generated by penify.}
+\DoxyCodeLine{\# Automatically generates documentation for changed files after each commit.}
+\DoxyCodeLine{}
+\DoxyCodeLine{penify docgen -\/gf /path/to/git/repository -\/t your\_api\_token}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md83}{}\doxysubsubsection{Installation Location}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md83}
+By default, hooks are installed in the current Git repository. You can specify a different location\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen install-\/hook -\/l /path/to/repo}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md84}{}\doxysubsubsection{Installation Requirements}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md84}
+To install hooks, you need\+:
+\begin{DoxyItemize}
+\item A valid Penify API token (login first with {\ttfamily penify login})
+\item Write permissions to the {\ttfamily .git/hooks} directory
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md85}{}\doxysubsubsection{Verifying Installation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md85}
+After installation, you can verify that the hook is installed\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cat .git/hooks/post-\/commit}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md86}{}\doxysubsection{Hook Customization}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md86}
+You can customize the post-\/commit hook after installation\+:\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md87}{}\doxysubsubsection{Modifying Hook Behavior}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md87}
+
+\begin{DoxyEnumerate}
+\item Edit the {\ttfamily .git/hooks/post-\/commit} file
+\item Add additional options to the {\ttfamily penify docgen} command
+\item Add other commands to run after commit
+\end{DoxyEnumerate}
+
+Example of a customized hook\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#!/bin/sh}
+\DoxyCodeLine{\# This is a post-\/commit hook generated by penify.}
+\DoxyCodeLine{\# Automatically generates documentation for changed files after each commit.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Generate documentation}
+\DoxyCodeLine{penify docgen -\/gf /path/to/git/repository -\/t your\_api\_token}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Additional custom commands}
+\DoxyCodeLine{echo "{}Documentation generation complete!"{}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md88}{}\doxysubsubsection{Advanced Hook Scenarios}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md88}
+{\bfseries{Conditional Documentation Generation}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#!/bin/sh}
+\DoxyCodeLine{\# Only generate documentation for commits to the main branch}
+\DoxyCodeLine{BRANCH=\$(git rev-\/parse -\/-\/abbrev-\/ref HEAD)}
+\DoxyCodeLine{if [ "{}\$BRANCH"{} = "{}main"{} ]; then}
+\DoxyCodeLine{  penify docgen -\/gf /path/to/git/repository -\/t your\_api\_token}
+\DoxyCodeLine{fi}
+
+\end{DoxyCode}
+
+
+{\bfseries{Documenting Specific Files/\+Folders}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#!/bin/sh}
+\DoxyCodeLine{\# Only document Python files in the src directory}
+\DoxyCodeLine{penify docgen -\/l src/ -\/gf /path/to/git/repository -\/t your\_api\_token}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md89}{}\doxysubsection{Hook Uninstallation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md89}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md90}{}\doxysubsubsection{Standard Uninstallation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md90}
+To remove a hook from the current repository\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen uninstall-\/hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md91}{}\doxysubsubsection{Specific Repository Uninstallation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md91}
+To remove a hook from a specific repository\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen uninstall-\/hook -\/l /path/to/repo}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md92}{}\doxysubsubsection{Manual Hook Removal}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md92}
+If needed, you can manually remove the hook\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rm .git/hooks/post-\/commit}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md93}{}\doxysubsubsection{Verifying Uninstallation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md93}
+Check that the hook was successfully removed\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ls -\/la .git/hooks/post-\/commit  \# Should return "{}No such file or directory"{}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md94}{}\doxysection{Advanced Use Cases}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md94}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md95}{}\doxysubsection{Continuous Integration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md95}
+Run documentation generation in CI pipelines\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# In your CI script}
+\DoxyCodeLine{export PENIFY\_API\_TOKEN=your\_api\_token}
+\DoxyCodeLine{penify docgen -\/l src/}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md96}{}\doxysubsection{Batch Documentation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md96}
+Generate documentation for multiple repositories\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Bash script for batch documentation}
+\DoxyCodeLine{for repo in repo1 repo2 repo3; do}
+\DoxyCodeLine{  cd /path/to/\$repo}
+\DoxyCodeLine{  penify docgen -\/l .}
+\DoxyCodeLine{done}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md97}{}\doxysubsection{Custom Git Hook Integration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md97}
+Integrate with other Git hooks\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# In .git/hooks/pre-\/push}
+\DoxyCodeLine{penify docgen -\/l src/}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md98}{}\doxysubsection{Documenting Release Tags}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md98}
+Generate documentation when creating a release tag\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Document everything when creating a tag}
+\DoxyCodeLine{git tag -\/a v1.0.0}
+\DoxyCodeLine{penify docgen -\/l .  \# Document entire codebase}
+\DoxyCodeLine{git commit -\/-\/amend -\/m "{}Release v1.0.0 with updated documentation"{}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md99}{}\doxysection{Troubleshooting}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md99}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md100}{}\doxysubsection{Common Issues}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md100}
+
+\begin{DoxyEnumerate}
+\item $\ast$$\ast$\char`\"{}\+Authentication required\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Run {\ttfamily penify login} before using documentation features
+\item Check your API token with {\ttfamily cat $\sim$/.penify}
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Permission denied when installing hook\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Check Git repository permissions
+\item Try running with sudo (if appropriate for your environment)
+\item Ensure the {\ttfamily .git/hooks} directory exists
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Hook installed but not running\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Check if the hook is executable\+: {\ttfamily ls -\/la .git/hooks/post-\/commit}
+\item Make it executable if needed\+: {\ttfamily chmod +x .git/hooks/post-\/commit}
+\item Check for syntax errors in the hook script
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+File or directory not found\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Verify the path provided to the {\ttfamily -\/l} option
+\item Ensure you\textquotesingle{}re running the command from the correct directory
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Hook uninstallation failed\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Check permissions on the {\ttfamily .git/hooks} directory
+\item Try manual removal\+: {\ttfamily rm .git/hooks/post-\/commit}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md101}{}\doxysubsection{Debugging}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md101}
+For detailed output when running documentation commands\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export PENIFY\_DEBUG=1}
+\DoxyCodeLine{penify docgen -\/l src/}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md102}{}\doxysubsection{Getting Help}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_doc_commands_autotoc_md102}
+For command-\/specific help\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen -\/-\/help}
+\DoxyCodeLine{penify docgen install-\/hook -\/-\/help}
+\DoxyCodeLine{penify docgen uninstall-\/hook -\/-\/help}
+
+\end{DoxyCode}
+ 

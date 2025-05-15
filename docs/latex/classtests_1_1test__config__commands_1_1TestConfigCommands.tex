@@ -1,0 +1,384 @@
+\hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands}{}\doxysection{tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands Class Reference}
+\label{classtests_1_1test__config__commands_1_1TestConfigCommands}\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+
+
+Collaboration diagram for tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classtests_1_1test__config__commands_1_1TestConfigCommands__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a2e8162082bcdd5652bb37bdb14cf453a}{test\+\_\+get\+\_\+penify\+\_\+config\+\_\+existing\+\_\+dir}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+makedirs, mock\+\_\+path, mock\+\_\+git\+\_\+folder)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a33d4760eee3b67e1cde3aed755ebb948}{test\+\_\+get\+\_\+penify\+\_\+config\+\_\+new\+\_\+dir}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+makedirs, mock\+\_\+path, mock\+\_\+git\+\_\+folder)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_adf9f2233a3f4cc5725b9d4f05758b167}{test\+\_\+get\+\_\+llm\+\_\+config\+\_\+exists}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+get\+\_\+config)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_abd12f028b89aa9cd1152c0b9ece5d3cd}{test\+\_\+get\+\_\+llm\+\_\+config\+\_\+empty}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+get\+\_\+config)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a473984d31452b56acd6ce4011a1248bd}{test\+\_\+get\+\_\+llm\+\_\+config\+\_\+invalid\+\_\+json}} (self, mock\+\_\+print, mock\+\_\+file\+\_\+open, mock\+\_\+get\+\_\+config)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_aee37b97432821d19758c6325d4c74bcf}{test\+\_\+get\+\_\+jira\+\_\+config\+\_\+exists}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+get\+\_\+config)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_acd8df8219441b9e9871b903a681400d9}{test\+\_\+save\+\_\+llm\+\_\+config\+\_\+success}} (self, mock\+\_\+print, mock\+\_\+json\+\_\+dump, mock\+\_\+file\+\_\+open, mock\+\_\+get\+\_\+config)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a73a264dfb21e16003e095b79f6eab2ac}{test\+\_\+save\+\_\+llm\+\_\+config\+\_\+failure}} (self, mock\+\_\+print, mock\+\_\+file\+\_\+open, mock\+\_\+get\+\_\+config)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_af8d62310da2d768e21770f8f01ff5375}{test\+\_\+save\+\_\+jira\+\_\+config\+\_\+success}} (self, mock\+\_\+print, mock\+\_\+json\+\_\+dump, mock\+\_\+file\+\_\+open, mock\+\_\+path)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a3355f7d313bebaa71694387cf2bc5232}{test\+\_\+get\+\_\+token\+\_\+from\+\_\+env}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+path, mock\+\_\+getenv)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a6c0207be563c3de59a6d16277805114c}{test\+\_\+get\+\_\+token\+\_\+from\+\_\+config}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+path, mock\+\_\+getenv)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__config__commands_1_1TestConfigCommands_a400ca5d9fcdc159714e8df54920f9436}{test\+\_\+get\+\_\+token\+\_\+not\+\_\+found}} (self, mock\+\_\+file\+\_\+open, mock\+\_\+path, mock\+\_\+getenv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_aee37b97432821d19758c6325d4c74bcf}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_aee37b97432821d19758c6325d4c74bcf}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_jira\_config\_exists@{test\_get\_jira\_config\_exists}}
+\index{test\_get\_jira\_config\_exists@{test\_get\_jira\_config\_exists}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_jira\_config\_exists()}{test\_get\_jira\_config\_exists()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+jira\+\_\+config\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+get\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test that get_jira_config returns the correct JIRA configuration when
+the configuration file exists.
+
+It sets up a mock for the configuration file to simulate its existence
+and verifies that the function reads from the correct file and returns
+the expected JIRA configuration dictionary. Additionally, it checks that
+the mock file open is called with the appropriate arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_get_config (MagicMock): A mock for the `get_config` function, which is expected to return a mock
+        configuration file object.
+
+Returns:
+    None: This test function does not explicitly return anything. Its assertions
+        serve as the verification of its correctness.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_aee37b97432821d19758c6325d4c74bcf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_abd12f028b89aa9cd1152c0b9ece5d3cd}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_abd12f028b89aa9cd1152c0b9ece5d3cd}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_llm\_config\_empty@{test\_get\_llm\_config\_empty}}
+\index{test\_get\_llm\_config\_empty@{test\_get\_llm\_config\_empty}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_llm\_config\_empty()}{test\_get\_llm\_config\_empty()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+llm\+\_\+config\+\_\+empty (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+get\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the behavior of get_llm_config when called with an empty
+configuration file.
+
+This function sets up a mock configuration file that exists but returns
+no content. It then calls the `get_llm_config` function and asserts that
+it returns an empty dictionary and that the file open method was called
+exactly once with the correct arguments.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the built-in open function.
+    mock_get_config (MagicMock): A MagicMock object simulating the get_config function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_abd12f028b89aa9cd1152c0b9ece5d3cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_adf9f2233a3f4cc5725b9d4f05758b167}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_adf9f2233a3f4cc5725b9d4f05758b167}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_llm\_config\_exists@{test\_get\_llm\_config\_exists}}
+\index{test\_get\_llm\_config\_exists@{test\_get\_llm\_config\_exists}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_llm\_config\_exists()}{test\_get\_llm\_config\_exists()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+llm\+\_\+config\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+get\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the get_llm_config function when the configuration file exists.
+
+This function sets up a mock configuration file that exists and returns
+it when called. It then calls the get_llm_config function and asserts
+that it returns the correct configuration dictionary. Additionally, it
+checks that the mock_file_open function was called with the correct
+arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the open() function.
+    mock_get_config (MagicMock): A mock for the get_config() function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_adf9f2233a3f4cc5725b9d4f05758b167_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a473984d31452b56acd6ce4011a1248bd}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a473984d31452b56acd6ce4011a1248bd}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_llm\_config\_invalid\_json@{test\_get\_llm\_config\_invalid\_json}}
+\index{test\_get\_llm\_config\_invalid\_json@{test\_get\_llm\_config\_invalid\_json}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_llm\_config\_invalid\_json()}{test\_get\_llm\_config\_invalid\_json()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+llm\+\_\+config\+\_\+invalid\+\_\+json (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+print,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+get\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test function to verify the behavior of get_llm_config when reading an
+invalid JSON file.
+
+It sets up a mock configuration file that exists but contains invalid
+JSON. The function is expected to handle this gracefully by printing an
+error message and returning an empty dictionary.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_get_config (MagicMock): Mock for the get_config function, which returns the mock configuration
+        file.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a473984d31452b56acd6ce4011a1248bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a2e8162082bcdd5652bb37bdb14cf453a}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a2e8162082bcdd5652bb37bdb14cf453a}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_penify\_config\_existing\_dir@{test\_get\_penify\_config\_existing\_dir}}
+\index{test\_get\_penify\_config\_existing\_dir@{test\_get\_penify\_config\_existing\_dir}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_penify\_config\_existing\_dir()}{test\_get\_penify\_config\_existing\_dir()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+penify\+\_\+config\+\_\+existing\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+makedirs,  }\item[{}]{mock\+\_\+path,  }\item[{}]{mock\+\_\+git\+\_\+folder }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the get_penify_config function when the .penify config directory
+exists.
+
+It should not create a new directory and assert that all mocked
+functions were called correctly.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the open() function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
+    mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
+    mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a2e8162082bcdd5652bb37bdb14cf453a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a33d4760eee3b67e1cde3aed755ebb948}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a33d4760eee3b67e1cde3aed755ebb948}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_penify\_config\_new\_dir@{test\_get\_penify\_config\_new\_dir}}
+\index{test\_get\_penify\_config\_new\_dir@{test\_get\_penify\_config\_new\_dir}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_penify\_config\_new\_dir()}{test\_get\_penify\_config\_new\_dir()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+penify\+\_\+config\+\_\+new\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+makedirs,  }\item[{}]{mock\+\_\+path,  }\item[{}]{mock\+\_\+git\+\_\+folder }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the behavior of get_penify_config when the .penify directory does
+not exist.
+
+This function mocks various system calls to simulate a scenario where
+the .penify directory is not present. It then asserts that the
+appropriate actions are taken to create the directory and write an empty
+JSON file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the `open` function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the `os.makedirs` function.
+    mock_path (MagicMock): A MagicMock object simulating the `Path` class from `pathlib`.
+    mock_git_folder (MagicMock): A MagicMock object simulating a git folder search function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a33d4760eee3b67e1cde3aed755ebb948_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a6c0207be563c3de59a6d16277805114c}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a6c0207be563c3de59a6d16277805114c}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_token\_from\_config@{test\_get\_token\_from\_config}}
+\index{test\_get\_token\_from\_config@{test\_get\_token\_from\_config}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_token\_from\_config()}{test\_get\_token\_from\_config()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+token\+\_\+from\+\_\+config (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+path,  }\item[{}]{mock\+\_\+getenv }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test retrieving a token from the configuration.
+
+This function sets up mocks for environment variables and configuration
+files, calls the `get_token` function, and asserts its behavior. It
+verifies that when the environment variable is not found, the function
+reads a token from a configuration file located in the user's home
+directory.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_path (MagicMock): A mock for the `pathlib.Path` class.
+    mock_getenv (MagicMock): A mock for the `os.getenv` function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a6c0207be563c3de59a6d16277805114c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a3355f7d313bebaa71694387cf2bc5232}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a3355f7d313bebaa71694387cf2bc5232}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_token\_from\_env@{test\_get\_token\_from\_env}}
+\index{test\_get\_token\_from\_env@{test\_get\_token\_from\_env}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_token\_from\_env()}{test\_get\_token\_from\_env()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+token\+\_\+from\+\_\+env (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+path,  }\item[{}]{mock\+\_\+getenv }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test retrieving a token from the environment variable.
+
+This function tests the behavior of `get_token` when an environment
+variable is set. It verifies that if the 'PENIFY_API_TOKEN' environment
+variable exists, the function returns its value without attempting to
+read a file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object for simulating file operations.
+    mock_path (MagicMock): A MagicMock object for simulating path operations.
+    mock_getenv (MagicMock): A MagicMock object for simulating environment variable retrieval.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a3355f7d313bebaa71694387cf2bc5232_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a400ca5d9fcdc159714e8df54920f9436}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a400ca5d9fcdc159714e8df54920f9436}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_get\_token\_not\_found@{test\_get\_token\_not\_found}}
+\index{test\_get\_token\_not\_found@{test\_get\_token\_not\_found}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_get\_token\_not\_found()}{test\_get\_token\_not\_found()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+get\+\_\+token\+\_\+not\+\_\+found (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+path,  }\item[{}]{mock\+\_\+getenv }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the get_token function when the API token environment variable is
+not found.
+
+This function tests the scenario where the `PENIFY_API_TOKEN`
+environment variable is not set. It mocks the environment variable to
+return `None`, and verifies that the function returns `None`. The test
+also checks that the environment variable is accessed once and that a
+file open operation is attempted on a configuration file located in the
+user's home directory.
+
+Args:
+    mock_file_open (MagicMock): Mock for the built-in `open` function.
+    mock_path (MagicMock): Mock for the `pathlib.Path` module.
+    mock_getenv (MagicMock): Mock for the `os.getenv` function.
+
+Returns:
+    None: The function does not return anything; it asserts conditions to verify
+        correctness.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a400ca5d9fcdc159714e8df54920f9436_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_af8d62310da2d768e21770f8f01ff5375}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_af8d62310da2d768e21770f8f01ff5375}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_save\_jira\_config\_success@{test\_save\_jira\_config\_success}}
+\index{test\_save\_jira\_config\_success@{test\_save\_jira\_config\_success}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_save\_jira\_config\_success()}{test\_save\_jira\_config\_success()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+save\+\_\+jira\+\_\+config\+\_\+success (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+print,  }\item[{}]{mock\+\_\+json\+\_\+dump,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the save_jira_config function to ensure it saves JIRA configuration
+successfully.
+
+This function sets up mocks for various dependencies and tests the
+functionality of saving a JIRA configuration. It asserts that the
+function returns `True`, the JSON dump is called with the correct
+configuration, and the print statement contains the expected message.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_json_dump (MagicMock): Mock for the json.dump function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_path (MagicMock): Mock for the path module.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_af8d62310da2d768e21770f8f01ff5375_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_a73a264dfb21e16003e095b79f6eab2ac}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_a73a264dfb21e16003e095b79f6eab2ac}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_save\_llm\_config\_failure@{test\_save\_llm\_config\_failure}}
+\index{test\_save\_llm\_config\_failure@{test\_save\_llm\_config\_failure}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_save\_llm\_config\_failure()}{test\_save\_llm\_config\_failure()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+save\+\_\+llm\+\_\+config\+\_\+failure (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+print,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+get\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test function to verify that the save_llm_config function returns False
+and prints an error message when it fails to save the LLM configuration
+due to a permission error.
+
+It sets up a mock configuration file that exists and calls the
+save_llm_config function with valid parameters. The function is expected
+to return False and print "Error saving LLM configuration: Permission
+denied" in case of a failure.
+
+Args:
+    self (TestLLMConfig): An instance of the test class.
+    mock_print (MagicMock): A MagicMock object representing the print function, which will be used
+        to assert that it was called with the expected error message.
+    mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in
+        this test but is included as a parameter for completeness.
+    mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be
+        used to return the mock configuration file.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_a73a264dfb21e16003e095b79f6eab2ac_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__config__commands_1_1TestConfigCommands_acd8df8219441b9e9871b903a681400d9}\label{classtests_1_1test__config__commands_1_1TestConfigCommands_acd8df8219441b9e9871b903a681400d9}} 
+\index{tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}!test\_save\_llm\_config\_success@{test\_save\_llm\_config\_success}}
+\index{test\_save\_llm\_config\_success@{test\_save\_llm\_config\_success}!tests.test\_config\_commands.TestConfigCommands@{tests.test\_config\_commands.TestConfigCommands}}
+\doxysubsubsection{\texorpdfstring{test\_save\_llm\_config\_success()}{test\_save\_llm\_config\_success()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+config\+\_\+commands.\+Test\+Config\+Commands.\+test\+\_\+save\+\_\+llm\+\_\+config\+\_\+success (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+print,  }\item[{}]{mock\+\_\+json\+\_\+dump,  }\item[{}]{mock\+\_\+file\+\_\+open,  }\item[{}]{mock\+\_\+get\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the save_llm_config function successfully.
+
+This function tests that the save_llm_config function correctly saves an
+LLM configuration and handles various mock objects and side effects. It
+ensures that the function returns True upon successful execution, writes
+the expected configuration to a file, and prints a confirmation message.
+
+Args:
+    mock_print (MagicMock): A mock object for the print function.
+    mock_json_dump (MagicMock): A mock object for json.dump.
+    mock_file_open (MagicMock): A mock object for file opening.
+    mock_get_config (MagicMock): A mock object to return a configuration file mock.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__config__commands_1_1TestConfigCommands_acd8df8219441b9e9871b903a681400d9_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/tests/\mbox{\hyperlink{test__config__commands_8py}{test\+\_\+config\+\_\+commands.\+py}}\end{DoxyCompactItemize}
