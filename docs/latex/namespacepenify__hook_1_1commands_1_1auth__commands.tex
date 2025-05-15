@@ -1,0 +1,76 @@
+\hypertarget{namespacepenify__hook_1_1commands_1_1auth__commands}{}\doxysection{penify\+\_\+hook.\+commands.\+auth\+\_\+commands Namespace Reference}
+\label{namespacepenify__hook_1_1commands_1_1auth__commands}\index{penify\_hook.commands.auth\_commands@{penify\_hook.commands.auth\_commands}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24}{save\+\_\+credentials}} (api\+\_\+key)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655}{login}} (api\+\_\+url, dashboard\+\_\+url)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655}\label{namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655}} 
+\index{penify\_hook.commands.auth\_commands@{penify\_hook.commands.auth\_commands}!login@{login}}
+\index{login@{login}!penify\_hook.commands.auth\_commands@{penify\_hook.commands.auth\_commands}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+auth\+\_\+commands.\+login (\begin{DoxyParamCaption}\item[{}]{api\+\_\+url,  }\item[{}]{dashboard\+\_\+url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Open the login page in a web browser and capture the token via redirect.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1auth__commands_a78f375c58bb6f69f98675e6a9ac84655_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24}\label{namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24}} 
+\index{penify\_hook.commands.auth\_commands@{penify\_hook.commands.auth\_commands}!save\_credentials@{save\_credentials}}
+\index{save\_credentials@{save\_credentials}!penify\_hook.commands.auth\_commands@{penify\_hook.commands.auth\_commands}}
+\doxysubsubsection{\texorpdfstring{save\_credentials()}{save\_credentials()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+auth\+\_\+commands.\+save\+\_\+credentials (\begin{DoxyParamCaption}\item[{}]{api\+\_\+key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save the API key in a priority-based manner.
+
+This function attempts to save the API key in two locations, based on priority:
+1. In a `.env` file located in the root of the Git repository if one is found.
+2. In a global `.penify` file located in the user's home directory as a
+fallback.  The function first tries to locate the Git repository using
+`recursive_search_git_folder`. If a Git repository is found, it reads the
+existing `.env` file (if present), updates or adds the API key under the key
+`PENIFY_API_TOKEN`, and writes the updated content back. If any error occurs
+during this process, it falls back to saving the credentials in the global
+`.penify` file. The function handles exceptions and prints appropriate error
+messages.
+
+Args:
+    api_key (str): The API key to save.
+
+Returns:
+    bool: True if the API key is saved successfully, False otherwise.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1auth__commands_aa3956ca1749d4218ea1dc6e5b6218b24_icgraph}
+\end{center}
+\end{figure}

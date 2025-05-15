@@ -1,0 +1,142 @@
+\hypertarget{classpenify__hook_1_1api__client_1_1APIClient}{}\doxysection{penify\+\_\+hook.\+api\+\_\+client.\+APIClient Class Reference}
+\label{classpenify__hook_1_1api__client_1_1APIClient}\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+
+
+Collaboration diagram for penify\+\_\+hook.\+api\+\_\+client.\+APIClient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classpenify__hook_1_1api__client_1_1APIClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_ad9cb741a8baf2d13f845e25a36311086}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_a130cf688ed35dc0e8cbd8320b6b2d872}{api\+\_\+url}}, str api\+\_\+token=None, str bearer\+\_\+token=None)
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_ac5aad61508c2cafdf6e88e6c7d6c82b3}{send\+\_\+file\+\_\+for\+\_\+docstring\+\_\+generation}} (self, file\+\_\+name, content, line\+\_\+numbers, repo\+\_\+details=None)
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_a7ff74798e7d428b4e2f20095287eb2ce}{generate\+\_\+commit\+\_\+summary}} (self, git\+\_\+diff, str instruction=\char`\"{}\char`\"{}, repo\+\_\+details=None, dict jira\+\_\+context=None)
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_a5d2b4a26b24352d951ea79ecc4ff3402}{get\+\_\+supported\+\_\+file\+\_\+types}} (self)
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_ac0ada470b897935f9fb372cd0e7e51e3}{generate\+\_\+commit\+\_\+summary\+\_\+with\+\_\+llm}} (self, diff, message, bool generate\+\_\+description, repo\+\_\+details, \mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient}{LLMClient}} llm\+\_\+client, jira\+\_\+context=None)
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_ad15b790608e703c8c122aa2ead7dfa99}{get\+\_\+api\+\_\+key}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_a130cf688ed35dc0e8cbd8320b6b2d872}{api\+\_\+url}}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_a5bb502603717946ad710b49ad9d95237}{AUTH\+\_\+\+TOKEN}}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient_a7d7e2cf42c54eb4f25adee96a09ee7b0}{BEARER\+\_\+\+TOKEN}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_ad9cb741a8baf2d13f845e25a36311086}\label{classpenify__hook_1_1api__client_1_1APIClient_ad9cb741a8baf2d13f845e25a36311086}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{api\+\_\+url,  }\item[{str }]{api\+\_\+token = {\ttfamily None},  }\item[{str }]{bearer\+\_\+token = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_a7ff74798e7d428b4e2f20095287eb2ce}\label{classpenify__hook_1_1api__client_1_1APIClient_a7ff74798e7d428b4e2f20095287eb2ce}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!generate\_commit\_summary@{generate\_commit\_summary}}
+\index{generate\_commit\_summary@{generate\_commit\_summary}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{generate\_commit\_summary()}{generate\_commit\_summary()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+generate\+\_\+commit\+\_\+summary (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{git\+\_\+diff,  }\item[{str }]{instruction = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{repo\+\_\+details = {\ttfamily None},  }\item[{dict }]{jira\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates a commit summary by sending a POST request to the API endpoint.
+
+This function constructs a payload containing the git diff and any additional
+instructions provided. It then sends this payload to a specified API endpoint
+to generate a summary of the commit. If the request is successful, it returns
+the response from the API; otherwise, it returns None. The function also
+handles optional repository details and JIRA context if they are provided.
+
+Args:
+    git_diff (str): The git diff of the commit.
+    instruction (str): Additional instruction for the commit. Defaults to "".
+    repo_details (dict): Details of the git repository. Defaults to None.
+    jira_context (dict): JIRA issue details to enhance the commit summary. Defaults to None.
+
+Returns:
+    dict: The response from the API if the request is successful, None otherwise.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1api__client_1_1APIClient_a7ff74798e7d428b4e2f20095287eb2ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_ac0ada470b897935f9fb372cd0e7e51e3}\label{classpenify__hook_1_1api__client_1_1APIClient_ac0ada470b897935f9fb372cd0e7e51e3}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!generate\_commit\_summary\_with\_llm@{generate\_commit\_summary\_with\_llm}}
+\index{generate\_commit\_summary\_with\_llm@{generate\_commit\_summary\_with\_llm}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{generate\_commit\_summary\_with\_llm()}{generate\_commit\_summary\_with\_llm()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+generate\+\_\+commit\+\_\+summary\+\_\+with\+\_\+llm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{diff,  }\item[{}]{message,  }\item[{bool}]{generate\+\_\+description,  }\item[{}]{repo\+\_\+details,  }\item[{\mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient}{LLMClient}}}]{llm\+\_\+client,  }\item[{}]{jira\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates a commit summary using a local LLM client; falls back to API on
+error.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1api__client_1_1APIClient_ac0ada470b897935f9fb372cd0e7e51e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_ad15b790608e703c8c122aa2ead7dfa99}\label{classpenify__hook_1_1api__client_1_1APIClient_ad15b790608e703c8c122aa2ead7dfa99}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!get\_api\_key@{get\_api\_key}}
+\index{get\_api\_key@{get\_api\_key}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{get\_api\_key()}{get\_api\_key()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+get\+\_\+api\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fetch an API key from a specified URL using a Bearer token.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_a5d2b4a26b24352d951ea79ecc4ff3402}\label{classpenify__hook_1_1api__client_1_1APIClient_a5d2b4a26b24352d951ea79ecc4ff3402}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!get\_supported\_file\_types@{get\_supported\_file\_types}}
+\index{get\_supported\_file\_types@{get\_supported\_file\_types}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{get\_supported\_file\_types()}{get\_supported\_file\_types()}}
+{\footnotesize\ttfamily  list\mbox{[}str\mbox{]} penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+get\+\_\+supported\+\_\+file\+\_\+types (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve supported file types from the API or return a default list.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_ac5aad61508c2cafdf6e88e6c7d6c82b3}\label{classpenify__hook_1_1api__client_1_1APIClient_ac5aad61508c2cafdf6e88e6c7d6c82b3}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!send\_file\_for\_docstring\_generation@{send\_file\_for\_docstring\_generation}}
+\index{send\_file\_for\_docstring\_generation@{send\_file\_for\_docstring\_generation}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{send\_file\_for\_docstring\_generation()}{send\_file\_for\_docstring\_generation()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+send\+\_\+file\+\_\+for\+\_\+docstring\+\_\+generation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+name,  }\item[{}]{content,  }\item[{}]{line\+\_\+numbers,  }\item[{}]{repo\+\_\+details = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send file content and modified lines to the API and return modified content.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_a130cf688ed35dc0e8cbd8320b6b2d872}\label{classpenify__hook_1_1api__client_1_1APIClient_a130cf688ed35dc0e8cbd8320b6b2d872}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!api\_url@{api\_url}}
+\index{api\_url@{api\_url}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{api\_url}{api\_url}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+api\+\_\+url}
+
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_a5bb502603717946ad710b49ad9d95237}\label{classpenify__hook_1_1api__client_1_1APIClient_a5bb502603717946ad710b49ad9d95237}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!AUTH\_TOKEN@{AUTH\_TOKEN}}
+\index{AUTH\_TOKEN@{AUTH\_TOKEN}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{AUTH\_TOKEN}{AUTH\_TOKEN}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+AUTH\+\_\+\+TOKEN}
+
+\mbox{\Hypertarget{classpenify__hook_1_1api__client_1_1APIClient_a7d7e2cf42c54eb4f25adee96a09ee7b0}\label{classpenify__hook_1_1api__client_1_1APIClient_a7d7e2cf42c54eb4f25adee96a09ee7b0}} 
+\index{penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}!BEARER\_TOKEN@{BEARER\_TOKEN}}
+\index{BEARER\_TOKEN@{BEARER\_TOKEN}!penify\_hook.api\_client.APIClient@{penify\_hook.api\_client.APIClient}}
+\doxysubsubsection{\texorpdfstring{BEARER\_TOKEN}{BEARER\_TOKEN}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+api\+\_\+client.\+APIClient.\+BEARER\+\_\+\+TOKEN}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/penify\+\_\+hook/\mbox{\hyperlink{api__client_8py}{api\+\_\+client.\+py}}\end{DoxyCompactItemize}

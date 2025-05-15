@@ -1,0 +1,60 @@
+\hypertarget{namespacepenify__hook_1_1config__command}{}\doxysection{penify\+\_\+hook.\+config\+\_\+command Namespace Reference}
+\label{namespacepenify__hook_1_1config__command}\index{penify\_hook.config\_command@{penify\_hook.config\_command}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1config__command_a4f3eb92164a69df1446d745f8a09285e}{setup\+\_\+config\+\_\+parser}} (parent\+\_\+parser)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde}{handle\+\_\+config}} (args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde}\label{namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde}} 
+\index{penify\_hook.config\_command@{penify\_hook.config\_command}!handle\_config@{handle\_config}}
+\index{handle\_config@{handle\_config}!penify\_hook.config\_command@{penify\_hook.config\_command}}
+\doxysubsubsection{\texorpdfstring{handle\_config()}{handle\_config()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+config\+\_\+command.\+handle\+\_\+config (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handle configuration settings based on the specified config type.
+
+This function processes different types of configurations such as LLM (Language
+Model) and JIRA. It saves configurations, sets up web-based configurations, and
+verifies JIRA connections. Depending on the `args.config_type`, it imports
+necessary modules, handles configuration saving or setup, and optionally
+verifies JIRA connectivity.
+
+Args:
+    args (argparse.Namespace): Command-line arguments containing the type of configuration to handle.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1config__command_a240e5331681eb574ac319d7458783bde_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1config__command_a4f3eb92164a69df1446d745f8a09285e}\label{namespacepenify__hook_1_1config__command_a4f3eb92164a69df1446d745f8a09285e}} 
+\index{penify\_hook.config\_command@{penify\_hook.config\_command}!setup\_config\_parser@{setup\_config\_parser}}
+\index{setup\_config\_parser@{setup\_config\_parser}!penify\_hook.config\_command@{penify\_hook.config\_command}}
+\doxysubsubsection{\texorpdfstring{setup\_config\_parser()}{setup\_config\_parser()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+config\+\_\+command.\+setup\+\_\+config\+\_\+parser (\begin{DoxyParamCaption}\item[{}]{parent\+\_\+parser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set up configuration parsers with subcommands for LLM and JIRA settings.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1config__command_a4f3eb92164a69df1446d745f8a09285e_icgraph}
+\end{center}
+\end{figure}

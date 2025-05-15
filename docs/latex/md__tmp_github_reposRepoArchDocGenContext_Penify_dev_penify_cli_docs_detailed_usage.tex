@@ -1,0 +1,155 @@
+This document provides in-\/depth information about all features and capabilities of the Penify CLI tool.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md42}{}\doxysection{Table of Contents}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md42}
+
+\begin{DoxyItemize}
+\item Penify CLI -\/ Detailed Usage Guide
+\begin{DoxyItemize}
+\item Table of Contents
+\item Authentication
+\begin{DoxyItemize}
+\item Login Process
+\item API Token Storage
+\item Token Precedence
+\end{DoxyItemize}
+\item Command Overview
+\item Commit Message Generation
+\item Code Documentation Generation
+\begin{DoxyItemize}
+\item Use Cases
+\item Authentication Requirement
+\end{DoxyItemize}
+\item Configuration Settings
+\item Git Hooks
+\begin{DoxyItemize}
+\item Post-\/\+Commit Hook
+\item Custom Hook Location
+\end{DoxyItemize}
+\item Advanced Use Cases
+\begin{DoxyItemize}
+\item CI/\+CD Integration
+\item Remote Repository Documentation
+\end{DoxyItemize}
+\item Troubleshooting
+\begin{DoxyItemize}
+\item Common Issues
+\item Logs
+\item Support
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md43}{}\doxysection{Authentication}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md43}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md44}{}\doxysubsection{Login Process}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md44}
+When you run {\ttfamily penify login}, the tool\+:
+
+
+\begin{DoxyEnumerate}
+\item Opens your default web browser
+\item Redirects you to Penify\textquotesingle{}s login page
+\item Captures the authentication token after successful login
+\item Saves the token in {\ttfamily $\sim$/.penify} file
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md45}{}\doxysubsection{API Token Storage}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md45}
+API tokens are stored in your home directory in the {\ttfamily .penify} file. This JSON file contains\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  "{}api\_keys"{}: "{}your-\/api-\/token"{},}
+\DoxyCodeLine{  "{}llm"{}: \{ "{}model"{}: "{}..."{}, "{}api\_base"{}: "{}..."{}, "{}api\_key"{}: "{}..."{} \},}
+\DoxyCodeLine{  "{}jira"{}: \{ "{}url"{}: "{}..."{}, "{}username"{}: "{}..."{}, "{}api\_token"{}: "{}..."{} \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md46}{}\doxysubsection{Token Precedence}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md46}
+
+\begin{DoxyEnumerate}
+\item Environment variable {\ttfamily PENIFY\+\_\+\+API\+\_\+\+TOKEN} (highest priority)
+\item Token in {\ttfamily $\sim$/.penify} file
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md47}{}\doxysection{Command Overview}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md47}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify}
+\DoxyCodeLine{├── commit        Generate smart commit messages}
+\DoxyCodeLine{├── config        Configure local LLM and JIRA}
+\DoxyCodeLine{│   ├── llm       Configure local LLM settings}
+\DoxyCodeLine{│   └── jira      Configure JIRA integration}
+\DoxyCodeLine{├── login         Log in to Penify account}
+\DoxyCodeLine{└── docgen        Generate code documentation}
+\DoxyCodeLine{    ├── install-\/hook     Install Git post-\/commit hook}
+\DoxyCodeLine{    └── uninstall-\/hook   Remove Git post-\/commit hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md48}{}\doxysection{Commit Message Generation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md48}
+The {\ttfamily commit} command analyzes your staged changes and generates meaningful commit messages. It can\+:
+
+
+\begin{DoxyItemize}
+\item Use a local LLM if configured
+\item Enhance messages with JIRA issue details
+\item Provide both title and description
+\end{DoxyItemize}
+
+For specific options and examples, see \mbox{\hyperlink{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands}{docs/commit-\/commands.md}}.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md49}{}\doxysection{Code Documentation Generation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md49}
+The {\ttfamily docgen} command generates documentation for your code\+:\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md50}{}\doxysubsection{Use Cases}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md50}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Current Git Diff}}\+: Default behavior, documents only changed files
+\item {\bfseries{Specific File}}\+: Pass a file path with {\ttfamily -\/l path/to/file.\+py}
+\item {\bfseries{Entire Folder}}\+: Pass a folder path with {\ttfamily -\/l path/to/folder}
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md51}{}\doxysubsection{Authentication Requirement}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md51}
+This feature requires authentication with a Penify account. Run {\ttfamily penify login} before using documentation features.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md52}{}\doxysection{Configuration Settings}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md52}
+Configure local settings using the {\ttfamily config} command\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{LLM Settings}}\+: Configure a local LLM for commit message generation
+\item {\bfseries{JIRA Settings}}\+: Set up JIRA integration for enhanced commit messages
+\end{DoxyItemize}
+
+For detailed configuration options, see \mbox{\hyperlink{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands}{docs/config-\/commands.md}}.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md53}{}\doxysection{Git Hooks}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md53}
+Penify can install Git hooks to automate documentation generation\+:\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md54}{}\doxysubsection{Post-\/\+Commit Hook}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md54}
+
+\begin{DoxyItemize}
+\item {\bfseries{Install}}\+: {\ttfamily penify docgen install-\/hook}
+\item {\bfseries{What it does}}\+: Automatically generates documentation for changed files after each commit
+\item {\bfseries{Uninstall}}\+: {\ttfamily penify docgen uninstall-\/hook}
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md55}{}\doxysubsection{Custom Hook Location}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md55}
+You can specify a custom location for Git hooks\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen install-\/hook -\/l /path/to/git/repo}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md56}{}\doxysection{Advanced Use Cases}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md56}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md57}{}\doxysubsection{CI/\+CD Integration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md57}
+For CI/\+CD pipelines\+:
+
+
+\begin{DoxyEnumerate}
+\item Set {\ttfamily PENIFY\+\_\+\+API\+\_\+\+TOKEN} as an environment variable
+\item Run commands without requiring interactive login
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md58}{}\doxysubsection{Remote Repository Documentation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md58}
+Generate documentation for an entire repository\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/user/repo}
+\DoxyCodeLine{cd repo}
+\DoxyCodeLine{penify docgen -\/l .}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md59}{}\doxysection{Troubleshooting}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md59}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md60}{}\doxysubsection{Common Issues}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md60}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{API Key Errors}}\+: Ensure you\textquotesingle{}ve run {\ttfamily penify login} or set {\ttfamily PENIFY\+\_\+\+API\+\_\+\+TOKEN}
+\item {\bfseries{LLM Configuration}}\+: Check your LLM settings with {\ttfamily cat $\sim$/.penify}
+\item {\bfseries{JIRA Integration}}\+: Verify JIRA credentials in your configuration
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md61}{}\doxysubsection{Logs}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md61}
+For more detailed logs, you can set the environment variable\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export PENIFY\_DEBUG=1}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md62}{}\doxysubsection{Support}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_detailed_usage_autotoc_md62}
+For additional help, visit \href{https://docs.penify.dev/}{\texttt{ https\+://docs.\+penify.\+dev/}} or contact \href{mailto:support@penify.dev}{\texttt{ support@penify.\+dev}} 
