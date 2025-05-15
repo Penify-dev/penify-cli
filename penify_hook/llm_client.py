@@ -37,7 +37,7 @@ class LLMClient:
             self._litellm = litellm
         return self._litellm
     
-    def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None, additonal_param: str = ") -> Dict:
+    def generate_commit_summary(self, diff: str, message: str, generate_description: bool, repo_details: Dict, jira_context: Dict = None, additonal_param: str = "", additonal_param_2: str = "") -> Dict:
         """Generate a concise and descriptive commit summary based on Git diff, user
         instructions, repository details, and optional JIRA context.
         
