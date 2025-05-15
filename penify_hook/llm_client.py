@@ -44,21 +44,25 @@ class LLMClient:
         This function constructs a prompt for an LLM to produce a commit title and, if
         requested, a detailed description. The summary adheres to Semantic Commit
         Messages guidelines. If JIRA context is provided, it enriches the prompt with
-        relevant issue information.
+        relevant issue information. The function also handles token limits by
+        truncating large diffs and includes additional parameters for flexibility.
         
         Args:
             diff (str): Git diff of changes.
             message (str): User-provided commit message or instructions.
             generate_description (bool): Flag indicating whether to include a detailed description in the summary.
             repo_details (Dict): Details about the repository.
-            jira_context (Dict?): Optional JIRA issue context to enhance the summary.
+            jira_context (Dict?): Optional JIRA issue context to enhance the summary. Defaults to None.
+            additonal_param (str?): An additional parameter for further customization. Defaults to "".
+            additonal_param_2 (str?): Another additional parameter for further customization. Defaults to "".
         
         Returns:
-            Dict: A dictionary containing the title and description for the commit. If
-                `generate_description` is False, the 'description' key may be absent.
+            Dict: A dictionary containing 'title' and optionally 'description'.
         
         Raises:
-            ValueError: If the LLM model is not configured.
+            ValueError: If the JSON structure from the LLM response is invalid.
+            Exception: Any other errors during the process, which will exit the script with an error
+                message.
         """
         if not self.model:
             raise ValueError("LLM model not configured. Please provide a model when initializing LLMClient.")
