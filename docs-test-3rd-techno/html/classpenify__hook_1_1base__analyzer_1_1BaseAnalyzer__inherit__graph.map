@@ -1,0 +1,11 @@
+<map id="penify_hook.base_analyzer.BaseAnalyzer" name="penify_hook.base_analyzer.BaseAnalyzer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="358,5,553,205"/>
+<area shape="rect" id="Node000002" href="$classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook.html" title=" " alt="" coords="5,253,223,433"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,180,236,256,225,263,222,259,232,251,345,175"/>
+<area shape="rect" id="Node000003" href="$classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook.html" title=" " alt="" coords="247,273,429,413"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="402,219,375,274,370,272,398,217"/>
+<area shape="rect" id="Node000004" href="$classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook.html" title=" " alt="" coords="454,283,691,403"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="513,217,546,282,541,284,508,219"/>
+<area shape="rect" id="Node000005" href="$classpenify__hook_1_1git__analyzer_1_1GitDocGenHook.html" title=" " alt="" coords="716,256,896,431"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="566,164,636,205,705,251,717,260,714,264,702,256,633,210,564,168"/>
+</map>

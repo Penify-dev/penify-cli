@@ -1,0 +1,7 @@
+<map id="penify_hook.commit_analyzer.CommitDocGenHook" name="penify_hook.commit_analyzer.CommitDocGenHook">
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,467,326,627"/>
+<area shape="rect" id="Node000002" href="$classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer.html" title=" " alt="" coords="5,105,200,305"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,317,193,466,188,467,138,319"/>
+<area shape="rect" id="Node000003" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html" title=" " alt="" coords="225,5,442,404"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,405,252,452,247,451,263,404"/>
+</map>
