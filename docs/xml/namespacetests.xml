@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacetests" kind="namespace" language="Python">
+    <compoundname>tests</compoundname>
+    <innernamespace refid="namespacetests_1_1conftest">tests::conftest</innernamespace>
+    <innernamespace refid="namespacetests_1_1test__commit__commands">tests::test_commit_commands</innernamespace>
+    <innernamespace refid="namespacetests_1_1test__config__commands">tests::test_config_commands</innernamespace>
+    <innernamespace refid="namespacetests_1_1test__doc__commands">tests::test_doc_commands</innernamespace>
+    <innernamespace refid="namespacetests_1_1test__web__config">tests::test_web_config</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

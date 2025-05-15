@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::folder_analyzer::FolderAnalyzerGenHook</compoundname>
+    <basecompoundref refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer" prot="public" virt="non-virtual">penify_hook.base_analyzer.BaseAnalyzer</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.folder_analyzer.FolderAnalyzerGenHook::dir_path</definition>
+        <argsstring></argsstring>
+        <name>dir_path</name>
+        <qualifiedname>penify_hook.folder_analyzer.FolderAnalyzerGenHook.dir_path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" line="11" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc" compoundref="folder__analyzer_8py" startline="35" endline="52">penify_hook.folder_analyzer.FolderAnalyzerGenHook.run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a1bb0358140931d82c7616f12efe31821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.folder_analyzer.FolderAnalyzerGenHook.__init__</definition>
+        <argsstring>(self, str dir_path, APIClient api_client)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>penify_hook.folder_analyzer.FolderAnalyzerGenHook.__init__</qualifiedname>
+        <reimplements refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>dir_path</declname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1api__client_1_1APIClient" kindref="compound">APIClient</ref></type>
+          <declname>api_client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" line="10" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a70b845318fc7ac3b607daf26378e19ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.folder_analyzer.FolderAnalyzerGenHook.list_all_files_in_dir</definition>
+        <argsstring>(self, str dir_path)</argsstring>
+        <name>list_all_files_in_dir</name>
+        <qualifiedname>penify_hook.folder_analyzer.FolderAnalyzerGenHook.list_all_files_in_dir</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>dir_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>List all non-hidden files in a directory and its subdirectories.
+
+This function recursively traverses the specified directory and its
+subdirectories, collecting paths of all non-hidden files. It filters out hidden
+directories and files (those starting with a dot) to ensure only visible files
+are returned.
+
+Args:
+    dir_path (str): The path to the directory whose files and subdirectory files need to be listed.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" line="14" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" bodystart="14" bodyend="34"/>
+        <referencedby refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc" compoundref="folder__analyzer_8py" startline="35" endline="52">penify_hook.folder_analyzer.FolderAnalyzerGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.folder_analyzer.FolderAnalyzerGenHook.run</definition>
+        <argsstring>(self)</argsstring>
+        <name>run</name>
+        <qualifiedname>penify_hook.folder_analyzer.FolderAnalyzerGenHook.run</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Run the post-commit hook and process files with a progress bar.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" line="35" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" bodystart="35" bodyend="52"/>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2" compoundref="base__analyzer_8py" startline="19">penify_hook.base_analyzer.BaseAnalyzer.api_client</references>
+        <references refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393" compoundref="folder__analyzer_8py" startline="11">penify_hook.folder_analyzer.FolderAnalyzerGenHook.dir_path</references>
+        <references refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a70b845318fc7ac3b607daf26378e19ec" compoundref="folder__analyzer_8py" startline="14" endline="34">penify_hook.folder_analyzer.FolderAnalyzerGenHook.list_all_files_in_dir</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>penify_hook.folder_analyzer.FolderAnalyzerGenHook</label>
+        <link refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>penify_hook.base_analyzer.BaseAnalyzer</label>
+        <link refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>penify_hook.folder_analyzer.FolderAnalyzerGenHook</label>
+        <link refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>penify_hook.base_analyzer.BaseAnalyzer</label>
+        <link refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" line="9" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/folder_analyzer.py" bodystart="9" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a1bb0358140931d82c7616f12efe31821" prot="public" virt="non-virtual"><scope>penify_hook::folder_analyzer::FolderAnalyzerGenHook</scope><name>__init__</name></member>
+      <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a53f73d69cc0f00763ee4830e4f0f7393" prot="public" virt="non-virtual"><scope>penify_hook::folder_analyzer::FolderAnalyzerGenHook</scope><name>dir_path</name></member>
+      <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1a70b845318fc7ac3b607daf26378e19ec" prot="public" virt="non-virtual"><scope>penify_hook::folder_analyzer::FolderAnalyzerGenHook</scope><name>list_all_files_in_dir</name></member>
+      <member refid="classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_1afd189d1b8c773bf710a899eb21fd76cc" prot="public" virt="non-virtual"><scope>penify_hook::folder_analyzer::FolderAnalyzerGenHook</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

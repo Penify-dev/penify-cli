@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtests_1_1test__config__commands_1_1TestConfigCommands" kind="class" language="Python" prot="public">
+    <compoundname>tests::test_config_commands::TestConfigCommands</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a2e8162082bcdd5652bb37bdb14cf453a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_penify_config_existing_dir</definition>
+        <argsstring>(self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</argsstring>
+        <name>test_get_penify_config_existing_dir</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_penify_config_existing_dir</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_makedirs</type>
+          <defname>mock_makedirs</defname>
+        </param>
+        <param>
+          <type>mock_path</type>
+          <defname>mock_path</defname>
+        </param>
+        <param>
+          <type>mock_git_folder</type>
+          <defname>mock_git_folder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the get_penify_config function when the .penify config directory
+exists.
+
+It should not create a new directory and assert that all mocked
+functions were called correctly.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the open() function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
+    mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
+    mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="22" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="22" bodyend="55"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20" compoundref="config__commands_8py" startline="66" endline="94">penify_hook.commands.config_commands.get_penify_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a33d4760eee3b67e1cde3aed755ebb948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_penify_config_new_dir</definition>
+        <argsstring>(self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</argsstring>
+        <name>test_get_penify_config_new_dir</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_penify_config_new_dir</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_makedirs</type>
+          <defname>mock_makedirs</defname>
+        </param>
+        <param>
+          <type>mock_path</type>
+          <defname>mock_path</defname>
+        </param>
+        <param>
+          <type>mock_git_folder</type>
+          <defname>mock_git_folder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the behavior of get_penify_config when the .penify directory does
+not exist.
+
+This function mocks various system calls to simulate a scenario where
+the .penify directory is not present. It then asserts that the
+appropriate actions are taken to create the directory and write an empty
+JSON file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the `open` function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the `os.makedirs` function.
+    mock_path (MagicMock): A MagicMock object simulating the `Path` class from `pathlib`.
+    mock_git_folder (MagicMock): A MagicMock object simulating a git folder search function.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="60" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="60" bodyend="94"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20" compoundref="config__commands_8py" startline="66" endline="94">penify_hook.commands.config_commands.get_penify_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1adf9f2233a3f4cc5725b9d4f05758b167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_llm_config_exists</definition>
+        <argsstring>(self, mock_file_open, mock_get_config)</argsstring>
+        <name>test_get_llm_config_exists</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_llm_config_exists</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_get_config</type>
+          <defname>mock_get_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the get_llm_config function when the configuration file exists.
+
+This function sets up a mock configuration file that exists and returns
+it when called. It then calls the get_llm_config function and asserts
+that it returns the correct configuration dictionary. Additionally, it
+checks that the mock_file_open function was called with the correct
+arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the open() function.
+    mock_get_config (MagicMock): A mock for the get_config() function.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="97" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="97" bodyend="126"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" compoundref="config__commands_8py" startline="237" endline="255">penify_hook.commands.config_commands.get_llm_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1abd12f028b89aa9cd1152c0b9ece5d3cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_llm_config_empty</definition>
+        <argsstring>(self, mock_file_open, mock_get_config)</argsstring>
+        <name>test_get_llm_config_empty</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_llm_config_empty</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_get_config</type>
+          <defname>mock_get_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the behavior of get_llm_config when called with an empty
+configuration file.
+
+This function sets up a mock configuration file that exists but returns
+no content. It then calls the `get_llm_config` function and asserts that
+it returns an empty dictionary and that the file open method was called
+exactly once with the correct arguments.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the built-in open function.
+    mock_get_config (MagicMock): A MagicMock object simulating the get_config function.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="129" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="129" bodyend="154"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" compoundref="config__commands_8py" startline="237" endline="255">penify_hook.commands.config_commands.get_llm_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a473984d31452b56acd6ce4011a1248bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_llm_config_invalid_json</definition>
+        <argsstring>(self, mock_print, mock_file_open, mock_get_config)</argsstring>
+        <name>test_get_llm_config_invalid_json</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_llm_config_invalid_json</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_print</type>
+          <defname>mock_print</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_get_config</type>
+          <defname>mock_get_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test function to verify the behavior of get_llm_config when reading an
+invalid JSON file.
+
+It sets up a mock configuration file that exists but contains invalid
+JSON. The function is expected to handle this gracefully by printing an
+error message and returning an empty dictionary.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_get_config (MagicMock): Mock for the get_config function, which returns the mock configuration
+        file.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="158" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="158" bodyend="185"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" compoundref="config__commands_8py" startline="237" endline="255">penify_hook.commands.config_commands.get_llm_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1aee37b97432821d19758c6325d4c74bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_jira_config_exists</definition>
+        <argsstring>(self, mock_file_open, mock_get_config)</argsstring>
+        <name>test_get_jira_config_exists</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_jira_config_exists</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_get_config</type>
+          <defname>mock_get_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test that get_jira_config returns the correct JIRA configuration when
+the configuration file exists.
+
+It sets up a mock for the configuration file to simulate its existence
+and verifies that the function reads from the correct file and returns
+the expected JIRA configuration dictionary. Additionally, it checks that
+the mock file open is called with the appropriate arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_get_config (MagicMock): A mock for the `get_config` function, which is expected to return a mock
+        configuration file object.
+
+Returns:
+    None: This test function does not explicitly return anything. Its assertions
+        serve as the verification of its correctness.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="188" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="188" bodyend="222"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" compoundref="config__commands_8py" startline="256" endline="274">penify_hook.commands.config_commands.get_jira_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1acd8df8219441b9e9871b903a681400d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_save_llm_config_success</definition>
+        <argsstring>(self, mock_print, mock_json_dump, mock_file_open, mock_get_config)</argsstring>
+        <name>test_save_llm_config_success</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_save_llm_config_success</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_print</type>
+          <defname>mock_print</defname>
+        </param>
+        <param>
+          <type>mock_json_dump</type>
+          <defname>mock_json_dump</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_get_config</type>
+          <defname>mock_get_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the save_llm_config function successfully.
+
+This function tests that the save_llm_config function correctly saves an
+LLM configuration and handles various mock objects and side effects. It
+ensures that the function returns True upon successful execution, writes
+the expected configuration to a file, and prints a confirmation message.
+
+Args:
+    mock_print (MagicMock): A mock object for the print function.
+    mock_json_dump (MagicMock): A mock object for json.dump.
+    mock_file_open (MagicMock): A mock object for file opening.
+    mock_get_config (MagicMock): A mock object to return a configuration file mock.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="227" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="227" bodyend="265"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4" compoundref="config__commands_8py" startline="100" endline="166">penify_hook.commands.config_commands.save_llm_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a73a264dfb21e16003e095b79f6eab2ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_save_llm_config_failure</definition>
+        <argsstring>(self, mock_print, mock_file_open, mock_get_config)</argsstring>
+        <name>test_save_llm_config_failure</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_save_llm_config_failure</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_print</type>
+          <defname>mock_print</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_get_config</type>
+          <defname>mock_get_config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test function to verify that the save_llm_config function returns False
+and prints an error message when it fails to save the LLM configuration
+due to a permission error.
+
+It sets up a mock configuration file that exists and calls the
+save_llm_config function with valid parameters. The function is expected
+to return False and print &quot;Error saving LLM configuration: Permission
+denied&quot; in case of a failure.
+
+Args:
+    self (TestLLMConfig): An instance of the test class.
+    mock_print (MagicMock): A MagicMock object representing the print function, which will be used
+        to assert that it was called with the expected error message.
+    mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in
+        this test but is included as a parameter for completeness.
+    mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be
+        used to return the mock configuration file.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="269" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="269" bodyend="300"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4" compoundref="config__commands_8py" startline="100" endline="166">penify_hook.commands.config_commands.save_llm_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1af8d62310da2d768e21770f8f01ff5375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_save_jira_config_success</definition>
+        <argsstring>(self, mock_print, mock_json_dump, mock_file_open, mock_path)</argsstring>
+        <name>test_save_jira_config_success</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_save_jira_config_success</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_print</type>
+          <defname>mock_print</defname>
+        </param>
+        <param>
+          <type>mock_json_dump</type>
+          <defname>mock_json_dump</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_path</type>
+          <defname>mock_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the save_jira_config function to ensure it saves JIRA configuration
+successfully.
+
+This function sets up mocks for various dependencies and tests the
+functionality of saving a JIRA configuration. It asserts that the
+function returns `True`, the JSON dump is called with the correct
+configuration, and the print statement contains the expected message.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_json_dump (MagicMock): Mock for the json.dump function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_path (MagicMock): Mock for the path module.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="305" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="305" bodyend="345"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4" compoundref="config__commands_8py" startline="167" endline="236">penify_hook.commands.config_commands.save_jira_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a3355f7d313bebaa71694387cf2bc5232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_token_from_env</definition>
+        <argsstring>(self, mock_file_open, mock_path, mock_getenv)</argsstring>
+        <name>test_get_token_from_env</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_token_from_env</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_path</type>
+          <defname>mock_path</defname>
+        </param>
+        <param>
+          <type>mock_getenv</type>
+          <defname>mock_getenv</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test retrieving a token from the environment variable.
+
+This function tests the behavior of `get_token` when an environment
+variable is set. It verifies that if the &apos;PENIFY_API_TOKEN&apos; environment
+variable exists, the function returns its value without attempting to
+read a file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object for simulating file operations.
+    mock_path (MagicMock): A MagicMock object for simulating path operations.
+    mock_getenv (MagicMock): A MagicMock object for simulating environment variable retrieval.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="349" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="349" bodyend="374"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a6c0207be563c3de59a6d16277805114c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_token_from_config</definition>
+        <argsstring>(self, mock_file_open, mock_path, mock_getenv)</argsstring>
+        <name>test_get_token_from_config</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_token_from_config</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_path</type>
+          <defname>mock_path</defname>
+        </param>
+        <param>
+          <type>mock_getenv</type>
+          <defname>mock_getenv</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test retrieving a token from the configuration.
+
+This function sets up mocks for environment variables and configuration
+files, calls the `get_token` function, and asserts its behavior. It
+verifies that when the environment variable is not found, the function
+reads a token from a configuration file located in the user&apos;s home
+directory.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_path (MagicMock): A mock for the `pathlib.Path` class.
+    mock_getenv (MagicMock): A mock for the `os.getenv` function.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="378" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="378" bodyend="409"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</references>
+      </memberdef>
+      <memberdef kind="function" id="classtests_1_1test__config__commands_1_1TestConfigCommands_1a400ca5d9fcdc159714e8df54920f9436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tests.test_config_commands.TestConfigCommands.test_get_token_not_found</definition>
+        <argsstring>(self, mock_file_open, mock_path, mock_getenv)</argsstring>
+        <name>test_get_token_not_found</name>
+        <qualifiedname>tests.test_config_commands.TestConfigCommands.test_get_token_not_found</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mock_file_open</type>
+          <defname>mock_file_open</defname>
+        </param>
+        <param>
+          <type>mock_path</type>
+          <defname>mock_path</defname>
+        </param>
+        <param>
+          <type>mock_getenv</type>
+          <defname>mock_getenv</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Test the get_token function when the API token environment variable is
+not found.
+
+This function tests the scenario where the `PENIFY_API_TOKEN`
+environment variable is not set. It mocks the environment variable to
+return `None`, and verifies that the function returns `None`. The test
+also checks that the environment variable is accessed once and that a
+file open operation is attempted on a configuration file located in the
+user&apos;s home directory.
+
+Args:
+    mock_file_open (MagicMock): Mock for the built-in `open` function.
+    mock_path (MagicMock): Mock for the `pathlib.Path` module.
+    mock_getenv (MagicMock): Mock for the `os.getenv` function.
+
+Returns:
+    None: The function does not return anything; it asserts conditions to verify
+        correctness.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="413" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="413" bodyend="450"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>tests.test_config_commands.TestConfigCommands</label>
+        <link refid="classtests_1_1test__config__commands_1_1TestConfigCommands"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" line="16" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_config_commands.py" bodystart="16" bodyend="450"/>
+    <listofallmembers>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1aee37b97432821d19758c6325d4c74bcf" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_jira_config_exists</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1abd12f028b89aa9cd1152c0b9ece5d3cd" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_llm_config_empty</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1adf9f2233a3f4cc5725b9d4f05758b167" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_llm_config_exists</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a473984d31452b56acd6ce4011a1248bd" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_llm_config_invalid_json</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a2e8162082bcdd5652bb37bdb14cf453a" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_penify_config_existing_dir</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a33d4760eee3b67e1cde3aed755ebb948" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_penify_config_new_dir</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a6c0207be563c3de59a6d16277805114c" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_token_from_config</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a3355f7d313bebaa71694387cf2bc5232" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_token_from_env</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a400ca5d9fcdc159714e8df54920f9436" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_get_token_not_found</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1af8d62310da2d768e21770f8f01ff5375" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_save_jira_config_success</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a73a264dfb21e16003e095b79f6eab2ac" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_save_llm_config_failure</name></member>
+      <member refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1acd8df8219441b9e9871b903a681400d9" prot="public" virt="non-virtual"><scope>tests::test_config_commands::TestConfigCommands</scope><name>test_save_llm_config_success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

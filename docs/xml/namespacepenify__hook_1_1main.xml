@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1main" kind="namespace" language="Python">
+    <compoundname>penify_hook::main</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.main.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>penify_hook.main.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Main function to handle command-line interface (CLI) interactions with Penify
+services.
+
+This tool provides a command-line interface for generating smart commit
+messages, configuring local-LLM and JIRA, and generating code documentation. It
+supports basic commands that do not require login and advanced commands that
+require user authentication. The `--version` flag can be used to display the
+version information.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/main.py" line="6" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/main.py" bodystart="6" bodyend="84"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="116" endline="147">penify_hook.commands.commit_commands.handle_commit</references>
+        <references refid="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" compoundref="config__command_8py" startline="31" endline="87">penify_hook.config_command.handle_config</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704" compoundref="doc__commands_8py" startline="114" endline="137">penify_hook.commands.doc_commands.handle_docgen</references>
+        <references refid="namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd" compoundref="login__command_8py" startline="6" endline="16">penify_hook.login_command.handle_login</references>
+        <references refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" compoundref="ui__utils_8py" startline="52" endline="55">penify_hook.ui_utils.print_info</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a8627583116eb78e31a4d3cdc16d2f15c" compoundref="commit__commands_8py" startline="98" endline="115">penify_hook.commands.commit_commands.setup_commit_parser</references>
+        <references refid="namespacepenify__hook_1_1config__command_1a4f3eb92164a69df1446d745f8a09285e" compoundref="config__command_8py" startline="4" endline="30">penify_hook.config_command.setup_config_parser</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1doc__commands_1acc7f4ead1b11951d885fa5c151c2cbe0" compoundref="doc__commands_8py" startline="82" endline="113">penify_hook.commands.doc_commands.setup_docgen_parser</references>
+        <references refid="namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a" compoundref="login__command_8py" startline="1" endline="5">penify_hook.login_command.setup_login_parser</references>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/main.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

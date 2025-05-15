@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1api__client_1_1APIClient" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::api_client::APIClient</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.api_client.APIClient::api_url</definition>
+        <argsstring></argsstring>
+        <name>api_url</name>
+        <qualifiedname>penify_hook.api_client.APIClient.api_url</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="8" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce" compoundref="api__client_8py" startline="33" endline="76">penify_hook.api_client.APIClient.generate_commit_summary</referencedby>
+        <referencedby refid="classpenify__hook_1_1api__client_1_1APIClient_1ad15b790608e703c8c122aa2ead7dfa99" compoundref="api__client_8py" startline="98" endline="112">penify_hook.api_client.APIClient.get_api_key</referencedby>
+        <referencedby refid="classpenify__hook_1_1api__client_1_1APIClient_1a5d2b4a26b24352d951ea79ecc4ff3402" compoundref="api__client_8py" startline="77" endline="87">penify_hook.api_client.APIClient.get_supported_file_types</referencedby>
+        <referencedby refid="classpenify__hook_1_1api__client_1_1APIClient_1ac5aad61508c2cafdf6e88e6c7d6c82b3" compoundref="api__client_8py" startline="12" endline="32">penify_hook.api_client.APIClient.send_file_for_docstring_generation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classpenify__hook_1_1api__client_1_1APIClient_1a5bb502603717946ad710b49ad9d95237" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.api_client.APIClient::AUTH_TOKEN</definition>
+        <argsstring></argsstring>
+        <name>AUTH_TOKEN</name>
+        <qualifiedname>penify_hook.api_client.APIClient.AUTH_TOKEN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="9" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpenify__hook_1_1api__client_1_1APIClient_1a7d7e2cf42c54eb4f25adee96a09ee7b0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.api_client.APIClient::BEARER_TOKEN</definition>
+        <argsstring></argsstring>
+        <name>BEARER_TOKEN</name>
+        <qualifiedname>penify_hook.api_client.APIClient.BEARER_TOKEN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="10" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpenify__hook_1_1api__client_1_1APIClient_1ad9cb741a8baf2d13f845e25a36311086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.api_client.APIClient.__init__</definition>
+        <argsstring>(self, api_url, str api_token=None, str bearer_token=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>penify_hook.api_client.APIClient.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" kindref="member">api_url</ref></type>
+          <defname>api_url</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>api_token</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>bearer_token</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="7" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1api__client_1_1APIClient_1ac5aad61508c2cafdf6e88e6c7d6c82b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.api_client.APIClient.send_file_for_docstring_generation</definition>
+        <argsstring>(self, file_name, content, line_numbers, repo_details=None)</argsstring>
+        <name>send_file_for_docstring_generation</name>
+        <qualifiedname>penify_hook.api_client.APIClient.send_file_for_docstring_generation</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>file_name</type>
+          <defname>file_name</defname>
+        </param>
+        <param>
+          <type>content</type>
+          <defname>content</defname>
+        </param>
+        <param>
+          <type>line_numbers</type>
+          <defname>line_numbers</defname>
+        </param>
+        <param>
+          <type>repo_details</type>
+          <defname>repo_details</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Send file content and modified lines to the API and return modified content.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="12" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="12" bodyend="32"/>
+        <references refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" compoundref="api__client_8py" startline="8">penify_hook.api_client.APIClient.api_url</references>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.api_client.APIClient.generate_commit_summary</definition>
+        <argsstring>(self, git_diff, str instruction=&quot;&quot;, repo_details=None, dict jira_context=None)</argsstring>
+        <name>generate_commit_summary</name>
+        <qualifiedname>penify_hook.api_client.APIClient.generate_commit_summary</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>git_diff</type>
+          <defname>git_diff</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>instruction</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>repo_details</type>
+          <defname>repo_details</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>jira_context</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates a commit summary by sending a POST request to the API endpoint.
+
+This function constructs a payload containing the git diff and any additional
+instructions provided. It then sends this payload to a specified API endpoint
+to generate a summary of the commit. If the request is successful, it returns
+the response from the API; otherwise, it returns None. The function also
+handles optional repository details and JIRA context if they are provided.
+
+Args:
+    git_diff (str): The git diff of the commit.
+    instruction (str): Additional instruction for the commit. Defaults to &quot;&quot;.
+    repo_details (dict): Details of the git repository. Defaults to None.
+    jira_context (dict): JIRA issue details to enhance the commit summary. Defaults to None.
+
+Returns:
+    dict: The response from the API if the request is successful, None otherwise.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="33" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="33" bodyend="76"/>
+        <references refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" compoundref="api__client_8py" startline="8">penify_hook.api_client.APIClient.api_url</references>
+        <referencedby refid="classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3" compoundref="api__client_8py" startline="88" endline="97">penify_hook.api_client.APIClient.generate_commit_summary_with_llm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1api__client_1_1APIClient_1a5d2b4a26b24352d951ea79ecc4ff3402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list[str]</type>
+        <definition> list[str] penify_hook.api_client.APIClient.get_supported_file_types</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_supported_file_types</name>
+        <qualifiedname>penify_hook.api_client.APIClient.get_supported_file_types</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieve supported file types from the API or return a default list.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="77" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="77" bodyend="87"/>
+        <references refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" compoundref="api__client_8py" startline="8">penify_hook.api_client.APIClient.api_url</references>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.api_client.APIClient.generate_commit_summary_with_llm</definition>
+        <argsstring>(self, diff, message, bool generate_description, repo_details, LLMClient llm_client, jira_context=None)</argsstring>
+        <name>generate_commit_summary_with_llm</name>
+        <qualifiedname>penify_hook.api_client.APIClient.generate_commit_summary_with_llm</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>diff</type>
+          <defname>diff</defname>
+        </param>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>generate_description</declname>
+        </param>
+        <param>
+          <type>repo_details</type>
+          <defname>repo_details</defname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1llm__client_1_1LLMClient" kindref="compound">LLMClient</ref></type>
+          <declname>llm_client</declname>
+        </param>
+        <param>
+          <type>jira_context</type>
+          <defname>jira_context</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates a commit summary using a local LLM client; falls back to API on
+error.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="88" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="88" bodyend="97"/>
+        <references refid="classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce" compoundref="api__client_8py" startline="33" endline="76">penify_hook.api_client.APIClient.generate_commit_summary</references>
+        <references refid="classpenify__hook_1_1llm__client_1_1LLMClient_1a2ad3014dac466ee1d8e00306d0cf2000" compoundref="llm__client_8py" startline="40" endline="174">penify_hook.llm_client.LLMClient.generate_commit_summary</references>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1api__client_1_1APIClient_1ad15b790608e703c8c122aa2ead7dfa99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.api_client.APIClient.get_api_key</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_api_key</name>
+        <qualifiedname>penify_hook.api_client.APIClient.get_api_key</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Fetch an API key from a specified URL using a Bearer token.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="98" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="98" bodyend="112"/>
+        <references refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" compoundref="api__client_8py" startline="8">penify_hook.api_client.APIClient.api_url</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>penify_hook.api_client.APIClient</label>
+        <link refid="classpenify__hook_1_1api__client_1_1APIClient"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="6" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" bodystart="6" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ad9cb741a8baf2d13f845e25a36311086" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>__init__</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a130cf688ed35dc0e8cbd8320b6b2d872" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>api_url</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a5bb502603717946ad710b49ad9d95237" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>AUTH_TOKEN</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a7d7e2cf42c54eb4f25adee96a09ee7b0" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>BEARER_TOKEN</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a7ff74798e7d428b4e2f20095287eb2ce" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>generate_commit_summary</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ac0ada470b897935f9fb372cd0e7e51e3" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>generate_commit_summary_with_llm</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ad15b790608e703c8c122aa2ead7dfa99" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>get_api_key</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1a5d2b4a26b24352d951ea79ecc4ff3402" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>get_supported_file_types</name></member>
+      <member refid="classpenify__hook_1_1api__client_1_1APIClient_1ac5aad61508c2cafdf6e88e6c7d6c82b3" prot="public" virt="non-virtual"><scope>penify_hook::api_client::APIClient</scope><name>send_file_for_docstring_generation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

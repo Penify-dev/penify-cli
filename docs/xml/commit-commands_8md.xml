@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="commit-commands_8md" kind="file" language="Markdown">
+    <compoundname>commit-commands.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Penify<sp/>CLI<sp/>-<sp/>Commit<sp/>Commands</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`commit`<sp/>command<sp/>allows<sp/>you<sp/>to<sp/>generate<sp/>smart,<sp/>AI-powered<sp/>commit<sp/>messages<sp/>for<sp/>your<sp/>Git<sp/>changes.<sp/>This<sp/>document<sp/>explains<sp/>all<sp/>available<sp/>options<sp/>and<sp/>combinations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Basic<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>default,<sp/>this<sp/>command:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Analyzes<sp/>your<sp/>staged<sp/>Git<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Generates<sp/>a<sp/>concise<sp/>commit<sp/>title<sp/>only</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Uses<sp/>local<sp/>LLM<sp/>if<sp/>configured,<sp/>or<sp/>falls<sp/>back<sp/>to<sp/>Penify<sp/>API</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Command<sp/>Options</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`-m,<sp/>--message`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Provide<sp/>context<sp/>for<sp/>the<sp/>commit<sp/>message<sp/>generation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-m<sp/>&quot;Fix<sp/>login<sp/>flow&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>hint<sp/>helps<sp/>the<sp/>AI<sp/>understand<sp/>your<sp/>intention<sp/>and<sp/>improves<sp/>the<sp/>quality<sp/>of<sp/>the<sp/>generated<sp/>message.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`-e,<sp/>--terminal`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Open<sp/>an<sp/>editor<sp/>to<sp/>review<sp/>and<sp/>edit<sp/>the<sp/>generated<sp/>commit<sp/>message<sp/>before<sp/>committing:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-e</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>opens<sp/>your<sp/>default<sp/>Git<sp/>editor<sp/>with<sp/>the<sp/>generated<sp/>message<sp/>for<sp/>review.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`-d,<sp/>--description`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generate<sp/>a<sp/>detailed<sp/>commit<sp/>message<sp/>with<sp/>both<sp/>title<sp/>and<sp/>description:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-d</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Without<sp/>this<sp/>flag,<sp/>only<sp/>the<sp/>commit<sp/>title<sp/>is<sp/>generated.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Option<sp/>Combinations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>combine<sp/>these<sp/>options<sp/>for<sp/>different<sp/>workflows:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate<sp/>Title<sp/>Only<sp/>with<sp/>Context</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-m<sp/>&quot;Update<sp/>login<sp/>UI&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate<sp/>Title<sp/>and<sp/>Description<sp/>with<sp/>Context</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-m<sp/>&quot;Update<sp/>login<sp/>UI&quot;<sp/>-d</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate<sp/>and<sp/>Edit<sp/>Full<sp/>Commit<sp/>Message</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-d<sp/>-e</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate,<sp/>Edit,<sp/>and<sp/>Provide<sp/>Context</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-m<sp/>&quot;Refactor<sp/>authentication&quot;<sp/>-d<sp/>-e</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>LLM<sp/>and<sp/>JIRA<sp/>Integration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Using<sp/>Local<sp/>LLM</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you&apos;ve<sp/>configured<sp/>a<sp/>local<sp/>LLM<sp/>using<sp/>`penify<sp/>config<sp/>llm`,<sp/>the<sp/>commit<sp/>command<sp/>will<sp/>automatically<sp/>use<sp/>it<sp/>for<sp/>message<sp/>generation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Benefits:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Privacy:<sp/>your<sp/>code<sp/>changes<sp/>don&apos;t<sp/>leave<sp/>your<sp/>machine</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Speed:<sp/>no<sp/>network<sp/>latency</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Works<sp/>offline</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>JIRA<sp/>Enhancement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you&apos;ve<sp/>configured<sp/>JIRA<sp/>integration<sp/>using<sp/>`penify<sp/>config<sp/>jira`,<sp/>the<sp/>commit<sp/>command<sp/>will:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Detect<sp/>JIRA<sp/>issue<sp/>references<sp/>in<sp/>your<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Fetch<sp/>issue<sp/>details<sp/>from<sp/>your<sp/>JIRA<sp/>instance</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Include<sp/>issue<sp/>information<sp/>in<sp/>the<sp/>commit<sp/>message</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Format<sp/>the<sp/>commit<sp/>message<sp/>according<sp/>to<sp/>JIRA&apos;s<sp/>smart<sp/>commit<sp/>format</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>output:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">PROJ-123:<sp/>Fix<sp/>authentication<sp/>bug<sp/>in<sp/>login<sp/>flow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Updated<sp/>OAuth<sp/>token<sp/>validation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Fixed<sp/>session<sp/>timeout<sp/>handling</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Added<sp/>unit<sp/>tests<sp/>for<sp/>edge<sp/>cases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[PROJ-123]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>the<sp/>`commit`<sp/>command<sp/>to<sp/>work:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>You<sp/>must<sp/>have<sp/>configured<sp/>either:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Local<sp/>LLM<sp/>via<sp/>`penify<sp/>config<sp/>llm`,<sp/>OR</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Logged<sp/>in<sp/>via<sp/>`penify<sp/>login`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>For<sp/>JIRA<sp/>enhancement<sp/>(optional):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Configure<sp/>JIRA<sp/>via<sp/>`penify<sp/>config<sp/>jira`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Examples</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Basic<sp/>Commit<sp/>with<sp/>Default<sp/>Settings</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Stage<sp/>your<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>add<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Generate<sp/>commit<sp/>message</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Commit<sp/>with<sp/>the<sp/>generated<sp/>message</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>commit<sp/>-m<sp/>&quot;Generated<sp/>message<sp/>here&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Full<sp/>Workflow<sp/>with<sp/>All<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Stage<sp/>your<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>add<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Generate<sp/>detailed<sp/>commit<sp/>message<sp/>with<sp/>JIRA<sp/>integration,<sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>provide<sp/>context,<sp/>and<sp/>open<sp/>editor<sp/>for<sp/>review</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-m<sp/>&quot;Fix<sp/>login<sp/>issue&quot;<sp/>-d<sp/>-e</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>commit<sp/>is<sp/>automatically<sp/>completed<sp/>after<sp/>you<sp/>save<sp/>and<sp/>exit<sp/>the<sp/>editor</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Common<sp/>Issues</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**&quot;No<sp/>LLM<sp/>model<sp/>or<sp/>API<sp/>token<sp/>provided&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Run<sp/>`penify<sp/>config<sp/>llm`<sp/>to<sp/>configure<sp/>a<sp/>local<sp/>LLM,<sp/>or</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Run<sp/>`penify<sp/>login`<sp/>to<sp/>authenticate<sp/>with<sp/>Penify</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>**&quot;Failed<sp/>to<sp/>connect<sp/>to<sp/>JIRA&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>your<sp/>JIRA<sp/>configuration<sp/>with<sp/>`cat<sp/>~/.penify`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Verify<sp/>your<sp/>network<sp/>connection</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>your<sp/>JIRA<sp/>credentials<sp/>are<sp/>valid</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>**&quot;Error<sp/>initializing<sp/>LLM<sp/>client&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Verify<sp/>your<sp/>LLM<sp/>configuration<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>the<sp/>LLM<sp/>API<sp/>is<sp/>accessible</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/commit-commands.md"/>
+  </compounddef>
+</doxygen>
