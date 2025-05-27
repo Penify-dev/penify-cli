@@ -1,2 +1,2 @@
-API_URL = 'http://localhost:8000/api'
+API_URL = 'https://production.gateway.snorkell.ai/api'
 DASHBOARD_URL = "https://dashboard.penify.dev/auth/localhost/login"

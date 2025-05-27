@@ -4,7 +4,7 @@
 def setup_config_parser(parent_parser):
 
     # Config subcommand: Create subparsers for config types
-    """Set up configuration parsers with subcommands for LLM and JIRA settings."""
+    """Set up configuration parsers for different types of configurations."""
     parser = parent_parser.add_subparsers(title="config_type", dest="config_type")
 
     # Config subcommand: llm
@@ -34,17 +34,7 @@ def handle_config(args):
     
     
 
-    """Handle configuration settings based on the specified config type.
-    
-    This function processes different types of configurations such as LLM (Language
-    Model) and JIRA. It saves configurations, sets up web-based configurations, and
-    verifies JIRA connections. Depending on the `args.config_type`, it imports
-    necessary modules, handles configuration saving or setup, and optionally
-    verifies JIRA connectivity.
-    
-    Args:
-        args (argparse.Namespace): Command-line arguments containing the type of configuration to handle.
-    """
+    """Handle configuration settings based on the specified config type."""
     if args.config_type == "llm-cmd":
         from penify_hook.commands.config_commands import save_llm_config
         save_llm_config(args.model, args.api_base, args.api_key)

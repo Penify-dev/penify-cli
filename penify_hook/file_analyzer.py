@@ -115,6 +115,7 @@ class FileAnalyzerGenHook(BaseAnalyzer):
         """
         stages = ["Validating", "Reading content", "Documenting", "Writing changes", "Completed"]
         pbar, _ = create_stage_progress_bar(stages, f"Starting documenting")
+        logger.debug(f"Processing file: {self.file_path}")
         
         try:
             # Print a clear indication of which file is being processed

@@ -57,7 +57,7 @@ def save_credentials(api_key):
                         f.write(f"{key}={value}\n")
                 
                 print(f"API token saved to {env_file}")
-                return True
+                # return True
             except Exception as e:
                 print(f"Error saving to .env file: {str(e)}")
                 # Fall back to saving in .penify global config
@@ -92,10 +92,13 @@ def login(api_url, dashboard_url):
     redirect_port = random.randint(30000, 50000)
     redirect_url = f"http://localhost:{redirect_port}/callback"
     
-    full_login_url = f"{dashboard_url}?redirectUri={urllib.parse.quote(redirect_url)}"
+    full_login_url = f"{dashboard_url}?redirectUri={urllib.parse.quote(redirect_url)}&autoClose=true"
     
     print(f"Opening login page in your default web browser: {full_login_url}")
-    webbrowser.open(full_login_url)
+    # Open browser with autoraise=True to ensure window is brought to front
+    # Note: window.close() in JavaScript can only close windows that were opened by JavaScript
+    # We'll pass an autoClose parameter to the dashboard URL so the server can handle closing
+    webbrowser.open(full_login_url, autoraise=True)
     
     class TokenHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
@@ -113,15 +116,17 @@ def login(api_url, dashboard_url):
                 response = """
                 <html>
                 <head>
-                    <script>
-                        setTimeout(function() {
-                            window.location.href = 'https://dashboard.penify.dev';
-                        }, 5000);
-                    </script>
+                    <style>
+                        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+                        .message { margin: 20px 0; }
+                        .note { font-size: 0.9em; color: #666; margin-top: 30px; }
+                    </style>
                 </head>
                 <body>
                     <h1>Login Successful!</h1>
-                    <p>You will be redirected to the Penify dashboard in 5 seconds. You can also close this window and return to the CLI.</p>
+                    <p class="message">API keys have been fetched and saved.</p>
+                    <p class="message">You can close this window and return to the CLI.</p>
+                    <p class="note">(The browser window cannot be closed automatically for security reasons)</p>
                 </body>
                 </html>
                 """
@@ -133,7 +138,7 @@ def login(api_url, dashboard_url):
                 if api_key:
                     save_credentials(api_key)
                     print("API keys fetched and saved successfully.")
-                    print("You'll be redirected to the Penify dashboard. You can continue using the CLI.")
+                    print("Please close the browser window and continue using the CLI.")
                 else:
                     print("Failed to fetch API keys.")
             else:
@@ -142,9 +147,17 @@ def login(api_url, dashboard_url):
                 self.end_headers()
                 response = """
                 <html>
+                <head>
+                    <style>
+                        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+                        .error { color: #d9534f; }
+                        .message { margin: 20px 0; }
+                    </style>
+                </head>
                 <body>
-                <h1>Login Failed</h1>
-                <p>Please try again.</p>
+                    <h1 class="error">Login Failed</h1>
+                    <p class="message">Please try again.</p>
+                    <p class="message">You can close this window and return to the CLI.</p>
                 </body>
                 </html>
                 """
@@ -155,7 +168,6 @@ def login(api_url, dashboard_url):
             thread = Thread(target=self.server.shutdown)
             thread.daemon = True
             thread.start()
-
         def log_message(self, format, *args):
             # Suppress log messages
             """Suppress log messages."""
