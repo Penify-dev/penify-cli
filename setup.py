@@ -2,12 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name="penify",  # Changed from "penify" to a more unique name
-    version="0.3.0",
+    version="0.3.1",
     packages=['penify_hook'],
     install_requires=[
         "requests",
         "tqdm",
-        "GitPython",
         "colorama",
         "litellm",
         "jira"
