@@ -106,13 +106,7 @@ class FileAnalyzerGenHook(BaseAnalyzer):
     def run(self):
         
         # Create a progress bar with appropriate stages
-        """Runs the documentation process with a progress bar.
-        
-        This method orchestrates the documentation process by creating a progress bar,
-        processing the file, and handling exceptions to ensure the progress bar
-        completes properly. It updates the progress bar through various stages and
-        provides feedback based on the result of the file processing.
-        """
+        """Runs the documentation process with a progress bar."""
         stages = ["Validating", "Reading content", "Documenting", "Writing changes", "Completed"]
         pbar, _ = create_stage_progress_bar(stages, f"Starting documenting")
         logger.debug(f"Processing file: {self.file_path}")

@@ -10,25 +10,8 @@ from pathlib import Path
 
 def save_credentials(api_key):
     # Try to save in .env file in git repo first
-    """Save the API key in a priority-based manner.
-    
-    This function attempts to save the API key in two locations, based on priority:
-    1. In a `.env` file located in the root of the Git repository if one is found.
-    2. In a global `.penify` file located in the user's home directory as a
-    fallback.  The function first tries to locate the Git repository using
-    `recursive_search_git_folder`. If a Git repository is found, it reads the
-    existing `.env` file (if present), updates or adds the API key under the key
-    `PENIFY_API_TOKEN`, and writes the updated content back. If any error occurs
-    during this process, it falls back to saving the credentials in the global
-    `.penify` file. The function handles exceptions and prints appropriate error
-    messages.
-    
-    Args:
-        api_key (str): The API key to save.
-    
-    Returns:
-        bool: True if the API key is saved successfully, False otherwise.
-    """
+    """Save the API key in a `.env` file in the Git repository if found, otherwise in
+    the global `.penify` file."""
     try:
         from ..utils import recursive_search_git_folder
         current_dir = os.getcwd()
@@ -103,7 +86,7 @@ def login(api_url, dashboard_url):
     class TokenHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
 
-            """Handle a GET request to process login token and redirect or display error
+            """Handle a GET request to process login token and display success or error
             message."""
             query = urllib.parse.urlparse(self.path).query
             query_components = urllib.parse.parse_qs(query)
@@ -170,7 +153,7 @@ def login(api_url, dashboard_url):
             thread.start()
         def log_message(self, format, *args):
             # Suppress log messages
-            """Suppress log messages."""
+            """Suppresses log messages."""
             return
     
     with socketserver.TCPServer(("", redirect_port), TokenHandler) as httpd:

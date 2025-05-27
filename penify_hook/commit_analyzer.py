@@ -19,7 +19,7 @@ class CommitDocGenHook(BaseAnalyzer):
         self.jira_client: JiraClient = jira_client  # Add JIRA client as an optional parameter
 
     def get_summary(self, instruction: str, generate_description: bool) -> dict:
-        """Generate a summary for the commit based on the staged changes."""
+        """Generate a summary for the commit based on staged changes."""
         diff = self.repo.git.diff('--cached')
         if not diff:
             raise ValueError("No changes to commit")
@@ -113,7 +113,7 @@ class CommitDocGenHook(BaseAnalyzer):
         return title, description
 
     def _amend_commit(self):
-        """Open the default git editor to amend the last commit message."""
+        """Amend the last commit message in the repository."""
         try:
             # Change to the repository directory
             os.chdir(self.repo_path)
