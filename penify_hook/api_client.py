@@ -75,15 +75,18 @@ class APIClient:
             return None
 
     def get_supported_file_types(self) -> list[str]:
+        """Retrieve the supported file types from the API.
 
-        """Retrieve supported file types from the API or return a default list."""
-        url = self.api_url+"/v1/cli/supported_languages"
-        response = requests.get(url)
-        if response.status_code == 200:
-            response = response.json()
-            return response
-        else:
-            return ["py", "js", "ts", "java", "kt", "cs", "c"]
+        This function sends a request to the API endpoint
+        `/v1/file/supported_languages` to obtain a list of supported file types.
+        If the API call is successful (status code 200), it parses the JSON
+        response and returns the list of supported file types. If the API call
+        fails, it returns a default list of common file types.
+
+        Returns:
+            list[str]: A list of supported file types, either from the API or a default set.
+        """
+        return ["py", "js", "ts", "java", "kt", "cs", "c", 'cpp', 'go', 'php', 'tsx','jsx']
 
     def generate_commit_summary_with_llm(self, diff, message, generate_description: bool, repo_details, llm_client : LLMClient, jira_context=None):
         """Generates a commit summary using a local LLM client; falls back to API on

@@ -1,2 +1,2 @@
 API_URL = 'http://localhost:8000/api'
-DASHBOARD_URL = "https://dashboard.penify.dev/auth/localhost/login"
+DASHBOARD_URL = "http://localhost:8000/auth/localhost/login"
