@@ -1,0 +1,10 @@
+<map id="penify_hook.jira_client.JiraClient.get_issue_details" name="penify_hook.jira_client.JiraClient.get_issue_details">
+<area shape="rect" id="Node000001" title=" " alt="" coords="485,53,684,93"/>
+<area shape="rect" id="Node000002" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html#a49ea1149758f7f5212149d357b13cc23" title=" " alt="" coords="251,5,437,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="471,57,437,51,438,46,472,51"/>
+<area shape="rect" id="Node000004" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html#afb41ce6f13c30b1265d439ddf04bf2cd" title=" " alt="" coords="257,84,431,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="472,93,431,100,430,95,472,88"/>
+<area shape="rect" id="Node000003" href="$classpenify__hook_1_1jira__client_1_1JiraClient.html#a70d2c5a6432aa6f238da0ff65d49a760" title=" " alt="" coords="5,45,203,100"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="238,53,203,59,202,54,237,48"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="243,98,202,91,203,86,244,93"/>
+</map>

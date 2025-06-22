@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['warning_5fcolor_0',['WARNING_COLOR',['../namespacepenify__hook_1_1ui__utils.html#a177bc9b44157844c999e0c1c2c6936ff',1,'penify_hook::ui_utils']]],
+  ['warning_5fsymbol_1',['WARNING_SYMBOL',['../namespacepenify__hook_1_1ui__utils.html#a9ee7a42eeca5b12429cb97bf89007be8',1,'penify_hook::ui_utils']]],
+  ['web_20interface_2',['Web Interface',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2config-commands.html#autotoc_md24',1,'Web Interface'],['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2config-commands.html#autotoc_md32',1,'Web Interface']]],
+  ['what_20happens_3a_3',['What happens:',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2penify-cli-documentation.html#autotoc_md143',1,'']]],
+  ['with_20ai_4',['Workflow 1: Efficient Git Commits with AI',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md104',1,'']]],
+  ['with_20all_20features_5',['Full Workflow with All Features',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2commit-commands.html#autotoc_md17',1,'']]],
+  ['with_20context_6',['with Context',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2commit-commands.html#autotoc_md8',1,'Generate Title and Description with Context'],['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2commit-commands.html#autotoc_md7',1,'Generate Title Only with Context']]],
+  ['with_20default_20settings_7',['Basic Commit with Default Settings',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2commit-commands.html#autotoc_md16',1,'']]],
+  ['work_8',['How Hooks Work',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2doc__commands.html#autotoc_md81',1,'']]],
+  ['workflow_9',['Workflow',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md106',1,'Daily Workflow'],['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md110',1,'Daily Workflow'],['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md115',1,'Workflow']]],
+  ['workflow_201_3a_20efficient_20git_20commits_20with_20ai_10',['Workflow 1: Efficient Git Commits with AI',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md104',1,'']]],
+  ['workflow_202_3a_20documentation_20generation_20pipeline_11',['Workflow 2: Documentation Generation Pipeline',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md108',1,'']]],
+  ['workflow_203_3a_20code_20review_20enhancement_12',['Workflow 3: Code Review Enhancement',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md113',1,'']]],
+  ['workflow_204_3a_20onboarding_20new_20team_20members_13',['Workflow 4: Onboarding New Team Members',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md117',1,'']]],
+  ['workflow_205_3a_20legacy_20code_20understanding_14',['Workflow 5: Legacy Code Understanding',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html#autotoc_md121',1,'']]],
+  ['workflow_20with_20all_20features_15',['Full Workflow with All Features',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2commit-commands.html#autotoc_md17',1,'']]],
+  ['workflows_16',['Penify CLI Example Workflows',['../md__2app_2doc__state_2github__reposRepoArchDocGenContext_2Penify-dev_2penify-cli_2docs_2example-workflows.html',1,'']]]
+];

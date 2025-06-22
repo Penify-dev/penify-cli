@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="penify-cli " />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="penify-cli - Custom CSS theme for html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://github.com/Penify-dev/penify-cli" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>penify-cli: tests.test_config_commands.TestConfigCommands Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/Penify-dev/penify-cli" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">penify-cli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classtests_1_1test__config__commands_1_1TestConfigCommands.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classtests_1_1test__config__commands_1_1TestConfigCommands-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tests.test_config_commands.TestConfigCommands Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for tests.test_config_commands.TestConfigCommands:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtests_1_1test__config__commands_1_1TestConfigCommands__coll__graph.svg" width="215" height="487"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae9c0ef56734f17892b7ac115e488bac4" id="r_ae9c0ef56734f17892b7ac115e488bac4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9c0ef56734f17892b7ac115e488bac4">test_get_penify_config_existing_dir</a> (self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</td></tr>
+<tr class="separator:ae9c0ef56734f17892b7ac115e488bac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335a57c003a8d797a5457c4d1c60420e" id="r_a335a57c003a8d797a5457c4d1c60420e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a335a57c003a8d797a5457c4d1c60420e">test_get_penify_config_new_dir</a> (self, mock_file_open, mock_makedirs, mock_path, mock_git_folder)</td></tr>
+<tr class="separator:a335a57c003a8d797a5457c4d1c60420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6ebd022b24b111df7cabdab4e1b6db" id="r_acd6ebd022b24b111df7cabdab4e1b6db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd6ebd022b24b111df7cabdab4e1b6db">test_get_llm_config_exists</a> (self, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:acd6ebd022b24b111df7cabdab4e1b6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29cdcf995761e77c9ff8c93e49eff541" id="r_a29cdcf995761e77c9ff8c93e49eff541"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29cdcf995761e77c9ff8c93e49eff541">test_get_llm_config_empty</a> (self, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a29cdcf995761e77c9ff8c93e49eff541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d58f1b9188f2486f7e424aea40d0bd" id="r_a06d58f1b9188f2486f7e424aea40d0bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06d58f1b9188f2486f7e424aea40d0bd">test_get_llm_config_invalid_json</a> (self, mock_print, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a06d58f1b9188f2486f7e424aea40d0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153e6f218be2f42581be6895a14a4e85" id="r_a153e6f218be2f42581be6895a14a4e85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a153e6f218be2f42581be6895a14a4e85">test_get_jira_config_exists</a> (self, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a153e6f218be2f42581be6895a14a4e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2411d025a057beb8a2f2a6431559e64f" id="r_a2411d025a057beb8a2f2a6431559e64f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2411d025a057beb8a2f2a6431559e64f">test_save_llm_config_success</a> (self, mock_print, mock_json_dump, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a2411d025a057beb8a2f2a6431559e64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ccb8ee5c161fcf49a04404a1658100b" id="r_a2ccb8ee5c161fcf49a04404a1658100b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ccb8ee5c161fcf49a04404a1658100b">test_save_llm_config_failure</a> (self, mock_print, mock_file_open, mock_get_config)</td></tr>
+<tr class="separator:a2ccb8ee5c161fcf49a04404a1658100b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060996b8323f4cfd629c77b4e2605f50" id="r_a060996b8323f4cfd629c77b4e2605f50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a060996b8323f4cfd629c77b4e2605f50">test_save_jira_config_success</a> (self, mock_print, mock_json_dump, mock_file_open, mock_path)</td></tr>
+<tr class="separator:a060996b8323f4cfd629c77b4e2605f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30db6b96dcf9e6143d6a8f5241f5be1" id="r_af30db6b96dcf9e6143d6a8f5241f5be1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af30db6b96dcf9e6143d6a8f5241f5be1">test_get_token_from_env</a> (self, mock_file_open, mock_path, mock_getenv)</td></tr>
+<tr class="separator:af30db6b96dcf9e6143d6a8f5241f5be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2890b010d859d53629d9bea6a72b9c0" id="r_ac2890b010d859d53629d9bea6a72b9c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2890b010d859d53629d9bea6a72b9c0">test_get_token_from_config</a> (self, mock_file_open, mock_path, mock_getenv)</td></tr>
+<tr class="separator:ac2890b010d859d53629d9bea6a72b9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1548cea068b4305d5a1d3ad5fb1bc25a" id="r_a1548cea068b4305d5a1d3ad5fb1bc25a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1548cea068b4305d5a1d3ad5fb1bc25a">test_get_token_not_found</a> (self, mock_file_open, mock_path, mock_getenv)</td></tr>
+<tr class="separator:a1548cea068b4305d5a1d3ad5fb1bc25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a153e6f218be2f42581be6895a14a4e85" name="a153e6f218be2f42581be6895a14a4e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153e6f218be2f42581be6895a14a4e85">&#9670;&#160;</a></span>test_get_jira_config_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_jira_config_exists </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_get_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test that get_jira_config returns the correct JIRA configuration when
+the configuration file exists.
+
+It sets up a mock for the configuration file to simulate its existence
+and verifies that the function reads from the correct file and returns
+the expected JIRA configuration dictionary. Additionally, it checks that
+the mock file open is called with the appropriate arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_get_config (MagicMock): A mock for the `get_config` function, which is expected to return a mock
+        configuration file object.
+
+Returns:
+    None: This test function does not explicitly return anything. Its assertions
+        serve as the verification of its correctness.
+</pre> 
+</div>
+</div>
+<a id="a29cdcf995761e77c9ff8c93e49eff541" name="a29cdcf995761e77c9ff8c93e49eff541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29cdcf995761e77c9ff8c93e49eff541">&#9670;&#160;</a></span>test_get_llm_config_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_llm_config_empty </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_get_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the behavior of get_llm_config when called with an empty
+configuration file.
+
+This function sets up a mock configuration file that exists but returns
+no content. It then calls the `get_llm_config` function and asserts that
+it returns an empty dictionary and that the file open method was called
+exactly once with the correct arguments.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the built-in open function.
+    mock_get_config (MagicMock): A MagicMock object simulating the get_config function.
+</pre> 
+</div>
+</div>
+<a id="acd6ebd022b24b111df7cabdab4e1b6db" name="acd6ebd022b24b111df7cabdab4e1b6db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6ebd022b24b111df7cabdab4e1b6db">&#9670;&#160;</a></span>test_get_llm_config_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_llm_config_exists </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_get_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the get_llm_config function when the configuration file exists.
+
+This function sets up a mock configuration file that exists and returns
+it when called. It then calls the get_llm_config function and asserts
+that it returns the correct configuration dictionary. Additionally, it
+checks that the mock_file_open function was called with the correct
+arguments.
+
+Args:
+    mock_file_open (MagicMock): A mock for the open() function.
+    mock_get_config (MagicMock): A mock for the get_config() function.
+</pre> 
+</div>
+</div>
+<a id="a06d58f1b9188f2486f7e424aea40d0bd" name="a06d58f1b9188f2486f7e424aea40d0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d58f1b9188f2486f7e424aea40d0bd">&#9670;&#160;</a></span>test_get_llm_config_invalid_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_llm_config_invalid_json </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_print</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_get_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test function to verify the behavior of get_llm_config when reading an
+invalid JSON file.
+
+It sets up a mock configuration file that exists but contains invalid
+JSON. The function is expected to handle this gracefully by printing an
+error message and returning an empty dictionary.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_get_config (MagicMock): Mock for the get_config function, which returns the mock configuration
+        file.
+</pre> 
+</div>
+</div>
+<a id="ae9c0ef56734f17892b7ac115e488bac4" name="ae9c0ef56734f17892b7ac115e488bac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c0ef56734f17892b7ac115e488bac4">&#9670;&#160;</a></span>test_get_penify_config_existing_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_penify_config_existing_dir </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_makedirs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_git_folder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the get_penify_config function when the .penify config directory
+exists.
+
+It should not create a new directory and assert that all mocked
+functions were called correctly.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the open() function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the os.makedirs() function.
+    mock_path (MagicMock): A MagicMock object simulating the Path class from pathlib module.
+    mock_git_folder (MagicMock): A MagicMock object simulating the git_folder_search() function.
+</pre> 
+</div>
+</div>
+<a id="a335a57c003a8d797a5457c4d1c60420e" name="a335a57c003a8d797a5457c4d1c60420e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a335a57c003a8d797a5457c4d1c60420e">&#9670;&#160;</a></span>test_get_penify_config_new_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_penify_config_new_dir </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_makedirs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_git_folder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the behavior of get_penify_config when the .penify directory does
+not exist.
+
+This function mocks various system calls to simulate a scenario where
+the .penify directory is not present. It then asserts that the
+appropriate actions are taken to create the directory and write an empty
+JSON file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object simulating the `open` function.
+    mock_makedirs (MagicMock): A MagicMock object simulating the `os.makedirs` function.
+    mock_path (MagicMock): A MagicMock object simulating the `Path` class from `pathlib`.
+    mock_git_folder (MagicMock): A MagicMock object simulating a git folder search function.
+</pre> 
+</div>
+</div>
+<a id="ac2890b010d859d53629d9bea6a72b9c0" name="ac2890b010d859d53629d9bea6a72b9c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2890b010d859d53629d9bea6a72b9c0">&#9670;&#160;</a></span>test_get_token_from_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_token_from_config </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_getenv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test retrieving a token from the configuration.
+
+This function sets up mocks for environment variables and configuration
+files, calls the `get_token` function, and asserts its behavior. It
+verifies that when the environment variable is not found, the function
+reads a token from a configuration file located in the user's home
+directory.
+
+Args:
+    mock_file_open (MagicMock): A mock for the `open` function.
+    mock_path (MagicMock): A mock for the `pathlib.Path` class.
+    mock_getenv (MagicMock): A mock for the `os.getenv` function.
+</pre> 
+</div>
+</div>
+<a id="af30db6b96dcf9e6143d6a8f5241f5be1" name="af30db6b96dcf9e6143d6a8f5241f5be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30db6b96dcf9e6143d6a8f5241f5be1">&#9670;&#160;</a></span>test_get_token_from_env()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_token_from_env </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_getenv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test retrieving a token from the environment variable.
+
+This function tests the behavior of `get_token` when an environment
+variable is set. It verifies that if the 'PENIFY_API_TOKEN' environment
+variable exists, the function returns its value without attempting to
+read a file.
+
+Args:
+    mock_file_open (MagicMock): A MagicMock object for simulating file operations.
+    mock_path (MagicMock): A MagicMock object for simulating path operations.
+    mock_getenv (MagicMock): A MagicMock object for simulating environment variable retrieval.
+</pre> 
+</div>
+</div>
+<a id="a1548cea068b4305d5a1d3ad5fb1bc25a" name="a1548cea068b4305d5a1d3ad5fb1bc25a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1548cea068b4305d5a1d3ad5fb1bc25a">&#9670;&#160;</a></span>test_get_token_not_found()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_get_token_not_found </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_getenv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the get_token function when the API token environment variable is
+not found.
+
+This function tests the scenario where the `PENIFY_API_TOKEN`
+environment variable is not set. It mocks the environment variable to
+return `None`, and verifies that the function returns `None`. The test
+also checks that the environment variable is accessed once and that a
+file open operation is attempted on a configuration file located in the
+user's home directory.
+
+Args:
+    mock_file_open (MagicMock): Mock for the built-in `open` function.
+    mock_path (MagicMock): Mock for the `pathlib.Path` module.
+    mock_getenv (MagicMock): Mock for the `os.getenv` function.
+
+Returns:
+    None: The function does not return anything; it asserts conditions to verify
+        correctness.
+</pre> 
+</div>
+</div>
+<a id="a060996b8323f4cfd629c77b4e2605f50" name="a060996b8323f4cfd629c77b4e2605f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060996b8323f4cfd629c77b4e2605f50">&#9670;&#160;</a></span>test_save_jira_config_success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_save_jira_config_success </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_print</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_json_dump</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the save_jira_config function to ensure it saves JIRA configuration
+successfully.
+
+This function sets up mocks for various dependencies and tests the
+functionality of saving a JIRA configuration. It asserts that the
+function returns `True`, the JSON dump is called with the correct
+configuration, and the print statement contains the expected message.
+
+Args:
+    mock_print (MagicMock): Mock for the print function.
+    mock_json_dump (MagicMock): Mock for the json.dump function.
+    mock_file_open (MagicMock): Mock for the open function.
+    mock_path (MagicMock): Mock for the path module.
+</pre> 
+</div>
+</div>
+<a id="a2ccb8ee5c161fcf49a04404a1658100b" name="a2ccb8ee5c161fcf49a04404a1658100b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ccb8ee5c161fcf49a04404a1658100b">&#9670;&#160;</a></span>test_save_llm_config_failure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_save_llm_config_failure </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_print</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_get_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test function to verify that the save_llm_config function returns False
+and prints an error message when it fails to save the LLM configuration
+due to a permission error.
+
+It sets up a mock configuration file that exists and calls the
+save_llm_config function with valid parameters. The function is expected
+to return False and print "Error saving LLM configuration: Permission
+denied" in case of a failure.
+
+Args:
+    self (TestLLMConfig): An instance of the test class.
+    mock_print (MagicMock): A MagicMock object representing the print function, which will be used
+        to assert that it was called with the expected error message.
+    mock_file_open (MagicMock): A MagicMock object representing the open function, which is not used in
+        this test but is included as a parameter for completeness.
+    mock_get_config (MagicMock): A MagicMock object representing the get_config function, which will be
+        used to return the mock configuration file.
+</pre> 
+</div>
+</div>
+<a id="a2411d025a057beb8a2f2a6431559e64f" name="a2411d025a057beb8a2f2a6431559e64f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2411d025a057beb8a2f2a6431559e64f">&#9670;&#160;</a></span>test_save_llm_config_success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tests.test_config_commands.TestConfigCommands.test_save_llm_config_success </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_print</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_json_dump</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_file_open</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_get_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Test the save_llm_config function successfully.
+
+This function tests that the save_llm_config function correctly saves an
+LLM configuration and handles various mock objects and side effects. It
+ensures that the function returns True upon successful execution, writes
+the expected configuration to a file, and prints a confirmation message.
+
+Args:
+    mock_print (MagicMock): A mock object for the print function.
+    mock_json_dump (MagicMock): A mock object for json.dump.
+    mock_file_open (MagicMock): A mock object for file opening.
+    mock_get_config (MagicMock): A mock object to return a configuration file mock.
+</pre> 
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/app/doc_state/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/<a class="el" href="test__config__commands_8py.html">test_config_commands.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacetests.html">tests</a></li><li class="navelem"><a class="el" href="namespacetests_1_1test__config__commands.html">test_config_commands</a></li><li class="navelem"><a class="el" href="classtests_1_1test__config__commands_1_1TestConfigCommands.html">TestConfigCommands</a></li>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/penify-logo.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>
