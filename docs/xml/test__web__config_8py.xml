@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="test__web__config_8py" kind="file" language="Python">
+    <compoundname>test_web_config.py</compoundname>
+    <innerclass refid="classtests_1_1test__web__config_1_1TestWebConfig" prot="public">tests::test_web_config::TestWebConfig</innerclass>
+    <innernamespace refid="namespacetests">tests</innernamespace>
+    <innernamespace refid="namespacetests_1_1test__web__config">tests::test_web_config</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacetests_1_1test__web__config" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pytest</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>json</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>http.server</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>threading</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>socketserver</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>unittest.mock<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>patch,<sp/>MagicMock,<sp/>mock_open</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>webbrowser</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacepenify__hook_1_1commands_1_1config__commands" kindref="compound">penify_hook.commands.config_commands</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>config_llm_web,<sp/>config_jira_web</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classtests_1_1test__web__config_1_1TestWebConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtests_1_1test__web__config_1_1TestWebConfig" kindref="compound">TestWebConfig</ref>:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@patch(&apos;webbrowser.open&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@patch(&apos;socketserver.TCPServer&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@patch(&apos;pkg_resources.resource_filename&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35" kindref="member">test_config_llm_web_server_setup</ref>(self,<sp/>mock_resource_filename,<sp/>mock_server,<sp/>mock_webbrowser):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Set<sp/>up<sp/>and<sp/>test<sp/>the<sp/>web<sp/>server<sp/>configuration<sp/>for<sp/>an<sp/>LLM<sp/>(Large<sp/>Language</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Model)<sp/>web<sp/>interface.</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>function<sp/>configures<sp/>a<sp/>mock<sp/>web<sp/>server<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>testing<sp/>purposes,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>including<sp/>setting<sp/>up<sp/>resource<sp/>filenames,<sp/>mocking<sp/>server<sp/>behavior,<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verifying<sp/>that<sp/>the<sp/>web<sp/>browser<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>opened<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>the<sp/>server<sp/>starts</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>correctly.<sp/>The<sp/>function<sp/>uses<sp/>various<sp/>mocks<sp/>to<sp/>simulate<sp/>external</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dependencies<sp/>such<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>`resource_filename`<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>`server`.</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_resource_filename<sp/>(MagicMock):<sp/>A<sp/>MagicMock<sp/>object<sp/>simulating<sp/>the<sp/>`resource_filename`<sp/>function.</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server<sp/>(MagicMock):<sp/>A<sp/>MagicMock<sp/>object<sp/>simulating<sp/>the<sp/>context<sp/>manager<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>the<sp/>web<sp/>server.</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_webbrowser<sp/>(MagicMock):<sp/>A<sp/>MagicMock<sp/>object<sp/>simulating<sp/>the<sp/>`webbrowser`<sp/>module.</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Setup<sp/>mocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_resource_filename.return_value<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;mock/template/path&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance<sp/>=<sp/>MagicMock()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server.return_value.__enter__.return_value<sp/>=<sp/>mock_server_instance</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Mock<sp/>the<sp/>serve_forever<sp/>method<sp/>to<sp/>stop<sp/>after<sp/>being<sp/>called<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">stop_server_after_call():</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance.shutdown()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance.serve_forever.side_effect<sp/>=<sp/>stop_server_after_call</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Call<sp/>function<sp/>with<sp/>patched<sp/>webbrowser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>patch(</highlight><highlight class="stringliteral">&apos;builtins.print&apos;</highlight><highlight class="normal">):<sp/><sp/></highlight><highlight class="comment">#<sp/>Suppress<sp/>print<sp/>statements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c" kindref="member">config_llm_web</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Verify<sp/>webbrowser<sp/>was<sp/>opened</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_webbrowser.assert_called_once()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>mock_webbrowser.call_args[0][0].startswith(</highlight><highlight class="stringliteral">&apos;http://localhost:&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Verify<sp/>server<sp/>was<sp/>started</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server.assert_called_once()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance.serve_forever.assert_called_once()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@patch(&apos;webbrowser.open&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@patch(&apos;socketserver.TCPServer&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@patch(&apos;pkg_resources.resource_filename&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a" kindref="member">test_config_jira_web_server_setup</ref>(self,<sp/>mock_resource_filename,<sp/>mock_server,<sp/>mock_webbrowser):</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Test<sp/>the<sp/>configuration<sp/>and<sp/>setup<sp/>of<sp/>a<sp/>JIRA<sp/>web<sp/>server.</highlight></codeline>
+<codeline lineno="61"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="62"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>function<sp/>tests<sp/>the<sp/>entire<sp/>process<sp/>of<sp/>setting<sp/>up<sp/>a<sp/>JIRA<sp/>web<sp/>server,</highlight></codeline>
+<codeline lineno="63"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>including<sp/>mocking<sp/>necessary<sp/>resources,<sp/>configuring<sp/>the<sp/>server<sp/>to<sp/>shut</highlight></codeline>
+<codeline lineno="64"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>down<sp/>after<sp/>handling<sp/>one<sp/>request,<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>verifying<sp/>that<sp/>the<sp/>web<sp/>browser<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opened<sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>the<sp/>correct<sp/>URL.<sp/>The<sp/>function<sp/>uses<sp/>several<sp/>mocks<sp/>to<sp/>simulate</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>external<sp/>dependencies<sp/>such<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>resource<sp/>files,<sp/>servers,<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>web<sp/>browsers.</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_resource_filename<sp/>(MagicMock):<sp/>A<sp/>MagicMock<sp/>object<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>simulating<sp/>the<sp/>`resource_filename`<sp/>function.</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server<sp/>(MagicMock):<sp/>A<sp/>MagicMock<sp/>object<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>simulating<sp/>the<sp/>server<sp/>setup.</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_webbrowser<sp/>(MagicMock):<sp/>A<sp/>MagicMock<sp/>object<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>simulating<sp/>the<sp/>web<sp/>browser<sp/>opening.</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Setup<sp/>mocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_resource_filename.return_value<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;mock/template/path&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance<sp/>=<sp/>MagicMock()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server.return_value.__enter__.return_value<sp/>=<sp/>mock_server_instance</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Mock<sp/>the<sp/>serve_forever<sp/>method<sp/>to<sp/>stop<sp/>after<sp/>being<sp/>called<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">stop_server_after_call():</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance.shutdown()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance.serve_forever.side_effect<sp/>=<sp/>stop_server_after_call</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Call<sp/>function<sp/>with<sp/>patched<sp/>webbrowser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>patch(</highlight><highlight class="stringliteral">&apos;builtins.print&apos;</highlight><highlight class="normal">):<sp/><sp/></highlight><highlight class="comment">#<sp/>Suppress<sp/>print<sp/>statements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" kindref="member">config_jira_web</ref>()</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Verify<sp/>webbrowser<sp/>was<sp/>opened</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_webbrowser.assert_called_once()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>mock_webbrowser.call_args[0][0].startswith(</highlight><highlight class="stringliteral">&apos;http://localhost:&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Verify<sp/>server<sp/>was<sp/>started</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server.assert_called_once()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mock_server_instance.serve_forever.assert_called_once()</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_web_config.py"/>
+  </compounddef>
+</doxygen>

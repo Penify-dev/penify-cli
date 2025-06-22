@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="detailed-usage_8md" kind="file" language="Markdown">
+    <compoundname>detailed-usage.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Penify<sp/>CLI<sp/>-<sp/>Detailed<sp/>Usage<sp/>Guide</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>document<sp/>provides<sp/>in-depth<sp/>information<sp/>about<sp/>all<sp/>features<sp/>and<sp/>capabilities<sp/>of<sp/>the<sp/>Penify<sp/>CLI<sp/>tool.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>Contents</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Penify<sp/>CLI<sp/>-<sp/>Detailed<sp/>Usage<sp/>Guide](#penify-cli---detailed-usage-guide)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Table<sp/>of<sp/>Contents](#table-of-contents)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Authentication](#authentication)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Login<sp/>Process](#login-process)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[API<sp/>Token<sp/>Storage](#api-token-storage)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Token<sp/>Precedence](#token-precedence)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Command<sp/>Overview](#command-overview)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Commit<sp/>Message<sp/>Generation](#commit-message-generation)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Code<sp/>Documentation<sp/>Generation](#code-documentation-generation)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Use<sp/>Cases](#use-cases)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Authentication<sp/>Requirement](#authentication-requirement)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Configuration<sp/>Settings](#configuration-settings)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Git<sp/>Hooks](#git-hooks)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Post-Commit<sp/>Hook](#post-commit-hook)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Custom<sp/>Hook<sp/>Location](#custom-hook-location)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Advanced<sp/>Use<sp/>Cases](#advanced-use-cases)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[CI/CD<sp/>Integration](#cicd-integration)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Remote<sp/>Repository<sp/>Documentation](#remote-repository-documentation)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Troubleshooting](#troubleshooting)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Common<sp/>Issues](#common-issues)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Logs](#logs)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[Support](#support)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Authentication</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Login<sp/>Process</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>you<sp/>run<sp/>`penify<sp/>login`,<sp/>the<sp/>tool:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Opens<sp/>your<sp/>default<sp/>web<sp/>browser</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Redirects<sp/>you<sp/>to<sp/>Penify&apos;s<sp/>login<sp/>page</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Captures<sp/>the<sp/>authentication<sp/>token<sp/>after<sp/>successful<sp/>login</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Saves<sp/>the<sp/>token<sp/>in<sp/>`~/.penify`<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>API<sp/>Token<sp/>Storage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">API<sp/>tokens<sp/>are<sp/>stored<sp/>in<sp/>your<sp/>home<sp/>directory<sp/>in<sp/>the<sp/>`.penify`<sp/>file.<sp/>This<sp/>JSON<sp/>file<sp/>contains:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```json</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;api_keys&quot;:<sp/>&quot;your-api-token&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;llm&quot;:<sp/>{<sp/>&quot;model&quot;:<sp/>&quot;...&quot;,<sp/>&quot;api_base&quot;:<sp/>&quot;...&quot;,<sp/>&quot;api_key&quot;:<sp/>&quot;...&quot;<sp/>},</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;jira&quot;:<sp/>{<sp/>&quot;url&quot;:<sp/>&quot;...&quot;,<sp/>&quot;username&quot;:<sp/>&quot;...&quot;,<sp/>&quot;api_token&quot;:<sp/>&quot;...&quot;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Token<sp/>Precedence</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Environment<sp/>variable<sp/>`PENIFY_API_TOKEN`<sp/>(highest<sp/>priority)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Token<sp/>in<sp/>`~/.penify`<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Command<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">penify</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>commit<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Generate<sp/>smart<sp/>commit<sp/>messages</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>config<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Configure<sp/>local<sp/>LLM<sp/>and<sp/>JIRA</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>llm<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Configure<sp/>local<sp/>LLM<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>jira<sp/><sp/><sp/><sp/><sp/><sp/>Configure<sp/>JIRA<sp/>integration</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>login<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log<sp/>in<sp/>to<sp/>Penify<sp/>account</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>docgen<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Generate<sp/>code<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>install-hook<sp/><sp/><sp/><sp/><sp/>Install<sp/>Git<sp/>post-commit<sp/>hook</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/>uninstall-hook<sp/><sp/><sp/>Remove<sp/>Git<sp/>post-commit<sp/>hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Commit<sp/>Message<sp/>Generation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`commit`<sp/>command<sp/>analyzes<sp/>your<sp/>staged<sp/>changes<sp/>and<sp/>generates<sp/>meaningful<sp/>commit<sp/>messages.<sp/>It<sp/>can:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Use<sp/>a<sp/>local<sp/>LLM<sp/>if<sp/>configured</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Enhance<sp/>messages<sp/>with<sp/>JIRA<sp/>issue<sp/>details</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Provide<sp/>both<sp/>title<sp/>and<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>specific<sp/>options<sp/>and<sp/>examples,<sp/>see<sp/>[docs/commit-commands.md](commit-commands.md).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Code<sp/>Documentation<sp/>Generation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`docgen`<sp/>command<sp/>generates<sp/>documentation<sp/>for<sp/>your<sp/>code:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Use<sp/>Cases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**Current<sp/>Git<sp/>Diff**:<sp/>Default<sp/>behavior,<sp/>documents<sp/>only<sp/>changed<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**Specific<sp/>File**:<sp/>Pass<sp/>a<sp/>file<sp/>path<sp/>with<sp/>`-l<sp/>path/to/file.py`</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**Entire<sp/>Folder**:<sp/>Pass<sp/>a<sp/>folder<sp/>path<sp/>with<sp/>`-l<sp/>path/to/folder`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Authentication<sp/>Requirement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>feature<sp/>requires<sp/>authentication<sp/>with<sp/>a<sp/>Penify<sp/>account.<sp/>Run<sp/>`penify<sp/>login`<sp/>before<sp/>using<sp/>documentation<sp/>features.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>Settings</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configure<sp/>local<sp/>settings<sp/>using<sp/>the<sp/>`config`<sp/>command:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**LLM<sp/>Settings**:<sp/>Configure<sp/>a<sp/>local<sp/>LLM<sp/>for<sp/>commit<sp/>message<sp/>generation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**JIRA<sp/>Settings**:<sp/>Set<sp/>up<sp/>JIRA<sp/>integration<sp/>for<sp/>enhanced<sp/>commit<sp/>messages</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>detailed<sp/>configuration<sp/>options,<sp/>see<sp/>[docs/config-commands.md](config-commands.md).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Git<sp/>Hooks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>can<sp/>install<sp/>Git<sp/>hooks<sp/>to<sp/>automate<sp/>documentation<sp/>generation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Post-Commit<sp/>Hook</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Install**:<sp/>`penify<sp/>docgen<sp/>install-hook`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**What<sp/>it<sp/>does**:<sp/>Automatically<sp/>generates<sp/>documentation<sp/>for<sp/>changed<sp/>files<sp/>after<sp/>each<sp/>commit</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Uninstall**:<sp/>`penify<sp/>docgen<sp/>uninstall-hook`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Custom<sp/>Hook<sp/>Location</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>specify<sp/>a<sp/>custom<sp/>location<sp/>for<sp/>Git<sp/>hooks:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook<sp/>-l<sp/>/path/to/git/repo</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Advanced<sp/>Use<sp/>Cases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>CI/CD<sp/>Integration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>CI/CD<sp/>pipelines:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Set<sp/>`PENIFY_API_TOKEN`<sp/>as<sp/>an<sp/>environment<sp/>variable</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Run<sp/>commands<sp/>without<sp/>requiring<sp/>interactive<sp/>login</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Remote<sp/>Repository<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generate<sp/>documentation<sp/>for<sp/>an<sp/>entire<sp/>repository:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/user/repo</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>repo</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Common<sp/>Issues</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**API<sp/>Key<sp/>Errors**:<sp/>Ensure<sp/>you&apos;ve<sp/>run<sp/>`penify<sp/>login`<sp/>or<sp/>set<sp/>`PENIFY_API_TOKEN`</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**LLM<sp/>Configuration**:<sp/>Check<sp/>your<sp/>LLM<sp/>settings<sp/>with<sp/>`cat<sp/>~/.penify`</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**JIRA<sp/>Integration**:<sp/>Verify<sp/>JIRA<sp/>credentials<sp/>in<sp/>your<sp/>configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Logs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>more<sp/>detailed<sp/>logs,<sp/>you<sp/>can<sp/>set<sp/>the<sp/>environment<sp/>variable:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>PENIFY_DEBUG=1</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Support</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>additional<sp/>help,<sp/>visit<sp/>[https://docs.penify.dev/](https://docs.penify.dev/)<sp/>or<sp/>contact<sp/>support@penify.dev</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/detailed-usage.md"/>
+  </compounddef>
+</doxygen>

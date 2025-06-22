@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="penify__hook_2commands_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespacepenify__hook">penify_hook</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1commands">penify_hook::commands</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacepenify__hook_1_1commands" refkind="compound"><highlight class="comment">#<sp/>This<sp/>file<sp/>makes<sp/>the<sp/>commands<sp/>directory<sp/>a<sp/>proper<sp/>Python<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/__init__.py"/>
+  </compounddef>
+</doxygen>

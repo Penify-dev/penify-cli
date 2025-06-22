@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1utils_1_1GitRepoNotFoundError" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::utils::GitRepoNotFoundError</compoundname>
+    <basecompoundref refid="classException" prot="public" virt="non-virtual">Exception</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Exception</label>
+        <link refid="classException"/>
+      </node>
+      <node id="1">
+        <label>penify_hook.utils.GitRepoNotFoundError</label>
+        <link refid="classpenify__hook_1_1utils_1_1GitRepoNotFoundError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Exception</label>
+        <link refid="classException"/>
+      </node>
+      <node id="1">
+        <label>penify_hook.utils.GitRepoNotFoundError</label>
+        <link refid="classpenify__hook_1_1utils_1_1GitRepoNotFoundError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" line="9" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/utils.py" bodystart="9" bodyend="12"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

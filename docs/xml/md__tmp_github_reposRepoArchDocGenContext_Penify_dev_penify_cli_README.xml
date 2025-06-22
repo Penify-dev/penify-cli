@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README" kind="page">
+    <compoundname>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README</compoundname>
+    <title>Penify CLI Tool</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="https://github.com/yourorganization/penify-cli/workflows/Tests/badge.svg" alt="Tests" inline="yes"></image>
+ <image type="html" name="./coverage.svg" alt="Coverage" inline="yes"></image>
+</para>
+<para>A CLI tool to generate smart commit messages, code documentation, and more.</para>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md157">
+<title>Features</title>
+<para><itemizedlist>
+<listitem><para>Automatically generate documentation for your code</para>
+</listitem><listitem><para>Support for multiple programming languages</para>
+</listitem><listitem><para>Git hook integration for automatic documentation on commits</para>
+</listitem><listitem><para>Folder and file analysis</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md158">
+<title>Installation</title>
+<para>Install from PyPI:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">pip<sp/>install<sp/>penify</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md159">
+<title>Usage</title>
+<para>Penify CLI provides several subcommands for different functionalities, organized into basic commands (no login required) and advanced commands (login required).</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md160">
+<title>Basic Commands (No login required)</title>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md161">
+<title>Commit</title>
+<para>Generate smart commit messages using local LLM:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">penify<sp/>commit<sp/>[-m<sp/>&quot;Optional<sp/>message&quot;]<sp/>[-e]<sp/>[-d]</highlight></codeline>
+</programlisting></para>
+<para>Options:<itemizedlist>
+<listitem><para><computeroutput>-m, --message</computeroutput>: Optional custom commit message</para>
+</listitem><listitem><para><computeroutput>-e, --terminal</computeroutput>: Open editor to modify commit message before committing</para>
+</listitem><listitem><para><computeroutput>-d, --description</computeroutput>: Generate commit message with both title and description (without this flag, only title is generated)</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md162">
+<title>Config</title>
+<para>Configure local LLM and JIRA settings:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>Configure<sp/>LLM<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>llm<sp/>--model<sp/>MODEL_NAME<sp/>[--api-base<sp/>API_URL]<sp/>[--api-key<sp/>API_KEY]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Configure<sp/>LLM<sp/>settings<sp/>through<sp/>web<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>llm-web</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Configure<sp/>JIRA<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>jira<sp/>--url<sp/>JIRA_URL<sp/>--username<sp/>USERNAME<sp/>--api-token<sp/>TOKEN<sp/>[--verify]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Configure<sp/>JIRA<sp/>settings<sp/>through<sp/>web<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>jira-web</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md163">
+<title>Advanced Commands (Login required)</title>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md164">
+<title>Login</title>
+<para>To log in and obtain an API token:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">penify<sp/>login</highlight></codeline>
+</programlisting></para>
+<para>This command will open a browser window for authentication. After successful login, the API key will be saved locally for future use.</para>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md165">
+<title>Documentation Generation</title>
+<para>Generate documentation for Git diff, files or folders:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>Generate<sp/>documentation<sp/>for<sp/>latest<sp/>Git<sp/>commit<sp/>diff</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Generate<sp/>documentation<sp/>for<sp/>specific<sp/>file<sp/>or<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>/path/to/file/or/folder</highlight></codeline>
+</programlisting></para>
+<para>Options:<itemizedlist>
+<listitem><para><computeroutput>-l, --location</computeroutput>: Path to specific file or folder for documentation generation (defaults to current directory)</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md166">
+<title>Git Hook Management</title>
+<para>Install or uninstall Git post-commit hooks:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>Install<sp/>Git<sp/>hook</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook<sp/>[-l<sp/>/path/to/repo]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Uninstall<sp/>Git<sp/>hook</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook<sp/>[-l<sp/>/path/to/repo]</highlight></codeline>
+</programlisting></para>
+<para>Options:<itemizedlist>
+<listitem><para><computeroutput>-l, --location</computeroutput>: Path to the Git repository (defaults to current directory)</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md167">
+<title>Authentication</title>
+<para>Penify CLI uses an API token for authentication with advanced features.</para>
+<para>If no token is available and you try to access an advanced feature, you&apos;ll be prompted to log in.</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md168">
+<title>Local LLM Configuration</title>
+<para>For commit message generation, Penify can use a local LLM. Configure it using:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">penify<sp/>config<sp/>llm<sp/>--model<sp/>MODEL_NAME<sp/>--api-base<sp/>API_URL<sp/>--api-key<sp/>API_KEY</highlight></codeline>
+</programlisting></para>
+<para>Common configurations:<itemizedlist>
+<listitem><para>OpenAI: <computeroutput>--model gpt-3.5-turbo --api-base <ulink url="https://api.openai.com/v1">https://api.openai.com/v1</ulink> --api-key YOUR_KEY</computeroutput></para>
+</listitem><listitem><para>Anthropic: <computeroutput>--model claude-2 --api-base <ulink url="https://api.anthropic.com">https://api.anthropic.com</ulink> --api-key YOUR_KEY</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md169">
+<title>JIRA Integration</title>
+<para>Configure JIRA integration to enhance commit messages with issue details:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">penify<sp/>config<sp/>jira<sp/>--url<sp/>https://your-domain.atlassian.net<sp/>--username<sp/>your-email@example.com<sp/>--api-token<sp/>YOUR_API_TOKEN</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md170">
+<title>Development</title>
+<para>To set up the development environment:</para>
+<para><orderedlist>
+<listitem><para>Clone the repository: <programlisting filename=".bash"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/SingularityX-ai/penify-cli.git</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Install the package in editable mode: <programlisting filename=".bash"><codeline><highlight class="normal">pip<sp/>install<sp/>-e<sp/>.</highlight></codeline>
+</programlisting></para>
+</listitem></orderedlist>
+</para>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md171">
+<title>Running Tests</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">pytest</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md172">
+<title>License</title>
+<para>This project is licensed under the MIT License.</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md173">
+<title>Author</title>
+<para>Suman Saurabh (<ulink url="mailto:ss.sumansaurabh92@gmail.com">ss.sumansaurabh92@gmail.com</ulink>)</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md174">
+<title>Contributing</title>
+<para>Contributions are welcome! Please feel free to submit a Pull Request.</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md175">
+<title>Issues</title>
+<para>If you encounter any problems or have suggestions, please file an issue on the <ulink url="https://github.com/SingularityX-ai/penify/issues">GitHub repository</ulink>.</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_README_1autotoc_md176">
+<title>Support</title>
+<para>For automated API Documentation, Architecture Documentation, Code Documentation, Pull Request Documentation, or if you need a demo, please join our <ulink url="https://discord.gg/wqrc8JeV">Discord support channel</ulink>. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/README.md"/>
+  </compounddef>
+</doxygen>

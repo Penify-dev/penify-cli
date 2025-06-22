@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="config-commands_8md" kind="file" language="Markdown">
+    <compoundname>config-commands.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Penify<sp/>CLI<sp/>-<sp/>Configuration<sp/>Commands</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`config`<sp/>command<sp/>allows<sp/>you<sp/>to<sp/>set<sp/>up<sp/>and<sp/>manage<sp/>configuration<sp/>settings<sp/>for<sp/>Penify<sp/>CLI.<sp/>This<sp/>document<sp/>explains<sp/>all<sp/>available<sp/>configuration<sp/>options<sp/>and<sp/>how<sp/>to<sp/>use<sp/>them.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>CLI<sp/>stores<sp/>configuration<sp/>in<sp/>a<sp/>JSON<sp/>file<sp/>at<sp/>`~/.penify/config.json`.<sp/>The<sp/>configuration<sp/>includes:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>LLM<sp/>(Large<sp/>Language<sp/>Model)<sp/>settings<sp/>for<sp/>local<sp/>commit<sp/>message<sp/>generation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>JIRA<sp/>integration<sp/>settings<sp/>for<sp/>enhanced<sp/>commit<sp/>messages</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>tokens<sp/>and<sp/>other<sp/>credentials</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Basic<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Configure<sp/>LLM<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>llm</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Configure<sp/>JIRA<sp/>integration</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>jira</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>LLM<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Web<sp/>Interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Running<sp/>`penify<sp/>config<sp/>llm`<sp/>opens<sp/>a<sp/>web<sp/>interface<sp/>in<sp/>your<sp/>browser<sp/>where<sp/>you<sp/>can<sp/>configure:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**Model**:<sp/>The<sp/>LLM<sp/>model<sp/>to<sp/>use<sp/>(e.g.,<sp/>`gpt-3.5-turbo`)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**API<sp/>Base<sp/>URL**:<sp/>The<sp/>endpoint<sp/>URL<sp/>for<sp/>your<sp/>LLM<sp/>API<sp/>(e.g.,<sp/>`https://api.openai.com/v1`)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**API<sp/>Key**:<sp/>Your<sp/>authentication<sp/>key<sp/>for<sp/>the<sp/>LLM<sp/>API</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Supported<sp/>LLMs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>CLI<sp/>supports<sp/>various<sp/>LLM<sp/>providers:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>OpenAI</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Model:<sp/>`gpt-3.5-turbo`<sp/>or<sp/>`gpt-4`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Base:<sp/>`https://api.openai.com/v1`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Key:<sp/>Your<sp/>OpenAI<sp/>API<sp/>key</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Anthropic</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Model:<sp/>`claude-instant-1`<sp/>or<sp/>`claude-2`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Base:<sp/>`https://api.anthropic.com/v1`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Key:<sp/>Your<sp/>Anthropic<sp/>API<sp/>key</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Ollama<sp/>(Local)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Model:<sp/>`llama2`<sp/>or<sp/>any<sp/>model<sp/>you<sp/>have<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Base:<sp/>`http://localhost:11434`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Key:<sp/>(leave<sp/>blank)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Azure<sp/>OpenAI</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Model:<sp/>Your<sp/>deployed<sp/>model<sp/>name</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Base:<sp/>Your<sp/>Azure<sp/>endpoint</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>Key:<sp/>Your<sp/>Azure<sp/>API<sp/>key</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Configuration<sp/>File<sp/>Structure</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>configuration,<sp/>your<sp/>`~/.penify/config.json`<sp/>will<sp/>contain:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```json</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;llm&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;model&quot;:<sp/>&quot;gpt-3.5-turbo&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;api_base&quot;:<sp/>&quot;https://api.openai.com/v1&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;api_key&quot;:<sp/>&quot;sk-...&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>JIRA<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Web<sp/>Interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Running<sp/>`penify<sp/>config<sp/>jira`<sp/>opens<sp/>a<sp/>web<sp/>interface<sp/>where<sp/>you<sp/>can<sp/>configure:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**JIRA<sp/>URL**:<sp/>Your<sp/>JIRA<sp/>instance<sp/>URL<sp/>(e.g.,<sp/>`https://yourcompany.atlassian.net`)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**Username**:<sp/>Your<sp/>JIRA<sp/>username<sp/>(typically<sp/>your<sp/>email)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**API<sp/>Token**:<sp/>Your<sp/>JIRA<sp/>API<sp/>token</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Creating<sp/>a<sp/>JIRA<sp/>API<sp/>Token</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Log<sp/>in<sp/>to<sp/>[https://id.atlassian.com/manage-profile/security/api-tokens](https://id.atlassian.com/manage-profile/security/api-tokens)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Click<sp/>&quot;Create<sp/>API<sp/>token&quot;</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Give<sp/>it<sp/>a<sp/>name<sp/>(e.g.,<sp/>&quot;Penify<sp/>CLI&quot;)</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Copy<sp/>the<sp/>generated<sp/>token<sp/>and<sp/>paste<sp/>it<sp/>into<sp/>the<sp/>configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Configuration<sp/>File<sp/>Structure</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>configuration,<sp/>your<sp/>`~/.penify/config.json`<sp/>will<sp/>contain:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```json</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;jira&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;url&quot;:<sp/>&quot;https://yourcompany.atlassian.net&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;username&quot;:<sp/>&quot;your.email@example.com&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;api_token&quot;:<sp/>&quot;your-jira-api-token&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>Locations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>CLI<sp/>looks<sp/>for<sp/>configuration<sp/>in<sp/>multiple<sp/>locations:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Project-specific:<sp/>`.penify/config.json`<sp/>in<sp/>the<sp/>Git<sp/>repository<sp/>root</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>User-specific:<sp/>`~/.penify/config.json`<sp/>in<sp/>your<sp/>home<sp/>directory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>project-specific<sp/>configuration<sp/>takes<sp/>precedence<sp/>if<sp/>both<sp/>exist.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Environment<sp/>Variables</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>override<sp/>configuration<sp/>settings<sp/>using<sp/>environment<sp/>variables:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_API_TOKEN`:<sp/>Override<sp/>the<sp/>stored<sp/>API<sp/>token</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_LLM_MODEL`:<sp/>Override<sp/>the<sp/>configured<sp/>LLM<sp/>model</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_LLM_API_BASE`:<sp/>Override<sp/>the<sp/>configured<sp/>LLM<sp/>API<sp/>base<sp/>URL</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_LLM_API_KEY`:<sp/>Override<sp/>the<sp/>configured<sp/>LLM<sp/>API<sp/>key</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_JIRA_URL`:<sp/>Override<sp/>the<sp/>configured<sp/>JIRA<sp/>URL</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_JIRA_USER`:<sp/>Override<sp/>the<sp/>configured<sp/>JIRA<sp/>username</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_JIRA_TOKEN`:<sp/>Override<sp/>the<sp/>configured<sp/>JIRA<sp/>API<sp/>token</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>PENIFY_LLM_MODEL=&quot;gpt-4&quot;</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Command-Line<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>advanced<sp/>users<sp/>or<sp/>scripting,<sp/>you<sp/>can<sp/>directly<sp/>edit<sp/>the<sp/>configuration<sp/>file:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>View<sp/>current<sp/>configuration</highlight></codeline>
+<codeline><highlight class="normal">cat<sp/>~/.penify/config.json</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Edit<sp/>configuration<sp/>with<sp/>your<sp/>preferred<sp/>editor</highlight></codeline>
+<codeline><highlight class="normal">nano<sp/>~/.penify/config.json</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sharing<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>share<sp/>configuration<sp/>between<sp/>machines<sp/>by<sp/>copying<sp/>the<sp/>`.penify/config.json`<sp/>file.<sp/>However,<sp/>be<sp/>cautious<sp/>with<sp/>API<sp/>keys<sp/>and<sp/>credentials.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>team<sp/>settings,<sp/>consider:</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Using<sp/>a<sp/>project-specific<sp/>`.penify/config.json`<sp/>with<sp/>shared<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Excluding<sp/>API<sp/>keys<sp/>from<sp/>shared<sp/>configuration</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Using<sp/>environment<sp/>variables<sp/>for<sp/>sensitive<sp/>credentials</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Common<sp/>Issues</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**&quot;Error<sp/>reading<sp/>configuration<sp/>file&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>if<sp/>the<sp/>file<sp/>exists:<sp/>`ls<sp/>-la<sp/>~/.penify`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>it<sp/>contains<sp/>valid<sp/>JSON:<sp/>`cat<sp/>~/.penify/config.json`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>**&quot;Failed<sp/>to<sp/>connect<sp/>to<sp/>LLM<sp/>API&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Verify<sp/>API<sp/>base<sp/>URL<sp/>and<sp/>API<sp/>key</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>network<sp/>connectivity<sp/>to<sp/>the<sp/>API<sp/>endpoint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>your<sp/>account<sp/>has<sp/>access<sp/>to<sp/>the<sp/>specified<sp/>model</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>**&quot;Failed<sp/>to<sp/>connect<sp/>to<sp/>JIRA&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>JIRA<sp/>URL<sp/>format<sp/>(should<sp/>include<sp/>`https://`)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Verify<sp/>username<sp/>and<sp/>API<sp/>token</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>your<sp/>JIRA<sp/>account<sp/>has<sp/>API<sp/>access<sp/>permissions</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/config-commands.md"/>
+  </compounddef>
+</doxygen>

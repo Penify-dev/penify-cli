@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1commands_1_1doc__commands" kind="namespace" language="Python">
+    <compoundname>penify_hook::commands::doc_commands</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepenify__hook_1_1commands_1_1doc__commands_1a3e42540047da37565afffeaf106cb948" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::commands::doc_commands.docgen_description</definition>
+        <argsstring></argsstring>
+        <name>docgen_description</name>
+        <qualifiedname>penify_hook.commands.doc_commands.docgen_description</qualifiedname>
+        <initializer>=  &quot;&quot;&quot;Generate code documentation using Penify.
+
+This command requires you to be logged in to your Penify account.
+You can generate documentation for:
+- Current Git diff (default)
+- Specific file
+- Specific folder
+&quot;&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" line="73" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1doc__commands_1a4daac68bc563432bf25c85dc78081a25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.doc_commands.generate_doc</definition>
+        <argsstring>(api_url, token, location=None)</argsstring>
+        <name>generate_doc</name>
+        <qualifiedname>penify_hook.commands.doc_commands.generate_doc</qualifiedname>
+        <param>
+          <type>api_url</type>
+          <defname>api_url</defname>
+        </param>
+        <param>
+          <type>token</type>
+          <defname>token</defname>
+        </param>
+        <param>
+          <type>location</type>
+          <defname>location</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates documentation based on the given parameters.
+
+This function initializes an API client using the provided API URL and token.
+It then generates documentation by analyzing the specified location, which can
+be a folder, a file, or the current working directory if no location is
+provided. The function handles different types of analysis based on the input
+location and reports any errors encountered during the process.
+
+Args:
+    api_url (str): The URL of the API to connect to for documentation generation.
+    token (str): The authentication token for accessing the API.
+    location (str?): The path to a specific file or folder to analyze. If not provided,
+        the current working directory is used.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" line="8" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" bodystart="8" bodyend="72"/>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704" compoundref="doc__commands_8py" startline="114" endline="137">penify_hook.commands.doc_commands.handle_docgen</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1aec76cc25c23476794234cdadbcaef0c0" compoundref="test__doc__commands_8py" startline="136" endline="168">tests.test_doc_commands.test_generate_doc_error_handling</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a0e74c920f258f442914771164fe26b45" compoundref="test__doc__commands_8py" startline="63" endline="99">tests.test_doc_commands.test_generate_doc_file_location</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a4bb75610e40d94d42bc169b25403c186" compoundref="test__doc__commands_8py" startline="101" endline="135">tests.test_doc_commands.test_generate_doc_folder_location</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a806110833eb0aad547156faf014b31d8" compoundref="test__doc__commands_8py" startline="23" endline="61">tests.test_doc_commands.test_generate_doc_no_location</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a335e7fd4912192c7276cf31bbebc6eb0" compoundref="test__doc__commands_8py" startline="313" endline="335">tests.test_doc_commands.test_generate_doc_with_file_exception</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a64165ddfdb3071a88422f080f0e529a3" compoundref="test__doc__commands_8py" startline="336" endline="358">tests.test_doc_commands.test_generate_doc_with_folder_exception</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1doc__commands_1acc7f4ead1b11951d885fa5c151c2cbe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.doc_commands.setup_docgen_parser</definition>
+        <argsstring>(parser)</argsstring>
+        <name>setup_docgen_parser</name>
+        <qualifiedname>penify_hook.commands.doc_commands.setup_docgen_parser</qualifiedname>
+        <param>
+          <type>parser</type>
+          <defname>parser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Configure a parser for generating documentation using Git commands.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" line="82" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" bodystart="82" bodyend="113"/>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a0f27751d0ba2acfe40ef7e85bccf47d7" compoundref="test__doc__commands_8py" startline="169" endline="199">tests.test_doc_commands.test_setup_docgen_parser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.doc_commands.handle_docgen</definition>
+        <argsstring>(args)</argsstring>
+        <name>handle_docgen</name>
+        <qualifiedname>penify_hook.commands.doc_commands.handle_docgen</qualifiedname>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handle document generation and hook management based on subcommands.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" line="114" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" bodystart="114" bodyend="137"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a4daac68bc563432bf25c85dc78081a25" compoundref="doc__commands_8py" startline="8" endline="72">penify_hook.commands.doc_commands.generate_doc</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1hook__commands_1adff8f5d3bf1c3795974a391ee95b72b2" compoundref="hook__commands_8py" startline="12" endline="27">penify_hook.commands.hook_commands.install_git_hook</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1hook__commands_1a81543eb5fa835fd1237f24e8bce6201d" compoundref="hook__commands_8py" startline="28" endline="37">penify_hook.commands.hook_commands.uninstall_git_hook</references>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1ab158ffa48469b6c097a7a55fcb20c21a" compoundref="test__doc__commands_8py" startline="264" endline="290">tests.test_doc_commands.test_handle_docgen_generate</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1ab74688baa8c9b5ba302c2877a9789d05" compoundref="test__doc__commands_8py" startline="201" endline="232">tests.test_doc_commands.test_handle_docgen_install_hook</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1af9b01e5fc89255cac96747fa081c442c" compoundref="test__doc__commands_8py" startline="291" endline="312">tests.test_doc_commands.test_handle_docgen_no_token</referencedby>
+        <referencedby refid="namespacetests_1_1test__doc__commands_1a1458af9ad0128c3ca1263b552fd5e482" compoundref="test__doc__commands_8py" startline="234" endline="262">tests.test_doc_commands.test_handle_docgen_uninstall_hook</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/doc_commands.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

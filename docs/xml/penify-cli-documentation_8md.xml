@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="penify-cli-documentation_8md" kind="file" language="Markdown">
+    <compoundname>penify-cli-documentation.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">layout:<sp/>doc</highlight></codeline>
+<codeline><highlight class="normal">title:<sp/>Streamline<sp/>Git<sp/>Commits<sp/>and<sp/>Code<sp/>Documentation<sp/>with<sp/>Penify-CLI&apos;s<sp/>Automated<sp/>Generation</highlight></codeline>
+<codeline><highlight class="normal">description:<sp/>Discover<sp/>how<sp/>Penify-CLI<sp/>automates<sp/>both<sp/>Git<sp/>commit<sp/>messages<sp/>and<sp/>code<sp/>documentation,<sp/>with<sp/>Jira<sp/>integration<sp/>and<sp/>flexible<sp/>options.<sp/>Save<sp/>time,<sp/>improve<sp/>repository<sp/>clarity,<sp/>and<sp/>boost<sp/>productivity<sp/>with<sp/>this<sp/>detailed<sp/>guide<sp/>to<sp/>usage<sp/>and<sp/>best<sp/>practices.</highlight></codeline>
+<codeline><highlight class="normal">keywords:<sp/>Penify-CLI,<sp/>Git<sp/>commit<sp/>messages,<sp/>code<sp/>documentation,<sp/>Jira<sp/>integration,<sp/>automated<sp/>documentation,<sp/>version<sp/>control,<sp/>repository<sp/>management,<sp/>developer<sp/>productivity</highlight></codeline>
+<codeline><highlight class="normal">author:<sp/>Suman<sp/>Sauarbh</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Penify<sp/>CLI<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>CLI<sp/>is<sp/>a<sp/>powerful<sp/>tool<sp/>for<sp/>enhancing<sp/>your<sp/>development<sp/>workflow<sp/>with<sp/>AI-powered<sp/>features<sp/>like<sp/>commit<sp/>message<sp/>generation,<sp/>code<sp/>documentation,<sp/>and<sp/>JIRA<sp/>integration.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>penify</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>installation,<sp/>you<sp/>can<sp/>check<sp/>the<sp/>version<sp/>of<sp/>Penify<sp/>CLI:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>--version</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Commands<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`commit`:<sp/>Generate<sp/>smart<sp/>commit<sp/>messages<sp/>using<sp/>local-LLM</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`config`:<sp/>Configure<sp/>local-LLM<sp/>and<sp/>JIRA<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`login`:<sp/>Log<sp/>in<sp/>to<sp/>Penify<sp/>to<sp/>use<sp/>advanced<sp/>features</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`docgen`:<sp/>Generate<sp/>code<sp/>documentation<sp/>for<sp/>Git<sp/>diffs,<sp/>files,<sp/>or<sp/>folders</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Detailed<sp/>Command<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Commit<sp/>Command</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`commit`<sp/>command<sp/>generates<sp/>intelligent<sp/>commit<sp/>messages<sp/>using<sp/>local<sp/>LLM<sp/>models<sp/>or<sp/>Penify<sp/>services.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Usage:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>[options]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Options:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`-m,<sp/>--message<sp/>TEXT`:<sp/>Provide<sp/>context<sp/>for<sp/>the<sp/>commit<sp/>message<sp/>generation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`-e,<sp/>--terminal`:<sp/>Open<sp/>an<sp/>editor<sp/>to<sp/>modify<sp/>the<sp/>generated<sp/>commit<sp/>message<sp/>before<sp/>applying<sp/>it</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`-d,<sp/>--description`:<sp/>Generate<sp/>a<sp/>detailed<sp/>commit<sp/>message<sp/>with<sp/>both<sp/>title<sp/>and<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Examples:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Basic<sp/>usage:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Provide<sp/>context<sp/>for<sp/>better<sp/>results:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-m<sp/>&quot;Fixed<sp/>the<sp/>login<sp/>button&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Generate<sp/>a<sp/>detailed<sp/>commit<sp/>message<sp/>and<sp/>open<sp/>editor:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit<sp/>-e<sp/>-d</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Requirements:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Either<sp/>a<sp/>local<sp/>LLM<sp/>configuration<sp/>(via<sp/>`penify<sp/>config<sp/>llm`)<sp/>or<sp/>Penify<sp/>login</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>For<sp/>JIRA<sp/>integration,<sp/>configure<sp/>JIRA<sp/>settings<sp/>(via<sp/>`penify<sp/>config<sp/>jira`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Config<sp/>Command</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`config`<sp/>command<sp/>helps<sp/>you<sp/>configure<sp/>local<sp/>LLM<sp/>settings<sp/>and<sp/>JIRA<sp/>integration<sp/>for<sp/>enhanced<sp/>commit<sp/>messages.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Usage:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>[subcommand]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Subcommands:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`llm`:<sp/>Configure<sp/>local<sp/>Large<sp/>Language<sp/>Model<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`jira`:<sp/>Configure<sp/>JIRA<sp/>integration<sp/>settings</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Examples:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Configure<sp/>local<sp/>LLM:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>llm</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>opens<sp/>a<sp/>web<sp/>interface<sp/>to<sp/>configure:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Model<sp/>name<sp/>(e.g.,<sp/>gpt-3.5-turbo,<sp/>llama2)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>base<sp/>URL<sp/>(e.g.,<sp/>https://api.openai.com/v1)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>key</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Configure<sp/>JIRA<sp/>integration:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>jira</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>opens<sp/>a<sp/>web<sp/>interface<sp/>to<sp/>configure:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>JIRA<sp/>URL<sp/>(e.g.,<sp/>https://your-domain.atlassian.net)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Username<sp/>(typically<sp/>your<sp/>email)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>API<sp/>token</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Login<sp/>Command</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`login`<sp/>command<sp/>authenticates<sp/>you<sp/>with<sp/>Penify<sp/>for<sp/>advanced<sp/>features<sp/>like<sp/>code<sp/>documentation<sp/>generation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Usage:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>login</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>What<sp/>happens:</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>A<sp/>browser<sp/>window<sp/>opens<sp/>to<sp/>the<sp/>Penify<sp/>login<sp/>page</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>After<sp/>successful<sp/>login,<sp/>your<sp/>API<sp/>key<sp/>is<sp/>automatically<sp/>saved</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>The<sp/>tool<sp/>is<sp/>now<sp/>authorized<sp/>to<sp/>use<sp/>Penify&apos;s<sp/>advanced<sp/>features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Example:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>login</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Docgen<sp/>Command</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`docgen`<sp/>command<sp/>generates<sp/>documentation<sp/>for<sp/>your<sp/>code<sp/>using<sp/>Penify&apos;s<sp/>AI<sp/>services.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Usage:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>[options]<sp/>[subcommand]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Options:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`-l,<sp/>--location<sp/>PATH`:<sp/>Path<sp/>to<sp/>a<sp/>specific<sp/>file<sp/>or<sp/>folder<sp/>to<sp/>document<sp/>(default:<sp/>current<sp/>working<sp/>directory)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Subcommands:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`install-hook`:<sp/>Install<sp/>a<sp/>Git<sp/>post-commit<sp/>hook<sp/>to<sp/>automatically<sp/>generate<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`uninstall-hook`:<sp/>Remove<sp/>the<sp/>Git<sp/>post-commit<sp/>hook</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Examples:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Document<sp/>current<sp/>Git<sp/>diff:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Document<sp/>a<sp/>specific<sp/>file:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/main.py</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Document<sp/>an<sp/>entire<sp/>folder:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/components</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Install<sp/>the<sp/>Git<sp/>hook<sp/>for<sp/>automatic<sp/>documentation:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Uninstall<sp/>the<sp/>Git<sp/>hook:**</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Requirements:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Requires<sp/>login<sp/>to<sp/>Penify<sp/>(`penify<sp/>login`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>Files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>CLI<sp/>stores<sp/>configuration<sp/>in<sp/>the<sp/>following<sp/>locations:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Global<sp/>configuration:<sp/>`~/.penify`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Project-specific<sp/>configuration:<sp/>`.penify`<sp/>in<sp/>your<sp/>Git<sp/>repository<sp/>root</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Environment<sp/>Variables</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`PENIFY_API_TOKEN`:<sp/>Can<sp/>be<sp/>used<sp/>to<sp/>provide<sp/>the<sp/>API<sp/>token<sp/>instead<sp/>of<sp/>logging<sp/>in</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>encounter<sp/>issues:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Check<sp/>your<sp/>configuration<sp/>with<sp/>`cat<sp/>~/.penify`</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Verify<sp/>network<sp/>connectivity<sp/>to<sp/>API<sp/>endpoints</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Ensure<sp/>your<sp/>API<sp/>keys<sp/>and<sp/>tokens<sp/>are<sp/>valid</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>For<sp/>JIRA<sp/>integration<sp/>issues,<sp/>verify<sp/>your<sp/>JIRA<sp/>credentials</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Additional<sp/>Resources</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>more<sp/>information,<sp/>visit<sp/>the<sp/>[Penify<sp/>Documentation](https://docs.penify.dev/).</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/penify-cli-documentation.md"/>
+  </compounddef>
+</doxygen>

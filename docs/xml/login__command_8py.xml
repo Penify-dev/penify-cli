@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="login__command_8py" kind="file" language="Python">
+    <compoundname>login_command.py</compoundname>
+    <innernamespace refid="namespacepenify__hook">penify_hook</innernamespace>
+    <innernamespace refid="namespacepenify__hook_1_1login__command">penify_hook::login_command</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a" refkind="member"><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacepenify__hook_1_1login__command_1aae63db4c484797bead34b7d874020c6a" kindref="member">setup_login_parser</ref>(parser):</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Set<sp/>up<sp/>command-line<sp/>arguments<sp/>for<sp/>login.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&quot;--token&quot;</highlight><highlight class="normal">,<sp/>help=</highlight><highlight class="stringliteral">&quot;Specify<sp/>API<sp/>token<sp/>directly&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Add<sp/>all<sp/>other<sp/>necessary<sp/>arguments<sp/>for<sp/>login<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacepenify__hook_1_1login__command_1ae4bf932fbafeff834b0a0c5a37f74ccd" kindref="member">handle_login</ref>(args):</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Initiates<sp/>a<sp/>user<sp/>login<sp/>process<sp/>using<sp/>predefined<sp/>constants<sp/>and<sp/>the<sp/>`login`</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>function.&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacepenify__hook_1_1constants" kindref="compound">penify_hook.constants</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>API_URL,<sp/>DASHBOARD_URL</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacepenify__hook_1_1commands_1_1auth__commands" kindref="compound">penify_hook.commands.auth_commands</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>login</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Only<sp/>import<sp/>dependencies<sp/>needed<sp/>for<sp/>login<sp/>functionality<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepenify__hook_1_1commands_1_1auth__commands_1a78f375c58bb6f69f98675e6a9ac84655" kindref="member">login</ref>(API_URL,<sp/>DASHBOARD_URL)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/login_command.py"/>
+  </compounddef>
+</doxygen>

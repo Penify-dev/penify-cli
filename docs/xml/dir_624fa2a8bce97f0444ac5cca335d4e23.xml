@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_624fa2a8bce97f0444ac5cca335d4e23" kind="dir">
+    <compoundname>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands</compoundname>
+    <innerfile refid="penify__hook_2commands_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="auth__commands_8py">auth_commands.py</innerfile>
+    <innerfile refid="commit__commands_8py">commit_commands.py</innerfile>
+    <innerfile refid="config__commands_8py">config_commands.py</innerfile>
+    <innerfile refid="doc__commands_8py">doc_commands.py</innerfile>
+    <innerfile refid="hook__commands_8py">hook_commands.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1jira__client_1_1JiraClient" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::jira_client::JiraClient</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a3c0cfecff02a75cb7001509a595b8197" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.jira_client.JiraClient::jira_url</definition>
+        <argsstring></argsstring>
+        <name>jira_url</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.jira_url</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="26" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpenify__hook_1_1jira__client_1_1JiraClient_1ae56104d5aa7bda7bb26d169c4b46038c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.jira_client.JiraClient::jira_user</definition>
+        <argsstring></argsstring>
+        <name>jira_user</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.jira_user</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="27" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpenify__hook_1_1jira__client_1_1JiraClient_1afc5c90e53b702f9fc27e2ee7d3f991b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.jira_client.JiraClient::jira_api_token</definition>
+        <argsstring></argsstring>
+        <name>jira_api_token</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.jira_api_token</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="28" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.jira_client.JiraClient::jira_client</definition>
+        <argsstring></argsstring>
+        <name>jira_client</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.jira_client</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="29" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" compoundref="jira__client_8py" startline="101" endline="114">penify_hook.jira_client.JiraClient.add_comment</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746" compoundref="jira__client_8py" startline="212" endline="294">penify_hook.jira_client.JiraClient.get_detailed_issue_context</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" compoundref="jira__client_8py" startline="66" endline="100">penify_hook.jira_client.JiraClient.get_issue_details</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a8496194276441fa2eb2fa014eaab9a37" compoundref="commit__analyzer_8py" startline="21" endline="65">penify_hook.commit_analyzer.CommitDocGenHook.get_summary</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1adda13cc121d96342476ccf72b63a007f" compoundref="commit__analyzer_8py" startline="103" endline="157">penify_hook.commit_analyzer.CommitDocGenHook.process_jira_integration</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a6370a03f7ed9175ef6f81e931a105ea9" compoundref="commit__analyzer_8py" startline="66" endline="102">penify_hook.commit_analyzer.CommitDocGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826" compoundref="jira__client_8py" startline="115" endline="156">penify_hook.jira_client.JiraClient.update_issue_status</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a47efc1ec07389c960f2dfb37ba8c09f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.jira_client.JiraClient.__init__</definition>
+        <argsstring>(self, str jira_url=None, str jira_user=None, str jira_api_token=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>jira_url</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>jira_user</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>jira_api_token</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the JIRA client.
+
+Args:
+    jira_url: Base URL for JIRA instance (e.g., &quot;https://your-domain.atlassian.net&quot;)
+    jira_user: JIRA username or email
+    jira_api_token: JIRA API token
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="17" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="17" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool penify_hook.jira_client.JiraClient.is_connected</definition>
+        <argsstring>(self)</argsstring>
+        <name>is_connected</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.is_connected</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Check if the JIRA client is connected.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="46" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="46" bodyend="49"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" compoundref="jira__client_8py" startline="29">penify_hook.jira_client.JiraClient.jira_client</references>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" compoundref="jira__client_8py" startline="101" endline="114">penify_hook.jira_client.JiraClient.add_comment</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760" compoundref="jira__client_8py" startline="333" endline="423">penify_hook.jira_client.JiraClient.enhance_commit_message</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" compoundref="jira__client_8py" startline="157" endline="211">penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" compoundref="jira__client_8py" startline="295" endline="332">penify_hook.jira_client.JiraClient.get_commit_context_from_issues</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746" compoundref="jira__client_8py" startline="212" endline="294">penify_hook.jira_client.JiraClient.get_detailed_issue_context</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" compoundref="jira__client_8py" startline="66" endline="100">penify_hook.jira_client.JiraClient.get_issue_details</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826" compoundref="jira__client_8py" startline="115" endline="156">penify_hook.jira_client.JiraClient.update_issue_status</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a093d6456fe053ef7a7862d5d6851910c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List[str]</type>
+        <definition> List[str] penify_hook.jira_client.JiraClient.extract_issue_keys_from_branch</definition>
+        <argsstring>(self, str branch_name)</argsstring>
+        <name>extract_issue_keys_from_branch</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.extract_issue_keys_from_branch</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>branch_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extracts unique JIRA issue keys from a branch name.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="50" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="50" bodyend="58"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" compoundref="ui__utils_8py" startline="52" endline="55">penify_hook.ui_utils.print_info</references>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1ad2823ad1d3baaedd38039913c3a97fd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List[str]</type>
+        <definition> List[str] penify_hook.jira_client.JiraClient.extract_issue_keys</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>extract_issue_keys</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.extract_issue_keys</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extract unique JIRA issue keys from the given text.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="59" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="59" bodyend="65"/>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" compoundref="jira__client_8py" startline="157" endline="211">penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Optional[Dict[str, Any]]</type>
+        <definition> Optional[Dict[str, Any]] penify_hook.jira_client.JiraClient.get_issue_details</definition>
+        <argsstring>(self, str issue_key)</argsstring>
+        <name>get_issue_details</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.get_issue_details</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>issue_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieve details of a JIRA issue based on its key.
+
+This function fetches detailed information about a specified JIRA issue using
+the provided issue key. It first checks if the JIRA client is connected; if
+not, it logs a warning and returns `None`. If connected, it attempts to
+retrieve the issue from the JIRA server. On success, it constructs and returns
+a dictionary containing various details such as the issue&apos;s key, summary,
+status, description, assignee, reporter, type, priority, and URL. Errors during
+this process are logged, and `None` is returned.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., &quot;PROJECT-123&quot;).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="66" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="66" bodyend="100"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" compoundref="jira__client_8py" startline="29">penify_hook.jira_client.JiraClient.jira_client</references>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" compoundref="jira__client_8py" startline="157" endline="211">penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" compoundref="jira__client_8py" startline="295" endline="332">penify_hook.jira_client.JiraClient.get_commit_context_from_issues</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool penify_hook.jira_client.JiraClient.add_comment</definition>
+        <argsstring>(self, str issue_key, str comment)</argsstring>
+        <name>add_comment</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.add_comment</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>issue_key</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>comment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Adds a comment to a JIRA issue.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="101" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="101" bodyend="114"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" compoundref="jira__client_8py" startline="101" endline="114">penify_hook.jira_client.JiraClient.add_comment</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" compoundref="jira__client_8py" startline="29">penify_hook.jira_client.JiraClient.jira_client</references>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" compoundref="jira__client_8py" startline="101" endline="114">penify_hook.jira_client.JiraClient.add_comment</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool penify_hook.jira_client.JiraClient.update_issue_status</definition>
+        <argsstring>(self, str issue_key, str transition_name)</argsstring>
+        <name>update_issue_status</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.update_issue_status</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>issue_key</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>transition_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Update the status of a JIRA issue.
+
+This method checks if the JIRA client is connected, retrieves available
+transitions for the given issue, finds the transition ID by name, and updates
+the issue&apos;s status accordingly. If any step fails or the specified transition
+is not found, appropriate logs are generated, and False is returned.
+
+Args:
+    issue_key (str): The key of the JIRA issue to be updated.
+    transition_name (str): The name of the desired transition.
+
+Returns:
+    bool: True if the status was successfully updated, False otherwise.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="115" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="115" bodyend="156"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" compoundref="jira__client_8py" startline="29">penify_hook.jira_client.JiraClient.jira_client</references>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>tuple</type>
+        <definition> tuple penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info</definition>
+        <argsstring>(self, str commit_title, str commit_description, List[str] issue_keys=None)</argsstring>
+        <name>format_commit_message_with_jira_info</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>commit_title</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>commit_description</declname>
+        </param>
+        <param>
+          <type>List</type>
+          <declname>issue_keys</declname>
+          <array>[str]</array>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Format commit message with JIRA issue information.
+
+This function updates the provided commit title and description by
+incorporating JIRA issue keys. If no issue keys are supplied, it extracts them
+from the commit title and description. It then formats the commit title to
+include the first issue key if not already present and appends detailed
+information about each issue to the commit description.
+
+Args:
+    commit_title (str): The original commit title.
+    commit_description (str): The original commit description.
+    issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
+        provided, issue keys will be extracted from both the title and the description.
+
+Returns:
+    tuple: A tuple containing the updated commit title and description with JIRA
+        information included.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="157" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="157" bodyend="211"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1ad2823ad1d3baaedd38039913c3a97fd7" compoundref="jira__client_8py" startline="59" endline="65">penify_hook.jira_client.JiraClient.extract_issue_keys</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" compoundref="jira__client_8py" startline="66" endline="100">penify_hook.jira_client.JiraClient.get_issue_details</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760" compoundref="jira__client_8py" startline="333" endline="423">penify_hook.jira_client.JiraClient.enhance_commit_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Dict[str, Any]</type>
+        <definition> Dict[str, Any] penify_hook.jira_client.JiraClient.get_detailed_issue_context</definition>
+        <argsstring>(self, str issue_key)</argsstring>
+        <name>get_detailed_issue_context</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.get_detailed_issue_context</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>issue_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieve comprehensive details about a JIRA issue including context for better
+commit messages.
+
+This function fetches detailed information from a specified JIRA issue and
+constructs a dictionary containing various context fields such as the issue
+summary, description, type, status, priority, comments, URL, and additional
+custom fields like acceptance criteria and sprint information. It handles
+errors by logging appropriate warnings or errors.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., &quot;PROJECT-123&quot;).
+
+Returns:
+    Dict[str, Any]: A dictionary containing business and technical context from the issue.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="212" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="212" bodyend="294"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" compoundref="jira__client_8py" startline="29">penify_hook.jira_client.JiraClient.jira_client</references>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" compoundref="jira__client_8py" startline="295" endline="332">penify_hook.jira_client.JiraClient.get_commit_context_from_issues</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Dict[str, Any]</type>
+        <definition> Dict[str, Any] penify_hook.jira_client.JiraClient.get_commit_context_from_issues</definition>
+        <argsstring>(self, List[str] issue_keys)</argsstring>
+        <name>get_commit_context_from_issues</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.get_commit_context_from_issues</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>List</type>
+          <declname>issue_keys</declname>
+          <array>[str]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Gather contextual information from JIRA issues to improve commit messages.
+
+This function processes a list of JIRA issue keys, retrieves detailed context
+for each issue, and aggregates it into a dictionary that can be used to enhance
+commit messages. It first retrieves the primary issue (the first key in the
+list) and then gathers basic details for any related issues. The resulting
+context includes information from both the primary and related issues, along
+with all issue keys.
+
+Args:
+    issue_keys: List of JIRA issue keys to gather information from
+
+Returns:
+    Dict containing business and technical context from the issues
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="295" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="295" bodyend="332"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746" compoundref="jira__client_8py" startline="212" endline="294">penify_hook.jira_client.JiraClient.get_detailed_issue_context</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" compoundref="jira__client_8py" startline="66" endline="100">penify_hook.jira_client.JiraClient.get_issue_details</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760" compoundref="jira__client_8py" startline="333" endline="423">penify_hook.jira_client.JiraClient.enhance_commit_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>tuple</type>
+        <definition> tuple penify_hook.jira_client.JiraClient.enhance_commit_message</definition>
+        <argsstring>(self, str title, str description, List[str] issue_keys)</argsstring>
+        <name>enhance_commit_message</name>
+        <qualifiedname>penify_hook.jira_client.JiraClient.enhance_commit_message</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>List</type>
+          <declname>issue_keys</declname>
+          <array>[str]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Enhance a commit message with business and technical context from JIRA issues.
+
+This function first checks if the list of issue keys is empty or if there is no
+connection. If so, it returns the original title and description without
+modification. It then retrieves context information from the specified JIRA
+issues. If the primary issue is missing, it formats the commit message with
+basic JIRA info.  The function enhances the commit title by prefixing it with
+the primary issue key if not already included. It appends a business context
+section to the description, including details like issue type, status,
+priority, sprint, acceptance criteria, and a condensed issue description. If
+comments are available, they are added as technical notes. Finally, related
+issues are listed.
+
+Args:
+    title (str): Original commit title.
+    description (str): Original commit description.
+    issue_keys (List[str]): List of JIRA issue keys to include in the enhanced commit message.
+
+Returns:
+    tuple: A tuple containing the enhanced commit title and description with added
+        context from JIRA issues.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="333" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="333" bodyend="423"/>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" compoundref="jira__client_8py" startline="157" endline="211">penify_hook.jira_client.JiraClient.format_commit_message_with_jira_info</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" compoundref="jira__client_8py" startline="295" endline="332">penify_hook.jira_client.JiraClient.get_commit_context_from_issues</references>
+        <references refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" compoundref="jira__client_8py" startline="46" endline="49">penify_hook.jira_client.JiraClient.is_connected</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Client for interacting with JIRA API
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>penify_hook.jira_client.JiraClient</label>
+        <link refid="classpenify__hook_1_1jira__client_1_1JiraClient"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" line="12" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/jira_client.py" bodystart="12" bodyend="423"/>
+    <listofallmembers>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a47efc1ec07389c960f2dfb37ba8c09f5" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>__init__</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa1f374116c64cd5f1492ec7f7e40f9c1" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>add_comment</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a70d2c5a6432aa6f238da0ff65d49a760" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>enhance_commit_message</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1ad2823ad1d3baaedd38039913c3a97fd7" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>extract_issue_keys</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a093d6456fe053ef7a7862d5d6851910c" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>extract_issue_keys_from_branch</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a49ea1149758f7f5212149d357b13cc23" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>format_commit_message_with_jira_info</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afb41ce6f13c30b1265d439ddf04bf2cd" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>get_commit_context_from_issues</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aa967169a4b7970c67c0947b9ac56f746" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>get_detailed_issue_context</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a65f6924819084b7c8d268956a784804a" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>get_issue_details</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a00d0f9ae006313a21576362d26ac5ec8" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>is_connected</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1afc5c90e53b702f9fc27e2ee7d3f991b9" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>jira_api_token</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aefb3f96c79358cf3a95d96d3747235b6" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>jira_client</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a3c0cfecff02a75cb7001509a595b8197" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>jira_url</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1ae56104d5aa7bda7bb26d169c4b46038c" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>jira_user</name></member>
+      <member refid="classpenify__hook_1_1jira__client_1_1JiraClient_1aca8837552d37bfd611de23441a240826" prot="public" virt="non-virtual"><scope>penify_hook::jira_client::JiraClient</scope><name>update_issue_status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

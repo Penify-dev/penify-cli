@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook" kind="class" language="Python" prot="public">
+    <compoundname>penify_hook::file_analyzer::FileAnalyzerGenHook</compoundname>
+    <basecompoundref refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer" prot="public" virt="non-virtual">penify_hook.base_analyzer.BaseAnalyzer</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook.file_analyzer.FileAnalyzerGenHook::file_path</definition>
+        <argsstring></argsstring>
+        <name>file_path</name>
+        <qualifiedname>penify_hook.file_analyzer.FileAnalyzerGenHook.file_path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" line="22" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a190c473090b2a07e7cb43073a3211c4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.file_analyzer.FileAnalyzerGenHook.__init__</definition>
+        <argsstring>(self, str file_path, APIClient api_client)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>penify_hook.file_analyzer.FileAnalyzerGenHook.__init__</qualifiedname>
+        <reimplements refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab1296a3d1e9070d891801876b66f7344">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>file_path</declname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1api__client_1_1APIClient" kindref="compound">APIClient</ref></type>
+          <declname>api_client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" line="21" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.file_analyzer.FileAnalyzerGenHook.process_file</definition>
+        <argsstring>(self, file_path, pbar, str new_param=&quot;&quot;)</argsstring>
+        <name>process_file</name>
+        <qualifiedname>penify_hook.file_analyzer.FileAnalyzerGenHook.process_file</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32" kindref="member">file_path</ref></type>
+          <defname>file_path</defname>
+        </param>
+        <param>
+          <type>pbar</type>
+          <defname>pbar</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>new_param</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Processes a file by validating its extension, reading content,
+generating documentation, and writing changes back to the file.  The function
+performs several stages of processing: 1. Validates the file&apos;s extension to
+ensure it is supported. 2. Reads the content of the file. 3. Sends the file
+content for documentation generation. 4. Writes the generated documentation
+back to the file if there are changes.
+
+Args:
+    file_path (str): The path of the file to be processed.
+    pbar (tqdm.tqdm): A progress bar object to update the status of processing stages.
+    new_param (str?): An additional parameter for future use. Defaults to an empty string.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" line="27" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" bodystart="27" bodyend="100"/>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a81e9c55709205aaf4ebbe2b41683baf2" compoundref="base__analyzer_8py" startline="19">penify_hook.base_analyzer.BaseAnalyzer.api_client</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa" compoundref="ui__utils_8py" startline="60" endline="63">penify_hook.ui_utils.print_warning</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1ab702c0c3ba81d159d7c3bcd7ea2abba4" compoundref="base__analyzer_8py" startline="18">penify_hook.base_analyzer.BaseAnalyzer.relative_file_path</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a9cca3465b0cc00d78324b0a9eac1d7f5" compoundref="base__analyzer_8py" startline="13">penify_hook.base_analyzer.BaseAnalyzer.repo_details</references>
+        <references refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_1a0cac0310ec635aa64a34857cf30ce1eb" compoundref="base__analyzer_8py" startline="20">penify_hook.base_analyzer.BaseAnalyzer.supported_file_types</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d" compoundref="ui__utils_8py" startline="105" endline="111">penify_hook.ui_utils.update_stage</references>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a6ab39391dfb7686f2a2d21a702dd3073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.file_analyzer.FileAnalyzerGenHook.print_processing</definition>
+        <argsstring>(self, file_path)</argsstring>
+        <name>print_processing</name>
+        <qualifiedname>penify_hook.file_analyzer.FileAnalyzerGenHook.print_processing</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32" kindref="member">file_path</ref></type>
+          <defname>file_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Prints a message indicating that a file is being processed.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" line="101" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" bodystart="101" bodyend="105"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4" compoundref="ui__utils_8py" startline="48" endline="51">penify_hook.ui_utils.format_file_path</references>
+      </memberdef>
+      <memberdef kind="function" id="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.file_analyzer.FileAnalyzerGenHook.run</definition>
+        <argsstring>(self)</argsstring>
+        <name>run</name>
+        <qualifiedname>penify_hook.file_analyzer.FileAnalyzerGenHook.run</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Runs the documentation process with a progress bar.
+
+This method orchestrates the documentation process by creating a progress bar,
+processing the file, and handling exceptions to ensure the progress bar
+completes properly. It updates the progress bar through various stages and
+provides feedback based on the result of the file processing.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" line="106" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" bodystart="106" bodyend="155"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef" compoundref="ui__utils_8py" startline="94" endline="104">penify_hook.ui_utils.create_stage_progress_bar</references>
+        <references refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32" compoundref="file__analyzer_8py" startline="22">penify_hook.file_analyzer.FileAnalyzerGenHook.file_path</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c" compoundref="ui__utils_8py" startline="73" endline="83">penify_hook.ui_utils.print_status</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a" compoundref="ui__utils_8py" startline="56" endline="59">penify_hook.ui_utils.print_success</references>
+        <references refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a05313caa22b173ce75638f0db08eeb85" compoundref="git__analyzer_8py" startline="78" endline="133">penify_hook.git_analyzer.GitDocGenHook.process_file</references>
+        <references refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" compoundref="file__analyzer_8py" startline="27" endline="100">penify_hook.file_analyzer.FileAnalyzerGenHook.process_file</references>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d" compoundref="ui__utils_8py" startline="105" endline="111">penify_hook.ui_utils.update_stage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>penify_hook.file_analyzer.FileAnalyzerGenHook</label>
+        <link refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>penify_hook.base_analyzer.BaseAnalyzer</label>
+        <link refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>penify_hook.file_analyzer.FileAnalyzerGenHook</label>
+        <link refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>penify_hook.base_analyzer.BaseAnalyzer</label>
+        <link refid="classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" line="20" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/file_analyzer.py" bodystart="20" bodyend="155"/>
+    <listofallmembers>
+      <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a190c473090b2a07e7cb43073a3211c4b" prot="public" virt="non-virtual"><scope>penify_hook::file_analyzer::FileAnalyzerGenHook</scope><name>__init__</name></member>
+      <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a9b03b88a9ce1b9af945279375048dc32" prot="public" virt="non-virtual"><scope>penify_hook::file_analyzer::FileAnalyzerGenHook</scope><name>file_path</name></member>
+      <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a6ab39391dfb7686f2a2d21a702dd3073" prot="public" virt="non-virtual"><scope>penify_hook::file_analyzer::FileAnalyzerGenHook</scope><name>print_processing</name></member>
+      <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" prot="public" virt="non-virtual"><scope>penify_hook::file_analyzer::FileAnalyzerGenHook</scope><name>process_file</name></member>
+      <member refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" prot="public" virt="non-virtual"><scope>penify_hook::file_analyzer::FileAnalyzerGenHook</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

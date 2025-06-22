@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands" kind="page">
+    <compoundname>md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands</compoundname>
+    <title>Penify CLI - Configuration Commands</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <computeroutput>config</computeroutput> command allows you to set up and manage configuration settings for Penify CLI. This document explains all available configuration options and how to use them.</para>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md21">
+<title>Configuration Overview</title>
+<para>Penify CLI stores configuration in a JSON file at <computeroutput>~/.penify/config.json</computeroutput>. The configuration includes:</para>
+<para><itemizedlist>
+<listitem><para>LLM (Large Language Model) settings for local commit message generation</para>
+</listitem><listitem><para>JIRA integration settings for enhanced commit messages</para>
+</listitem><listitem><para>API tokens and other credentials</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md22">
+<title>Basic Usage</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>Configure<sp/>LLM<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>llm</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Configure<sp/>JIRA<sp/>integration</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>jira</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md23">
+<title>LLM Configuration</title>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md24">
+<title>Web Interface</title>
+<para>Running <computeroutput>penify config llm</computeroutput> opens a web interface in your browser where you can configure:</para>
+<para><orderedlist>
+<listitem><para><bold>Model</bold>: The LLM model to use (e.g., <computeroutput>gpt-3.5-turbo</computeroutput>)</para>
+</listitem><listitem><para><bold>API Base URL</bold>: The endpoint URL for your LLM API (e.g., <computeroutput><ulink url="https://api.openai.com/v1">https://api.openai.com/v1</ulink></computeroutput>)</para>
+</listitem><listitem><para><bold>API Key</bold>: Your authentication key for the LLM API</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md25">
+<title>Supported LLMs</title>
+<para>Penify CLI supports various LLM providers:</para>
+<sect3 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md26">
+<title>OpenAI</title>
+<para><itemizedlist>
+<listitem><para>Model: <computeroutput>gpt-3.5-turbo</computeroutput> or <computeroutput>gpt-4</computeroutput></para>
+</listitem><listitem><para>API Base: <computeroutput><ulink url="https://api.openai.com/v1">https://api.openai.com/v1</ulink></computeroutput></para>
+</listitem><listitem><para>API Key: Your OpenAI API key</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md27">
+<title>Anthropic</title>
+<para><itemizedlist>
+<listitem><para>Model: <computeroutput>claude-instant-1</computeroutput> or <computeroutput>claude-2</computeroutput></para>
+</listitem><listitem><para>API Base: <computeroutput><ulink url="https://api.anthropic.com/v1">https://api.anthropic.com/v1</ulink></computeroutput></para>
+</listitem><listitem><para>API Key: Your Anthropic API key</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md28">
+<title>Ollama (Local)</title>
+<para><itemizedlist>
+<listitem><para>Model: <computeroutput>llama2</computeroutput> or any model you have installed</para>
+</listitem><listitem><para>API Base: <computeroutput><ulink url="http://localhost:11434">http://localhost:11434</ulink></computeroutput></para>
+</listitem><listitem><para>API Key: (leave blank)</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md29">
+<title>Azure OpenAI</title>
+<para><itemizedlist>
+<listitem><para>Model: Your deployed model name</para>
+</listitem><listitem><para>API Base: Your Azure endpoint</para>
+</listitem><listitem><para>API Key: Your Azure API key</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md30">
+<title>Configuration File Structure</title>
+<para>After configuration, your <computeroutput>~/.penify/config.json</computeroutput> will contain:</para>
+<para><programlisting filename=".json"><codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;llm&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;model&quot;:<sp/>&quot;gpt-3.5-turbo&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;api_base&quot;:<sp/>&quot;https://api.openai.com/v1&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;api_key&quot;:<sp/>&quot;sk-...&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md31">
+<title>JIRA Configuration</title>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md32">
+<title>Web Interface</title>
+<para>Running <computeroutput>penify config jira</computeroutput> opens a web interface where you can configure:</para>
+<para><orderedlist>
+<listitem><para><bold>JIRA URL</bold>: Your JIRA instance URL (e.g., <computeroutput><ulink url="https://yourcompany.atlassian.net">https://yourcompany.atlassian.net</ulink></computeroutput>)</para>
+</listitem><listitem><para><bold>Username</bold>: Your JIRA username (typically your email)</para>
+</listitem><listitem><para><bold>API Token</bold>: Your JIRA API token</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md33">
+<title>Creating a JIRA API Token</title>
+<para><orderedlist>
+<listitem><para>Log in to <ulink url="https://id.atlassian.com/manage-profile/security/api-tokens">https://id.atlassian.com/manage-profile/security/api-tokens</ulink></para>
+</listitem><listitem><para>Click &quot;Create API token&quot;</para>
+</listitem><listitem><para>Give it a name (e.g., &quot;Penify CLI&quot;)</para>
+</listitem><listitem><para>Copy the generated token and paste it into the configuration</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md34">
+<title>Configuration File Structure</title>
+<para>After configuration, your <computeroutput>~/.penify/config.json</computeroutput> will contain:</para>
+<para><programlisting filename=".json"><codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;jira&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;url&quot;:<sp/>&quot;https://yourcompany.atlassian.net&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;username&quot;:<sp/>&quot;your.email@example.com&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;api_token&quot;:<sp/>&quot;your-jira-api-token&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md35">
+<title>Configuration Locations</title>
+<para>Penify CLI looks for configuration in multiple locations:</para>
+<para><orderedlist>
+<listitem><para>Project-specific: <computeroutput>.penify/config.json</computeroutput> in the Git repository root</para>
+</listitem><listitem><para>User-specific: <computeroutput>~/.penify/config.json</computeroutput> in your home directory</para>
+</listitem></orderedlist>
+</para>
+<para>The project-specific configuration takes precedence if both exist.</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md36">
+<title>Environment Variables</title>
+<para>You can override configuration settings using environment variables:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>PENIFY_API_TOKEN</computeroutput>: Override the stored API token</para>
+</listitem><listitem><para><computeroutput>PENIFY_LLM_MODEL</computeroutput>: Override the configured LLM model</para>
+</listitem><listitem><para><computeroutput>PENIFY_LLM_API_BASE</computeroutput>: Override the configured LLM API base URL</para>
+</listitem><listitem><para><computeroutput>PENIFY_LLM_API_KEY</computeroutput>: Override the configured LLM API key</para>
+</listitem><listitem><para><computeroutput>PENIFY_JIRA_URL</computeroutput>: Override the configured JIRA URL</para>
+</listitem><listitem><para><computeroutput>PENIFY_JIRA_USER</computeroutput>: Override the configured JIRA username</para>
+</listitem><listitem><para><computeroutput>PENIFY_JIRA_TOKEN</computeroutput>: Override the configured JIRA API token</para>
+</listitem></itemizedlist>
+</para>
+<para>Example: <programlisting filename=".bash"><codeline><highlight class="normal">export<sp/>PENIFY_LLM_MODEL=&quot;gpt-4&quot;</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md37">
+<title>Command-Line Configuration</title>
+<para>For advanced users or scripting, you can directly edit the configuration file:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>View<sp/>current<sp/>configuration</highlight></codeline>
+<codeline><highlight class="normal">cat<sp/>~/.penify/config.json</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Edit<sp/>configuration<sp/>with<sp/>your<sp/>preferred<sp/>editor</highlight></codeline>
+<codeline><highlight class="normal">nano<sp/>~/.penify/config.json</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md38">
+<title>Sharing Configuration</title>
+<para>You can share configuration between machines by copying the <computeroutput>.penify/config.json</computeroutput> file. However, be cautious with API keys and credentials.</para>
+<para>For team settings, consider:<orderedlist>
+<listitem><para>Using a project-specific <computeroutput>.penify/config.json</computeroutput> with shared settings</para>
+</listitem><listitem><para>Excluding API keys from shared configuration</para>
+</listitem><listitem><para>Using environment variables for sensitive credentials</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md39">
+<title>Troubleshooting</title>
+<sect2 id="md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_1autotoc_md40">
+<title>Common Issues</title>
+<para><orderedlist>
+<listitem><para>**&quot;Error reading configuration file&quot;**<itemizedlist>
+<listitem><para>Check if the file exists: <computeroutput>ls -la ~/.penify</computeroutput></para>
+</listitem><listitem><para>Ensure it contains valid JSON: <computeroutput>cat ~/.penify/config.json</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>**&quot;Failed to connect to LLM API&quot;**<itemizedlist>
+<listitem><para>Verify API base URL and API key</para>
+</listitem><listitem><para>Check network connectivity to the API endpoint</para>
+</listitem><listitem><para>Ensure your account has access to the specified model</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>**&quot;Failed to connect to JIRA&quot;**<itemizedlist>
+<listitem><para>Check JIRA URL format (should include <computeroutput><ulink url="https://">https://</ulink></computeroutput>)</para>
+</listitem><listitem><para>Verify username and API token</para>
+</listitem><listitem><para>Ensure your JIRA account has API access permissions </para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/config-commands.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1ui__utils" kind="namespace" language="Python">
+    <compoundname>penify_hook::ui_utils</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1ab560cfade398ac1e0bd47befb52d9f71" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.autoreset</definition>
+        <argsstring></argsstring>
+        <name>autoreset</name>
+        <qualifiedname>penify_hook.ui_utils.autoreset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="12" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a9fdcb180915696f5d217032a62c3857c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.INFO_COLOR</definition>
+        <argsstring></argsstring>
+        <name>INFO_COLOR</name>
+        <qualifiedname>penify_hook.ui_utils.INFO_COLOR</qualifiedname>
+        <initializer>=  Fore.CYAN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="15" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a22c450c5e2b5394618ecf9b636560df4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.SUCCESS_COLOR</definition>
+        <argsstring></argsstring>
+        <name>SUCCESS_COLOR</name>
+        <qualifiedname>penify_hook.ui_utils.SUCCESS_COLOR</qualifiedname>
+        <initializer>=  Fore.GREEN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="16" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a177bc9b44157844c999e0c1c2c6936ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.WARNING_COLOR</definition>
+        <argsstring></argsstring>
+        <name>WARNING_COLOR</name>
+        <qualifiedname>penify_hook.ui_utils.WARNING_COLOR</qualifiedname>
+        <initializer>=  Fore.YELLOW</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="17" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a4ab4e61dfab7973c87bef59c6e1977fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.ERROR_COLOR</definition>
+        <argsstring></argsstring>
+        <name>ERROR_COLOR</name>
+        <qualifiedname>penify_hook.ui_utils.ERROR_COLOR</qualifiedname>
+        <initializer>=  Fore.RED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="18" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1aba01b8259f0d66cdc2b4a1b58f9736fc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.HIGHLIGHT_COLOR</definition>
+        <argsstring></argsstring>
+        <name>HIGHLIGHT_COLOR</name>
+        <qualifiedname>penify_hook.ui_utils.HIGHLIGHT_COLOR</qualifiedname>
+        <initializer>=  Fore.BLUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="19" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1aca0fcee81606857497520ae4290bc9f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::ui_utils.NEUTRAL_COLOR</definition>
+        <argsstring></argsstring>
+        <name>NEUTRAL_COLOR</name>
+        <qualifiedname>penify_hook.ui_utils.NEUTRAL_COLOR</qualifiedname>
+        <initializer>=  Fore.WHITE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="20" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a3c6fe4bd17c1a5fe76587225ae4beb3e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::ui_utils.SUCCESS_SYMBOL</definition>
+        <argsstring></argsstring>
+        <name>SUCCESS_SYMBOL</name>
+        <qualifiedname>penify_hook.ui_utils.SUCCESS_SYMBOL</qualifiedname>
+        <initializer>=  &quot;✓&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="23" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a6eaea98f1a8cbe16a181647da2fc0a16" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::ui_utils.WARNING_SYMBOL</definition>
+        <argsstring></argsstring>
+        <name>WARNING_SYMBOL</name>
+        <qualifiedname>penify_hook.ui_utils.WARNING_SYMBOL</qualifiedname>
+        <initializer>=  &quot;○&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="24" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1aa564e1e1d016c8227d076542e74cecb0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::ui_utils.ERROR_SYMBOL</definition>
+        <argsstring></argsstring>
+        <name>ERROR_SYMBOL</name>
+        <qualifiedname>penify_hook.ui_utils.ERROR_SYMBOL</qualifiedname>
+        <initializer>=  &quot;✗&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="25" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1ui__utils_1a3b208e2750a38dd09467a73e4afd9756" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::ui_utils.PROCESSING_SYMBOL</definition>
+        <argsstring></argsstring>
+        <name>PROCESSING_SYMBOL</name>
+        <qualifiedname>penify_hook.ui_utils.PROCESSING_SYMBOL</qualifiedname>
+        <initializer>=  &quot;⟳&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="26" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.format_info</definition>
+        <argsstring>(message)</argsstring>
+        <name>format_info</name>
+        <qualifiedname>penify_hook.ui_utils.format_info</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Format an informational message with appropriate color.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="28" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="28" bodyend="31"/>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c" compoundref="ui__utils_8py" startline="84" endline="93">penify_hook.ui_utils.create_progress_bar</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef" compoundref="ui__utils_8py" startline="94" endline="104">penify_hook.ui_utils.create_stage_progress_bar</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" compoundref="ui__utils_8py" startline="52" endline="55">penify_hook.ui_utils.print_info</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a532cdb4de7c679ce8b29c3e9116c4776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.format_success</definition>
+        <argsstring>(message)</argsstring>
+        <name>format_success</name>
+        <qualifiedname>penify_hook.ui_utils.format_success</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Formats a success message with green color and reset style.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="32" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="32" bodyend="35"/>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a" compoundref="ui__utils_8py" startline="56" endline="59">penify_hook.ui_utils.print_success</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a0a6fd2613c6fe053b6e4356cd9e5cda2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.format_warning</definition>
+        <argsstring>(message)</argsstring>
+        <name>format_warning</name>
+        <qualifiedname>penify_hook.ui_utils.format_warning</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Format a warning message with appropriate color.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="36" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="36" bodyend="39"/>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa" compoundref="ui__utils_8py" startline="60" endline="63">penify_hook.ui_utils.print_warning</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a4dd934568897433fa73f9cc182ac4a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.format_error</definition>
+        <argsstring>(message)</argsstring>
+        <name>format_error</name>
+        <qualifiedname>penify_hook.ui_utils.format_error</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Format an error message with the specified error color.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="40" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="40" bodyend="43"/>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f" compoundref="ui__utils_8py" startline="64" endline="67">penify_hook.ui_utils.print_error</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1adcb97fc26b405d2b9cdf5eb7aecc5452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.format_highlight</definition>
+        <argsstring>(message)</argsstring>
+        <name>format_highlight</name>
+        <qualifiedname>penify_hook.ui_utils.format_highlight</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Format a highlighted message with appropriate color.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="44" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.format_file_path</definition>
+        <argsstring>(file_path)</argsstring>
+        <name>format_file_path</name>
+        <qualifiedname>penify_hook.ui_utils.format_file_path</qualifiedname>
+        <param>
+          <type>file_path</type>
+          <defname>file_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Format a file path with a warning color.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="48" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="48" bodyend="51"/>
+        <referencedby refid="namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115" compoundref="ui__utils_8py" startline="68" endline="72">penify_hook.ui_utils.print_processing</referencedby>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a6ab39391dfb7686f2a2d21a702dd3073" compoundref="file__analyzer_8py" startline="101" endline="105">penify_hook.file_analyzer.FileAnalyzerGenHook.print_processing</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a811f0adf6e9bf71510c379b6fa155e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.print_info</definition>
+        <argsstring>(message)</argsstring>
+        <name>print_info</name>
+        <qualifiedname>penify_hook.ui_utils.print_info</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Prints an informational message with formatting.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="52" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="52" bodyend="55"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6" compoundref="ui__utils_8py" startline="28" endline="31">penify_hook.ui_utils.format_info</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="97">penify_hook.commands.commit_commands.commit_code</referencedby>
+        <referencedby refid="classpenify__hook_1_1jira__client_1_1JiraClient_1a093d6456fe053ef7a7862d5d6851910c" compoundref="jira__client_8py" startline="50" endline="58">penify_hook.jira_client.JiraClient.extract_issue_keys_from_branch</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a8496194276441fa2eb2fa014eaab9a37" compoundref="commit__analyzer_8py" startline="21" endline="65">penify_hook.commit_analyzer.CommitDocGenHook.get_summary</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="116" endline="147">penify_hook.commands.commit_commands.handle_commit</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1main_1a16838b20df4bd14ee4b5e1dd2906738f" compoundref="main_8py" startline="6" endline="84">penify_hook.main.main</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1adda13cc121d96342476ccf72b63a007f" compoundref="commit__analyzer_8py" startline="103" endline="157">penify_hook.commit_analyzer.CommitDocGenHook.process_jira_integration</referencedby>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a6370a03f7ed9175ef6f81e931a105ea9" compoundref="commit__analyzer_8py" startline="66" endline="102">penify_hook.commit_analyzer.CommitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a2b16aa6b68a9edea5f29f84f1c4be79a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.print_success</definition>
+        <argsstring>(message)</argsstring>
+        <name>print_success</name>
+        <qualifiedname>penify_hook.ui_utils.print_success</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Prints a formatted success message.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="56" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="56" bodyend="59"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a532cdb4de7c679ce8b29c3e9116c4776" compoundref="ui__utils_8py" startline="32" endline="35">penify_hook.ui_utils.format_success</references>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1a6370a03f7ed9175ef6f81e931a105ea9" compoundref="commit__analyzer_8py" startline="66" endline="102">penify_hook.commit_analyzer.CommitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a1ffbb9671dbe233770268e2dd66a67fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.print_warning</definition>
+        <argsstring>(message)</argsstring>
+        <name>print_warning</name>
+        <qualifiedname>penify_hook.ui_utils.print_warning</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Prints a warning message with formatted output.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="60" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="60" bodyend="63"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a0a6fd2613c6fe053b6e4356cd9e5cda2" compoundref="ui__utils_8py" startline="36" endline="39">penify_hook.ui_utils.format_warning</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="97">penify_hook.commands.commit_commands.commit_code</referencedby>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" compoundref="file__analyzer_8py" startline="27" endline="100">penify_hook.file_analyzer.FileAnalyzerGenHook.process_file</referencedby>
+        <referencedby refid="classpenify__hook_1_1commit__analyzer_1_1CommitDocGenHook_1adda13cc121d96342476ccf72b63a007f" compoundref="commit__analyzer_8py" startline="103" endline="157">penify_hook.commit_analyzer.CommitDocGenHook.process_jira_integration</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a6f0acd7dd91abfe67d0807803bc3b65f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.print_error</definition>
+        <argsstring>(message)</argsstring>
+        <name>print_error</name>
+        <qualifiedname>penify_hook.ui_utils.print_error</qualifiedname>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Print an error message with appropriate formatting.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="64" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="64" bodyend="67"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a4dd934568897433fa73f9cc182ac4a3e" compoundref="ui__utils_8py" startline="40" endline="43">penify_hook.ui_utils.format_error</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1a62564c4e8ad59fc46d56cb0f9122a71a" compoundref="commit__commands_8py" startline="10" endline="97">penify_hook.commands.commit_commands.commit_code</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1adfcbbfe39029ab6d1dd33e7bf75ae115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.print_processing</definition>
+        <argsstring>(file_path)</argsstring>
+        <name>print_processing</name>
+        <qualifiedname>penify_hook.ui_utils.print_processing</qualifiedname>
+        <param>
+          <type>file_path</type>
+          <defname>file_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Print a processing message for a specified file.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="68" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="68" bodyend="72"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1af3441fb3c2c3850b8b3b6455a9fdaba4" compoundref="ui__utils_8py" startline="48" endline="51">penify_hook.ui_utils.format_file_path</references>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1aa6e684c00e26199440137a87ed9b195c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.print_status</definition>
+        <argsstring>(status, message)</argsstring>
+        <name>print_status</name>
+        <qualifiedname>penify_hook.ui_utils.print_status</qualifiedname>
+        <param>
+          <type>status</type>
+          <defname>status</defname>
+        </param>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Print a status message with an appropriate symbol.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="73" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="73" bodyend="83"/>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a12b92532b1458af94f3649d411b5505c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.create_progress_bar</definition>
+        <argsstring>(total, desc=&quot;Processing&quot;, unit=&quot;item&quot;)</argsstring>
+        <name>create_progress_bar</name>
+        <qualifiedname>penify_hook.ui_utils.create_progress_bar</qualifiedname>
+        <param>
+          <type>total</type>
+          <defname>total</defname>
+        </param>
+        <param>
+          <type>desc</type>
+          <defname>desc</defname>
+          <defval>&quot;Processing&quot;</defval>
+        </param>
+        <param>
+          <type>unit</type>
+          <defname>unit</defname>
+          <defval>&quot;item&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a tqdm progress bar with consistent styling.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="84" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="84" bodyend="93"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6" compoundref="ui__utils_8py" startline="28" endline="31">penify_hook.ui_utils.format_info</references>
+        <referencedby refid="classpenify__hook_1_1git__analyzer_1_1GitDocGenHook_1a3beba14e92d717391a74bb70b1fab0ae" compoundref="git__analyzer_8py" startline="134" endline="178">penify_hook.git_analyzer.GitDocGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a3da02cd1140179a9ce60f62c85fccfef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.create_stage_progress_bar</definition>
+        <argsstring>(stages, desc=&quot;Processing&quot;)</argsstring>
+        <name>create_stage_progress_bar</name>
+        <qualifiedname>penify_hook.ui_utils.create_stage_progress_bar</qualifiedname>
+        <param>
+          <type>stages</type>
+          <defname>stages</defname>
+        </param>
+        <param>
+          <type>desc</type>
+          <defname>desc</defname>
+          <defval>&quot;Processing&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a tqdm progress bar for processing stages with consistent styling.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="94" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="94" bodyend="104"/>
+        <references refid="namespacepenify__hook_1_1ui__utils_1a92c3e466d1912058167be2eacf85b9f6" compoundref="ui__utils_8py" startline="28" endline="31">penify_hook.ui_utils.format_info</references>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1ui__utils_1a5a7340d0fc60fb80f17514d60bf45f1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.ui_utils.update_stage</definition>
+        <argsstring>(pbar, stage_name)</argsstring>
+        <name>update_stage</name>
+        <qualifiedname>penify_hook.ui_utils.update_stage</qualifiedname>
+        <param>
+          <type>pbar</type>
+          <defname>pbar</defname>
+        </param>
+        <param>
+          <type>stage_name</type>
+          <defname>stage_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Update the progress bar with a new stage name.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="105" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" bodystart="105" bodyend="111"/>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a2cc6c22ef588fccf3eed9bbc57fb6d6e" compoundref="file__analyzer_8py" startline="27" endline="100">penify_hook.file_analyzer.FileAnalyzerGenHook.process_file</referencedby>
+        <referencedby refid="classpenify__hook_1_1file__analyzer_1_1FileAnalyzerGenHook_1a4f4dffbc432fac3e259d957dd1e187f1" compoundref="file__analyzer_8py" startline="106" endline="155">penify_hook.file_analyzer.FileAnalyzerGenHook.run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>UI utilities for Penify CLI.
+
+This module provides utility functions for consistent UI formatting,
+colored output, and progress indicators across the Penify CLI application.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/ui_utils.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

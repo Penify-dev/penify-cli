@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1api__client" kind="namespace" language="Python">
+    <compoundname>penify_hook::api_client</compoundname>
+    <innerclass refid="classpenify__hook_1_1api__client_1_1APIClient" prot="public">penify_hook::api_client::APIClient</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/api_client.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

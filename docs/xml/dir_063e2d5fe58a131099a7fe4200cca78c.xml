@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_063e2d5fe58a131099a7fe4200cca78c" kind="dir">
+    <compoundname>/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests</compoundname>
+    <innerfile refid="tests_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="conftest_8py">conftest.py</innerfile>
+    <innerfile refid="test__commit__commands_8py">test_commit_commands.py</innerfile>
+    <innerfile refid="test__config__commands_8py">test_config_commands.py</innerfile>
+    <innerfile refid="test__doc__commands_8py">test_doc_commands.py</innerfile>
+    <innerfile refid="test__web__config_8py">test_web_config.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/"/>
+  </compounddef>
+</doxygen>

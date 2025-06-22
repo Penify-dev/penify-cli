@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1commands_1_1config__commands" kind="namespace" language="Python">
+    <compoundname>penify_hook::commands::config_commands</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepenify__hook_1_1commands_1_1config__commands_1a152642ab83cf6219b604bda6122aba67" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool penify_hook::commands::config_commands::DOTENV_AVAILABLE</definition>
+        <argsstring></argsstring>
+        <name>DOTENV_AVAILABLE</name>
+        <qualifiedname>penify_hook.commands.config_commands.DOTENV_AVAILABLE</qualifiedname>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="17" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1commands_1_1config__commands_1a4b202072a3a3b8515c9c254622e9c880" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>penify_hook::commands::config_commands.path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>penify_hook.commands.config_commands.path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="286" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None penify_hook.commands.config_commands.load_env_files</definition>
+        <argsstring>()</argsstring>
+        <name>load_env_files</name>
+        <qualifiedname>penify_hook.commands.config_commands.load_env_files</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Load environment variables from .env files in various locations with proper
+priority.
+
+This function loads environment variables from .env files located in different
+directories, prioritizing the current directory over the Git repo root and the
+user home directory. The loading process ensures that later files override
+earlier ones.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="22" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="22" bodyend="62"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" compoundref="config__commands_8py" startline="22" endline="62">penify_hook.commands.config_commands.load_env_files</references>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" compoundref="config__commands_8py" startline="256" endline="274">penify_hook.commands.config_commands.get_jira_config</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" compoundref="config__commands_8py" startline="237" endline="255">penify_hook.commands.config_commands.get_llm_config</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" compoundref="config__commands_8py" startline="22" endline="62">penify_hook.commands.config_commands.load_env_files</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Path</type>
+        <definition> Path penify_hook.commands.config_commands.get_penify_config</definition>
+        <argsstring>()</argsstring>
+        <name>get_penify_config</name>
+        <qualifiedname>penify_hook.commands.config_commands.get_penify_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the path to the `config.json` file within the `.penify` directory,
+creating it if necessary.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="66" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="66" bodyend="94"/>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a2e8162082bcdd5652bb37bdb14cf453a" compoundref="test__config__commands_8py" startline="22" endline="55">tests.test_config_commands.TestConfigCommands.test_get_penify_config_existing_dir</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a33d4760eee3b67e1cde3aed755ebb948" compoundref="test__config__commands_8py" startline="60" endline="94">tests.test_config_commands.TestConfigCommands.test_get_penify_config_new_dir</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any penify_hook.commands.config_commands.get_env_var_or_default</definition>
+        <argsstring>(str env_var, Any default=None)</argsstring>
+        <name>get_env_var_or_default</name>
+        <qualifiedname>penify_hook.commands.config_commands.get_env_var_or_default</qualifiedname>
+        <param>
+          <type>str</type>
+          <declname>env_var</declname>
+        </param>
+        <param>
+          <type>Any</type>
+          <declname>default</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get environment variable or return default value.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="95" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="95" bodyend="99"/>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" compoundref="config__commands_8py" startline="256" endline="274">penify_hook.commands.config_commands.get_jira_config</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" compoundref="config__commands_8py" startline="237" endline="255">penify_hook.commands.config_commands.get_llm_config</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" compoundref="config__commands_8py" startline="490" endline="521">penify_hook.commands.config_commands.get_token</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a4617bc5956e502c9555dc0dda0376df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.config_commands.save_llm_config</definition>
+        <argsstring>(model, api_base, api_key)</argsstring>
+        <name>save_llm_config</name>
+        <qualifiedname>penify_hook.commands.config_commands.save_llm_config</qualifiedname>
+        <param>
+          <type>model</type>
+          <defname>model</defname>
+        </param>
+        <param>
+          <type>api_base</type>
+          <defname>api_base</defname>
+        </param>
+        <param>
+          <type>api_key</type>
+          <defname>api_key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Save LLM configuration settings to an .env file.
+
+This function saves the LLM configuration following a specific priority: 1. Git
+repo root .env (if inside a git repo) 2. User home directory .env  It handles
+the detection of the Git repo root, reads the existing .env content, updates it
+with the new LLM configuration, and writes it back to the file. It also reloads
+the environment variables to make changes immediately available.
+
+Args:
+    model (str): The name of the language model.
+    api_base (str): The base URL for the API.
+    api_key (str): The API key for authentication.
+
+Returns:
+    bool: True if the configuration is saved successfully, False otherwise.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="100" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="100" bodyend="166"/>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" compoundref="config__command_8py" startline="31" endline="87">penify_hook.config_command.handle_config</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a73a264dfb21e16003e095b79f6eab2ac" compoundref="test__config__commands_8py" startline="269" endline="300">tests.test_config_commands.TestConfigCommands.test_save_llm_config_failure</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1acd8df8219441b9e9871b903a681400d9" compoundref="test__config__commands_8py" startline="227" endline="265">tests.test_config_commands.TestConfigCommands.test_save_llm_config_success</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.config_commands.save_jira_config</definition>
+        <argsstring>(url, username, api_token)</argsstring>
+        <name>save_jira_config</name>
+        <qualifiedname>penify_hook.commands.config_commands.save_jira_config</qualifiedname>
+        <param>
+          <type>url</type>
+          <defname>url</defname>
+        </param>
+        <param>
+          <type>username</type>
+          <defname>username</defname>
+        </param>
+        <param>
+          <type>api_token</type>
+          <defname>api_token</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Save JIRA configuration settings to a .env file.
+
+This function saves JIRA configuration following these steps: 1. Determine the
+target .env file location based on whether the current directory is inside a
+Git repository. 2. If inside a Git repo, use the Git repo root&apos;s .env file;
+otherwise, use the user home directory&apos;s .env file. 3. Read the existing
+content of the .env file (if it exists) to preserve other settings. 4. Update
+the .env content with the new JIRA configuration. 5. Write the updated content
+back to the .env file. 6. Optionally, reload environment variables to make
+changes immediately available.
+
+Args:
+    url (str): The JIRA URL to be saved in the .env file.
+    username (str): The JIRA username to be saved in the .env file.
+    api_token (str): The JIRA API token to be saved in the .env file.
+
+Returns:
+    bool: True if the configuration was successfully saved, False otherwise.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="167" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="167" bodyend="236"/>
+        <references refid="namespacepenify__hook_1_1utils_1a95c3f9c80860d6a2e2d061d2fb660a3f" compoundref="utils_8py" startline="78" endline="88">penify_hook.utils.recursive_search_git_folder</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" compoundref="config__commands_8py" startline="381" endline="489">penify_hook.commands.config_commands.config_jira_web</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" compoundref="config__command_8py" startline="31" endline="87">penify_hook.config_command.handle_config</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1af8d62310da2d768e21770f8f01ff5375" compoundref="test__config__commands_8py" startline="305" endline="345">tests.test_config_commands.TestConfigCommands.test_save_jira_config_success</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a6492bc8e7df6e38bb06ad05e572d4cc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Dict[str, str]</type>
+        <definition> Dict[str, str] penify_hook.commands.config_commands.get_llm_config</definition>
+        <argsstring>()</argsstring>
+        <name>get_llm_config</name>
+        <qualifiedname>penify_hook.commands.config_commands.get_llm_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieve LLM configuration from environment variables.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="237" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="237" bodyend="255"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87" compoundref="config__commands_8py" startline="95" endline="99">penify_hook.commands.config_commands.get_env_var_or_default</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" compoundref="config__commands_8py" startline="22" endline="62">penify_hook.commands.config_commands.load_env_files</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="116" endline="147">penify_hook.commands.commit_commands.handle_commit</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1abd12f028b89aa9cd1152c0b9ece5d3cd" compoundref="test__config__commands_8py" startline="129" endline="154">tests.test_config_commands.TestConfigCommands.test_get_llm_config_empty</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1adf9f2233a3f4cc5725b9d4f05758b167" compoundref="test__config__commands_8py" startline="97" endline="126">tests.test_config_commands.TestConfigCommands.test_get_llm_config_exists</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a473984d31452b56acd6ce4011a1248bd" compoundref="test__config__commands_8py" startline="158" endline="185">tests.test_config_commands.TestConfigCommands.test_get_llm_config_invalid_json</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Dict[str, str]</type>
+        <definition> Dict[str, str] penify_hook.commands.config_commands.get_jira_config</definition>
+        <argsstring>()</argsstring>
+        <name>get_jira_config</name>
+        <qualifiedname>penify_hook.commands.config_commands.get_jira_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieve JIRA configuration from environment variables.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="256" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="256" bodyend="274"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87" compoundref="config__commands_8py" startline="95" endline="99">penify_hook.commands.config_commands.get_env_var_or_default</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" compoundref="config__commands_8py" startline="22" endline="62">penify_hook.commands.config_commands.load_env_files</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" compoundref="config__commands_8py" startline="381" endline="489">penify_hook.commands.config_commands.config_jira_web</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="116" endline="147">penify_hook.commands.commit_commands.handle_commit</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1aee37b97432821d19758c6325d4c74bcf" compoundref="test__config__commands_8py" startline="188" endline="222">tests.test_config_commands.TestConfigCommands.test_get_jira_config_exists</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a185dfc34a655ed80e6c95939b6f3c35c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.config_commands.config_llm_web</definition>
+        <argsstring>()</argsstring>
+        <name>config_llm_web</name>
+        <qualifiedname>penify_hook.commands.config_commands.config_llm_web</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Starts an HTTP server for configuring LLM settings via a web interface.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="275" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="275" bodyend="380"/>
+        <referencedby refid="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" compoundref="config__command_8py" startline="31" endline="87">penify_hook.config_command.handle_config</referencedby>
+        <referencedby refid="classtests_1_1test__web__config_1_1TestWebConfig_1afc6440352201d207ea8b4d26f8ccfa35" compoundref="test__web__config_8py" startline="18" endline="55">tests.test_web_config.TestWebConfig.test_config_llm_web_server_setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1af115198ea5d6808ccb98733957f50b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def penify_hook.commands.config_commands.config_jira_web</definition>
+        <argsstring>()</argsstring>
+        <name>config_jira_web</name>
+        <qualifiedname>penify_hook.commands.config_commands.config_jira_web</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Starts a web server for configuring JIRA settings.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="381" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="381" bodyend="489"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a15bf3685c4dcb5c15ba6a4055e484cf2" compoundref="config__commands_8py" startline="256" endline="274">penify_hook.commands.config_commands.get_jira_config</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1ab2486ac2bf16b4a671e49625bfa4f9b4" compoundref="config__commands_8py" startline="167" endline="236">penify_hook.commands.config_commands.save_jira_config</references>
+        <referencedby refid="namespacepenify__hook_1_1config__command_1a240e5331681eb574ac319d7458783bde" compoundref="config__command_8py" startline="31" endline="87">penify_hook.config_command.handle_config</referencedby>
+        <referencedby refid="classtests_1_1test__web__config_1_1TestWebConfig_1a06e600222e426b003850509cb1d3190a" compoundref="test__web__config_8py" startline="59" endline="95">tests.test_web_config.TestWebConfig.test_config_jira_web_server_setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepenify__hook_1_1commands_1_1config__commands_1a5503d51c905e2f1b299b12d2a73bd812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Optional[str]</type>
+        <definition> Optional[str] penify_hook.commands.config_commands.get_token</definition>
+        <argsstring>()</argsstring>
+        <name>get_token</name>
+        <qualifiedname>penify_hook.commands.config_commands.get_token</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieves an API token using a prioritized method.
+
+This function first attempts to load environment variables from all `.env`
+files and checks if the `PENIFY_API_TOKEN` environment variable is set. If
+found, it returns the token. If not, it looks for the API key in a
+configuration file named &apos;api_keys&apos;. If both methods fail, it returns None.
+
+Returns:
+    str or None: The API token if found, otherwise None.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="490" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" bodystart="490" bodyend="521"/>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a3caf2b062dd33b1f1d7ddc7224f0ff87" compoundref="config__commands_8py" startline="95" endline="99">penify_hook.commands.config_commands.get_env_var_or_default</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1a6559a82d0bf727703d550d1003d3ed20" compoundref="config__commands_8py" startline="66" endline="94">penify_hook.commands.config_commands.get_penify_config</references>
+        <references refid="namespacepenify__hook_1_1commands_1_1config__commands_1aabe277132ce0bc0aacef951cf1dee2ae" compoundref="config__commands_8py" startline="22" endline="62">penify_hook.commands.config_commands.load_env_files</references>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1commit__commands_1af4f739f524c38b437e4e47673d683e23" compoundref="commit__commands_8py" startline="116" endline="147">penify_hook.commands.commit_commands.handle_commit</referencedby>
+        <referencedby refid="namespacepenify__hook_1_1commands_1_1doc__commands_1a2006ab13bff718ef783868a910c0b704" compoundref="doc__commands_8py" startline="114" endline="137">penify_hook.commands.doc_commands.handle_docgen</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a6c0207be563c3de59a6d16277805114c" compoundref="test__config__commands_8py" startline="378" endline="409">tests.test_config_commands.TestConfigCommands.test_get_token_from_config</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a3355f7d313bebaa71694387cf2bc5232" compoundref="test__config__commands_8py" startline="349" endline="374">tests.test_config_commands.TestConfigCommands.test_get_token_from_env</referencedby>
+        <referencedby refid="classtests_1_1test__config__commands_1_1TestConfigCommands_1a400ca5d9fcdc159714e8df54920f9436" compoundref="test__config__commands_8py" startline="413" endline="450">tests.test_config_commands.TestConfigCommands.test_get_token_not_found</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/commands/config_commands.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

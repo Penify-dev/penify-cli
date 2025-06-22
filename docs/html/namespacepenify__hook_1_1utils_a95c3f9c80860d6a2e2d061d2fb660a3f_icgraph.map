@@ -1,0 +1,41 @@
+<map id="penify_hook.utils.recursive_search_git_folder" name="penify_hook.utils.recursive_search_git_folder">
+<area shape="rect" id="node1" title=" " alt="" coords="1397,625,1595,667"/>
+<area shape="rect" id="node2" href="$namespacepenify__hook_1_1commands_1_1commit__commands.html#a62564c4e8ad59fc46d56cb0f9122a71a" title=" " alt="" coords="1119,291,1349,332"/>
+<area shape="rect" id="node10" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#a6559a82d0bf727703d550d1003d3ed20" title=" " alt="" coords="1124,548,1344,589"/>
+<area shape="rect" id="node22" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#aabe277132ce0bc0aacef951cf1dee2ae" title=" " alt="" coords="1124,669,1344,711"/>
+<area shape="rect" id="node32" href="$namespacepenify__hook_1_1commands_1_1auth__commands.html#aa3956ca1749d4218ea1dc6e5b6218b24" title=" " alt="" coords="1127,93,1341,135"/>
+<area shape="rect" id="node35" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#ab2486ac2bf16b4a671e49625bfa4f9b4" title=" " alt="" coords="831,885,1051,927"/>
+<area shape="rect" id="node37" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#a4617bc5956e502c9555dc0dda0376df4" title=" " alt="" coords="1124,1077,1344,1119"/>
+<area shape="rect" id="node3" href="$namespacepenify__hook_1_1commands_1_1commit__commands.html#af4f739f524c38b437e4e47673d683e23" title=" " alt="" coords="533,469,764,511"/>
+<area shape="rect" id="node6" href="$classtests_1_1test__commit__commands_1_1TestCommitCommands.html#a43c2ff3707124aa48e8eb581106b8691" title=" " alt="" coords="830,71,1053,127"/>
+<area shape="rect" id="node7" href="$classtests_1_1test__commit__commands_1_1TestCommitCommands.html#af9c09013055ec39ddde86b487aefcf8b" title=" " alt="" coords="830,151,1053,207"/>
+<area shape="rect" id="node8" href="$classtests_1_1test__commit__commands_1_1TestCommitCommands.html#acea0d934ee0f2b914b0b893736e8fe4e" title=" " alt="" coords="812,232,1071,303"/>
+<area shape="rect" id="node9" href="$classtests_1_1test__commit__commands_1_1TestCommitCommands.html#acc4b1e4189792a3f7c11d2a745f479c0" title=" " alt="" coords="830,327,1053,383"/>
+<area shape="rect" id="node4" href="$namespacepenify__hook_1_1main.html#a16838b20df4bd14ee4b5e1dd2906738f" title=" " alt="" coords="5,535,180,562"/>
+<area shape="rect" id="node5" href="$classtests_1_1test__commit__commands_1_1TestCommitCommands.html#ac13e368262340af98b30fd8ebdac6597" title=" " alt="" coords="245,521,468,577"/>
+<area shape="rect" id="node11" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#a5503d51c905e2f1b299b12d2a73bd812" title=" " alt="" coords="831,408,1051,449"/>
+<area shape="rect" id="node20" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a2e8162082bcdd5652bb37bdb14cf453a" title=" " alt="" coords="828,605,1055,661"/>
+<area shape="rect" id="node21" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a33d4760eee3b67e1cde3aed755ebb948" title=" " alt="" coords="835,525,1047,581"/>
+<area shape="rect" id="node12" href="$namespacepenify__hook_1_1commands_1_1doc__commands.html#a2006ab13bff718ef783868a910c0b704" title=" " alt="" coords="547,404,751,445"/>
+<area shape="rect" id="node17" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a6c0207be563c3de59a6d16277805114c" title=" " alt="" coords="543,323,755,379"/>
+<area shape="rect" id="node18" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a3355f7d313bebaa71694387cf2bc5232" title=" " alt="" coords="543,163,755,219"/>
+<area shape="rect" id="node19" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a400ca5d9fcdc159714e8df54920f9436" title=" " alt="" coords="543,243,755,299"/>
+<area shape="rect" id="node13" href="$namespacetests_1_1test__doc__commands.html#ab158ffa48469b6c097a7a55fcb20c21a" title=" " alt="" coords="246,208,467,249"/>
+<area shape="rect" id="node14" href="$namespacetests_1_1test__doc__commands.html#ab74688baa8c9b5ba302c2877a9789d05" title=" " alt="" coords="246,273,467,315"/>
+<area shape="rect" id="node15" href="$namespacetests_1_1test__doc__commands.html#af9b01e5fc89255cac96747fa081c442c" title=" " alt="" coords="246,339,467,380"/>
+<area shape="rect" id="node16" href="$namespacetests_1_1test__doc__commands.html#a1458af9ad0128c3ca1263b552fd5e482" title=" " alt="" coords="242,404,471,445"/>
+<area shape="rect" id="node23" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#a15bf3685c4dcb5c15ba6a4055e484cf2" title=" " alt="" coords="831,765,1051,807"/>
+<area shape="rect" id="node28" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#a6492bc8e7df6e38bb06ad05e572d4cc0" title=" " alt="" coords="831,685,1051,727"/>
+<area shape="rect" id="node24" href="$namespacepenify__hook_1_1commands_1_1config__commands.html#af115198ea5d6808ccb98733957f50b06" title=" " alt="" coords="539,856,759,897"/>
+<area shape="rect" id="node27" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#aee37b97432821d19758c6325d4c74bcf" title=" " alt="" coords="543,775,755,831"/>
+<area shape="rect" id="node25" href="$namespacepenify__hook_1_1config__command.html#a240e5331681eb574ac319d7458783bde" title=" " alt="" coords="263,915,451,956"/>
+<area shape="rect" id="node26" href="$classtests_1_1test__web__config_1_1TestWebConfig.html#a06e600222e426b003850509cb1d3190a" title=" " alt="" coords="259,834,454,890"/>
+<area shape="rect" id="node29" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#abd12f028b89aa9cd1152c0b9ece5d3cd" title=" " alt="" coords="543,695,755,751"/>
+<area shape="rect" id="node30" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#adf9f2233a3f4cc5725b9d4f05758b167" title=" " alt="" coords="543,535,755,591"/>
+<area shape="rect" id="node31" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a473984d31452b56acd6ce4011a1248bd" title=" " alt="" coords="543,615,755,671"/>
+<area shape="rect" id="node33" href="$namespacepenify__hook_1_1commands_1_1auth__commands.html#a78f375c58bb6f69f98675e6a9ac84655" title=" " alt="" coords="836,5,1047,47"/>
+<area shape="rect" id="node34" href="$namespacepenify__hook_1_1login__command.html#ae4bf932fbafeff834b0a0c5a37f74ccd" title=" " alt="" coords="228,100,485,141"/>
+<area shape="rect" id="node36" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#af8d62310da2d768e21770f8f01ff5375" title=" " alt="" coords="543,973,755,1029"/>
+<area shape="rect" id="node38" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#a73a264dfb21e16003e095b79f6eab2ac" title=" " alt="" coords="835,1103,1047,1159"/>
+<area shape="rect" id="node39" href="$classtests_1_1test__config__commands_1_1TestConfigCommands.html#acd8df8219441b9e9871b903a681400d9" title=" " alt="" coords="835,1183,1047,1239"/>
+</map>

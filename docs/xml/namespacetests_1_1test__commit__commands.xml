@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacetests_1_1test__commit__commands" kind="namespace" language="Python">
+    <compoundname>tests::test_commit_commands</compoundname>
+    <innerclass refid="classtests_1_1test__commit__commands_1_1TestCommitCommands" prot="public">tests::test_commit_commands::TestCommitCommands</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/tests/test_commit_commands.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepenify__hook_1_1constants" kind="namespace" language="Python">
+    <compoundname>penify_hook::constants</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepenify__hook_1_1constants_1af198b5d1fc2f44657a2061aa324af3e0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::constants.API_URL</definition>
+        <argsstring></argsstring>
+        <name>API_URL</name>
+        <qualifiedname>penify_hook.constants.API_URL</qualifiedname>
+        <initializer>=  &apos;http://localhost:8000/api&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/constants.py" line="1" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/constants.py" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepenify__hook_1_1constants_1a316c5a606e4440fb8224c6544c3a15f0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string penify_hook::constants.DASHBOARD_URL</definition>
+        <argsstring></argsstring>
+        <name>DASHBOARD_URL</name>
+        <qualifiedname>penify_hook.constants.DASHBOARD_URL</qualifiedname>
+        <initializer>=  &quot;https://dashboard.penify.dev/auth/localhost/login&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/constants.py" line="2" column="1" bodyfile="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/constants.py" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/penify_hook/constants.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

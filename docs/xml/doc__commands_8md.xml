@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="doc__commands_8md" kind="file" language="Markdown">
+    <compoundname>doc_commands.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Penify<sp/>CLI<sp/>-<sp/>Documentation<sp/>Generation<sp/>Commands</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>document<sp/>provides<sp/>a<sp/>detailed<sp/>guide<sp/>to<sp/>all<sp/>permutations<sp/>and<sp/>combinations<sp/>of<sp/>the<sp/>`docgen`<sp/>command,<sp/>including<sp/>extensive<sp/>information<sp/>about<sp/>Git<sp/>hook<sp/>commands<sp/>for<sp/>automating<sp/>documentation<sp/>generation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>Contents</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Basic<sp/>Usage](#basic-usage)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Command<sp/>Options](#command-options)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Option<sp/>Combinations](#option-combinations)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Git<sp/>Hook<sp/>Commands](#git-hook-commands)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Hook<sp/>Installation](#hook-installation)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Hook<sp/>Customization](#hook-customization)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Hook<sp/>Uninstallation](#hook-uninstallation)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Advanced<sp/>Use<sp/>Cases](#advanced-use-cases)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Troubleshooting](#troubleshooting)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Basic<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>default,<sp/>this<sp/>command:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Analyzes<sp/>the<sp/>current<sp/>Git<sp/>diff<sp/>(changes<sp/>since<sp/>last<sp/>commit)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Generates<sp/>documentation<sp/>for<sp/>changed<sp/>files<sp/>only</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Requires<sp/>authentication<sp/>via<sp/>`penify<sp/>login`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Command<sp/>Options</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`-l,<sp/>--location`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Specify<sp/>a<sp/>target<sp/>for<sp/>documentation<sp/>generation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Generate<sp/>documentation<sp/>for<sp/>a<sp/>specific<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>path/to/file.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Generate<sp/>documentation<sp/>for<sp/>a<sp/>specific<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>path/to/folder</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Without<sp/>this<sp/>flag,<sp/>Penify<sp/>analyzes<sp/>only<sp/>Git-tracked<sp/>modified<sp/>files.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Subcommands</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`install-hook`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>a<sp/>Git<sp/>post-commit<sp/>hook<sp/>to<sp/>automatically<sp/>generate<sp/>documentation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`uninstall-hook`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Remove<sp/>the<sp/>Git<sp/>post-commit<sp/>hook:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Option<sp/>Combinations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate<sp/>Documentation<sp/>for<sp/>Current<sp/>Git<sp/>Diff</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Basic<sp/>usage<sp/>-<sp/>current<sp/>Git<sp/>diff</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate<sp/>Documentation<sp/>for<sp/>a<sp/>Specific<sp/>File</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Single<sp/>file<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/main.py</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Generate<sp/>Documentation<sp/>for<sp/>a<sp/>Folder</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Folder<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/models/</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Install<sp/>Hook<sp/>in<sp/>Current<sp/>Repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Install<sp/>hook<sp/>in<sp/>current<sp/>Git<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Install<sp/>Hook<sp/>in<sp/>Specific<sp/>Repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Install<sp/>hook<sp/>in<sp/>a<sp/>specific<sp/>Git<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook<sp/>-l<sp/>/path/to/repo</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Uninstall<sp/>Hook<sp/>from<sp/>Current<sp/>Repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Uninstall<sp/>hook<sp/>from<sp/>current<sp/>Git<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Uninstall<sp/>Hook<sp/>from<sp/>Specific<sp/>Repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Uninstall<sp/>hook<sp/>from<sp/>a<sp/>specific<sp/>Git<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook<sp/>-l<sp/>/path/to/repo</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Git<sp/>Hook<sp/>Commands</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Penify<sp/>provides<sp/>Git<sp/>hook<sp/>commands<sp/>to<sp/>automate<sp/>documentation<sp/>generation<sp/>as<sp/>part<sp/>of<sp/>your<sp/>Git<sp/>workflow.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Hook<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>How<sp/>Hooks<sp/>Work</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>you<sp/>install<sp/>a<sp/>Git<sp/>hook<sp/>with<sp/>`penify<sp/>docgen<sp/>install-hook`,<sp/>Penify:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Creates<sp/>a<sp/>post-commit<sp/>hook<sp/>script<sp/>in<sp/>the<sp/>`.git/hooks`<sp/>directory</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Makes<sp/>the<sp/>script<sp/>executable</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Configures<sp/>the<sp/>hook<sp/>to<sp/>run<sp/>`penify<sp/>docgen`<sp/>after<sp/>each<sp/>commit</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Hook<sp/>Script<sp/>Content</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>generated<sp/>post-commit<sp/>hook<sp/>contains:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#!/bin/sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>is<sp/>a<sp/>post-commit<sp/>hook<sp/>generated<sp/>by<sp/>penify.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Automatically<sp/>generates<sp/>documentation<sp/>for<sp/>changed<sp/>files<sp/>after<sp/>each<sp/>commit.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-gf<sp/>/path/to/git/repository<sp/>-t<sp/>your_api_token</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Installation<sp/>Location</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>default,<sp/>hooks<sp/>are<sp/>installed<sp/>in<sp/>the<sp/>current<sp/>Git<sp/>repository.<sp/>You<sp/>can<sp/>specify<sp/>a<sp/>different<sp/>location:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook<sp/>-l<sp/>/path/to/repo</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Installation<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>install<sp/>hooks,<sp/>you<sp/>need:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>A<sp/>valid<sp/>Penify<sp/>API<sp/>token<sp/>(login<sp/>first<sp/>with<sp/>`penify<sp/>login`)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Write<sp/>permissions<sp/>to<sp/>the<sp/>`.git/hooks`<sp/>directory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Verifying<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>installation,<sp/>you<sp/>can<sp/>verify<sp/>that<sp/>the<sp/>hook<sp/>is<sp/>installed:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">cat<sp/>.git/hooks/post-commit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Hook<sp/>Customization</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>customize<sp/>the<sp/>post-commit<sp/>hook<sp/>after<sp/>installation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Modifying<sp/>Hook<sp/>Behavior</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Edit<sp/>the<sp/>`.git/hooks/post-commit`<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Add<sp/>additional<sp/>options<sp/>to<sp/>the<sp/>`penify<sp/>docgen`<sp/>command</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Add<sp/>other<sp/>commands<sp/>to<sp/>run<sp/>after<sp/>commit</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>of<sp/>a<sp/>customized<sp/>hook:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#!/bin/sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>is<sp/>a<sp/>post-commit<sp/>hook<sp/>generated<sp/>by<sp/>penify.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Automatically<sp/>generates<sp/>documentation<sp/>for<sp/>changed<sp/>files<sp/>after<sp/>each<sp/>commit.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Generate<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-gf<sp/>/path/to/git/repository<sp/>-t<sp/>your_api_token</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Additional<sp/>custom<sp/>commands</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>&quot;Documentation<sp/>generation<sp/>complete!&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Advanced<sp/>Hook<sp/>Scenarios</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Conditional<sp/>Documentation<sp/>Generation**:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#!/bin/sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Only<sp/>generate<sp/>documentation<sp/>for<sp/>commits<sp/>to<sp/>the<sp/>main<sp/>branch</highlight></codeline>
+<codeline><highlight class="normal">BRANCH=$(git<sp/>rev-parse<sp/>--abbrev-ref<sp/>HEAD)</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>&quot;$BRANCH&quot;<sp/>=<sp/>&quot;main&quot;<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>penify<sp/>docgen<sp/>-gf<sp/>/path/to/git/repository<sp/>-t<sp/>your_api_token</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Documenting<sp/>Specific<sp/>Files/Folders**:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#!/bin/sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Only<sp/>document<sp/>Python<sp/>files<sp/>in<sp/>the<sp/>src<sp/>directory</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/<sp/>-gf<sp/>/path/to/git/repository<sp/>-t<sp/>your_api_token</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Hook<sp/>Uninstallation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Standard<sp/>Uninstallation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>remove<sp/>a<sp/>hook<sp/>from<sp/>the<sp/>current<sp/>repository:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Specific<sp/>Repository<sp/>Uninstallation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>remove<sp/>a<sp/>hook<sp/>from<sp/>a<sp/>specific<sp/>repository:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook<sp/>-l<sp/>/path/to/repo</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Manual<sp/>Hook<sp/>Removal</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>needed,<sp/>you<sp/>can<sp/>manually<sp/>remove<sp/>the<sp/>hook:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">rm<sp/>.git/hooks/post-commit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Verifying<sp/>Uninstallation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Check<sp/>that<sp/>the<sp/>hook<sp/>was<sp/>successfully<sp/>removed:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">ls<sp/>-la<sp/>.git/hooks/post-commit<sp/><sp/>#<sp/>Should<sp/>return<sp/>&quot;No<sp/>such<sp/>file<sp/>or<sp/>directory&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Advanced<sp/>Use<sp/>Cases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Continuous<sp/>Integration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Run<sp/>documentation<sp/>generation<sp/>in<sp/>CI<sp/>pipelines:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>In<sp/>your<sp/>CI<sp/>script</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>PENIFY_API_TOKEN=your_api_token</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Batch<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generate<sp/>documentation<sp/>for<sp/>multiple<sp/>repositories:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Bash<sp/>script<sp/>for<sp/>batch<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>repo<sp/>in<sp/>repo1<sp/>repo2<sp/>repo3;<sp/>do</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cd<sp/>/path/to/$repo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>penify<sp/>docgen<sp/>-l<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">done</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Custom<sp/>Git<sp/>Hook<sp/>Integration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Integrate<sp/>with<sp/>other<sp/>Git<sp/>hooks:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>In<sp/>.git/hooks/pre-push</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Documenting<sp/>Release<sp/>Tags</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generate<sp/>documentation<sp/>when<sp/>creating<sp/>a<sp/>release<sp/>tag:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Document<sp/>everything<sp/>when<sp/>creating<sp/>a<sp/>tag</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>tag<sp/>-a<sp/>v1.0.0</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>.<sp/><sp/>#<sp/>Document<sp/>entire<sp/>codebase</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>commit<sp/>--amend<sp/>-m<sp/>&quot;Release<sp/>v1.0.0<sp/>with<sp/>updated<sp/>documentation&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Common<sp/>Issues</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**&quot;Authentication<sp/>required&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Run<sp/>`penify<sp/>login`<sp/>before<sp/>using<sp/>documentation<sp/>features</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>your<sp/>API<sp/>token<sp/>with<sp/>`cat<sp/>~/.penify`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>**&quot;Permission<sp/>denied<sp/>when<sp/>installing<sp/>hook&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>Git<sp/>repository<sp/>permissions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Try<sp/>running<sp/>with<sp/>sudo<sp/>(if<sp/>appropriate<sp/>for<sp/>your<sp/>environment)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>the<sp/>`.git/hooks`<sp/>directory<sp/>exists</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>**&quot;Hook<sp/>installed<sp/>but<sp/>not<sp/>running&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>if<sp/>the<sp/>hook<sp/>is<sp/>executable:<sp/>`ls<sp/>-la<sp/>.git/hooks/post-commit`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Make<sp/>it<sp/>executable<sp/>if<sp/>needed:<sp/>`chmod<sp/>+x<sp/>.git/hooks/post-commit`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>for<sp/>syntax<sp/>errors<sp/>in<sp/>the<sp/>hook<sp/>script</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/>**&quot;File<sp/>or<sp/>directory<sp/>not<sp/>found&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Verify<sp/>the<sp/>path<sp/>provided<sp/>to<sp/>the<sp/>`-l`<sp/>option</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ensure<sp/>you&apos;re<sp/>running<sp/>the<sp/>command<sp/>from<sp/>the<sp/>correct<sp/>directory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>**&quot;Hook<sp/>uninstallation<sp/>failed&quot;**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Check<sp/>permissions<sp/>on<sp/>the<sp/>`.git/hooks`<sp/>directory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Try<sp/>manual<sp/>removal:<sp/>`rm<sp/>.git/hooks/post-commit`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Debugging</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>detailed<sp/>output<sp/>when<sp/>running<sp/>documentation<sp/>commands:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>PENIFY_DEBUG=1</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Getting<sp/>Help</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>command-specific<sp/>help:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>--help</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook<sp/>--help</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>uninstall-hook<sp/>--help</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/doc_commands.md"/>
+  </compounddef>
+</doxygen>

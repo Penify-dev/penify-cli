@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="example-workflows_8md" kind="file" language="Markdown">
+    <compoundname>example-workflows.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Penify<sp/>CLI<sp/>Example<sp/>Workflows</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>document<sp/>demonstrates<sp/>how<sp/>to<sp/>use<sp/>Penify<sp/>CLI<sp/>in<sp/>real-world<sp/>development<sp/>workflows<sp/>to<sp/>improve<sp/>your<sp/>productivity.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Workflow<sp/>1:<sp/>Efficient<sp/>Git<sp/>Commits<sp/>with<sp/>AI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">First,<sp/>configure<sp/>your<sp/>local<sp/>LLM<sp/>for<sp/>offline<sp/>operation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>llm</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configure<sp/>your<sp/>JIRA<sp/>integration<sp/>for<sp/>enhanced<sp/>commit<sp/>messages:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>config<sp/>jira</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Daily<sp/>Workflow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Make<sp/>your<sp/>code<sp/>changes<sp/>as<sp/>usual</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>When<sp/>ready<sp/>to<sp/>commit,<sp/>use<sp/>Penify<sp/>to<sp/>generate<sp/>a<sp/>smart<sp/>commit<sp/>message:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>commit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Review<sp/>and<sp/>confirm<sp/>the<sp/>generated<sp/>commit<sp/>message</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Git<sp/>commit<sp/>and<sp/>push<sp/>as<sp/>usual</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Benefits</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Consistent<sp/>and<sp/>descriptive<sp/>commit<sp/>messages</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Automatic<sp/>inclusion<sp/>of<sp/>relevant<sp/>JIRA<sp/>ticket<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Time<sp/>saved<sp/>from<sp/>writing<sp/>detailed<sp/>commit<sp/>messages</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Workflow<sp/>2:<sp/>Documentation<sp/>Generation<sp/>Pipeline</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Login<sp/>to<sp/>Penify<sp/>to<sp/>access<sp/>advanced<sp/>documentation<sp/>features:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>login</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>the<sp/>Git<sp/>hook<sp/>for<sp/>automatic<sp/>documentation<sp/>generation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>install-hook</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Daily<sp/>Workflow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Make<sp/>your<sp/>code<sp/>changes<sp/>as<sp/>usual</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Commit<sp/>your<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Documentation<sp/>is<sp/>automatically<sp/>generated<sp/>for<sp/>changed<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Review<sp/>the<sp/>generated<sp/>documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Manual<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>specific<sp/>files<sp/>or<sp/>folders:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/components/authentication</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Benefits</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Always<sp/>up-to-date<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Consistent<sp/>documentation<sp/>style</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Time<sp/>saved<sp/>from<sp/>writing<sp/>detailed<sp/>documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Workflow<sp/>3:<sp/>Code<sp/>Review<sp/>Enhancement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ensure<sp/>you&apos;re<sp/>logged<sp/>into<sp/>Penify:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>login</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Workflow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Before<sp/>submitting<sp/>a<sp/>PR,<sp/>generate<sp/>documentation<sp/>for<sp/>changed<sp/>files:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Include<sp/>the<sp/>generated<sp/>documentation<sp/>in<sp/>your<sp/>PR</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Reviewers<sp/>can<sp/>better<sp/>understand<sp/>your<sp/>changes<sp/>with<sp/>the<sp/>AI-generated<sp/>explanations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Benefits</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Improved<sp/>PR<sp/>quality</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Faster<sp/>code<sp/>reviews</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Better<sp/>team<sp/>understanding<sp/>of<sp/>code<sp/>changes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Workflow<sp/>4:<sp/>Onboarding<sp/>New<sp/>Team<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>For<sp/>Team<sp/>Leads</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generate<sp/>comprehensive<sp/>documentation<sp/>for<sp/>the<sp/>entire<sp/>codebase:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>For<sp/>New<sp/>Team<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generate<sp/>focused<sp/>documentation<sp/>for<sp/>components<sp/>you&apos;re<sp/>working<sp/>on:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/components/my-feature</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Benefits</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Faster<sp/>onboarding</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Better<sp/>understanding<sp/>of<sp/>code<sp/>structure</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Reduced<sp/>questions<sp/>to<sp/>senior<sp/>team<sp/>members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Workflow<sp/>5:<sp/>Legacy<sp/>Code<sp/>Understanding</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>working<sp/>with<sp/>unfamiliar<sp/>legacy<sp/>code:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Document<sp/>a<sp/>specific<sp/>complex<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/legacy/complex_module.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Document<sp/>an<sp/>entire<sp/>legacy<sp/>component</highlight></codeline>
+<codeline><highlight class="normal">penify<sp/>docgen<sp/>-l<sp/>src/legacy/old_component</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Benefits</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Quickly<sp/>understand<sp/>complex<sp/>legacy<sp/>systems</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Reduce<sp/>time<sp/>spent<sp/>deciphering<sp/>undocumented<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Make<sp/>safer<sp/>changes<sp/>to<sp/>legacy<sp/>systems</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_reposRepoArchDocGenContext/Penify-dev/penify-cli/docs/example-workflows.md"/>
+  </compounddef>
+</doxygen>
