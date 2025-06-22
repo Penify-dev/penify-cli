@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="penify-cli " />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="penify-cli - Custom CSS theme for html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://github.com/SingularityX-ai/penify-cli" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>penify-cli: penify_hook.ui_utils Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/SingularityX-ai/penify-cli" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">penify-cli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('namespacepenify__hook_1_1ui__utils.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">penify_hook.ui_utils Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa0c6826668b45c778d864f5ae741e1b2" id="r_aa0c6826668b45c778d864f5ae741e1b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0c6826668b45c778d864f5ae741e1b2">format_info</a> (message)</td></tr>
+<tr class="separator:aa0c6826668b45c778d864f5ae741e1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ca95113c53214d848659a52a099f5e" id="r_a56ca95113c53214d848659a52a099f5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56ca95113c53214d848659a52a099f5e">format_success</a> (message)</td></tr>
+<tr class="separator:a56ca95113c53214d848659a52a099f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81190fd240641e2c83f6a047490e7797" id="r_a81190fd240641e2c83f6a047490e7797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81190fd240641e2c83f6a047490e7797">format_warning</a> (message)</td></tr>
+<tr class="separator:a81190fd240641e2c83f6a047490e7797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee226ee36d43076ed54dade970dc0ca" id="r_acee226ee36d43076ed54dade970dc0ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acee226ee36d43076ed54dade970dc0ca">format_error</a> (message)</td></tr>
+<tr class="separator:acee226ee36d43076ed54dade970dc0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f4c14003953f6e4b51ce5512c728d7" id="r_a60f4c14003953f6e4b51ce5512c728d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60f4c14003953f6e4b51ce5512c728d7">format_highlight</a> (message)</td></tr>
+<tr class="separator:a60f4c14003953f6e4b51ce5512c728d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de53cca2e23a993884797e523337e41" id="r_a9de53cca2e23a993884797e523337e41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9de53cca2e23a993884797e523337e41">format_file_path</a> (file_path)</td></tr>
+<tr class="separator:a9de53cca2e23a993884797e523337e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cee29e999fa3c812725cb98f24aae4c" id="r_a3cee29e999fa3c812725cb98f24aae4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cee29e999fa3c812725cb98f24aae4c">print_info</a> (message)</td></tr>
+<tr class="separator:a3cee29e999fa3c812725cb98f24aae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bff909b9e155a344597f69a0530754b" id="r_a9bff909b9e155a344597f69a0530754b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bff909b9e155a344597f69a0530754b">print_success</a> (message)</td></tr>
+<tr class="separator:a9bff909b9e155a344597f69a0530754b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f112b02d36b74c88a3ce3ed1458b45" id="r_a73f112b02d36b74c88a3ce3ed1458b45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f112b02d36b74c88a3ce3ed1458b45">print_warning</a> (message)</td></tr>
+<tr class="separator:a73f112b02d36b74c88a3ce3ed1458b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b79a7837fd654ad8f0cdb4e6e87598" id="r_a35b79a7837fd654ad8f0cdb4e6e87598"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35b79a7837fd654ad8f0cdb4e6e87598">print_error</a> (message)</td></tr>
+<tr class="separator:a35b79a7837fd654ad8f0cdb4e6e87598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f7cab36c3b1f09507654b119d45bfb" id="r_ad4f7cab36c3b1f09507654b119d45bfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f7cab36c3b1f09507654b119d45bfb">print_processing</a> (file_path)</td></tr>
+<tr class="separator:ad4f7cab36c3b1f09507654b119d45bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65594c876dabfceb83d9b0ce9d0d65e7" id="r_a65594c876dabfceb83d9b0ce9d0d65e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65594c876dabfceb83d9b0ce9d0d65e7">print_status</a> (status, message)</td></tr>
+<tr class="separator:a65594c876dabfceb83d9b0ce9d0d65e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4493a3c0c62d3d3cec0e4c96f4fca5" id="r_aae4493a3c0c62d3d3cec0e4c96f4fca5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae4493a3c0c62d3d3cec0e4c96f4fca5">create_progress_bar</a> (total, desc=&quot;Processing&quot;, unit=&quot;item&quot;)</td></tr>
+<tr class="separator:aae4493a3c0c62d3d3cec0e4c96f4fca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583e3b1ec7b75f08653a9f6cfb897405" id="r_a583e3b1ec7b75f08653a9f6cfb897405"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a583e3b1ec7b75f08653a9f6cfb897405">create_stage_progress_bar</a> (stages, desc=&quot;Processing&quot;)</td></tr>
+<tr class="separator:a583e3b1ec7b75f08653a9f6cfb897405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8be9c5a2708c211a651e2b3dfb54bcd" id="r_ad8be9c5a2708c211a651e2b3dfb54bcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8be9c5a2708c211a651e2b3dfb54bcd">update_stage</a> (pbar, stage_name)</td></tr>
+<tr class="separator:ad8be9c5a2708c211a651e2b3dfb54bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab560cfade398ac1e0bd47befb52d9f71" id="r_ab560cfade398ac1e0bd47befb52d9f71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab560cfade398ac1e0bd47befb52d9f71">autoreset</a></td></tr>
+<tr class="separator:ab560cfade398ac1e0bd47befb52d9f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdcb180915696f5d217032a62c3857c" id="r_a9fdcb180915696f5d217032a62c3857c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fdcb180915696f5d217032a62c3857c">INFO_COLOR</a> = Fore.CYAN</td></tr>
+<tr class="separator:a9fdcb180915696f5d217032a62c3857c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c450c5e2b5394618ecf9b636560df4" id="r_a22c450c5e2b5394618ecf9b636560df4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c450c5e2b5394618ecf9b636560df4">SUCCESS_COLOR</a> = Fore.GREEN</td></tr>
+<tr class="separator:a22c450c5e2b5394618ecf9b636560df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a177bc9b44157844c999e0c1c2c6936ff" id="r_a177bc9b44157844c999e0c1c2c6936ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a177bc9b44157844c999e0c1c2c6936ff">WARNING_COLOR</a> = Fore.YELLOW</td></tr>
+<tr class="separator:a177bc9b44157844c999e0c1c2c6936ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab4e61dfab7973c87bef59c6e1977fe" id="r_a4ab4e61dfab7973c87bef59c6e1977fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ab4e61dfab7973c87bef59c6e1977fe">ERROR_COLOR</a> = Fore.RED</td></tr>
+<tr class="separator:a4ab4e61dfab7973c87bef59c6e1977fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba01b8259f0d66cdc2b4a1b58f9736fc" id="r_aba01b8259f0d66cdc2b4a1b58f9736fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba01b8259f0d66cdc2b4a1b58f9736fc">HIGHLIGHT_COLOR</a> = Fore.BLUE</td></tr>
+<tr class="separator:aba01b8259f0d66cdc2b4a1b58f9736fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0fcee81606857497520ae4290bc9f5" id="r_aca0fcee81606857497520ae4290bc9f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca0fcee81606857497520ae4290bc9f5">NEUTRAL_COLOR</a> = Fore.WHITE</td></tr>
+<tr class="separator:aca0fcee81606857497520ae4290bc9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3cc992aaeb0a01c536c9a48e801ff3" id="r_a7d3cc992aaeb0a01c536c9a48e801ff3"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d3cc992aaeb0a01c536c9a48e801ff3">SUCCESS_SYMBOL</a> = &quot;✓&quot;</td></tr>
+<tr class="separator:a7d3cc992aaeb0a01c536c9a48e801ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee7a42eeca5b12429cb97bf89007be8" id="r_a9ee7a42eeca5b12429cb97bf89007be8"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ee7a42eeca5b12429cb97bf89007be8">WARNING_SYMBOL</a> = &quot;○&quot;</td></tr>
+<tr class="separator:a9ee7a42eeca5b12429cb97bf89007be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae941d124e4d3aa294314d73fb47c6432" id="r_ae941d124e4d3aa294314d73fb47c6432"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae941d124e4d3aa294314d73fb47c6432">ERROR_SYMBOL</a> = &quot;✗&quot;</td></tr>
+<tr class="separator:ae941d124e4d3aa294314d73fb47c6432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7cc8eaf7a660ff195f4366d792ab155" id="r_ad7cc8eaf7a660ff195f4366d792ab155"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7cc8eaf7a660ff195f4366d792ab155">PROCESSING_SYMBOL</a> = &quot;⟳&quot;</td></tr>
+<tr class="separator:ad7cc8eaf7a660ff195f4366d792ab155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">UI utilities for Penify CLI.
+
+This module provides utility functions for consistent UI formatting,
+colored output, and progress indicators across the Penify CLI application.
+</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="aae4493a3c0c62d3d3cec0e4c96f4fca5" name="aae4493a3c0c62d3d3cec0e4c96f4fca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4493a3c0c62d3d3cec0e4c96f4fca5">&#9670;&#160;</a></span>create_progress_bar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.create_progress_bar </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>total</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>desc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;Processing&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>unit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;item&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Create a tqdm progress bar with consistent styling.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_aae4493a3c0c62d3d3cec0e4c96f4fca5_cgraph.svg" width="488" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a583e3b1ec7b75f08653a9f6cfb897405" name="a583e3b1ec7b75f08653a9f6cfb897405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583e3b1ec7b75f08653a9f6cfb897405">&#9670;&#160;</a></span>create_stage_progress_bar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.create_stage_progress_bar </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>stages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>desc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;Processing&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Create a tqdm progress bar for processing stages with consistent styling.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a583e3b1ec7b75f08653a9f6cfb897405_cgraph.svg" width="488" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="acee226ee36d43076ed54dade970dc0ca" name="acee226ee36d43076ed54dade970dc0ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee226ee36d43076ed54dade970dc0ca">&#9670;&#160;</a></span>format_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.format_error </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Format an error message with the specified error color.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_acee226ee36d43076ed54dade970dc0ca_icgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9de53cca2e23a993884797e523337e41" name="a9de53cca2e23a993884797e523337e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de53cca2e23a993884797e523337e41">&#9670;&#160;</a></span>format_file_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.format_file_path </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>file_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Format a file path with a warning color.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a9de53cca2e23a993884797e523337e41_icgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a60f4c14003953f6e4b51ce5512c728d7" name="a60f4c14003953f6e4b51ce5512c728d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f4c14003953f6e4b51ce5512c728d7">&#9670;&#160;</a></span>format_highlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.format_highlight </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Format a highlighted message with appropriate color.</pre> 
+</div>
+</div>
+<a id="aa0c6826668b45c778d864f5ae741e1b2" name="aa0c6826668b45c778d864f5ae741e1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c6826668b45c778d864f5ae741e1b2">&#9670;&#160;</a></span>format_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.format_info </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Format an informational message with appropriate color.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_aa0c6826668b45c778d864f5ae741e1b2_icgraph.svg" width="510" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a56ca95113c53214d848659a52a099f5e" name="a56ca95113c53214d848659a52a099f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ca95113c53214d848659a52a099f5e">&#9670;&#160;</a></span>format_success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.format_success </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Formats a success message with green color and reset style.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a56ca95113c53214d848659a52a099f5e_icgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a81190fd240641e2c83f6a047490e7797" name="a81190fd240641e2c83f6a047490e7797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81190fd240641e2c83f6a047490e7797">&#9670;&#160;</a></span>format_warning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.format_warning </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Format a warning message with appropriate color.</pre> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a81190fd240641e2c83f6a047490e7797_icgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a35b79a7837fd654ad8f0cdb4e6e87598" name="a35b79a7837fd654ad8f0cdb4e6e87598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b79a7837fd654ad8f0cdb4e6e87598">&#9670;&#160;</a></span>print_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.print_error </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Print an error message with appropriate formatting.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a35b79a7837fd654ad8f0cdb4e6e87598_cgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3cee29e999fa3c812725cb98f24aae4c" name="a3cee29e999fa3c812725cb98f24aae4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cee29e999fa3c812725cb98f24aae4c">&#9670;&#160;</a></span>print_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.print_info </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Prints an informational message with formatting.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a3cee29e999fa3c812725cb98f24aae4c_cgraph.svg" width="510" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ad4f7cab36c3b1f09507654b119d45bfb" name="ad4f7cab36c3b1f09507654b119d45bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f7cab36c3b1f09507654b119d45bfb">&#9670;&#160;</a></span>print_processing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.print_processing </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>file_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Print a processing message for a specified file.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_ad4f7cab36c3b1f09507654b119d45bfb_cgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a65594c876dabfceb83d9b0ce9d0d65e7" name="a65594c876dabfceb83d9b0ce9d0d65e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65594c876dabfceb83d9b0ce9d0d65e7">&#9670;&#160;</a></span>print_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.print_status </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>status</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Print a status message with an appropriate symbol.</pre> 
+</div>
+</div>
+<a id="a9bff909b9e155a344597f69a0530754b" name="a9bff909b9e155a344597f69a0530754b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bff909b9e155a344597f69a0530754b">&#9670;&#160;</a></span>print_success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.print_success </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Prints a formatted success message.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a9bff909b9e155a344597f69a0530754b_cgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a73f112b02d36b74c88a3ce3ed1458b45" name="a73f112b02d36b74c88a3ce3ed1458b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f112b02d36b74c88a3ce3ed1458b45">&#9670;&#160;</a></span>print_warning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.print_warning </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Prints a warning message with formatted output.</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacepenify__hook_1_1ui__utils_a73f112b02d36b74c88a3ce3ed1458b45_cgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ad8be9c5a2708c211a651e2b3dfb54bcd" name="ad8be9c5a2708c211a651e2b3dfb54bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8be9c5a2708c211a651e2b3dfb54bcd">&#9670;&#160;</a></span>update_stage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.update_stage </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pbar</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>stage_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Update the progress bar with a new stage name.</pre> 
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ab560cfade398ac1e0bd47befb52d9f71" name="ab560cfade398ac1e0bd47befb52d9f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab560cfade398ac1e0bd47befb52d9f71">&#9670;&#160;</a></span>autoreset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.autoreset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ab4e61dfab7973c87bef59c6e1977fe" name="a4ab4e61dfab7973c87bef59c6e1977fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab4e61dfab7973c87bef59c6e1977fe">&#9670;&#160;</a></span>ERROR_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.ERROR_COLOR = Fore.RED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae941d124e4d3aa294314d73fb47c6432" name="ae941d124e4d3aa294314d73fb47c6432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae941d124e4d3aa294314d73fb47c6432">&#9670;&#160;</a></span>ERROR_SYMBOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str penify_hook.ui_utils.ERROR_SYMBOL = &quot;✗&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba01b8259f0d66cdc2b4a1b58f9736fc" name="aba01b8259f0d66cdc2b4a1b58f9736fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba01b8259f0d66cdc2b4a1b58f9736fc">&#9670;&#160;</a></span>HIGHLIGHT_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.HIGHLIGHT_COLOR = Fore.BLUE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fdcb180915696f5d217032a62c3857c" name="a9fdcb180915696f5d217032a62c3857c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdcb180915696f5d217032a62c3857c">&#9670;&#160;</a></span>INFO_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.INFO_COLOR = Fore.CYAN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca0fcee81606857497520ae4290bc9f5" name="aca0fcee81606857497520ae4290bc9f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0fcee81606857497520ae4290bc9f5">&#9670;&#160;</a></span>NEUTRAL_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.NEUTRAL_COLOR = Fore.WHITE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7cc8eaf7a660ff195f4366d792ab155" name="ad7cc8eaf7a660ff195f4366d792ab155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7cc8eaf7a660ff195f4366d792ab155">&#9670;&#160;</a></span>PROCESSING_SYMBOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str penify_hook.ui_utils.PROCESSING_SYMBOL = &quot;⟳&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22c450c5e2b5394618ecf9b636560df4" name="a22c450c5e2b5394618ecf9b636560df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c450c5e2b5394618ecf9b636560df4">&#9670;&#160;</a></span>SUCCESS_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.SUCCESS_COLOR = Fore.GREEN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d3cc992aaeb0a01c536c9a48e801ff3" name="a7d3cc992aaeb0a01c536c9a48e801ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3cc992aaeb0a01c536c9a48e801ff3">&#9670;&#160;</a></span>SUCCESS_SYMBOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str penify_hook.ui_utils.SUCCESS_SYMBOL = &quot;✓&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a177bc9b44157844c999e0c1c2c6936ff" name="a177bc9b44157844c999e0c1c2c6936ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a177bc9b44157844c999e0c1c2c6936ff">&#9670;&#160;</a></span>WARNING_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">penify_hook.ui_utils.WARNING_COLOR = Fore.YELLOW</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ee7a42eeca5b12429cb97bf89007be8" name="a9ee7a42eeca5b12429cb97bf89007be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee7a42eeca5b12429cb97bf89007be8">&#9670;&#160;</a></span>WARNING_SYMBOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str penify_hook.ui_utils.WARNING_SYMBOL = &quot;○&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacepenify__hook.html">penify_hook</a></li><li class="navelem"><a class="el" href="namespacepenify__hook_1_1ui__utils.html">ui_utils</a></li>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/penify-logo.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>
