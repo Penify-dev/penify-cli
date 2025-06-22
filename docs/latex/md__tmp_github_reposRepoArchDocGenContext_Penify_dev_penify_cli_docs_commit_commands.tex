@@ -1,0 +1,162 @@
+The {\ttfamily commit} command allows you to generate smart, AI-\/powered commit messages for your Git changes. This document explains all available options and combinations.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md1}{}\doxysection{Basic Usage}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit}
+
+\end{DoxyCode}
+
+
+By default, this command\+:
+\begin{DoxyItemize}
+\item Analyzes your staged Git changes
+\item Generates a concise commit title only
+\item Uses local LLM if configured, or falls back to Penify API
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md2}{}\doxysection{Command Options}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md2}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md3}{}\doxysubsection{$<$tt$>$-\/m, -\/-\/message$<$/tt$>$}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md3}
+Provide context for the commit message generation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/m "{}Fix login flow"{}}
+
+\end{DoxyCode}
+
+
+This hint helps the AI understand your intention and improves the quality of the generated message.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md4}{}\doxysubsection{$<$tt$>$-\/e, -\/-\/terminal$<$/tt$>$}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md4}
+Open an editor to review and edit the generated commit message before committing\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/e}
+
+\end{DoxyCode}
+
+
+This opens your default Git editor with the generated message for review.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md5}{}\doxysubsection{$<$tt$>$-\/d, -\/-\/description$<$/tt$>$}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md5}
+Generate a detailed commit message with both title and description\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/d}
+
+\end{DoxyCode}
+
+
+Without this flag, only the commit title is generated.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md6}{}\doxysection{Option Combinations}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md6}
+You can combine these options for different workflows\+:\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md7}{}\doxysubsection{Generate Title Only with Context}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/m "{}Update login UI"{}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md8}{}\doxysubsection{Generate Title and Description with Context}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/m "{}Update login UI"{} -\/d}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md9}{}\doxysubsection{Generate and Edit Full Commit Message}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md9}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/d -\/e}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md10}{}\doxysubsection{Generate, Edit, and Provide Context}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit -\/m "{}Refactor authentication"{} -\/d -\/e}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md11}{}\doxysection{LLM and JIRA Integration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md11}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md12}{}\doxysubsection{Using Local LLM}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md12}
+If you\textquotesingle{}ve configured a local LLM using {\ttfamily penify config llm}, the commit command will automatically use it for message generation.
+
+Benefits\+:
+\begin{DoxyItemize}
+\item Privacy\+: your code changes don\textquotesingle{}t leave your machine
+\item Speed\+: no network latency
+\item Works offline
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md13}{}\doxysubsection{JIRA Enhancement}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md13}
+If you\textquotesingle{}ve configured JIRA integration using {\ttfamily penify config jira}, the commit command will\+:
+
+
+\begin{DoxyEnumerate}
+\item Detect JIRA issue references in your changes
+\item Fetch issue details from your JIRA instance
+\item Include issue information in the commit message
+\item Format the commit message according to JIRA\textquotesingle{}s smart commit format
+\end{DoxyEnumerate}
+
+Example output\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PROJ-\/123: Fix authentication bug in login flow}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/ Updated OAuth token validation}
+\DoxyCodeLine{-\/ Fixed session timeout handling}
+\DoxyCodeLine{-\/ Added unit tests for edge cases}
+\DoxyCodeLine{}
+\DoxyCodeLine{[PROJ-\/123]}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md14}{}\doxysection{Configuration Requirements}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md14}
+For the {\ttfamily commit} command to work\+:
+
+
+\begin{DoxyEnumerate}
+\item You must have configured either\+:
+\begin{DoxyItemize}
+\item Local LLM via {\ttfamily penify config llm}, OR
+\item Logged in via {\ttfamily penify login}
+\end{DoxyItemize}
+\item For JIRA enhancement (optional)\+:
+\begin{DoxyItemize}
+\item Configure JIRA via {\ttfamily penify config jira}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md15}{}\doxysection{Examples}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md15}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md16}{}\doxysubsection{Basic Commit with Default Settings}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md16}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Stage your changes}
+\DoxyCodeLine{git add .}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Generate commit message}
+\DoxyCodeLine{penify commit}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Commit with the generated message}
+\DoxyCodeLine{git commit -\/m "{}Generated message here"{}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md17}{}\doxysubsection{Full Workflow with All Features}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md17}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Stage your changes}
+\DoxyCodeLine{git add .}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Generate detailed commit message with JIRA integration, }
+\DoxyCodeLine{\# provide context, and open editor for review}
+\DoxyCodeLine{penify commit -\/m "{}Fix login issue"{} -\/d -\/e}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The commit is automatically completed after you save and exit the editor}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md18}{}\doxysection{Troubleshooting}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md18}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md19}{}\doxysubsection{Common Issues}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_commit_commands_autotoc_md19}
+
+\begin{DoxyEnumerate}
+\item $\ast$$\ast$\char`\"{}\+No LLM model or API token provided\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Run {\ttfamily penify config llm} to configure a local LLM, or
+\item Run {\ttfamily penify login} to authenticate with Penify
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Failed to connect to JIRA\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Check your JIRA configuration with {\ttfamily cat $\sim$/.penify}
+\item Verify your network connection
+\item Ensure your JIRA credentials are valid
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Error initializing LLM client\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Verify your LLM configuration settings
+\item Ensure the LLM API is accessible 
+\end{DoxyItemize}
+\end{DoxyEnumerate}

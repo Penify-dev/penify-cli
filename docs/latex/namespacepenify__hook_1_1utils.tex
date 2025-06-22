@@ -1,0 +1,87 @@
+\hypertarget{namespacepenify__hook_1_1utils}{}\doxysection{penify\+\_\+hook.\+utils Namespace Reference}
+\label{namespacepenify__hook_1_1utils}\index{penify\_hook.utils@{penify\_hook.utils}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpenify__hook_1_1utils_1_1GitRepoNotFoundError}{Git\+Repo\+Not\+Found\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1utils_ae236f3c4c8bf5dcddbb92b4c2065eea3}{get\+\_\+repo\+\_\+details}} (Repo repo)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f}{recursive\+\_\+search\+\_\+git\+\_\+folder}} (folder\+\_\+path)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1utils_a4ec5335a4026c22a34a3a8ccf665a5f2}{find\+\_\+git\+\_\+parent}} (path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1utils_a0c0c1ed6b197038085c94a90ceedfb01}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1utils_a4ec5335a4026c22a34a3a8ccf665a5f2}\label{namespacepenify__hook_1_1utils_a4ec5335a4026c22a34a3a8ccf665a5f2}} 
+\index{penify\_hook.utils@{penify\_hook.utils}!find\_git\_parent@{find\_git\_parent}}
+\index{find\_git\_parent@{find\_git\_parent}!penify\_hook.utils@{penify\_hook.utils}}
+\doxysubsubsection{\texorpdfstring{find\_git\_parent()}{find\_git\_parent()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+utils.\+find\+\_\+git\+\_\+parent (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Traverse up from the given path to find the nearest directory containing a .git
+subdirectory.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepenify__hook_1_1utils_ae236f3c4c8bf5dcddbb92b4c2065eea3}\label{namespacepenify__hook_1_1utils_ae236f3c4c8bf5dcddbb92b4c2065eea3}} 
+\index{penify\_hook.utils@{penify\_hook.utils}!get\_repo\_details@{get\_repo\_details}}
+\index{get\_repo\_details@{get\_repo\_details}!penify\_hook.utils@{penify\_hook.utils}}
+\doxysubsubsection{\texorpdfstring{get\_repo\_details()}{get\_repo\_details()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+utils.\+get\+\_\+repo\+\_\+details (\begin{DoxyParamCaption}\item[{Repo}]{repo }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determine the details of a repository including its remote URL, hosting
+service, organization name, and repository name.
+
+This function extracts the remote URL from the given Git repository object and
+determines the hosting service (e.g., GitHub, Azure DevOps, Bitbucket, GitLab).
+It then parses the URL to extract the organization name and repository name. If
+the URL does not match any known hosting service pattern, it sets the hosting
+service as "Unknown". The function handles exceptions that may occur during
+this process and logs an error message if needed.
+
+Args:
+    repo (Repo): A GitPython Repo object representing the local git repository.
+
+Returns:
+    dict: A dictionary containing the organization name, repository name, and hosting
+        service.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f}\label{namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f}} 
+\index{penify\_hook.utils@{penify\_hook.utils}!recursive\_search\_git\_folder@{recursive\_search\_git\_folder}}
+\index{recursive\_search\_git\_folder@{recursive\_search\_git\_folder}!penify\_hook.utils@{penify\_hook.utils}}
+\doxysubsubsection{\texorpdfstring{recursive\_search\_git\_folder()}{recursive\_search\_git\_folder()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+utils.\+recursive\+\_\+search\+\_\+git\+\_\+folder (\begin{DoxyParamCaption}\item[{}]{folder\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recursively searches for a .git folder starting from the given directory.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1utils_a95c3f9c80860d6a2e2d061d2fb660a3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1utils_a0c0c1ed6b197038085c94a90ceedfb01}\label{namespacepenify__hook_1_1utils_a0c0c1ed6b197038085c94a90ceedfb01}} 
+\index{penify\_hook.utils@{penify\_hook.utils}!logger@{logger}}
+\index{logger@{logger}!penify\_hook.utils@{penify\_hook.utils}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+utils.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+

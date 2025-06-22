@@ -1,0 +1,413 @@
+\hypertarget{namespacepenify__hook_1_1ui__utils}{}\doxysection{penify\+\_\+hook.\+ui\+\_\+utils Namespace Reference}
+\label{namespacepenify__hook_1_1ui__utils}\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a92c3e466d1912058167be2eacf85b9f6}{format\+\_\+info}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a532cdb4de7c679ce8b29c3e9116c4776}{format\+\_\+success}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a0a6fd2613c6fe053b6e4356cd9e5cda2}{format\+\_\+warning}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a4dd934568897433fa73f9cc182ac4a3e}{format\+\_\+error}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_adcb97fc26b405d2b9cdf5eb7aecc5452}{format\+\_\+highlight}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_af3441fb3c2c3850b8b3b6455a9fdaba4}{format\+\_\+file\+\_\+path}} (file\+\_\+path)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44}{print\+\_\+info}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a}{print\+\_\+success}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa}{print\+\_\+warning}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f}{print\+\_\+error}} (message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115}{print\+\_\+processing}} (file\+\_\+path)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_aa6e684c00e26199440137a87ed9b195c}{print\+\_\+status}} (status, message)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c}{create\+\_\+progress\+\_\+bar}} (total, desc=\char`\"{}Processing\char`\"{}, unit=\char`\"{}item\char`\"{})
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef}{create\+\_\+stage\+\_\+progress\+\_\+bar}} (stages, desc=\char`\"{}Processing\char`\"{})
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a5a7340d0fc60fb80f17514d60bf45f1d}{update\+\_\+stage}} (pbar, stage\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_ab560cfade398ac1e0bd47befb52d9f71}{autoreset}}
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a9fdcb180915696f5d217032a62c3857c}{INFO\+\_\+\+COLOR}} = Fore.\+CYAN
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a22c450c5e2b5394618ecf9b636560df4}{SUCCESS\+\_\+\+COLOR}} = Fore.\+GREEN
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a177bc9b44157844c999e0c1c2c6936ff}{WARNING\+\_\+\+COLOR}} = Fore.\+YELLOW
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a4ab4e61dfab7973c87bef59c6e1977fe}{ERROR\+\_\+\+COLOR}} = Fore.\+RED
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_aba01b8259f0d66cdc2b4a1b58f9736fc}{HIGHLIGHT\+\_\+\+COLOR}} = Fore.\+BLUE
+\item 
+\mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_aca0fcee81606857497520ae4290bc9f5}{NEUTRAL\+\_\+\+COLOR}} = Fore.\+WHITE
+\item 
+string \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a3c6fe4bd17c1a5fe76587225ae4beb3e}{SUCCESS\+\_\+\+SYMBOL}} = \char`\"{}✓\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a6eaea98f1a8cbe16a181647da2fc0a16}{WARNING\+\_\+\+SYMBOL}} = \char`\"{}○\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_aa564e1e1d016c8227d076542e74cecb0}{ERROR\+\_\+\+SYMBOL}} = \char`\"{}✗\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacepenify__hook_1_1ui__utils_a3b208e2750a38dd09467a73e4afd9756}{PROCESSING\+\_\+\+SYMBOL}} = \char`\"{}⟳\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}UI utilities for Penify CLI.
+
+This module provides utility functions for consistent UI formatting,
+colored output, and progress indicators across the Penify CLI application.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c}\label{namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!create\_progress\_bar@{create\_progress\_bar}}
+\index{create\_progress\_bar@{create\_progress\_bar}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{create\_progress\_bar()}{create\_progress\_bar()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+create\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}\item[{}]{total,  }\item[{}]{desc = {\ttfamily \char`\"{}Processing\char`\"{}},  }\item[{}]{unit = {\ttfamily \char`\"{}item\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a tqdm progress bar with consistent styling.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a12b92532b1458af94f3649d411b5505c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef}\label{namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!create\_stage\_progress\_bar@{create\_stage\_progress\_bar}}
+\index{create\_stage\_progress\_bar@{create\_stage\_progress\_bar}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{create\_stage\_progress\_bar()}{create\_stage\_progress\_bar()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+create\+\_\+stage\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}\item[{}]{stages,  }\item[{}]{desc = {\ttfamily \char`\"{}Processing\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a tqdm progress bar for processing stages with consistent styling.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a3da02cd1140179a9ce60f62c85fccfef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a4dd934568897433fa73f9cc182ac4a3e}\label{namespacepenify__hook_1_1ui__utils_a4dd934568897433fa73f9cc182ac4a3e}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!format\_error@{format\_error}}
+\index{format\_error@{format\_error}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{format\_error()}{format\_error()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+format\+\_\+error (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format an error message with the specified error color.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a4dd934568897433fa73f9cc182ac4a3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_af3441fb3c2c3850b8b3b6455a9fdaba4}\label{namespacepenify__hook_1_1ui__utils_af3441fb3c2c3850b8b3b6455a9fdaba4}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!format\_file\_path@{format\_file\_path}}
+\index{format\_file\_path@{format\_file\_path}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{format\_file\_path()}{format\_file\_path()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+format\+\_\+file\+\_\+path (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format a file path with a warning color.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_af3441fb3c2c3850b8b3b6455a9fdaba4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_adcb97fc26b405d2b9cdf5eb7aecc5452}\label{namespacepenify__hook_1_1ui__utils_adcb97fc26b405d2b9cdf5eb7aecc5452}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!format\_highlight@{format\_highlight}}
+\index{format\_highlight@{format\_highlight}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{format\_highlight()}{format\_highlight()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+format\+\_\+highlight (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format a highlighted message with appropriate color.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a92c3e466d1912058167be2eacf85b9f6}\label{namespacepenify__hook_1_1ui__utils_a92c3e466d1912058167be2eacf85b9f6}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!format\_info@{format\_info}}
+\index{format\_info@{format\_info}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{format\_info()}{format\_info()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+format\+\_\+info (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format an informational message with appropriate color.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a92c3e466d1912058167be2eacf85b9f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a532cdb4de7c679ce8b29c3e9116c4776}\label{namespacepenify__hook_1_1ui__utils_a532cdb4de7c679ce8b29c3e9116c4776}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!format\_success@{format\_success}}
+\index{format\_success@{format\_success}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{format\_success()}{format\_success()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+format\+\_\+success (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Formats a success message with green color and reset style.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a532cdb4de7c679ce8b29c3e9116c4776_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a0a6fd2613c6fe053b6e4356cd9e5cda2}\label{namespacepenify__hook_1_1ui__utils_a0a6fd2613c6fe053b6e4356cd9e5cda2}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!format\_warning@{format\_warning}}
+\index{format\_warning@{format\_warning}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{format\_warning()}{format\_warning()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+format\+\_\+warning (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format a warning message with appropriate color.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a0a6fd2613c6fe053b6e4356cd9e5cda2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f}\label{namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!print\_error@{print\_error}}
+\index{print\_error@{print\_error}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{print\_error()}{print\_error()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+print\+\_\+error (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print an error message with appropriate formatting.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a6f0acd7dd91abfe67d0807803bc3b65f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44}\label{namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!print\_info@{print\_info}}
+\index{print\_info@{print\_info}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{print\_info()}{print\_info()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+print\+\_\+info (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints an informational message with formatting.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a811f0adf6e9bf71510c379b6fa155e44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115}\label{namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!print\_processing@{print\_processing}}
+\index{print\_processing@{print\_processing}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{print\_processing()}{print\_processing()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+print\+\_\+processing (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print a processing message for a specified file.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_adfcbbfe39029ab6d1dd33e7bf75ae115_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_aa6e684c00e26199440137a87ed9b195c}\label{namespacepenify__hook_1_1ui__utils_aa6e684c00e26199440137a87ed9b195c}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!print\_status@{print\_status}}
+\index{print\_status@{print\_status}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{print\_status()}{print\_status()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+print\+\_\+status (\begin{DoxyParamCaption}\item[{}]{status,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print a status message with an appropriate symbol.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_aa6e684c00e26199440137a87ed9b195c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a}\label{namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!print\_success@{print\_success}}
+\index{print\_success@{print\_success}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{print\_success()}{print\_success()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+print\+\_\+success (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints a formatted success message.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a2b16aa6b68a9edea5f29f84f1c4be79a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa}\label{namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!print\_warning@{print\_warning}}
+\index{print\_warning@{print\_warning}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{print\_warning()}{print\_warning()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+print\+\_\+warning (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints a warning message with formatted output.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a1ffbb9671dbe233770268e2dd66a67fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a5a7340d0fc60fb80f17514d60bf45f1d}\label{namespacepenify__hook_1_1ui__utils_a5a7340d0fc60fb80f17514d60bf45f1d}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!update\_stage@{update\_stage}}
+\index{update\_stage@{update\_stage}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{update\_stage()}{update\_stage()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+ui\+\_\+utils.\+update\+\_\+stage (\begin{DoxyParamCaption}\item[{}]{pbar,  }\item[{}]{stage\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Update the progress bar with a new stage name.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1ui__utils_a5a7340d0fc60fb80f17514d60bf45f1d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_ab560cfade398ac1e0bd47befb52d9f71}\label{namespacepenify__hook_1_1ui__utils_ab560cfade398ac1e0bd47befb52d9f71}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!autoreset@{autoreset}}
+\index{autoreset@{autoreset}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{autoreset}{autoreset}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+autoreset}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a4ab4e61dfab7973c87bef59c6e1977fe}\label{namespacepenify__hook_1_1ui__utils_a4ab4e61dfab7973c87bef59c6e1977fe}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!ERROR\_COLOR@{ERROR\_COLOR}}
+\index{ERROR\_COLOR@{ERROR\_COLOR}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{ERROR\_COLOR}{ERROR\_COLOR}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+ERROR\+\_\+\+COLOR = Fore.\+RED}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_aa564e1e1d016c8227d076542e74cecb0}\label{namespacepenify__hook_1_1ui__utils_aa564e1e1d016c8227d076542e74cecb0}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!ERROR\_SYMBOL@{ERROR\_SYMBOL}}
+\index{ERROR\_SYMBOL@{ERROR\_SYMBOL}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{ERROR\_SYMBOL}{ERROR\_SYMBOL}}
+{\footnotesize\ttfamily string penify\+\_\+hook.\+ui\+\_\+utils.\+ERROR\+\_\+\+SYMBOL = \char`\"{}✗\char`\"{}}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_aba01b8259f0d66cdc2b4a1b58f9736fc}\label{namespacepenify__hook_1_1ui__utils_aba01b8259f0d66cdc2b4a1b58f9736fc}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!HIGHLIGHT\_COLOR@{HIGHLIGHT\_COLOR}}
+\index{HIGHLIGHT\_COLOR@{HIGHLIGHT\_COLOR}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{HIGHLIGHT\_COLOR}{HIGHLIGHT\_COLOR}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+HIGHLIGHT\+\_\+\+COLOR = Fore.\+BLUE}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a9fdcb180915696f5d217032a62c3857c}\label{namespacepenify__hook_1_1ui__utils_a9fdcb180915696f5d217032a62c3857c}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!INFO\_COLOR@{INFO\_COLOR}}
+\index{INFO\_COLOR@{INFO\_COLOR}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{INFO\_COLOR}{INFO\_COLOR}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+INFO\+\_\+\+COLOR = Fore.\+CYAN}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_aca0fcee81606857497520ae4290bc9f5}\label{namespacepenify__hook_1_1ui__utils_aca0fcee81606857497520ae4290bc9f5}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!NEUTRAL\_COLOR@{NEUTRAL\_COLOR}}
+\index{NEUTRAL\_COLOR@{NEUTRAL\_COLOR}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{NEUTRAL\_COLOR}{NEUTRAL\_COLOR}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+NEUTRAL\+\_\+\+COLOR = Fore.\+WHITE}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a3b208e2750a38dd09467a73e4afd9756}\label{namespacepenify__hook_1_1ui__utils_a3b208e2750a38dd09467a73e4afd9756}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!PROCESSING\_SYMBOL@{PROCESSING\_SYMBOL}}
+\index{PROCESSING\_SYMBOL@{PROCESSING\_SYMBOL}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{PROCESSING\_SYMBOL}{PROCESSING\_SYMBOL}}
+{\footnotesize\ttfamily string penify\+\_\+hook.\+ui\+\_\+utils.\+PROCESSING\+\_\+\+SYMBOL = \char`\"{}⟳\char`\"{}}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a22c450c5e2b5394618ecf9b636560df4}\label{namespacepenify__hook_1_1ui__utils_a22c450c5e2b5394618ecf9b636560df4}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!SUCCESS\_COLOR@{SUCCESS\_COLOR}}
+\index{SUCCESS\_COLOR@{SUCCESS\_COLOR}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{SUCCESS\_COLOR}{SUCCESS\_COLOR}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+SUCCESS\+\_\+\+COLOR = Fore.\+GREEN}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a3c6fe4bd17c1a5fe76587225ae4beb3e}\label{namespacepenify__hook_1_1ui__utils_a3c6fe4bd17c1a5fe76587225ae4beb3e}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!SUCCESS\_SYMBOL@{SUCCESS\_SYMBOL}}
+\index{SUCCESS\_SYMBOL@{SUCCESS\_SYMBOL}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{SUCCESS\_SYMBOL}{SUCCESS\_SYMBOL}}
+{\footnotesize\ttfamily string penify\+\_\+hook.\+ui\+\_\+utils.\+SUCCESS\+\_\+\+SYMBOL = \char`\"{}✓\char`\"{}}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a177bc9b44157844c999e0c1c2c6936ff}\label{namespacepenify__hook_1_1ui__utils_a177bc9b44157844c999e0c1c2c6936ff}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!WARNING\_COLOR@{WARNING\_COLOR}}
+\index{WARNING\_COLOR@{WARNING\_COLOR}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{WARNING\_COLOR}{WARNING\_COLOR}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+ui\+\_\+utils.\+WARNING\+\_\+\+COLOR = Fore.\+YELLOW}
+
+\mbox{\Hypertarget{namespacepenify__hook_1_1ui__utils_a6eaea98f1a8cbe16a181647da2fc0a16}\label{namespacepenify__hook_1_1ui__utils_a6eaea98f1a8cbe16a181647da2fc0a16}} 
+\index{penify\_hook.ui\_utils@{penify\_hook.ui\_utils}!WARNING\_SYMBOL@{WARNING\_SYMBOL}}
+\index{WARNING\_SYMBOL@{WARNING\_SYMBOL}!penify\_hook.ui\_utils@{penify\_hook.ui\_utils}}
+\doxysubsubsection{\texorpdfstring{WARNING\_SYMBOL}{WARNING\_SYMBOL}}
+{\footnotesize\ttfamily string penify\+\_\+hook.\+ui\+\_\+utils.\+WARNING\+\_\+\+SYMBOL = \char`\"{}○\char`\"{}}
+

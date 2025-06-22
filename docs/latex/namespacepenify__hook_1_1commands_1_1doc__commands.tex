@@ -1,0 +1,106 @@
+\hypertarget{namespacepenify__hook_1_1commands_1_1doc__commands}{}\doxysection{penify\+\_\+hook.\+commands.\+doc\+\_\+commands Namespace Reference}
+\label{namespacepenify__hook_1_1commands_1_1doc__commands}\index{penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1doc__commands_a4daac68bc563432bf25c85dc78081a25}{generate\+\_\+doc}} (api\+\_\+url, token, location=None)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1doc__commands_acc7f4ead1b11951d885fa5c151c2cbe0}{setup\+\_\+docgen\+\_\+parser}} (parser)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704}{handle\+\_\+docgen}} (args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1doc__commands_a3e42540047da37565afffeaf106cb948}{docgen\+\_\+description}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1doc__commands_a4daac68bc563432bf25c85dc78081a25}\label{namespacepenify__hook_1_1commands_1_1doc__commands_a4daac68bc563432bf25c85dc78081a25}} 
+\index{penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}!generate\_doc@{generate\_doc}}
+\index{generate\_doc@{generate\_doc}!penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}}
+\doxysubsubsection{\texorpdfstring{generate\_doc()}{generate\_doc()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+doc\+\_\+commands.\+generate\+\_\+doc (\begin{DoxyParamCaption}\item[{}]{api\+\_\+url,  }\item[{}]{token,  }\item[{}]{location = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates documentation based on the given parameters.
+
+This function initializes an API client using the provided API URL and token.
+It then generates documentation by analyzing the specified location, which can
+be a folder, a file, or the current working directory if no location is
+provided. The function handles different types of analysis based on the input
+location and reports any errors encountered during the process.
+
+Args:
+    api_url (str): The URL of the API to connect to for documentation generation.
+    token (str): The authentication token for accessing the API.
+    location (str?): The path to a specific file or folder to analyze. If not provided,
+        the current working directory is used.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1doc__commands_a4daac68bc563432bf25c85dc78081a25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704}\label{namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704}} 
+\index{penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}!handle\_docgen@{handle\_docgen}}
+\index{handle\_docgen@{handle\_docgen}!penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}}
+\doxysubsubsection{\texorpdfstring{handle\_docgen()}{handle\_docgen()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+doc\+\_\+commands.\+handle\+\_\+docgen (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handle document generation and hook management based on subcommands.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1doc__commands_a2006ab13bff718ef783868a910c0b704_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1doc__commands_acc7f4ead1b11951d885fa5c151c2cbe0}\label{namespacepenify__hook_1_1commands_1_1doc__commands_acc7f4ead1b11951d885fa5c151c2cbe0}} 
+\index{penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}!setup\_docgen\_parser@{setup\_docgen\_parser}}
+\index{setup\_docgen\_parser@{setup\_docgen\_parser}!penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}}
+\doxysubsubsection{\texorpdfstring{setup\_docgen\_parser()}{setup\_docgen\_parser()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+doc\+\_\+commands.\+setup\+\_\+docgen\+\_\+parser (\begin{DoxyParamCaption}\item[{}]{parser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Configure a parser for generating documentation using Git commands.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1doc__commands_acc7f4ead1b11951d885fa5c151c2cbe0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1doc__commands_a3e42540047da37565afffeaf106cb948}\label{namespacepenify__hook_1_1commands_1_1doc__commands_a3e42540047da37565afffeaf106cb948}} 
+\index{penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}!docgen\_description@{docgen\_description}}
+\index{docgen\_description@{docgen\_description}!penify\_hook.commands.doc\_commands@{penify\_hook.commands.doc\_commands}}
+\doxysubsubsection{\texorpdfstring{docgen\_description}{docgen\_description}}
+{\footnotesize\ttfamily string penify\+\_\+hook.\+commands.\+doc\+\_\+commands.\+docgen\+\_\+description}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{"{}"{}"{}Generate code documentation using Penify.}}
+\DoxyCodeLine{2 \textcolor{stringliteral}{}}
+\DoxyCodeLine{3 \textcolor{stringliteral}{This command requires you to be logged in to your Penify account.}}
+\DoxyCodeLine{4 \textcolor{stringliteral}{You can generate documentation for:}}
+\DoxyCodeLine{5 \textcolor{stringliteral}{-\/ Current Git diff (default)}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{-\/ Specific file}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{-\/ Specific folder}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{"{}"{}"{}}}
+
+\end{DoxyCode}

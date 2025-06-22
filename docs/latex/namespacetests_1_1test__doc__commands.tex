@@ -1,0 +1,323 @@
+\hypertarget{namespacetests_1_1test__doc__commands}{}\doxysection{tests.\+test\+\_\+doc\+\_\+commands Namespace Reference}
+\label{namespacetests_1_1test__doc__commands}\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a806110833eb0aad547156faf014b31d8}{test\+\_\+generate\+\_\+doc\+\_\+no\+\_\+location}} (mock\+\_\+getcwd, mock\+\_\+api\+\_\+client, mock\+\_\+folder\+\_\+analyzer, mock\+\_\+file\+\_\+analyzer, mock\+\_\+git\+\_\+analyzer)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a0e74c920f258f442914771164fe26b45}{test\+\_\+generate\+\_\+doc\+\_\+file\+\_\+location}} (mock\+\_\+api\+\_\+client, mock\+\_\+folder\+\_\+analyzer, mock\+\_\+file\+\_\+analyzer, mock\+\_\+git\+\_\+analyzer)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a4bb75610e40d94d42bc169b25403c186}{test\+\_\+generate\+\_\+doc\+\_\+folder\+\_\+location}} (mock\+\_\+api\+\_\+client, mock\+\_\+folder\+\_\+analyzer, mock\+\_\+file\+\_\+analyzer, mock\+\_\+git\+\_\+analyzer)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_aec76cc25c23476794234cdadbcaef0c0}{test\+\_\+generate\+\_\+doc\+\_\+error\+\_\+handling}} (mock\+\_\+api\+\_\+client, mock\+\_\+git\+\_\+analyzer, mock\+\_\+exit)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a0f27751d0ba2acfe40ef7e85bccf47d7}{test\+\_\+setup\+\_\+docgen\+\_\+parser}} ()
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_ab74688baa8c9b5ba302c2877a9789d05}{test\+\_\+handle\+\_\+docgen\+\_\+install\+\_\+hook}} (mock\+\_\+exit, mock\+\_\+get\+\_\+token, mock\+\_\+generate\+\_\+doc, mock\+\_\+uninstall\+\_\+hook, mock\+\_\+install\+\_\+hook)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a1458af9ad0128c3ca1263b552fd5e482}{test\+\_\+handle\+\_\+docgen\+\_\+uninstall\+\_\+hook}} (mock\+\_\+exit, mock\+\_\+get\+\_\+token, mock\+\_\+generate\+\_\+doc, mock\+\_\+uninstall\+\_\+hook, mock\+\_\+install\+\_\+hook)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_ab158ffa48469b6c097a7a55fcb20c21a}{test\+\_\+handle\+\_\+docgen\+\_\+generate}} (mock\+\_\+get\+\_\+token, mock\+\_\+generate\+\_\+doc, mock\+\_\+uninstall\+\_\+hook, mock\+\_\+install\+\_\+hook)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_af9b01e5fc89255cac96747fa081c442c}{test\+\_\+handle\+\_\+docgen\+\_\+no\+\_\+token}} (mock\+\_\+exit, mock\+\_\+get\+\_\+token)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a335e7fd4912192c7276cf31bbebc6eb0}{test\+\_\+generate\+\_\+doc\+\_\+with\+\_\+file\+\_\+exception}} (mock\+\_\+api\+\_\+client, mock\+\_\+getcwd)
+\item 
+def \mbox{\hyperlink{namespacetests_1_1test__doc__commands_a64165ddfdb3071a88422f080f0e529a3}{test\+\_\+generate\+\_\+doc\+\_\+with\+\_\+folder\+\_\+exception}} (mock\+\_\+api\+\_\+client, mock\+\_\+getcwd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_aec76cc25c23476794234cdadbcaef0c0}\label{namespacetests_1_1test__doc__commands_aec76cc25c23476794234cdadbcaef0c0}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_generate\_doc\_error\_handling@{test\_generate\_doc\_error\_handling}}
+\index{test\_generate\_doc\_error\_handling@{test\_generate\_doc\_error\_handling}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_generate\_doc\_error\_handling()}{test\_generate\_doc\_error\_handling()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+generate\+\_\+doc\+\_\+error\+\_\+handling (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+api\+\_\+client,  }\item[{}]{mock\+\_\+git\+\_\+analyzer,  }\item[{}]{mock\+\_\+exit }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a documentation string for the provided code snippet using
+Google Docstring style.
+
+Short one line description: Test function to ensure proper error
+handling during API calls with GitAnalyzer.  Multiline long description:
+This test function is designed to verify that the generate_doc function
+handles exceptions correctly when an error occurs during API interaction
+with GitAnalyzer. It sets up a mock API client and a mock Git analyzer,
+causing the analyzer to raise an exception to simulate a failure
+condition. The function then asserts that the exit code is set to 1 when
+the error handling mechanism is invoked.
+
+Args:
+    mock_api_client (MagicMock): A mock object simulating the API client.
+    mock_git_analyzer (MagicMock): A mock object simulating the Git analyzer, configured to raise an
+        exception.
+    mock_exit (MagicMock): A mock object representing the exit function, which should be called
+        with an error code.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_aec76cc25c23476794234cdadbcaef0c0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a0e74c920f258f442914771164fe26b45}\label{namespacetests_1_1test__doc__commands_a0e74c920f258f442914771164fe26b45}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_generate\_doc\_file\_location@{test\_generate\_doc\_file\_location}}
+\index{test\_generate\_doc\_file\_location@{test\_generate\_doc\_file\_location}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_generate\_doc\_file\_location()}{test\_generate\_doc\_file\_location()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+generate\+\_\+doc\+\_\+file\+\_\+location (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+api\+\_\+client,  }\item[{}]{mock\+\_\+folder\+\_\+analyzer,  }\item[{}]{mock\+\_\+file\+\_\+analyzer,  }\item[{}]{mock\+\_\+git\+\_\+analyzer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test generating a documentation file location.
+
+This function tests the process of generating a documentation file
+location using mock objects for API client, folder analyzer, file
+analyzer, and Git analyzer. It sets up the necessary mocks, calls the
+`generate_doc` function with specified parameters, and asserts that the
+appropriate methods on the mock objects are called as expected.
+
+Args:
+    mock_api_client (MagicMock): Mock object for the API client.
+    mock_folder_analyzer (MagicMock): Mock object for the folder analyzer.
+    mock_file_analyzer (MagicMock): Mock object for the file analyzer.
+    mock_git_analyzer (MagicMock): Mock object for the Git analyzer.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a0e74c920f258f442914771164fe26b45_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a4bb75610e40d94d42bc169b25403c186}\label{namespacetests_1_1test__doc__commands_a4bb75610e40d94d42bc169b25403c186}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_generate\_doc\_folder\_location@{test\_generate\_doc\_folder\_location}}
+\index{test\_generate\_doc\_folder\_location@{test\_generate\_doc\_folder\_location}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_generate\_doc\_folder\_location()}{test\_generate\_doc\_folder\_location()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+generate\+\_\+doc\+\_\+folder\+\_\+location (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+api\+\_\+client,  }\item[{}]{mock\+\_\+folder\+\_\+analyzer,  }\item[{}]{mock\+\_\+file\+\_\+analyzer,  }\item[{}]{mock\+\_\+git\+\_\+analyzer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the function to generate documentation for a folder location.
+
+It sets up mock objects for API client, folder analyzer, file analyzer,
+and Git analyzer, then calls the `generate_doc` function with specified
+parameters. Finally, it asserts that the correct methods on the mock
+objects were called as expected.
+
+Args:
+    mock_api_client (MagicMock): Mock object for the API client.
+    mock_folder_analyzer (MagicMock): Mock object for the folder analyzer.
+    mock_file_analyzer (MagicMock): Mock object for the file analyzer.
+    mock_git_analyzer (MagicMock): Mock object for the Git analyzer.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a4bb75610e40d94d42bc169b25403c186_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a806110833eb0aad547156faf014b31d8}\label{namespacetests_1_1test__doc__commands_a806110833eb0aad547156faf014b31d8}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_generate\_doc\_no\_location@{test\_generate\_doc\_no\_location}}
+\index{test\_generate\_doc\_no\_location@{test\_generate\_doc\_no\_location}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_generate\_doc\_no\_location()}{test\_generate\_doc\_no\_location()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+generate\+\_\+doc\+\_\+no\+\_\+location (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+getcwd,  }\item[{}]{mock\+\_\+api\+\_\+client,  }\item[{}]{mock\+\_\+folder\+\_\+analyzer,  }\item[{}]{mock\+\_\+file\+\_\+analyzer,  }\item[{}]{mock\+\_\+git\+\_\+analyzer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test function to generate documentation without location information.
+
+This function sets up mocks for the API client, current working
+directory, and Git analyzer. It then calls the `generate_doc` function
+with a fake API URL and token. The function is expected to initialize
+the API client, configure the Git analyzer, and run it without any
+location information.
+
+Args:
+    mock_getcwd (MagicMock): Mock for os.getcwd().
+    mock_api_client (MagicMock): Mock for creating an API client.
+    mock_folder_analyzer (MagicMock): Mock for folder analysis.
+    mock_file_analyzer (MagicMock): Mock for file analysis.
+    mock_git_analyzer (MagicMock): Mock for Git analyzer setup.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a806110833eb0aad547156faf014b31d8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a335e7fd4912192c7276cf31bbebc6eb0}\label{namespacetests_1_1test__doc__commands_a335e7fd4912192c7276cf31bbebc6eb0}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_generate\_doc\_with\_file\_exception@{test\_generate\_doc\_with\_file\_exception}}
+\index{test\_generate\_doc\_with\_file\_exception@{test\_generate\_doc\_with\_file\_exception}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_generate\_doc\_with\_file\_exception()}{test\_generate\_doc\_with\_file\_exception()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+generate\+\_\+doc\+\_\+with\+\_\+file\+\_\+exception (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+api\+\_\+client,  }\item[{}]{mock\+\_\+getcwd }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate documentation from a Python source file.
+
+This function reads a Python file and generates a docstring based on its
+content. It uses mock objects to simulate API calls and directory
+operations during testing.
+
+Args:
+    mock_api_client (unittest.mock.MagicMock): A mock object for simulating API client behavior.
+    mock_getcwd (unittest.mock.MagicMock): A mock object for simulating the current working directory function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a335e7fd4912192c7276cf31bbebc6eb0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a64165ddfdb3071a88422f080f0e529a3}\label{namespacetests_1_1test__doc__commands_a64165ddfdb3071a88422f080f0e529a3}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_generate\_doc\_with\_folder\_exception@{test\_generate\_doc\_with\_folder\_exception}}
+\index{test\_generate\_doc\_with\_folder\_exception@{test\_generate\_doc\_with\_folder\_exception}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_generate\_doc\_with\_folder\_exception()}{test\_generate\_doc\_with\_folder\_exception()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+generate\+\_\+doc\+\_\+with\+\_\+folder\+\_\+exception (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+api\+\_\+client,  }\item[{}]{mock\+\_\+getcwd }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate documentation from a given API endpoint and save it to a
+folder.
+
+This function fetches data from the specified API endpoint, processes
+it, and saves the generated documentation in the provided folder. If an
+error occurs during the fetching process, a SystemExit exception is
+raised with an appropriate message.
+
+Args:
+    api_url (str): The URL of the API endpoint from which data will be fetched.
+    token (str): The authentication token required to access the API.
+    folder_path (str): The path to the folder where the documentation will be saved.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a64165ddfdb3071a88422f080f0e529a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_ab158ffa48469b6c097a7a55fcb20c21a}\label{namespacetests_1_1test__doc__commands_ab158ffa48469b6c097a7a55fcb20c21a}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_handle\_docgen\_generate@{test\_handle\_docgen\_generate}}
+\index{test\_handle\_docgen\_generate@{test\_handle\_docgen\_generate}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_handle\_docgen\_generate()}{test\_handle\_docgen\_generate()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+handle\+\_\+docgen\+\_\+generate (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+get\+\_\+token,  }\item[{}]{mock\+\_\+generate\+\_\+doc,  }\item[{}]{mock\+\_\+uninstall\+\_\+hook,  }\item[{}]{mock\+\_\+install\+\_\+hook }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the direct documentation generation functionality.
+
+This function tests the `handle_docgen` function when no subcommand is
+provided. It verifies that the document generation hook is called and
+the uninstall and install hooks are not called.
+
+Args:
+    mock_get_token (MagicMock): Mocked function to get authentication token.
+    mock_generate_doc (MagicMock): Mocked function for generating documentation.
+    mock_uninstall_hook (MagicMock): Mocked function for uninstalling the document generation hook.
+    mock_install_hook (MagicMock): Mocked function for installing the document generation hook.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_ab158ffa48469b6c097a7a55fcb20c21a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_ab74688baa8c9b5ba302c2877a9789d05}\label{namespacetests_1_1test__doc__commands_ab74688baa8c9b5ba302c2877a9789d05}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_handle\_docgen\_install\_hook@{test\_handle\_docgen\_install\_hook}}
+\index{test\_handle\_docgen\_install\_hook@{test\_handle\_docgen\_install\_hook}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_handle\_docgen\_install\_hook()}{test\_handle\_docgen\_install\_hook()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+handle\+\_\+docgen\+\_\+install\+\_\+hook (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+exit,  }\item[{}]{mock\+\_\+get\+\_\+token,  }\item[{}]{mock\+\_\+generate\+\_\+doc,  }\item[{}]{mock\+\_\+uninstall\+\_\+hook,  }\item[{}]{mock\+\_\+install\+\_\+hook }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the handling of the 'install-hook' subcommand.
+
+This function sets up a mock environment where it simulates the
+execution of the 'install-hook' subcommand. It verifies that the
+`mock_install_hook` is called with the correct arguments, while
+`mock_generate_doc` and `mock_uninstall_hook` are not called.
+
+Args:
+    mock_exit (MagicMock): Mock object for sys.exit.
+    mock_get_token (MagicMock): Mock object to simulate fetching a token.
+    mock_generate_doc (MagicMock): Mock object to simulate generating documentation.
+    mock_uninstall_hook (MagicMock): Mock object to simulate uninstalling a hook.
+    mock_install_hook (MagicMock): Mock object to simulate installing a hook.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_ab74688baa8c9b5ba302c2877a9789d05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_af9b01e5fc89255cac96747fa081c442c}\label{namespacetests_1_1test__doc__commands_af9b01e5fc89255cac96747fa081c442c}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_handle\_docgen\_no\_token@{test\_handle\_docgen\_no\_token}}
+\index{test\_handle\_docgen\_no\_token@{test\_handle\_docgen\_no\_token}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_handle\_docgen\_no\_token()}{test\_handle\_docgen\_no\_token()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+handle\+\_\+docgen\+\_\+no\+\_\+token (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+exit,  }\item[{}]{mock\+\_\+get\+\_\+token }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the behavior of the `handle_docgen` function when no token is
+provided.
+
+This function asserts that if no token is returned by `mock_get_token`,
+the `handle_docgen` function will call `mock_exit` with a status code of
+1.
+
+Args:
+    mock_exit (MagicMock): A MagicMock object simulating the `exit` function.
+    mock_get_token (MagicMock): A MagicMock object simulating the `get_token` function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_af9b01e5fc89255cac96747fa081c442c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a1458af9ad0128c3ca1263b552fd5e482}\label{namespacetests_1_1test__doc__commands_a1458af9ad0128c3ca1263b552fd5e482}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_handle\_docgen\_uninstall\_hook@{test\_handle\_docgen\_uninstall\_hook}}
+\index{test\_handle\_docgen\_uninstall\_hook@{test\_handle\_docgen\_uninstall\_hook}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_handle\_docgen\_uninstall\_hook()}{test\_handle\_docgen\_uninstall\_hook()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+handle\+\_\+docgen\+\_\+uninstall\+\_\+hook (\begin{DoxyParamCaption}\item[{}]{mock\+\_\+exit,  }\item[{}]{mock\+\_\+get\+\_\+token,  }\item[{}]{mock\+\_\+generate\+\_\+doc,  }\item[{}]{mock\+\_\+uninstall\+\_\+hook,  }\item[{}]{mock\+\_\+install\+\_\+hook }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the uninstall-hook subcommand of the handle_docgen function.
+This test case sets up a mock environment and verifies that the
+uninstall-hook is called with the correct location, while generate_doc
+and install_hook are not called.
+
+Args:
+    mock_exit (MagicMock): A mock for the exit function.
+    mock_get_token (MagicMock): A mock for the get_token function.
+    mock_generate_doc (MagicMock): A mock for the generate_doc function.
+    mock_uninstall_hook (MagicMock): A mock for the uninstall_hook function.
+    mock_install_hook (MagicMock): A mock for the install_hook function.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a1458af9ad0128c3ca1263b552fd5e482_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetests_1_1test__doc__commands_a0f27751d0ba2acfe40ef7e85bccf47d7}\label{namespacetests_1_1test__doc__commands_a0f27751d0ba2acfe40ef7e85bccf47d7}} 
+\index{tests.test\_doc\_commands@{tests.test\_doc\_commands}!test\_setup\_docgen\_parser@{test\_setup\_docgen\_parser}}
+\index{test\_setup\_docgen\_parser@{test\_setup\_docgen\_parser}!tests.test\_doc\_commands@{tests.test\_doc\_commands}}
+\doxysubsubsection{\texorpdfstring{test\_setup\_docgen\_parser()}{test\_setup\_docgen\_parser()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+doc\+\_\+commands.\+test\+\_\+setup\+\_\+docgen\+\_\+parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the setup_docgen_parser function to ensure it properly configures
+the ArgumentParser for docgen options.
+
+It verifies that the parser correctly sets up docgen options and handles
+different subcommands like 'install-hook' and 'uninstall-hook'.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetests_1_1test__doc__commands_a0f27751d0ba2acfe40ef7e85bccf47d7_cgraph}
+\end{center}
+\end{figure}

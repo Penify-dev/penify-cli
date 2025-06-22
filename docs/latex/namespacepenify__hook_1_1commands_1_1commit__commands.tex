@@ -1,0 +1,95 @@
+\hypertarget{namespacepenify__hook_1_1commands_1_1commit__commands}{}\doxysection{penify\+\_\+hook.\+commands.\+commit\+\_\+commands Namespace Reference}
+\label{namespacepenify__hook_1_1commands_1_1commit__commands}\index{penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1commit__commands_a62564c4e8ad59fc46d56cb0f9122a71a}{commit\+\_\+code}} (api\+\_\+url, token, message, open\+\_\+terminal, generate\+\_\+description, llm\+\_\+model=None, llm\+\_\+api\+\_\+base=None, llm\+\_\+api\+\_\+key=None, jira\+\_\+url=None, jira\+\_\+user=None, jira\+\_\+api\+\_\+token=None)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1commit__commands_a8627583116eb78e31a4d3cdc16d2f15c}{setup\+\_\+commit\+\_\+parser}} (parser)
+\item 
+def \mbox{\hyperlink{namespacepenify__hook_1_1commands_1_1commit__commands_af4f739f524c38b437e4e47673d683e23}{handle\+\_\+commit}} (args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1commit__commands_a62564c4e8ad59fc46d56cb0f9122a71a}\label{namespacepenify__hook_1_1commands_1_1commit__commands_a62564c4e8ad59fc46d56cb0f9122a71a}} 
+\index{penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}!commit\_code@{commit\_code}}
+\index{commit\_code@{commit\_code}!penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}}
+\doxysubsubsection{\texorpdfstring{commit\_code()}{commit\_code()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+commit\+\_\+commands.\+commit\+\_\+code (\begin{DoxyParamCaption}\item[{}]{api\+\_\+url,  }\item[{}]{token,  }\item[{}]{message,  }\item[{}]{open\+\_\+terminal,  }\item[{}]{generate\+\_\+description,  }\item[{}]{llm\+\_\+model = {\ttfamily None},  }\item[{}]{llm\+\_\+api\+\_\+base = {\ttfamily None},  }\item[{}]{llm\+\_\+api\+\_\+key = {\ttfamily None},  }\item[{}]{jira\+\_\+url = {\ttfamily None},  }\item[{}]{jira\+\_\+user = {\ttfamily None},  }\item[{}]{jira\+\_\+api\+\_\+token = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Enhance Git commits with AI-powered commit messages.
+
+This function allows for the generation of enhanced commit messages using
+natural language processing models and optionally integrates with JIRA for
+additional context. It processes the current Git folder to find relevant files
+and generates a detailed commit message based on the provided parameters.
+
+Args:
+    api_url (str): URL of the API endpoint.
+    token (str): Authentication token for the API.
+    message (str): Initial commit message provided by the user.
+    open_terminal (bool): Whether to open the terminal after committing.
+    generate_description (bool): Whether to generate a detailed description in the commit message.
+    llm_model (str?): The language model to use for generating the commit message. Defaults to None.
+    llm_api_base (str?): Base URL of the LLM API. Defaults to None.
+    llm_api_key (str?): API key for accessing the LLM service. Defaults to None.
+    jira_url (str?): URL of the JIRA instance. Defaults to None.
+    jira_user (str?): Username for authenticating with JIRA. Defaults to None.
+    jira_api_token (str?): API token for accessing JIRA. Defaults to None.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1commit__commands_a62564c4e8ad59fc46d56cb0f9122a71a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1commit__commands_a62564c4e8ad59fc46d56cb0f9122a71a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1commit__commands_af4f739f524c38b437e4e47673d683e23}\label{namespacepenify__hook_1_1commands_1_1commit__commands_af4f739f524c38b437e4e47673d683e23}} 
+\index{penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}!handle\_commit@{handle\_commit}}
+\index{handle\_commit@{handle\_commit}!penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}}
+\doxysubsubsection{\texorpdfstring{handle\_commit()}{handle\_commit()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+commit\+\_\+commands.\+handle\+\_\+commit (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handle commit functionality by processing arguments and invoking the
+appropriate commands.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1commit__commands_af4f739f524c38b437e4e47673d683e23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1commit__commands_af4f739f524c38b437e4e47673d683e23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepenify__hook_1_1commands_1_1commit__commands_a8627583116eb78e31a4d3cdc16d2f15c}\label{namespacepenify__hook_1_1commands_1_1commit__commands_a8627583116eb78e31a4d3cdc16d2f15c}} 
+\index{penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}!setup\_commit\_parser@{setup\_commit\_parser}}
+\index{setup\_commit\_parser@{setup\_commit\_parser}!penify\_hook.commands.commit\_commands@{penify\_hook.commands.commit\_commands}}
+\doxysubsubsection{\texorpdfstring{setup\_commit\_parser()}{setup\_commit\_parser()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+commands.\+commit\+\_\+commands.\+setup\+\_\+commit\+\_\+parser (\begin{DoxyParamCaption}\item[{}]{parser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sets up an argument parser for generating smart commit messages.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepenify__hook_1_1commands_1_1commit__commands_a8627583116eb78e31a4d3cdc16d2f15c_icgraph}
+\end{center}
+\end{figure}

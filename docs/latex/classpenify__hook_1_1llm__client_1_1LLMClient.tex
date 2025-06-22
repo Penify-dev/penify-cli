@@ -1,0 +1,134 @@
+\hypertarget{classpenify__hook_1_1llm__client_1_1LLMClient}{}\doxysection{penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient Class Reference}
+\label{classpenify__hook_1_1llm__client_1_1LLMClient}\index{penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}}
+
+
+Collaboration diagram for penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classpenify__hook_1_1llm__client_1_1LLMClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient_a76d92354f585ab4bb291169f9f530764}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient_abc2cb6b1d6d9b5dc16401ca078ec8c10}{model}}=None, str api\+\_\+base=None, str api\+\_\+key=None)
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient_ad6f06658ca922793f879474f2234518e}{litellm}} (self)
+\item 
+Dict \mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000}{generate\+\_\+commit\+\_\+summary}} (self, str diff, str message, bool generate\+\_\+description, Dict repo\+\_\+details, Dict jira\+\_\+context=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient_abc2cb6b1d6d9b5dc16401ca078ec8c10}{model}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1llm__client_1_1LLMClient_a76c2e9805f805624ab9c55a9f1f8d362}{\+\_\+litellm}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Client for interacting with LLM models using LiteLLM.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1llm__client_1_1LLMClient_a76d92354f585ab4bb291169f9f530764}\label{classpenify__hook_1_1llm__client_1_1LLMClient_a76d92354f585ab4bb291169f9f530764}} 
+\index{penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{model = {\ttfamily None},  }\item[{str }]{api\+\_\+base = {\ttfamily None},  }\item[{str }]{api\+\_\+key = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the LLM client.
+
+Args:
+    model: LLM model to use (e.g., "gpt-4", "ollama/llama2", etc.)
+    api_base: Base URL for API requests (e.g., "http://localhost:11434" for Ollama)
+    api_key: API key for the LLM service
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000}\label{classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000}} 
+\index{penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}!generate\_commit\_summary@{generate\_commit\_summary}}
+\index{generate\_commit\_summary@{generate\_commit\_summary}!penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}}
+\doxysubsubsection{\texorpdfstring{generate\_commit\_summary()}{generate\_commit\_summary()}}
+{\footnotesize\ttfamily  Dict penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient.\+generate\+\_\+commit\+\_\+summary (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{diff,  }\item[{str}]{message,  }\item[{bool}]{generate\+\_\+description,  }\item[{Dict}]{repo\+\_\+details,  }\item[{Dict }]{jira\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a concise and descriptive commit summary based on Git diff, user
+instructions, repository details, and optional JIRA context.
+
+This function constructs a prompt for an LLM to produce a commit title and, if
+requested, a detailed description. The summary adheres to Semantic Commit
+Messages guidelines. If JIRA context is provided, it enriches the prompt with
+relevant issue information.
+
+Args:
+    diff (str): Git diff of changes.
+    message (str): User-provided commit message or instructions.
+    generate_description (bool): Flag indicating whether to include a detailed description in the summary.
+    repo_details (Dict): Details about the repository.
+    jira_context (Dict?): Optional JIRA issue context to enhance the summary.
+
+Returns:
+    Dict: A dictionary containing the title and description for the commit. If
+        `generate_description` is False, the 'description' key may be absent.
+
+Raises:
+    ValueError: If the LLM model is not configured.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1llm__client_1_1LLMClient_a2ad3014dac466ee1d8e00306d0cf2000_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1llm__client_1_1LLMClient_ad6f06658ca922793f879474f2234518e}\label{classpenify__hook_1_1llm__client_1_1LLMClient_ad6f06658ca922793f879474f2234518e}} 
+\index{penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}!litellm@{litellm}}
+\index{litellm@{litellm}!penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}}
+\doxysubsubsection{\texorpdfstring{litellm()}{litellm()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient.\+litellm (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the litellm module, loading it if necessary.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1llm__client_1_1LLMClient_ad6f06658ca922793f879474f2234518e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1llm__client_1_1LLMClient_a76c2e9805f805624ab9c55a9f1f8d362}\label{classpenify__hook_1_1llm__client_1_1LLMClient_a76c2e9805f805624ab9c55a9f1f8d362}} 
+\index{penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}!\_litellm@{\_litellm}}
+\index{\_litellm@{\_litellm}!penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}}
+\doxysubsubsection{\texorpdfstring{\_litellm}{\_litellm}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient.\+\_\+litellm\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpenify__hook_1_1llm__client_1_1LLMClient_abc2cb6b1d6d9b5dc16401ca078ec8c10}\label{classpenify__hook_1_1llm__client_1_1LLMClient_abc2cb6b1d6d9b5dc16401ca078ec8c10}} 
+\index{penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}!model@{model}}
+\index{model@{model}!penify\_hook.llm\_client.LLMClient@{penify\_hook.llm\_client.LLMClient}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+llm\+\_\+client.\+LLMClient.\+model}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/penify\+\_\+hook/\mbox{\hyperlink{llm__client_8py}{llm\+\_\+client.\+py}}\end{DoxyCompactItemize}

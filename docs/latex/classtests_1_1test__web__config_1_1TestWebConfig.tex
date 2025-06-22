@@ -1,0 +1,82 @@
+\hypertarget{classtests_1_1test__web__config_1_1TestWebConfig}{}\doxysection{tests.\+test\+\_\+web\+\_\+config.\+Test\+Web\+Config Class Reference}
+\label{classtests_1_1test__web__config_1_1TestWebConfig}\index{tests.test\_web\_config.TestWebConfig@{tests.test\_web\_config.TestWebConfig}}
+
+
+Collaboration diagram for tests.\+test\+\_\+web\+\_\+config.\+Test\+Web\+Config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classtests_1_1test__web__config_1_1TestWebConfig__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classtests_1_1test__web__config_1_1TestWebConfig_afc6440352201d207ea8b4d26f8ccfa35}{test\+\_\+config\+\_\+llm\+\_\+web\+\_\+server\+\_\+setup}} (self, mock\+\_\+resource\+\_\+filename, mock\+\_\+server, mock\+\_\+webbrowser)
+\item 
+def \mbox{\hyperlink{classtests_1_1test__web__config_1_1TestWebConfig_a06e600222e426b003850509cb1d3190a}{test\+\_\+config\+\_\+jira\+\_\+web\+\_\+server\+\_\+setup}} (self, mock\+\_\+resource\+\_\+filename, mock\+\_\+server, mock\+\_\+webbrowser)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtests_1_1test__web__config_1_1TestWebConfig_a06e600222e426b003850509cb1d3190a}\label{classtests_1_1test__web__config_1_1TestWebConfig_a06e600222e426b003850509cb1d3190a}} 
+\index{tests.test\_web\_config.TestWebConfig@{tests.test\_web\_config.TestWebConfig}!test\_config\_jira\_web\_server\_setup@{test\_config\_jira\_web\_server\_setup}}
+\index{test\_config\_jira\_web\_server\_setup@{test\_config\_jira\_web\_server\_setup}!tests.test\_web\_config.TestWebConfig@{tests.test\_web\_config.TestWebConfig}}
+\doxysubsubsection{\texorpdfstring{test\_config\_jira\_web\_server\_setup()}{test\_config\_jira\_web\_server\_setup()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+web\+\_\+config.\+Test\+Web\+Config.\+test\+\_\+config\+\_\+jira\+\_\+web\+\_\+server\+\_\+setup (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+resource\+\_\+filename,  }\item[{}]{mock\+\_\+server,  }\item[{}]{mock\+\_\+webbrowser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the configuration and setup of a JIRA web server.
+
+This function tests the entire process of setting up a JIRA web server,
+including mocking necessary resources, configuring the server to shut
+down after handling one request, and verifying that the web browser is
+opened with the correct URL. The function uses several mocks to simulate
+external dependencies such as resource files, servers, and web browsers.
+
+Args:
+    mock_resource_filename (MagicMock): A MagicMock object for simulating the `resource_filename` function.
+    mock_server (MagicMock): A MagicMock object for simulating the server setup.
+    mock_webbrowser (MagicMock): A MagicMock object for simulating the web browser opening.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__web__config_1_1TestWebConfig_a06e600222e426b003850509cb1d3190a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtests_1_1test__web__config_1_1TestWebConfig_afc6440352201d207ea8b4d26f8ccfa35}\label{classtests_1_1test__web__config_1_1TestWebConfig_afc6440352201d207ea8b4d26f8ccfa35}} 
+\index{tests.test\_web\_config.TestWebConfig@{tests.test\_web\_config.TestWebConfig}!test\_config\_llm\_web\_server\_setup@{test\_config\_llm\_web\_server\_setup}}
+\index{test\_config\_llm\_web\_server\_setup@{test\_config\_llm\_web\_server\_setup}!tests.test\_web\_config.TestWebConfig@{tests.test\_web\_config.TestWebConfig}}
+\doxysubsubsection{\texorpdfstring{test\_config\_llm\_web\_server\_setup()}{test\_config\_llm\_web\_server\_setup()}}
+{\footnotesize\ttfamily def tests.\+test\+\_\+web\+\_\+config.\+Test\+Web\+Config.\+test\+\_\+config\+\_\+llm\+\_\+web\+\_\+server\+\_\+setup (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+resource\+\_\+filename,  }\item[{}]{mock\+\_\+server,  }\item[{}]{mock\+\_\+webbrowser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set up and test the web server configuration for an LLM (Large Language
+Model) web interface.
+
+This function configures a mock web server for testing purposes,
+including setting up resource filenames, mocking server behavior, and
+verifying that the web browser is opened and the server starts
+correctly. The function uses various mocks to simulate external
+dependencies such as `resource_filename` and `server`.
+
+Args:
+    mock_resource_filename (MagicMock): A MagicMock object simulating the `resource_filename` function.
+    mock_server (MagicMock): A MagicMock object simulating the context manager for the web server.
+    mock_webbrowser (MagicMock): A MagicMock object simulating the `webbrowser` module.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtests_1_1test__web__config_1_1TestWebConfig_afc6440352201d207ea8b4d26f8ccfa35_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/tests/\mbox{\hyperlink{test__web__config_8py}{test\+\_\+web\+\_\+config.\+py}}\end{DoxyCompactItemize}

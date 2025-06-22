@@ -1,0 +1,105 @@
+\hypertarget{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook}{}\doxysection{penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook Class Reference}
+\label{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook}\index{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}}
+
+
+Inheritance diagram for penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a1bb0358140931d82c7616f12efe31821}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a53f73d69cc0f00763ee4830e4f0f7393}{dir\+\_\+path}}, \mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient}{APIClient}} \mbox{\hyperlink{classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_a81e9c55709205aaf4ebbe2b41683baf2}{api\+\_\+client}})
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a70b845318fc7ac3b607daf26378e19ec}{list\+\_\+all\+\_\+files\+\_\+in\+\_\+dir}} (self, str \mbox{\hyperlink{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a53f73d69cc0f00763ee4830e4f0f7393}{dir\+\_\+path}})
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_afd189d1b8c773bf710a899eb21fd76cc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a53f73d69cc0f00763ee4830e4f0f7393}{dir\+\_\+path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a1bb0358140931d82c7616f12efe31821}\label{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a1bb0358140931d82c7616f12efe31821}} 
+\index{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dir\+\_\+path,  }\item[{\mbox{\hyperlink{classpenify__hook_1_1api__client_1_1APIClient}{APIClient}}}]{api\+\_\+client }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpenify__hook_1_1base__analyzer_1_1BaseAnalyzer_ab1296a3d1e9070d891801876b66f7344}{penify\+\_\+hook.\+base\+\_\+analyzer.\+Base\+Analyzer}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a70b845318fc7ac3b607daf26378e19ec}\label{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a70b845318fc7ac3b607daf26378e19ec}} 
+\index{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}!list\_all\_files\_in\_dir@{list\_all\_files\_in\_dir}}
+\index{list\_all\_files\_in\_dir@{list\_all\_files\_in\_dir}!penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}}
+\doxysubsubsection{\texorpdfstring{list\_all\_files\_in\_dir()}{list\_all\_files\_in\_dir()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook.\+list\+\_\+all\+\_\+files\+\_\+in\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dir\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}List all non-hidden files in a directory and its subdirectories.
+
+This function recursively traverses the specified directory and its
+subdirectories, collecting paths of all non-hidden files. It filters out hidden
+directories and files (those starting with a dot) to ensure only visible files
+are returned.
+
+Args:
+    dir_path (str): The path to the directory whose files and subdirectory files need to be listed.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a70b845318fc7ac3b607daf26378e19ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_afd189d1b8c773bf710a899eb21fd76cc}\label{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_afd189d1b8c773bf710a899eb21fd76cc}} 
+\index{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}!run@{run}}
+\index{run@{run}!penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the post-commit hook and process files with a progress bar.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_afd189d1b8c773bf710a899eb21fd76cc_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a53f73d69cc0f00763ee4830e4f0f7393}\label{classpenify__hook_1_1folder__analyzer_1_1FolderAnalyzerGenHook_a53f73d69cc0f00763ee4830e4f0f7393}} 
+\index{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}!dir\_path@{dir\_path}}
+\index{dir\_path@{dir\_path}!penify\_hook.folder\_analyzer.FolderAnalyzerGenHook@{penify\_hook.folder\_analyzer.FolderAnalyzerGenHook}}
+\doxysubsubsection{\texorpdfstring{dir\_path}{dir\_path}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+folder\+\_\+analyzer.\+Folder\+Analyzer\+Gen\+Hook.\+dir\+\_\+path}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/penify\+\_\+hook/\mbox{\hyperlink{folder__analyzer_8py}{folder\+\_\+analyzer.\+py}}\end{DoxyCompactItemize}

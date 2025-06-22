@@ -1,0 +1,167 @@
+The {\ttfamily config} command allows you to set up and manage configuration settings for Penify CLI. This document explains all available configuration options and how to use them.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md21}{}\doxysection{Configuration Overview}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md21}
+Penify CLI stores configuration in a JSON file at {\ttfamily $\sim$/.penify/config.\+json}. The configuration includes\+:
+
+
+\begin{DoxyItemize}
+\item LLM (Large Language Model) settings for local commit message generation
+\item JIRA integration settings for enhanced commit messages
+\item API tokens and other credentials
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md22}{}\doxysection{Basic Usage}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md22}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Configure LLM settings}
+\DoxyCodeLine{penify config llm}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Configure JIRA integration}
+\DoxyCodeLine{penify config jira}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md23}{}\doxysection{LLM Configuration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md23}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md24}{}\doxysubsection{Web Interface}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md24}
+Running {\ttfamily penify config llm} opens a web interface in your browser where you can configure\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Model}}\+: The LLM model to use (e.\+g., {\ttfamily gpt-\/3.\+5-\/turbo})
+\item {\bfseries{API Base URL}}\+: The endpoint URL for your LLM API (e.\+g., {\ttfamily \href{https://api.openai.com/v1}{\texttt{ https\+://api.\+openai.\+com/v1}}})
+\item {\bfseries{API Key}}\+: Your authentication key for the LLM API
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md25}{}\doxysubsection{Supported LLMs}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md25}
+Penify CLI supports various LLM providers\+:\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md26}{}\doxysubsubsection{Open\+AI}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md26}
+
+\begin{DoxyItemize}
+\item Model\+: {\ttfamily gpt-\/3.\+5-\/turbo} or {\ttfamily gpt-\/4}
+\item API Base\+: {\ttfamily \href{https://api.openai.com/v1}{\texttt{ https\+://api.\+openai.\+com/v1}}}
+\item API Key\+: Your Open\+AI API key
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md27}{}\doxysubsubsection{Anthropic}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md27}
+
+\begin{DoxyItemize}
+\item Model\+: {\ttfamily claude-\/instant-\/1} or {\ttfamily claude-\/2}
+\item API Base\+: {\ttfamily \href{https://api.anthropic.com/v1}{\texttt{ https\+://api.\+anthropic.\+com/v1}}}
+\item API Key\+: Your Anthropic API key
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md28}{}\doxysubsubsection{Ollama (\+Local)}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md28}
+
+\begin{DoxyItemize}
+\item Model\+: {\ttfamily llama2} or any model you have installed
+\item API Base\+: {\ttfamily \href{http://localhost:11434}{\texttt{ http\+://localhost\+:11434}}}
+\item API Key\+: (leave blank)
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md29}{}\doxysubsubsection{Azure Open\+AI}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md29}
+
+\begin{DoxyItemize}
+\item Model\+: Your deployed model name
+\item API Base\+: Your Azure endpoint
+\item API Key\+: Your Azure API key
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md30}{}\doxysubsection{Configuration File Structure}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md30}
+After configuration, your {\ttfamily $\sim$/.penify/config.\+json} will contain\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  "{}llm"{}: \{}
+\DoxyCodeLine{    "{}model"{}: "{}gpt-\/3.5-\/turbo"{},}
+\DoxyCodeLine{    "{}api\_base"{}: "{}https://api.openai.com/v1"{},}
+\DoxyCodeLine{    "{}api\_key"{}: "{}sk-\/..."{}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md31}{}\doxysection{JIRA Configuration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md31}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md32}{}\doxysubsection{Web Interface}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md32}
+Running {\ttfamily penify config jira} opens a web interface where you can configure\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{JIRA URL}}\+: Your JIRA instance URL (e.\+g., {\ttfamily \href{https://yourcompany.atlassian.net}{\texttt{ https\+://yourcompany.\+atlassian.\+net}}})
+\item {\bfseries{Username}}\+: Your JIRA username (typically your email)
+\item {\bfseries{API Token}}\+: Your JIRA API token
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md33}{}\doxysubsection{Creating a JIRA API Token}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md33}
+
+\begin{DoxyEnumerate}
+\item Log in to \href{https://id.atlassian.com/manage-profile/security/api-tokens}{\texttt{ https\+://id.\+atlassian.\+com/manage-\/profile/security/api-\/tokens}}
+\item Click \char`\"{}\+Create API token\char`\"{}
+\item Give it a name (e.\+g., \char`\"{}\+Penify CLI\char`\"{})
+\item Copy the generated token and paste it into the configuration
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md34}{}\doxysubsection{Configuration File Structure}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md34}
+After configuration, your {\ttfamily $\sim$/.penify/config.\+json} will contain\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  "{}jira"{}: \{}
+\DoxyCodeLine{    "{}url"{}: "{}https://yourcompany.atlassian.net"{},}
+\DoxyCodeLine{    "{}username"{}: "{}your.email@example.com"{},}
+\DoxyCodeLine{    "{}api\_token"{}: "{}your-\/jira-\/api-\/token"{}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md35}{}\doxysection{Configuration Locations}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md35}
+Penify CLI looks for configuration in multiple locations\+:
+
+
+\begin{DoxyEnumerate}
+\item Project-\/specific\+: {\ttfamily .penify/config.\+json} in the Git repository root
+\item User-\/specific\+: {\ttfamily $\sim$/.penify/config.\+json} in your home directory
+\end{DoxyEnumerate}
+
+The project-\/specific configuration takes precedence if both exist.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md36}{}\doxysection{Environment Variables}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md36}
+You can override configuration settings using environment variables\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily PENIFY\+\_\+\+API\+\_\+\+TOKEN}\+: Override the stored API token
+\item {\ttfamily PENIFY\+\_\+\+LLM\+\_\+\+MODEL}\+: Override the configured LLM model
+\item {\ttfamily PENIFY\+\_\+\+LLM\+\_\+\+API\+\_\+\+BASE}\+: Override the configured LLM API base URL
+\item {\ttfamily PENIFY\+\_\+\+LLM\+\_\+\+API\+\_\+\+KEY}\+: Override the configured LLM API key
+\item {\ttfamily PENIFY\+\_\+\+JIRA\+\_\+\+URL}\+: Override the configured JIRA URL
+\item {\ttfamily PENIFY\+\_\+\+JIRA\+\_\+\+USER}\+: Override the configured JIRA username
+\item {\ttfamily PENIFY\+\_\+\+JIRA\+\_\+\+TOKEN}\+: Override the configured JIRA API token
+\end{DoxyItemize}
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export PENIFY\_LLM\_MODEL="{}gpt-\/4"{}}
+\DoxyCodeLine{penify commit}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md37}{}\doxysection{Command-\/\+Line Configuration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md37}
+For advanced users or scripting, you can directly edit the configuration file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# View current configuration}
+\DoxyCodeLine{cat \string~/.penify/config.json}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Edit configuration with your preferred editor}
+\DoxyCodeLine{nano \string~/.penify/config.json}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md38}{}\doxysection{Sharing Configuration}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md38}
+You can share configuration between machines by copying the {\ttfamily .penify/config.\+json} file. However, be cautious with API keys and credentials.
+
+For team settings, consider\+:
+\begin{DoxyEnumerate}
+\item Using a project-\/specific {\ttfamily .penify/config.\+json} with shared settings
+\item Excluding API keys from shared configuration
+\item Using environment variables for sensitive credentials
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md39}{}\doxysection{Troubleshooting}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md39}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md40}{}\doxysubsection{Common Issues}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_config_commands_autotoc_md40}
+
+\begin{DoxyEnumerate}
+\item $\ast$$\ast$\char`\"{}\+Error reading configuration file\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Check if the file exists\+: {\ttfamily ls -\/la $\sim$/.penify}
+\item Ensure it contains valid JSON\+: {\ttfamily cat $\sim$/.penify/config.\+json}
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Failed to connect to LLM API\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Verify API base URL and API key
+\item Check network connectivity to the API endpoint
+\item Ensure your account has access to the specified model
+\end{DoxyItemize}
+\item $\ast$$\ast$\char`\"{}\+Failed to connect to JIRA\char`\"{}$\ast$$\ast$
+\begin{DoxyItemize}
+\item Check JIRA URL format (should include {\ttfamily \href{https://}{\texttt{ https\+://}}})
+\item Verify username and API token
+\item Ensure your JIRA account has API access permissions 
+\end{DoxyItemize}
+\end{DoxyEnumerate}

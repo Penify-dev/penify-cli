@@ -1,0 +1,385 @@
+\hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient}{}\doxysection{penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client Class Reference}
+\label{classpenify__hook_1_1jira__client_1_1JiraClient}\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+
+
+Collaboration diagram for penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classpenify__hook_1_1jira__client_1_1JiraClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a47efc1ec07389c960f2dfb37ba8c09f5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a3c0cfecff02a75cb7001509a595b8197}{jira\+\_\+url}}=None, str \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_ae56104d5aa7bda7bb26d169c4b46038c}{jira\+\_\+user}}=None, str \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_afc5c90e53b702f9fc27e2ee7d3f991b9}{jira\+\_\+api\+\_\+token}}=None)
+\item 
+bool \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a00d0f9ae006313a21576362d26ac5ec8}{is\+\_\+connected}} (self)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c}{extract\+\_\+issue\+\_\+keys\+\_\+from\+\_\+branch}} (self, str branch\+\_\+name)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_ad2823ad1d3baaedd38039913c3a97fd7}{extract\+\_\+issue\+\_\+keys}} (self, str text)
+\item 
+Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a}{get\+\_\+issue\+\_\+details}} (self, str issue\+\_\+key)
+\item 
+bool \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1}{add\+\_\+comment}} (self, str issue\+\_\+key, str comment)
+\item 
+bool \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_aca8837552d37bfd611de23441a240826}{update\+\_\+issue\+\_\+status}} (self, str issue\+\_\+key, str transition\+\_\+name)
+\item 
+tuple \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23}{format\+\_\+commit\+\_\+message\+\_\+with\+\_\+jira\+\_\+info}} (self, str commit\+\_\+title, str commit\+\_\+description, List\mbox{[}str\mbox{]} issue\+\_\+keys=None)
+\item 
+Dict\mbox{[}str, Any\mbox{]} \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746}{get\+\_\+detailed\+\_\+issue\+\_\+context}} (self, str issue\+\_\+key)
+\item 
+Dict\mbox{[}str, Any\mbox{]} \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd}{get\+\_\+commit\+\_\+context\+\_\+from\+\_\+issues}} (self, List\mbox{[}str\mbox{]} issue\+\_\+keys)
+\item 
+tuple \mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a70d2c5a6432aa6f238da0ff65d49a760}{enhance\+\_\+commit\+\_\+message}} (self, str title, str description, List\mbox{[}str\mbox{]} issue\+\_\+keys)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_a3c0cfecff02a75cb7001509a595b8197}{jira\+\_\+url}}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_ae56104d5aa7bda7bb26d169c4b46038c}{jira\+\_\+user}}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_afc5c90e53b702f9fc27e2ee7d3f991b9}{jira\+\_\+api\+\_\+token}}
+\item 
+\mbox{\hyperlink{classpenify__hook_1_1jira__client_1_1JiraClient_aefb3f96c79358cf3a95d96d3747235b6}{jira\+\_\+client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Client for interacting with JIRA API
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a47efc1ec07389c960f2dfb37ba8c09f5}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a47efc1ec07389c960f2dfb37ba8c09f5}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{jira\+\_\+url = {\ttfamily None},  }\item[{str }]{jira\+\_\+user = {\ttfamily None},  }\item[{str }]{jira\+\_\+api\+\_\+token = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the JIRA client.
+
+Args:
+    jira_url: Base URL for JIRA instance (e.g., "https://your-domain.atlassian.net")
+    jira_user: JIRA username or email
+    jira_api_token: JIRA API token
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1}\label{classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!add\_comment@{add\_comment}}
+\index{add\_comment@{add\_comment}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{add\_comment()}{add\_comment()}}
+{\footnotesize\ttfamily  bool penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+add\+\_\+comment (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{issue\+\_\+key,  }\item[{str}]{comment }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds a comment to a JIRA issue.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classpenify__hook_1_1jira__client_1_1JiraClient_aa1f374116c64cd5f1492ec7f7e40f9c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a70d2c5a6432aa6f238da0ff65d49a760}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a70d2c5a6432aa6f238da0ff65d49a760}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!enhance\_commit\_message@{enhance\_commit\_message}}
+\index{enhance\_commit\_message@{enhance\_commit\_message}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{enhance\_commit\_message()}{enhance\_commit\_message()}}
+{\footnotesize\ttfamily  tuple penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+enhance\+\_\+commit\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{title,  }\item[{str}]{description,  }\item[{List\mbox{[}str\mbox{]}}]{issue\+\_\+keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Enhance a commit message with business and technical context from JIRA issues.
+
+This function first checks if the list of issue keys is empty or if there is no
+connection. If so, it returns the original title and description without
+modification. It then retrieves context information from the specified JIRA
+issues. If the primary issue is missing, it formats the commit message with
+basic JIRA info.  The function enhances the commit title by prefixing it with
+the primary issue key if not already included. It appends a business context
+section to the description, including details like issue type, status,
+priority, sprint, acceptance criteria, and a condensed issue description. If
+comments are available, they are added as technical notes. Finally, related
+issues are listed.
+
+Args:
+    title (str): Original commit title.
+    description (str): Original commit description.
+    issue_keys (List[str]): List of JIRA issue keys to include in the enhanced commit message.
+
+Returns:
+    tuple: A tuple containing the enhanced commit title and description with added
+        context from JIRA issues.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a70d2c5a6432aa6f238da0ff65d49a760_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_ad2823ad1d3baaedd38039913c3a97fd7}\label{classpenify__hook_1_1jira__client_1_1JiraClient_ad2823ad1d3baaedd38039913c3a97fd7}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!extract\_issue\_keys@{extract\_issue\_keys}}
+\index{extract\_issue\_keys@{extract\_issue\_keys}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{extract\_issue\_keys()}{extract\_issue\_keys()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+extract\+\_\+issue\+\_\+keys (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extract unique JIRA issue keys from the given text.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_ad2823ad1d3baaedd38039913c3a97fd7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!extract\_issue\_keys\_from\_branch@{extract\_issue\_keys\_from\_branch}}
+\index{extract\_issue\_keys\_from\_branch@{extract\_issue\_keys\_from\_branch}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{extract\_issue\_keys\_from\_branch()}{extract\_issue\_keys\_from\_branch()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+extract\+\_\+issue\+\_\+keys\+\_\+from\+\_\+branch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{branch\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extracts unique JIRA issue keys from a branch name.\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a093d6456fe053ef7a7862d5d6851910c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!format\_commit\_message\_with\_jira\_info@{format\_commit\_message\_with\_jira\_info}}
+\index{format\_commit\_message\_with\_jira\_info@{format\_commit\_message\_with\_jira\_info}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{format\_commit\_message\_with\_jira\_info()}{format\_commit\_message\_with\_jira\_info()}}
+{\footnotesize\ttfamily  tuple penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+format\+\_\+commit\+\_\+message\+\_\+with\+\_\+jira\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{commit\+\_\+title,  }\item[{str}]{commit\+\_\+description,  }\item[{List\mbox{[}str\mbox{]} }]{issue\+\_\+keys = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format commit message with JIRA issue information.
+
+This function updates the provided commit title and description by
+incorporating JIRA issue keys. If no issue keys are supplied, it extracts them
+from the commit title and description. It then formats the commit title to
+include the first issue key if not already present and appends detailed
+information about each issue to the commit description.
+
+Args:
+    commit_title (str): The original commit title.
+    commit_description (str): The original commit description.
+    issue_keys (List[str]?): A list of JIRA issue keys to include in the commit message. If not
+        provided, issue keys will be extracted from both the title and the description.
+
+Returns:
+    tuple: A tuple containing the updated commit title and description with JIRA
+        information included.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a49ea1149758f7f5212149d357b13cc23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd}\label{classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!get\_commit\_context\_from\_issues@{get\_commit\_context\_from\_issues}}
+\index{get\_commit\_context\_from\_issues@{get\_commit\_context\_from\_issues}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{get\_commit\_context\_from\_issues()}{get\_commit\_context\_from\_issues()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, Any\mbox{]} penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+get\+\_\+commit\+\_\+context\+\_\+from\+\_\+issues (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{List\mbox{[}str\mbox{]}}]{issue\+\_\+keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gather contextual information from JIRA issues to improve commit messages.
+
+This function processes a list of JIRA issue keys, retrieves detailed context
+for each issue, and aggregates it into a dictionary that can be used to enhance
+commit messages. It first retrieves the primary issue (the first key in the
+list) and then gathers basic details for any related issues. The resulting
+context includes information from both the primary and related issues, along
+with all issue keys.
+
+Args:
+    issue_keys: List of JIRA issue keys to gather information from
+
+Returns:
+    Dict containing business and technical context from the issues
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_afb41ce6f13c30b1265d439ddf04bf2cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746}\label{classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!get\_detailed\_issue\_context@{get\_detailed\_issue\_context}}
+\index{get\_detailed\_issue\_context@{get\_detailed\_issue\_context}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{get\_detailed\_issue\_context()}{get\_detailed\_issue\_context()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, Any\mbox{]} penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+get\+\_\+detailed\+\_\+issue\+\_\+context (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{issue\+\_\+key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve comprehensive details about a JIRA issue including context for better
+commit messages.
+
+This function fetches detailed information from a specified JIRA issue and
+constructs a dictionary containing various context fields such as the issue
+summary, description, type, status, priority, comments, URL, and additional
+custom fields like acceptance criteria and sprint information. It handles
+errors by logging appropriate warnings or errors.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
+
+Returns:
+    Dict[str, Any]: A dictionary containing business and technical context from the issue.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_aa967169a4b7970c67c0947b9ac56f746_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!get\_issue\_details@{get\_issue\_details}}
+\index{get\_issue\_details@{get\_issue\_details}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{get\_issue\_details()}{get\_issue\_details()}}
+{\footnotesize\ttfamily  Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+get\+\_\+issue\+\_\+details (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{issue\+\_\+key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve details of a JIRA issue based on its key.
+
+This function fetches detailed information about a specified JIRA issue using
+the provided issue key. It first checks if the JIRA client is connected; if
+not, it logs a warning and returns `None`. If connected, it attempts to
+retrieve the issue from the JIRA server. On success, it constructs and returns
+a dictionary containing various details such as the issue's key, summary,
+status, description, assignee, reporter, type, priority, and URL. Errors during
+this process are logged, and `None` is returned.
+
+Args:
+    issue_key (str): The JIRA issue key (e.g., "PROJECT-123").
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a65f6924819084b7c8d268956a784804a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a00d0f9ae006313a21576362d26ac5ec8}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a00d0f9ae006313a21576362d26ac5ec8}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!is\_connected@{is\_connected}}
+\index{is\_connected@{is\_connected}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{is\_connected()}{is\_connected()}}
+{\footnotesize\ttfamily  bool penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+is\+\_\+connected (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check if the JIRA client is connected.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_a00d0f9ae006313a21576362d26ac5ec8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_aca8837552d37bfd611de23441a240826}\label{classpenify__hook_1_1jira__client_1_1JiraClient_aca8837552d37bfd611de23441a240826}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!update\_issue\_status@{update\_issue\_status}}
+\index{update\_issue\_status@{update\_issue\_status}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{update\_issue\_status()}{update\_issue\_status()}}
+{\footnotesize\ttfamily  bool penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+update\+\_\+issue\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{issue\+\_\+key,  }\item[{str}]{transition\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Update the status of a JIRA issue.
+
+This method checks if the JIRA client is connected, retrieves available
+transitions for the given issue, finds the transition ID by name, and updates
+the issue's status accordingly. If any step fails or the specified transition
+is not found, appropriate logs are generated, and False is returned.
+
+Args:
+    issue_key (str): The key of the JIRA issue to be updated.
+    transition_name (str): The name of the desired transition.
+
+Returns:
+    bool: True if the status was successfully updated, False otherwise.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpenify__hook_1_1jira__client_1_1JiraClient_aca8837552d37bfd611de23441a240826_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_afc5c90e53b702f9fc27e2ee7d3f991b9}\label{classpenify__hook_1_1jira__client_1_1JiraClient_afc5c90e53b702f9fc27e2ee7d3f991b9}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!jira\_api\_token@{jira\_api\_token}}
+\index{jira\_api\_token@{jira\_api\_token}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{jira\_api\_token}{jira\_api\_token}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+jira\+\_\+api\+\_\+token}
+
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_aefb3f96c79358cf3a95d96d3747235b6}\label{classpenify__hook_1_1jira__client_1_1JiraClient_aefb3f96c79358cf3a95d96d3747235b6}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!jira\_client@{jira\_client}}
+\index{jira\_client@{jira\_client}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{jira\_client}{jira\_client}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+jira\+\_\+client}
+
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_a3c0cfecff02a75cb7001509a595b8197}\label{classpenify__hook_1_1jira__client_1_1JiraClient_a3c0cfecff02a75cb7001509a595b8197}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!jira\_url@{jira\_url}}
+\index{jira\_url@{jira\_url}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{jira\_url}{jira\_url}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+jira\+\_\+url}
+
+\mbox{\Hypertarget{classpenify__hook_1_1jira__client_1_1JiraClient_ae56104d5aa7bda7bb26d169c4b46038c}\label{classpenify__hook_1_1jira__client_1_1JiraClient_ae56104d5aa7bda7bb26d169c4b46038c}} 
+\index{penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}!jira\_user@{jira\_user}}
+\index{jira\_user@{jira\_user}!penify\_hook.jira\_client.JiraClient@{penify\_hook.jira\_client.JiraClient}}
+\doxysubsubsection{\texorpdfstring{jira\_user}{jira\_user}}
+{\footnotesize\ttfamily penify\+\_\+hook.\+jira\+\_\+client.\+Jira\+Client.\+jira\+\_\+user}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/tmp/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Penify-\/dev/penify-\/cli/penify\+\_\+hook/\mbox{\hyperlink{jira__client_8py}{jira\+\_\+client.\+py}}\end{DoxyCompactItemize}

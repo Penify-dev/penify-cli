@@ -1,0 +1,155 @@
+This document demonstrates how to use Penify CLI in real-\/world development workflows to improve your productivity.\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md104}{}\doxysection{Workflow 1\+: Efficient Git Commits with AI}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md104}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md105}{}\doxysubsection{Setup}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md105}
+First, configure your local LLM for offline operation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify config llm}
+
+\end{DoxyCode}
+
+
+Configure your JIRA integration for enhanced commit messages\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify config jira}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md106}{}\doxysubsection{Daily Workflow}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md106}
+
+\begin{DoxyEnumerate}
+\item Make your code changes as usual
+\item When ready to commit, use Penify to generate a smart commit message\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify commit}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Review and confirm the generated commit message
+\item Git commit and push as usual
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md107}{}\doxysubsection{Benefits}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md107}
+
+\begin{DoxyItemize}
+\item Consistent and descriptive commit messages
+\item Automatic inclusion of relevant JIRA ticket information
+\item Time saved from writing detailed commit messages
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md108}{}\doxysection{Workflow 2\+: Documentation Generation Pipeline}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md108}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md109}{}\doxysubsection{Setup}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md109}
+Login to Penify to access advanced documentation features\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify login}
+
+\end{DoxyCode}
+
+
+Install the Git hook for automatic documentation generation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen install-\/hook}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md110}{}\doxysubsection{Daily Workflow}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md110}
+
+\begin{DoxyEnumerate}
+\item Make your code changes as usual
+\item Commit your changes
+\item Documentation is automatically generated for changed files
+\item Review the generated documentation
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md111}{}\doxysubsection{Manual Documentation}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md111}
+For specific files or folders\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen -\/l src/components/authentication}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md112}{}\doxysubsection{Benefits}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md112}
+
+\begin{DoxyItemize}
+\item Always up-\/to-\/date documentation
+\item Consistent documentation style
+\item Time saved from writing detailed documentation
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md113}{}\doxysection{Workflow 3\+: Code Review Enhancement}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md113}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md114}{}\doxysubsection{Setup}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md114}
+Ensure you\textquotesingle{}re logged into Penify\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify login}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md115}{}\doxysubsection{Workflow}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md115}
+
+\begin{DoxyEnumerate}
+\item Before submitting a PR, generate documentation for changed files\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Include the generated documentation in your PR
+\item Reviewers can better understand your changes with the AI-\/generated explanations
+\end{DoxyEnumerate}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md116}{}\doxysubsection{Benefits}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md116}
+
+\begin{DoxyItemize}
+\item Improved PR quality
+\item Faster code reviews
+\item Better team understanding of code changes
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md117}{}\doxysection{Workflow 4\+: Onboarding New Team Members}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md117}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md118}{}\doxysubsection{For Team Leads}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md118}
+Generate comprehensive documentation for the entire codebase\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen -\/l .}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md119}{}\doxysubsection{For New Team Members}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md119}
+Generate focused documentation for components you\textquotesingle{}re working on\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{penify docgen -\/l src/components/my-\/feature}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md120}{}\doxysubsection{Benefits}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md120}
+
+\begin{DoxyItemize}
+\item Faster onboarding
+\item Better understanding of code structure
+\item Reduced questions to senior team members
+\end{DoxyItemize}\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md121}{}\doxysection{Workflow 5\+: Legacy Code Understanding}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md121}
+When working with unfamiliar legacy code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Document a specific complex file}
+\DoxyCodeLine{penify docgen -\/l src/legacy/complex\_module.py}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Document an entire legacy component}
+\DoxyCodeLine{penify docgen -\/l src/legacy/old\_component}
+
+\end{DoxyCode}
+\hypertarget{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md122}{}\doxysubsection{Benefits}\label{md__tmp_github_reposRepoArchDocGenContext_Penify_dev_penify_cli_docs_example_workflows_autotoc_md122}
+
+\begin{DoxyItemize}
+\item Quickly understand complex legacy systems
+\item Reduce time spent deciphering undocumented code
+\item Make safer changes to legacy systems 
+\end{DoxyItemize}
